@@ -1,0 +1,19 @@
+{
+  "name": "ruleta-juego",
+  "version": "1.0.0",
+  "description": "Aplicación web interactiva para la ruleta de Pokémon Shiny con los **400 Pokémon oficiales de la Pokédex de Paldea** (Pokémon Escarlata y Pokémon Púrpura).",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "node --watch server/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "express": "^5.3.0",
+    "jsonwebtoken": "^9.0.3"
+  }
+}

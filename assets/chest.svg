@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="woodGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#9a3412"/>
+      <stop offset="100%" stop-color="#431407"/>
+    </linearGradient>
+    <linearGradient id="goldTrim" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fef08a"/>
+      <stop offset="50%" stop-color="#eab308"/>
+      <stop offset="100%" stop-color="#a16207"/>
+    </linearGradient>
+    <radialGradient id="chestGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fef08a" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#eab308" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="chestShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#78350f" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+  <g filter="url(#chestShadow)">
+    <!-- Light burst inside chest -->
+    <ellipse cx="50" cy="46" rx="28" ry="12" fill="url(#chestGlow)"/>
+    <!-- Chest Body -->
+    <rect x="20" y="48" width="60" height="36" rx="4" fill="url(#woodGrad)" stroke="#270a04" stroke-width="1.5"/>
+    <!-- Chest Lid (open slightly or arched closed) -->
+    <path d="M18,48 C18,28 82,28 82,48 Z" fill="url(#woodGrad)" stroke="#270a04" stroke-width="1.5"/>
+    <!-- Metal Bands -->
+    <rect x="28" y="29" width="6" height="55" fill="url(#goldTrim)" stroke="#713f12" stroke-width="0.8"/>
+    <rect x="66" y="29" width="6" height="55" fill="url(#goldTrim)" stroke="#713f12" stroke-width="0.8"/>
+    <rect x="18" y="45" width="64" height="6" fill="url(#goldTrim)" stroke="#713f12" stroke-width="0.8"/>
+    <!-- Lock plate & keyhole -->
+    <rect x="45" y="44" width="10" height="13" rx="2" fill="url(#goldTrim)" stroke="#713f12" stroke-width="1"/>
+    <circle cx="50" cy="49" r="2" fill="#270a04"/>
+    <polygon points="49,50 51,50 51.5,54 48.5,54" fill="#270a04"/>
+    <!-- Jewels overflowing -->
+    <circle cx="36" cy="45" r="3" fill="#38bdf8"/>
+    <circle cx="60" cy="44" r="3.5" fill="#ec4899"/>
+    <circle cx="50" cy="40" r="4" fill="#fbbf24"/>
+  </g>
+</svg>

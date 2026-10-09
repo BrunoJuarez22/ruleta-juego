@@ -1,0 +1,2 @@
+# Este archivo preserva la carpeta data/ en el repositorio Git.
+# Las bases de datos SQLite (*.db, *.db-wal, *.db-shm) están ignoradas por seguridad.

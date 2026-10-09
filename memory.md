@@ -1,0 +1,221 @@
+# MEMORY.md — Shiny Roulette (Pokédex de Paldea)
+
+Este documento registra la memoria técnica, el contexto de negocio, las decisiones arquitectónicas y el historial de evolución del proyecto **Shiny Roulette**. Debe consultarse en cada sesión para garantizar la coherencia y continuidad de los desarrollos.
+
+---
+
+## 1. Visión General del Proyecto
+
+- **Nombre:** Shiny Roulette (Pokédex de Paldea).
+- **Ubicación local:** `C:\Users\bruno\OneDrive\Desktop\ruleta-juego`.
+- **Propósito:** Mini-juego web interactivo de ruleta enfocado en dinámicas de *Shiny Hunting* para los 400 Pokémon oficiales de la Pokédex de Paldea (*Pokémon Escarlata y Púrpura*).
+- **Filosofía de Ejecución:** **100% Offline-First y Latencia Cero**. Todo el contenido (datos, 400 sprites estándar, 400 sprites shiny y audio sintetizado) funciona localmente sin depender de conexiones de red externas en tiempo de ejecución.
+
+---
+
+## 2. Arquitectura de Archivos
+
+```
+ruleta-juego/
+├── assets/
+│   ├── pokeball.svg              # Icono SVG para Pokéball y núcleo central
+│   ├── sprites/                  # Sprites locales estándar (PNG offline, incluye 10250 y 10253)
+│   │   ├── 1.png ... 10253.png
+│   │   └── shiny/                # Sprites shiny locales (PNG offline, incluye 10250 y 10253)
+│   │       ├── 1.png ... 10253.png
+│   └── artwork/                  # Ilustraciones oficiales en alta resolución locales
+│       ├── 10250.png, 10253.png
+│       └── shiny/                # Ilustraciones shiny locales
+├── data/                         # Almacenamiento SQLite persistente local (.gitignored)
+│   └── shiny_roulette.db         # Base de datos SQLite
+├── server/                       # Backend REST API
+│   ├── db.js                     # Repositorio y conexión node:sqlite / esquemas
+│   ├── auth.js                   # Middleware JWT y generación de tokens
+│   ├── server.js                 # Servidor Express, CORS y servicio estático
+│   └── routes/
+│       ├── authRoutes.js         # Registro, Login y /me
+│       └── userRoutes.js         # Progreso, capturas, sincronización y estado
+├── index.html                    # Estructura semántica, controles, modales y matriz
+├── style.css                     # Sistema de diseño, variables CSS, temas día/noche y auth
+├── api.js                        # Cliente frontend para API REST, JWT y sincronización
+├── script.js                     # Motor de ruleta (Canvas 2D), Web Audio API, matriz y lógica shiny
+├── paldea_data.js                # Definición de window.PALDEA_POKEMON (400 registros completos)
+├── paldea_pokemon.json           # Base de datos canónica en formato JSON
+├── package.json                  # Dependencias de backend (express, bcryptjs, jsonwebtoken, cors)
+├── ads.txt                       # Archivo de autorización de inventario publicitario (IAB Tech Lab)
+├── README.md                     # Documentación general para usuarios
+├── memory.md                     # Memoria del proyecto, arquitectura y changelog
+└── agent.md                      # Directrices operativas y de estilo para agentes de IA
+```
+
+---
+
+## 3. Historial de Decisiones y Evolución (Changelog)
+
+1. **Ruleta Básica Inicial:**
+   - Creación del canvas interactivo de 500x500 con física de giro basada en `easeOutQuart` y duración de 4800ms.
+   - Puntero superior en 270° con animación de rebote y sonidos de clic generados por osciladores de la Web Audio API.
+
+2. **Integración Completa de Paldea (400 Pokémon):**
+   - Incorporación de los 400 Pokémon oficiales de la Pokédex de Paldea con nombres en español, números de Paldea (#001-#400), números Nacionales (#0001-#1010) y tipos elementales.
+
+3. **Descarga de Sprites Locales Offline:**
+   - Descarga local de los 400 sprites estándar y 400 sprites shiny en `assets/sprites/` y `assets/sprites/shiny/`.
+   - Implementación de `imageCache` en memoria y precarga anticipada (`preloadAllSprites`) para eliminar cualquier lag de red.
+
+4. **Sincronización a 60 FPS del Live Tracker:**
+   - Cálculo trigonométrico en tiempo real (`getActivePokemonAtRotation`) para actualizar el Live Tracker en cada fotograma del giro mientras la ruleta rueda.
+
+5. **Restricciones Visuales Estrictas impuestas por el Usuario:**
+   - **Modo Día por Defecto:** La paleta clara es la inicial (`currentTheme = 'light'`).
+   - **Cero Emojis:** Prohibidos en toda la interfaz. Se emplean iconos vectoriales SVG limpios y caracteres tipográficos estándar como la estrella `★`.
+   - **Sin bordes ondulados ni burbujas:** Estética geométrica profesional con bordes nítidos (`border-radius: 4px` o `3px`).
+   - **Sin animaciones de respiración/pulsación:** Eliminadas todas las transiciones infinitas cíclicas (`pulse`, `breath`).
+   - **Esfera Central Circular y Centrada:** El botón `#centerSpinHub` debe conservar siempre `border-radius: 50%` y `transform: translate(-50%, -50%)`, permaneciendo fijo en el eje central de la ruleta.
+
+6. **Sistema de Seguimiento Shiny (Capturados vs Pendientes):**
+   - Al detenerse la ruleta, el usuario puede marcar el Pokémon como **Capturado Shiny** o enviarlo a la lista de **Pendientes**.
+   - Persistencia completa en `localStorage` con contadores dinámicos.
+
+7. **Selector de Línea Evolutiva en Modal Ganador:**
+   - Inyección del árbol evolutivo en los 400 registros (`evolutionLine`).
+   - El modal ganador permite marcar con casillas de verificación múltiples miembros de la misma familia evolutiva (ej. capturar Sprigatito, Floragato y Meowscarada en un único giro si se cazó la línea entera).
+
+8. **Selector de Línea Evolutiva en Pendientes:**
+   - El botón `CAPTURADO SHINY` de cualquier tarjeta pendiente abre el modal configurado para pendientes (`openEvolutionLineModal(pokemon, 'pending')`), permitiendo marcar fases de la línea y cancelando sin obligar a girar la ruleta.
+
+9. **Eliminación de Parpadeo del Pokémon Previo:**
+   - Problema detectado: Al volver a girar y detenerse en un nuevo Pokémon, por un instante se apreciaba el sprite del Pokémon anterior debido a la decodificación asíncrona de `<img>`.
+   - Solución: Se creó `clearModalContent()` para vaciar el modal al cerrar y al iniciar el giro, y se integró precarga con `Image.decode()` para activar el modal (`.active`) únicamente cuando el nuevo mapa de bits esté 100% procesado.
+
+10. **Transformación de Pendientes a Matriz Gigante (400 Pokémon):**
+    - La vista de pendientes se sustituyó por una matriz completa de los 400 Pokémon de Paldea.
+    - **Resaltado especial:** Los Pokémon pendientes del último giro se distinguen con la clase `.is-last-spin-pending` (borde rojo de 2px, gradiente, etiqueta `★ GIRO ANTERIOR` y botón de captura prioritario).
+    - Inclusión de barra de estadísticas (total de capturados, porcentaje, pendientes del giro anterior), buscador en tiempo real y chips de filtrado.
+
+11. **Corrección de Colores de la Ruleta:**
+    - Se resolvió un error donde la ruleta se pintaba completamente negra por falta del atributo `color` en los datos serializados.
+    - Se integró el mapa `TYPE_COLORS` para los 18 tipos elementales tanto en los archivos de datos (`paldea_data.js`, `paldea_pokemon.json`) como en `script.js` con la función de respaldo `getPokemonColor()`.
+
+12. **Ajuste y Contención de Botones en la Matriz:**
+    - Se solucionó el desbordamiento del botón `LÍNEA` en las tarjetas de la matriz aplicando `minmax(136px, 1fr)` en `.matrix-grid`, `box-sizing: border-box`, `overflow: hidden` en `.matrix-card`, y anchos fijos proporcionados (`btn-matrix-toggle` flexible con `min-width: 0` y `btn-matrix-evo` con `44px`).
+
+13. **Sistema de Cuentas, Autenticación y Base de Datos (SQLite + Express + JWT + Modo Híbrido):**
+    - Se desarrolló un backend REST modular en Node.js + Express con base de datos SQLite nativa (`node:sqlite`) alojada en `data/shiny_roulette.db`.
+    - Autenticación segura con cifrado `bcryptjs` (salt 10) y tokens de sesión JWT (`jsonwebtoken`) válidos por 30 días.
+    - Endpoints de API:
+      - `POST /api/auth/register`: Creación de cuenta con verificación de duplicados y asignación de token.
+      - `POST /api/auth/login`: Autenticación por usuario o correo.
+      - `GET /api/auth/me`: Validación del perfil de la sesión activa.
+      - `GET /api/user/progress`: Consulta del estado y capturas guardadas en la base de datos.
+      - `POST /api/user/sync`: Fusión inteligente sin pérdidas entre el progreso del usuario como invitado y los datos en la nube.
+      - `POST /api/user/capture`: Guardado atómico de capturas individuales o lotes de líneas evolutivas.
+      - `POST /api/user/uncapture`: Eliminación de capturas de la base de datos.
+      - `POST /api/user/pending`: Registro y actualización de Pokémon pendientes y del último giro.
+    - **Modo Híbrido (100% Offline-First con Nube Opcional):** Si no hay servidor o el usuario no ha iniciado sesión, el juego funciona exactamente igual guardando localmente en `localStorage`. Si inicia sesión, el progreso se sincroniza en segundo plano y se refleja en cualquier dispositivo.
+    - **Interfaz de Usuario:** Botón de cuenta en la cabecera con indicador de estado (verde conectado, gris local, azul sincronizando) y modal `#authModal` con pestañas de Login, Registro y Panel de Perfil de Entrenador. Se respetan estrictamente las directrices: cero emojis (iconos SVG limpios), bordes rectos (4px/3px), sin animaciones infinitas de pulsación y modo día por defecto.
+
+14. **Corrección de Assets para Formas Regionales de Paldea (Wooper y Tauros):**
+    - **Problema Detectado:** Las entradas de **Wooper de Paldea** (#053 Paldea, tipo Veneno/Tierra) y **Tauros de Paldea** (#223 Paldea, tipo Lucha) estaban apuntando erróneamente a los sprites e ilustraciones de sus formas estándar originales (Johto #194, Wooper azul; y Kanto #128, Tauros marrón).
+    - **Descarga e Integración de Formas Oficiales de Paldea:**
+      - Wooper de Paldea: Se descargaron `assets/sprites/10253.png` (marrón con branquias óseas púrpuras), `assets/sprites/shiny/10253.png`, `assets/artwork/10253.png` e ilustración shiny.
+      - Tauros de Paldea (Combat Breed): Se descargaron `assets/sprites/10250.png` (negro carbón con melena y cuernos Paldea), `assets/sprites/shiny/10250.png`, `assets/artwork/10250.png` e ilustración shiny.
+    - **Garantía Retroactiva y Offline-First:**
+      - Se sobrescribieron también `assets/sprites/194.png`, `assets/sprites/shiny/194.png`, `assets/sprites/128.png` y `assets/sprites/shiny/128.png` con las formas de Paldea, garantizando que capturas previas en `localStorage` o cachés locales también muestren la forma correcta.
+      - Se actualizaron `paldea_pokemon.json` y `paldea_data.js` con las nuevas rutas locales y remotas.
+      - Se actualizó el motor de precarga y fallback de modales en `script.js` para precargar ilustraciones locales.
+
+15. **Desmarcado desde la Sección de Pendientes y Limpieza de Encabezado:**
+    - **Desmarcado de Pendientes (`removePending`):** Se habilitó la opción de retirar Pokémon del estado pendiente directamente desde la matriz y desde el modal:
+      - Botón `DESMARCAR` en la botonera de acciones de cada tarjeta que tenga estado pendiente (`isPending` o `isLastSpin`).
+      - Botón rápido `✕` integrado en el distintivo de cabecera de la tarjeta (`.btn-card-unpend`).
+      - Botón `DESMARCAR DE PENDIENTE` en el modal de selección de línea evolutiva si el Pokémon activo se encuentra pendiente.
+      - Sincronización inmediata con `localStorage` y emisión asíncrona a la base de datos en la nube (`POST /api/user/remove-pending`).
+    - **Limpieza del Título:** Se retiró el subtítulo secundario *"Caza de Pokémon Shiny · Pokédex de Paldea"* de la cabecera principal (`.title-group`), dejando únicamente el título nítido y estilizado: `SHINY ROULETTE`.
+
+16. **Preparación para Monetización por Anuncios (Google AdSense) y Blindaje Legal (Copyright & Fair Use):**
+    - **Estrategia y Protección contra Reclamaciones de Propiedad Intelectual:**
+      - El proyecto implementa la estrategia estándar de los principales sitios comunitarios de referencia (como Serebii, Smogon y Pokémon Showdown):
+        1. **Herramienta 100% gratuita:** No se vende ni cobra por ningún activo de Nintendo ni de The Pokémon Company. La publicidad sufraga costes de servidor, computación y mantenimiento técnico.
+        2. **Marca y dominio independientes:** El proyecto se denomina *"Shiny Roulette"*, sin usurpar marcas registradas en el nombre de la herramienta ni inducir a confusión comercial.
+        3. **Atribución visible de marcas:** Pie de página (`.app-footer`) con declaración explícita: *"Pokémon y todos los nombres, marcas y activos gráficos son propiedad de Nintendo Co., Ltd., Creatures Inc. y Game Freak Inc."*
+        4. **Amparo en Uso Legítimo (Fair Use / 17 U.S.C. § 107):** Declaración de fines educativos, recreativos y de catalogación documental para la comunidad de jugadores.
+        5. **Procedimiento formal DMCA:** Sección y buzón directo (`dmca@shinyroulette.local`) con compromiso de retirada de material en 24-48h sin litigios.
+    - **Preparación Técnica para Google AdSense / Redes Publicitarias:**
+      - **Archivo `ads.txt`:** Implementado en la raíz del proyecto conforme al estándar del IAB Tech Lab (`google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0`).
+      - **Contenedor publicitario seguro (`.ad-placement-section`):** Caja para banner responsive de 728x90 ubicada debajo de los controles principales y antes de la matriz, debidamente señalizada con la etiqueta `PUBLICIDAD` para evitar infracciones de clics involuntarios (invalid clicks).
+      - **Modal Legal Integral (`#legalModal`):** Cuatro paneles interactivos:
+        - *Copyright & DMCA*: Declaración legal, atribución de marcas y protocolo de retirada.
+        - *Privacidad (AdSense/GDPR)*: Divulgación de cookies DART/DoubleClick de terceros requerida contractualmente por Google AdSense, y derechos de los usuarios.
+        - *Términos de Servicio*: Condiciones de uso de la herramienta.
+        - *Gestión de Cookies*: Información sobre cookies técnicas vs publicitarias.
+      - **Banner de Consentimiento de Cookies (`#cookieConsentBanner`):** Banner fijo inferior conforme a GDPR/ePrivacy/CCPA con opciones "ACEPTAR TODAS" y "SÓLO ESENCIALES", persistido en `localStorage` (`ruleta_cookies_accepted`).
+      - **Estilo y Coherencia:** Totalmente integrado con el sistema de diseño: cero emojis (iconos SVG limpios), bordes rectos (4px/3px), sin animaciones infinitas de pulsación y adaptativo a temas claro/oscuro.
+
+17. **Verificación Operativa de la Base de Datos y Guía de Despliegue sin Dominio:**
+    - **Estado de SQLite:** Base de datos activa y verificada en `data/shiny_roulette.db` con tablas `users`, `user_captured`, `user_pending` y `user_state`.
+    - **Arquitectura Fullstack Unificada:** `server/server.js` sirve simultáneamente las rutas de API REST (`/api/auth`, `/api/user`, `/api/health`) y los archivos estáticos de la aplicación mediante `express.static(ROOT_DIR)`.
+    - **Detección Dinámica de URL en Frontend (`api.js`):** Detecta automáticamente si se ejecuta bajo protocolo HTTP/HTTPS (usando rutas relativas `/api/...`) o vía archivo local `file://` (apuntando a `http://localhost:3000`), permitiendo el despliegue directo en cualquier servicio en la nube (Render, Railway, Koyeb) sin requerir configuración manual de dominio ni variables de entorno adicionales.
+
+---
+
+## 4. Estructuras de Datos y Persistencia
+
+### Modelo de Datos del Pokémon
+```json
+{
+  "numPal": "001",
+  "numNac": "0906",
+  "name": "Sprigatito",
+  "types": ["Planta"],
+  "color": "#16a34a",
+  "sprite": "assets/sprites/906.png",
+  "remoteSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/906.png",
+  "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/906.png",
+  "shinySprite": "assets/sprites/shiny/906.png",
+  "chainId": 478,
+  "evolutionLine": ["001", "002", "003"]
+}
+```
+
+### Esquema de Base de Datos Relacional (SQLite)
+- **`users`:** `id` (INTEGER PK), `username` (TEXT UNIQUE NOCASE), `email` (TEXT UNIQUE NOCASE), `password_hash` (TEXT), `created_at`, `updated_at`.
+- **`user_captured`:** `id` (INTEGER PK), `user_id` (FK users), `num_pal` (TEXT), `num_nac` (TEXT), `name` (TEXT), `types` (TEXT JSON), `color` (TEXT), `sprite` (TEXT), `shiny_sprite` (TEXT), `captured_at`. `UNIQUE(user_id, num_pal)`.
+- **`user_pending`:** `id` (INTEGER PK), `user_id` (FK users), `num_pal` (TEXT), `num_nac` (TEXT), `name` (TEXT), `types` (TEXT JSON), `color` (TEXT), `sprite` (TEXT), `shiny_sprite` (TEXT), `added_at`. `UNIQUE(user_id, num_pal)`.
+- **`user_state`:** `user_id` (PK FK users), `last_spin_pending` (TEXT JSON), `theme_pref` (TEXT), `audio_pref` (INTEGER), `updated_at`.
+
+### Llaves de `localStorage`
+- `ruleta_theme`: `'light'` (predeterminado) o `'dark'`.
+- `ruleta_audio`: `'true'` o `'false'`.
+- `shiny_captured`: Arreglo JSON de objetos Pokémon capturados en modo local.
+- `shiny_pending`: Arreglo JSON de objetos Pokémon pendientes en modo local.
+- `shiny_last_spin_pending`: Arreglo JSON de strings `numPal` del giro anterior en modo local.
+- `ruleta_jwt_token`: Token JWT de autenticación para llamadas a la API REST.
+- `ruleta_current_user`: Objeto JSON con el perfil del usuario autenticado (`id`, `username`, `email`).
+- `ruleta_last_sync_time`: Marca de tiempo ISO de la última sincronización exitosa con la base de datos.
+- `ruleta_cookies_accepted`: `'all'` o `'essential'`. Preferencia de cookies publicitarias y de terceros según el consentimiento del usuario.
+
+
+---
+
+## 5. Tabla de Colores Oficiales por Tipo (`TYPE_COLORS`)
+
+| Tipo | Color Hex | Tipo | Color Hex |
+| :--- | :--- | :--- | :--- |
+| **Planta** | `#16a34a` | **Eléctrico** | `#eab308` |
+| **Fuego** | `#ea580c` | **Hielo** | `#0891b2` |
+| **Agua** | `#0284c7` | **Lucha** | `#c2410c` |
+| **Bicho** | `#65a30d` | **Veneno** | `#9333ea` |
+| **Normal** | `#78716c` | **Tierra** | `#d97706` |
+| **Volador** | `#6366f1` | **Psíquico** | `#db2777` |
+| **Roca** | `#a16207` | **Fantasma** | `#7c3aed` |
+| **Dragón** | `#4f46e5` | **Siniestro** | `#334155` |
+| **Acero** | `#64748b` | **Hada** | `#ec4899` |
+
+---
+
+## 6. Protocolo de Trabajo y Actualización Continua
+
+- **Regla Mandataria:** Tras **cada** tarea, corrección, ajuste estético u operación realizada en el proyecto, el agente o desarrollador debe revisar y actualizar obligatoriamente `memory.md` (y `agent.md` si se modificaron directrices operativas o de diseño).
+- **Objetivo:** Mantener una memoria técnica viva y precisa que garantice continuidad total, cero pérdida de contexto y cumplimiento riguroso de las preferencias del usuario a lo largo de todas las sesiones de desarrollo.
+

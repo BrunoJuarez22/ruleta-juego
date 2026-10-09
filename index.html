@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shiny Roulette - Pokédex de Paldea</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Cabecera Principal -->
+  <header>
+    <div class="logo-area">
+      <img src="assets/pokeball.svg" alt="Pokéball" class="logo-icon-img">
+      <div class="title-group">
+        <h1>SHINY ROULETTE</h1>
+      </div>
+    </div>
+    <div class="header-actions">
+      <!-- Selector Modo Día / Noche -->
+      <button id="themeToggleBtn" class="btn-action" title="Cambiar tema">
+        <svg id="themeIcon" class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <!-- Dibujado dinámicamente según tema -->
+        </svg>
+        <span id="themeText">MODO NOCHE</span>
+      </button>
+
+      <!-- Botón de Sonido -->
+      <button id="soundToggleBtn" class="btn-action" title="Activar o silenciar sonido">
+        <svg id="soundIcon" class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+          <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+        </svg>
+        <span id="soundText">SONIDO: ACTIVO</span>
+      </button>
+
+      <!-- Botón de Catálogo -->
+      <button id="settingsBtn" class="btn-action" title="Abrir catálogo Pokédex">
+        <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+        </svg>
+        <span>CATÁLOGO</span>
+      </button>
+
+      <!-- Botón de Cuenta y Guardado en la Nube -->
+      <button id="userAuthBtn" class="btn-action btn-auth" title="Iniciar sesión o gestionar cuenta">
+        <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+          <circle cx="12" cy="7" r="4"></circle>
+        </svg>
+        <span id="userAuthText">CUENTA</span>
+        <span id="syncIndicatorDot" class="sync-dot offline" title="Modo local (invitado)"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Barra de Filtros y Modos -->
+  <div class="filter-toolbar">
+    <div class="filter-group">
+      <label for="typeFilter" class="filter-label">TIPO:</label>
+      <select id="typeFilter" class="filter-select">
+        <option value="all">TODOS LOS TIPOS</option>
+        <option value="Planta">Planta</option>
+        <option value="Fuego">Fuego</option>
+        <option value="Agua">Agua</option>
+        <option value="Eléctrico">Eléctrico</option>
+        <option value="Bicho">Bicho</option>
+        <option value="Normal">Normal</option>
+        <option value="Volador">Volador</option>
+        <option value="Veneno">Veneno</option>
+        <option value="Tierra">Tierra</option>
+        <option value="Roca">Roca</option>
+        <option value="Lucha">Lucha</option>
+        <option value="Psíquico">Psíquico</option>
+        <option value="Fantasma">Fantasma</option>
+        <option value="Dragón">Dragón</option>
+        <option value="Siniestro">Siniestro</option>
+        <option value="Acero">Acero</option>
+        <option value="Hielo">Hielo</option>
+        <option value="Hada">Hada</option>
+      </select>
+    </div>
+
+    <div class="filter-group">
+      <label for="rangeFilter" class="filter-label">RANGO:</label>
+      <select id="rangeFilter" class="filter-select">
+        <option value="all">TODOS (#001 - #400)</option>
+        <option value="starters">INICIALES (#001 - #024)</option>
+        <option value="1-100">#001 - #100</option>
+        <option value="101-200">#101 - #200</option>
+        <option value="201-300">#201 - #300</option>
+        <option value="301-400">#301 - #400</option>
+        <option value="paradox">PARADOJAS (#376 - #400)</option>
+      </select>
+    </div>
+
+    <div class="filter-group actions-group">
+      <button id="randomSubsetBtn" class="btn-subaction" title="Seleccionar 16 Pokémon al azar">
+        <svg class="icon-svg-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="16 3 21 3 21 8"></polyline>
+          <line x1="4" y1="20" x2="21" y2="3"></line>
+          <polyline points="21 16 21 21 16 21"></polyline>
+          <line x1="15" y1="15" x2="21" y2="21"></line>
+          <line x1="4" y1="4" x2="9" y2="9"></line>
+        </svg>
+        <span>16 ALEATORIOS</span>
+      </button>
+
+      <button id="resetAllPokemonBtn" class="btn-subaction" title="Restablecer los 400 Pokémon">
+        <svg class="icon-svg-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="23 4 23 10 17 10"></polyline>
+          <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+        </svg>
+        <span>VER LOS 400</span>
+      </button>
+
+      <span id="counterBadge" class="badge-counter">400 POKÉMON</span>
+    </div>
+  </div>
+
+  <!-- Contenedor Principal -->
+  <main>
+    <!-- Live Tracker -->
+    <div class="live-tracker-card">
+      <img id="liveTrackerImg" src="assets/sprites/906.png" alt="Sprite" class="live-tracker-thumb">
+      <div class="tracker-info">
+        <span class="live-tracker-title">APUNTANDO A:</span>
+        <strong id="liveTrackerName" class="live-tracker-name">#001 Sprigatito</strong>
+      </div>
+      <div id="liveTrackerBadges" class="badges-container"></div>
+    </div>
+
+    <!-- Ruleta -->
+    <div class="roulette-wrapper">
+      <div class="pointer-container">
+        <div id="pointerTriangle" class="pointer-triangle"></div>
+        <div class="pointer-pin"></div>
+      </div>
+
+      <canvas id="wheelCanvas" width="500" height="500"></canvas>
+
+      <button id="centerSpinHub" class="center-spin-hub" title="Girar ruleta">
+        <img src="assets/pokeball.svg" alt="Girar" class="hub-icon">
+        <span class="hub-text">GIRAR</span>
+      </button>
+    </div>
+
+    <!-- Panel de Giro -->
+    <div class="controls-panel">
+      <button id="spinBtn" class="btn-spin-large">
+        <svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor">
+          <polygon points="5 3 19 12 5 21 5 3"></polygon>
+        </svg>
+        <span>GIRAR RULETA</span>
+      </button>
+      <div class="keyboard-hint">
+        <span>TECLA DE ACCESO: <kbd class="kbd">ESPACIO</kbd> O <kbd class="kbd">ENTER</kbd></span>
+      </div>
+    </div>
+
+    <!-- Panel de Seguimiento Shiny (Matriz de Paldea y Capturados) -->
+    <section class="status-dashboard">
+      <div class="dashboard-tabs">
+        <button id="tabPendingBtn" class="tab-btn active">
+          MATRIZ PALDEA 400 (<span id="pendingCount">0</span> PENDIENTES)
+        </button>
+        <button id="tabCapturedBtn" class="tab-btn">
+          CAPTURADOS SHINY (<span id="capturedCount">0</span>)
+        </button>
+        <button id="tabHistoryBtn" class="tab-btn">
+          HISTORIAL RECIENTE
+        </button>
+      </div>
+
+      <!-- Vista 1: Matriz Gigante de Paldea (400) & Pendientes -->
+      <div id="pendingView" class="dashboard-view active">
+        <div class="matrix-toolbar">
+          <div class="matrix-stats-bar">
+            <span class="matrix-stat-pill">
+              <span class="stat-label">CAPTURADOS:</span>
+              <strong id="matrixCapturedCount">0</strong>/400
+              <span id="matrixCapturedPercent" class="stat-percentage">(0%)</span>
+            </span>
+            <span class="matrix-stat-pill is-highlight" id="matrixLastSpinPill" title="Pendientes del giro anterior">
+              <span class="stat-indicator-dot"></span>
+              <span class="stat-label">GIRO ANTERIOR:</span>
+              <strong id="matrixLastSpinCount">0</strong>
+            </span>
+            <span class="matrix-stat-pill">
+              <span class="stat-label">TOTAL PENDIENTES:</span>
+              <strong id="matrixPendingCount">0</strong>
+            </span>
+          </div>
+
+          <div class="matrix-filter-controls">
+            <div class="matrix-search-box">
+              <svg class="icon-svg-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <input type="text" id="matrixSearchInput" placeholder="BUSCAR EN LA MATRIZ (NOMBRE, #, TIPO)...">
+              <button id="matrixClearSearchBtn" class="btn-clear-search" title="Limpiar búsqueda" style="display: none;">
+                <svg class="icon-svg-xs" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+              </button>
+            </div>
+
+            <div class="matrix-filter-chips">
+              <button class="matrix-chip active" data-matrix-filter="all">TODOS (400)</button>
+              <button class="matrix-chip chip-last-spin" data-matrix-filter="last-spin">
+                <span>GIRO ANTERIOR</span>
+                <span id="chipLastSpinBadge" class="chip-badge">0</span>
+              </button>
+              <button class="matrix-chip" data-matrix-filter="pending">
+                <span>PENDIENTES</span>
+                <span id="chipPendingBadge" class="chip-badge">0</span>
+              </button>
+              <button class="matrix-chip" data-matrix-filter="captured">
+                <span>CAPTURADOS</span>
+                <span id="chipCapturedBadge" class="chip-badge">0</span>
+              </button>
+              <button class="matrix-chip" data-matrix-filter="uncaptured">POR CAPTURAR</button>
+            </div>
+          </div>
+        </div>
+
+        <div id="matrixGrid" class="matrix-grid">
+          <!-- Rellenado dinámicamente con JS (400 Pokémon) -->
+        </div>
+      </div>
+
+      <!-- Vista 2: Capturados Shiny -->
+      <div id="capturedView" class="dashboard-view">
+        <div id="capturedList" class="items-grid-list">
+          <!-- Rellenado dinámicamente con JS -->
+        </div>
+      </div>
+
+      <!-- Vista 3: Historial -->
+      <div id="historyView" class="dashboard-view">
+        <div id="historyList" class="history-chips">
+          <!-- Rellenado dinámicamente con JS -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Espacio Publicitario Cumple Políticas AdSense (Etiquetado y Separado de Controles) -->
+  <section class="ad-placement-section" aria-label="Espacio Publicitario">
+    <div class="ad-header-label">
+      <span class="ad-label-tag">PUBLICIDAD</span>
+      <span class="ad-label-hint">Anuncios de la red Google / Patrocinados</span>
+    </div>
+    <div class="ad-slot-box" id="adBannerBottom">
+      <div class="ad-placeholder-content">
+        <span class="ad-placeholder-badge">ESPACIO PUBLICITARIO (728x90 / RESPONSIVE)</span>
+        <p class="ad-placeholder-text">Contenedor preparado para Google AdSense u otras redes publicitarias.</p>
+        <span class="ad-placeholder-code">Configurado con ads.txt y compatible con políticas de tráfico limpio</span>
+      </div>
+      <!-- Snippet de Google AdSense cuando la cuenta esté activa:
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-0000000000000000"
+           data-ad-slot="0000000000"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      -->
+    </div>
+  </section>
+
+  <!-- Pie de Página Legal y Cumplimiento Normativo -->
+  <footer class="app-footer">
+    <div class="footer-inner">
+      <div class="footer-disclaimer">
+        <p class="disclaimer-lead">
+          <strong>AVISO DE DERECHOS DE AUTOR:</strong> Shiny Roulette es una herramienta independiente desarrollada por fanáticos con propósitos educativos y de referencia para la comunidad. Pokémon y todos los nombres de Pokémon, sprites, marcas comerciales y logotipos asociados son propiedad de <strong>Nintendo</strong>, <strong>Creatures Inc.</strong> y <strong>Game Freak Inc.</strong> Este proyecto no está respaldado, patrocinado ni afiliado de ninguna manera con Nintendo o The Pokémon Company.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <button type="button" class="btn-footer-link" id="footerBtnCopyright">Aviso Legal & DMCA</button>
+        <span class="footer-sep">·</span>
+        <button type="button" class="btn-footer-link" id="footerBtnPrivacy">Política de Privacidad</button>
+        <span class="footer-sep">·</span>
+        <button type="button" class="btn-footer-link" id="footerBtnTerms">Términos de Servicio</button>
+        <span class="footer-sep">·</span>
+        <button type="button" class="btn-footer-link" id="footerBtnCookies">Cookies</button>
+      </div>
+
+      <div class="footer-copy">
+        <span>&copy; 2026 Shiny Roulette · Herramienta no oficial de utilidad para Shiny Hunting</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal de Selección de Línea Evolutiva y Resultado -->
+  <div id="winnerModal" class="modal-overlay">
+    <div class="modal-box winner-card">
+      <div id="modalCardTag" class="modal-card-tag">OBJETIVO SHINY RULETA</div>
+      <div class="winner-image-container">
+        <img id="winnerImg" src="assets/pokeball.svg" alt="Pokémon" onerror="this.src='assets/pokeball.svg'">
+      </div>
+      <div id="winnerDexNum" class="winner-dex-num">Nº PALDEA: #001 · NAC: #0906</div>
+      <h2 id="winnerTitle" class="winner-title">Sprigatito</h2>
+      <div id="winnerTypes" class="winner-types-container"></div>
+      
+      <!-- Sección de Línea Evolutiva Dinámica -->
+      <div id="evolutionLineSection" class="evolution-line-section">
+        <div class="evo-section-header">
+          <span class="evo-section-title">LÍNEA EVOLUTIVA</span>
+          <span class="evo-section-desc">Selecciona los que capturaste:</span>
+        </div>
+        <div id="evolutionLineContainer" class="evolution-grid">
+          <!-- Rellenado dinámicamente con JS -->
+        </div>
+      </div>
+
+      <div class="winner-actions-group">
+        <!-- Botón destacado: Marcar seleccionados como Shiny -->
+        <button id="winnerCaptureShinyBtn" class="btn-shiny-capture">
+          <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2l2.4 5.6L20 10l-5.6 2.4L12 18l-2.4-5.6L4 10l5.6-2.4z"></path>
+          </svg>
+          <span id="winnerCaptureShinyText">MARCAR SELECCIONADOS COMO SHINY</span>
+        </button>
+
+        <!-- Opciones normales cuando proviene de la ruleta -->
+        <div id="winnerWheelActions" class="winner-secondary-actions">
+          <button id="winnerSpinAgainBtn" class="btn-modal-secondary">
+            GIRAR DE NUEVO (PENDIENTE)
+          </button>
+          <button id="winnerAcceptBtn" class="btn-modal-secondary">
+            GUARDAR PENDIENTE Y CERRAR
+          </button>
+        </div>
+
+        <!-- Opciones cuando proviene de la lista de pendientes -->
+        <div id="winnerPendingActions" class="winner-secondary-actions" style="display: none;">
+          <button id="winnerUnpendModalBtn" class="btn-modal-secondary btn-modal-unpend" type="button">
+            DESMARCAR DE PENDIENTE
+          </button>
+          <button id="winnerCancelPendingBtn" class="btn-modal-secondary" type="button">
+            CANCELAR
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de Catálogo Pokédex -->
+  <div id="settingsModal" class="modal-overlay">
+    <div class="modal-box pokedex-modal">
+      <div class="modal-header">
+        <h2>CATÁLOGO POKÉDEX DE PALDEA (400)</h2>
+        <button id="closeSettingsBtn" class="modal-close" title="Cerrar">
+          <svg class="icon-svg-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-search-wrapper">
+        <input type="text" id="pokedexSearch" class="search-input" placeholder="BUSCAR POR NOMBRE, NÚMERO O TIPO...">
+      </div>
+      <div class="modal-body">
+        <div id="itemsListContainer" class="items-list-container">
+          <!-- Rellenado con JS -->
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button id="closeSettingsFooterBtn" class="btn-modal-secondary">CERRAR</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de Cuenta / Login & Sign In / Guardado en la Nube -->
+  <div id="authModal" class="modal-overlay">
+    <div class="modal-box auth-modal">
+      <div class="modal-header">
+        <div class="auth-modal-title-group">
+          <h2 id="authModalTitle">GESTIÓN DE CUENTA</h2>
+          <span class="auth-cloud-badge" id="authCloudStatusBadge">MODO LOCAL (INVITADO)</span>
+        </div>
+        <button id="closeAuthBtn" class="modal-close" title="Cerrar">
+          <svg class="icon-svg-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Pestañas para usuario no autenticado -->
+      <div id="authGuestTabs" class="auth-tabs">
+        <button id="tabAuthLogin" class="auth-tab-btn active" type="button">INICIAR SESIÓN</button>
+        <button id="tabAuthRegister" class="auth-tab-btn" type="button">CREAR CUENTA</button>
+      </div>
+
+      <div class="modal-body auth-modal-body">
+        <!-- Notificación de estado / Mensajes de error o éxito -->
+        <div id="authAlertBox" class="auth-alert" style="display: none;"></div>
+
+        <!-- Vista 1: Formulario de Login -->
+        <form id="loginForm" class="auth-form active">
+          <div class="form-group">
+            <label for="loginIdentifier" class="form-label">USUARIO O CORREO:</label>
+            <input type="text" id="loginIdentifier" class="form-input" placeholder="Ingresa tu usuario o correo" required autocomplete="username">
+          </div>
+          <div class="form-group">
+            <label for="loginPassword" class="form-label">CONTRASEÑA:</label>
+            <input type="password" id="loginPassword" class="form-input" placeholder="Ingresa tu contraseña" required autocomplete="current-password">
+          </div>
+          <div class="form-actions">
+            <button type="submit" id="submitLoginBtn" class="btn-primary-action">
+              <span>INICIAR SESIÓN</span>
+            </button>
+          </div>
+          <div class="auth-form-footer">
+            <p>¿Aún no tienes cuenta? <button type="button" id="switchToRegisterLink" class="btn-text-link">Regístrate aquí</button></p>
+          </div>
+        </form>
+
+        <!-- Vista 2: Formulario de Registro / Sign In -->
+        <form id="registerForm" class="auth-form">
+          <div class="form-group">
+            <label for="registerUsername" class="form-label">NOMBRE DE USUARIO:</label>
+            <input type="text" id="registerUsername" class="form-input" placeholder="Ej. AshPaldea" required minlength="3" maxlength="30" autocomplete="username">
+            <span class="form-hint">Mínimo 3 caracteres (letras, números, guiones).</span>
+          </div>
+          <div class="form-group">
+            <label for="registerEmail" class="form-label">CORREO ELECTRÓNICO (OPCIONAL):</label>
+            <input type="email" id="registerEmail" class="form-input" placeholder="entrenador@ejemplo.com" autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label for="registerPassword" class="form-label">CONTRASEÑA:</label>
+            <input type="password" id="registerPassword" class="form-input" placeholder="Mínimo 6 caracteres" required minlength="6" autocomplete="new-password">
+          </div>
+          <div class="form-group">
+            <label for="registerConfirmPassword" class="form-label">CONFIRMAR CONTRASEÑA:</label>
+            <input type="password" id="registerConfirmPassword" class="form-input" placeholder="Repite tu contraseña" required minlength="6" autocomplete="new-password">
+          </div>
+          <div class="form-checkbox-group">
+            <label class="checkbox-container">
+              <input type="checkbox" id="registerSyncCheck" checked>
+              <span class="checkbox-text">Sincronizar mi progreso actual de invitado con esta nueva cuenta</span>
+            </label>
+          </div>
+          <div class="form-actions">
+            <button type="submit" id="submitRegisterBtn" class="btn-primary-action">
+              <span>CREAR CUENTA Y GUARDAR</span>
+            </button>
+          </div>
+          <div class="auth-form-footer">
+            <p>¿Ya tienes cuenta? <button type="button" id="switchToLoginLink" class="btn-text-link">Inicia sesión</button></p>
+          </div>
+        </form>
+
+        <!-- Vista 3: Perfil y Gestión de Cuenta Conectada -->
+        <div id="profileView" class="auth-profile-view" style="display: none;">
+          <div class="profile-card">
+            <div class="profile-header-info">
+              <div class="profile-avatar">
+                <svg class="icon-svg-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+              </div>
+              <div class="profile-user-details">
+                <strong id="profileUsername" class="profile-username">ENTRENADOR</strong>
+                <span id="profileEmail" class="profile-email">sin correo</span>
+                <span class="profile-status-badge">★ CUENTA EN LA NUBE ACTIVA</span>
+              </div>
+            </div>
+
+            <div class="profile-stats-grid">
+              <div class="profile-stat-box">
+                <span class="stat-number" id="profileCapturedCount">0</span>
+                <span class="stat-name">CAPTURADOS EN NUBE</span>
+              </div>
+              <div class="profile-stat-box">
+                <span class="stat-number" id="profilePendingCount">0</span>
+                <span class="stat-name">PENDIENTES EN NUBE</span>
+              </div>
+            </div>
+
+            <div class="profile-sync-info">
+              <span class="sync-info-label">ÚLTIMA SINCRONIZACIÓN:</span>
+              <strong id="profileLastSync" class="sync-info-time">Recién iniciada</strong>
+            </div>
+
+            <div class="profile-actions">
+              <button id="profileSyncNowBtn" class="btn-primary-action btn-sync">
+                <svg class="icon-svg-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M23 4v6h-6"></path>
+                  <path d="M1 20v-6h6"></path>
+                  <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+                </svg>
+                <span>FORZAR SINCRONIZACIÓN AHORA</span>
+              </button>
+
+              <button id="profileLogoutBtn" class="btn-modal-secondary btn-logout">
+                <svg class="icon-svg-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                  <polyline points="16 17 21 12 16 7"></polyline>
+                  <line x1="21" y1="12" x2="9" y2="12"></line>
+                </svg>
+                <span>CERRAR SESIÓN</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button id="closeAuthFooterBtn" class="btn-modal-secondary">CERRAR</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Legal, Copyright, Privacidad y Términos -->
+  <div id="legalModal" class="modal-overlay">
+    <div class="modal-box legal-modal">
+      <div class="modal-header">
+        <div class="auth-modal-title-group">
+          <h2 id="legalModalTitle">AVISO LEGAL & POLÍTICAS</h2>
+          <span class="auth-cloud-badge">CUMPLIMIENTO NORMATIVO</span>
+        </div>
+        <button id="closeLegalBtn" class="modal-close" title="Cerrar">
+          <svg class="icon-svg-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Pestañas del Modal Legal -->
+      <div class="auth-tabs legal-tabs">
+        <button id="tabLegalCopyright" class="auth-tab-btn active" type="button">COPYRIGHT & DMCA</button>
+        <button id="tabLegalPrivacy" class="auth-tab-btn" type="button">PRIVACIDAD (ADSENSE)</button>
+        <button id="tabLegalTerms" class="auth-tab-btn" type="button">TÉRMINOS</button>
+        <button id="tabLegalCookies" class="auth-tab-btn" type="button">COOKIES</button>
+      </div>
+
+      <div class="modal-body legal-modal-body">
+        <!-- Panel 1: Copyright & DMCA -->
+        <div id="panelLegalCopyright" class="legal-panel active">
+          <h3>Propiedad Intelectual y Atribución de Marcas</h3>
+          <p><strong>Pokémon</strong>, los nombres de los personajes, Pokéball, Pokédex, sprites, ilustraciones oficiales, sonidos y toda la propiedad intelectual relacionada pertenecen a <strong>Nintendo Co., Ltd.</strong>, <strong>Creatures Inc.</strong> y <strong>Game Freak Inc.</strong></p>
+          <p><strong>Shiny Roulette</strong> es una herramienta digital de utilidad independiente y comunitaria creada por fanáticos sin afiliación, patrocinio ni respaldo oficial por parte de Nintendo o The Pokémon Company.</p>
+          
+          <h3>Uso Legítimo (Fair Use)</h3>
+          <p>El uso de nombres y activos gráficos en este sitio web se acoge a las doctrinas internacionales de <strong>Uso Legítimo (Fair Use / 17 U.S.C. § 107)</strong> con propósitos estrictamente recreativos, de referencia documental e interactividad comunitaria para jugadores de Pokémon Escarlata y Púrpura.</p>
+
+          <h3>Procedimiento de Notificación y Retirada DMCA</h3>
+          <p>Si eres titular de derechos de autor o representas legalmente a uno y consideras que algún elemento de este sitio vulnera tus derechos, te solicitamos contactar directamente para su resolución inmediata:</p>
+          <div class="legal-contact-box">
+            <span>CORREO DE CONTACTO LEGAL:</span>
+            <strong>dmca@shinyroulette.local</strong>
+            <small>Procedemos con la revisión y remoción en un plazo máximo de 24 a 48 horas sin requerimientos litigiosos.</small>
+          </div>
+        </div>
+
+        <!-- Panel 2: Política de Privacidad (Cumple Google AdSense, GDPR y CCPA) -->
+        <div id="panelLegalPrivacy" class="legal-panel">
+          <h3>Política de Privacidad y Redes Publicitarias</h3>
+          <p>Esta política detalla cómo se gestiona la información y cómo operan los proveedores publicitarios asociados en este sitio web:</p>
+
+          <h4>1. Publicidad de Terceros y Cookies de Google</h4>
+          <p>Proveedores externos, incluido Google, utilizan cookies para publicar anuncios basados en las visitas anteriores de un usuario a este sitio web o a otros sitios web en Internet.</p>
+          <p>El uso de cookies de publicidad por parte de Google (como la cookie DART) permite a Google y a sus socios publicar anuncios basados en las visitas realizadas a este y otros sitios.</p>
+          <p>Los usuarios pueden inhabilitar la publicidad personalizada consultando la <a href="https://adssettings.google.com" target="_blank" rel="noopener" class="legal-link">Configuración de Anuncios de Google</a> o el portal <a href="https://aboutads.info" target="_blank" rel="noopener" class="legal-link">aboutads.info</a>.</p>
+
+          <h4>2. Datos Almacenados</h4>
+          <p>Shiny Roulette solo almacena datos esenciales para el funcionamiento del juego (progreso de capturas shiny, modo claro/oscuro y preferencias de audio) en tu almacenamiento local (<code>localStorage</code>) y, si decides registrarte, en una base de datos segura protegida con contraseñas cifradas (bcrypt) y tokens JWT. No vendemos, comercializamos ni cedemos información personal a terceros.</p>
+        </div>
+
+        <!-- Panel 3: Términos de Servicio -->
+        <div id="panelLegalTerms" class="legal-panel">
+          <h3>Términos y Condiciones de Uso</h3>
+          <p>Al utilizar Shiny Roulette, aceptas los siguientes términos:</p>
+          <ul>
+            <li>El servicio se proporciona «tal cual» (AS IS), sin garantías explícitas de disponibilidad ininterrumpida.</li>
+            <li>El usuario es responsable de la custodia de sus credenciales si decide crear una cuenta.</li>
+            <li>Queda prohibido el uso de herramientas automatizadas maliciosas destinadas a saturar los servidores o manipular indebidamente las solicitudes a la API.</li>
+          </ul>
+        </div>
+
+        <!-- Panel 4: Gestión de Cookies -->
+        <div id="panelLegalCookies" class="legal-panel">
+          <h3>Configuración y Consentimiento de Cookies</h3>
+          <p>A continuación puedes revisar los tipos de cookies utilizados:</p>
+          <div class="cookie-types-list">
+            <div class="cookie-type-item">
+              <strong>Cookies Técnicas / Esenciales:</strong>
+              <span>Necesarias para recordar el tema día/noche, el estado del sonido y la sesión activa del usuario. Están siempre activas.</span>
+            </div>
+            <div class="cookie-type-item">
+              <strong>Cookies Publicitarias y de Análisis:</strong>
+              <span>Utilizadas por redes de publicidad (como Google AdSense) para mostrar anuncios relevantes y medir el rendimiento del tráfico.</span>
+            </div>
+          </div>
+          <div class="legal-actions-group">
+            <button type="button" id="toggleAdCookiesBtn" class="btn-primary-action">
+              HABILITAR / INHABILITAR ANUNCIOS PERSONALIZADOS
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button id="closeLegalFooterBtn" class="btn-modal-secondary">CERRAR</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Banner de Consentimiento de Cookies (Requerido por Google AdSense, GDPR y CCPA) -->
+  <div id="cookieConsentBanner" class="cookie-banner" style="display: none;">
+    <div class="cookie-content">
+      <div class="cookie-text">
+        <strong>CONSENTIMIENTO DE PRIVACIDAD Y PUBLICIDAD</strong>
+        <p>Utilizamos cookies para personalizar anuncios, analizar el tráfico y recordar tus preferencias. Puedes aceptar todas o revisar la <button type="button" class="btn-text-link" id="cookiePrivacyLink">Política de Privacidad y Aviso Legal</button>.</p>
+      </div>
+      <div class="cookie-actions">
+        <button type="button" id="acceptCookiesBtn" class="btn-primary-action btn-cookie-action">ACEPTAR TODAS</button>
+        <button type="button" id="rejectCookiesBtn" class="btn-modal-secondary btn-cookie-action">SÓLO ESENCIALES</button>
+      </div>
+    </div>
+  </div>
+
+  <canvas id="confettiCanvas"></canvas>
+
+  <script src="paldea_data.js"></script>
+  <script src="api.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

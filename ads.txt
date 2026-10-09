@@ -1,0 +1,4 @@
+# ads.txt — Archivo de autorización de vendedores de publicidad (IAB Tech Lab)
+# Reemplaza 'pub-0000000000000000' con tu ID de editor de Google AdSense obtenido en https://adsense.google.com
+
+google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
