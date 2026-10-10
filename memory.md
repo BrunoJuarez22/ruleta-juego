@@ -212,6 +212,7 @@ ruleta-juego/
     - **Social Media & Open Graph:**
       - Open Graph: `og:site_name`, `og:title`, `og:description`, `og:type: website`, `og:url`, `og:image` y `og:locale: es_ES`.
       - Twitter Cards: `twitter:card: summary`, `twitter:title`, `twitter:description`, `twitter:image`.
+    - **Verificación de Google Search Console:** Etiqueta `<meta name="google-site-verification" content="-FtLYsysW5d6oZYMjUdbwnlk8n7ugT7FrNaqd-8XGmY">` integrada en el `<head>` para validación instantánea de propiedad en Search Console.
     - **Archivos de Indexación en la Raíz:**
       - `robots.txt`: Configurado para permitir indexación global (`Allow: /`), bloquear endpoints privados de API (`Disallow: /api/`), y declarar la ruta al sitemap (`Sitemap: https://shiny-roulette.fly.dev/sitemap.xml`).
       - `sitemap.xml`: Archivo XML conforme al estándar sitemaps.org con frecuencia de cambio diaria y prioridad máxima 1.0 para indexación rápida.
