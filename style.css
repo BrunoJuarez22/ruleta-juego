@@ -2194,10 +2194,13 @@ main {
    ========================================================================== */
 
 .ad-placement-section {
+  display: none !important;
   width: 100%;
   max-width: 1100px;
-  margin: 24px auto 16px;
-  padding: 0 16px;
+  margin: 0;
+  padding: 0;
+  height: 0;
+  overflow: hidden;
   box-sizing: border-box;
 }
 

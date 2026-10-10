@@ -217,6 +217,12 @@ ruleta-juego/
       - `robots.txt`: Configurado para permitir indexación global (`Allow: /`), bloquear endpoints privados de API (`Disallow: /api/`), y declarar la ruta al sitemap (`Sitemap: https://shiny-roulette.fly.dev/sitemap.xml`).
       - `sitemap.xml`: Archivo XML conforme al estándar sitemaps.org con frecuencia de cambio diaria y prioridad máxima 1.0 para indexación rápida.
 
+23. **Ocultación Limpia del Bloque Publicitario (Enfoque en Experiencia y Crecimiento de Usuarios):**
+    - **Visibilidad y Espacio Cero:** Se ocultó el contenedor `.ad-placement-section` mediante `display: none !important; margin: 0; padding: 0; height: 0; overflow: hidden;` tanto en `style.css` como con estilo inline en `index.html`.
+    - **Preservación de Estructura Técnica:** Todo el marcado HTML, IDs (`#adBannerBottom`), etiquetas semánticas y comentarios para los scripts de Google AdSense se mantienen 100% intactos en el código fuente para una activación instantánea a futuro cuando la audiencia esté consolidada.
+    - **Banner de Cookies Neutralizado:** Se suavizó la redacción del banner de consentimiento para enfocarlo en "Privacidad y Preferencias" (guardado de capturas, analítica y rendimiento) en lugar de mencionar explícitamente publicidad.
+    - **Archivos Legales y de Monetización Preservados:** `ads.txt` en la raíz y las políticas legales en `#legalModal` permanecen completamente operativos para salvaguardar la cuenta y el cumplimiento normativo.
+
 ---
 
 ## 4. Estructuras de Datos y Persistencia
