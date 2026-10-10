@@ -199,6 +199,23 @@ ruleta-juego/
       - Buscador global y de matriz: Soporte para buscar `escarlata`, `purpura`, `púrpura` o `ambos`.
     - **Estilo Visual:** Cero emojis; puntos vectoriales CSS circulares (`.game-dot`), bordes rectos nítidos (2-3px), paleta oficial (rojo escarlata `#e11d48`, violeta púrpura `#7c3aed`, neutro slate `#64748b`) con soporte impecable en Modo Día y Modo Noche.
 
+22. **Optimización Integral de SEO, Google Search Console y Posicionamiento de Marca:**
+    - **Nombre de Marca y Título Canónico:** Establecimiento estricto de `<title>Shiny Roulette</title>` en lugar de títulos largos para consolidar el nombre de la página en el índice de Google y fragmentos de búsqueda.
+    - **Datos Estructurados Schema.org (JSON-LD):**
+      - `WebSite` schema (`@type: WebSite` con `name: "Shiny Roulette"` y alias `alternateName: ["ShinyRoulette", "Shiny Roulette Paldea"]`) conforme a la especificación oficial de Google para Site Names en resultados de búsqueda.
+      - `WebApplication` schema (`@type: WebApplication`) especificando categoría `GameApplication`, requisitos HTML5/JS y costo gratuito.
+    - **Metadatos y Rastreo:**
+      - Metadatos primarios: `description`, `keywords`, `author`, `application-name`, `apple-mobile-web-app-title`, `theme-color: #dc2626`.
+      - Directivas de rastreo: `<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">` y `googlebot`.
+      - Etiqueta placeholder identificada para verificación por meta tag de Google Search Console (`<meta name="google-site-verification" content="...">`).
+      - URL Canónica: `<link rel="canonical" href="https://shiny-roulette.fly.dev/">`.
+    - **Social Media & Open Graph:**
+      - Open Graph: `og:site_name`, `og:title`, `og:description`, `og:type: website`, `og:url`, `og:image` y `og:locale: es_ES`.
+      - Twitter Cards: `twitter:card: summary`, `twitter:title`, `twitter:description`, `twitter:image`.
+    - **Archivos de Indexación en la Raíz:**
+      - `robots.txt`: Configurado para permitir indexación global (`Allow: /`), bloquear endpoints privados de API (`Disallow: /api/`), y declarar la ruta al sitemap (`Sitemap: https://shiny-roulette.fly.dev/sitemap.xml`).
+      - `sitemap.xml`: Archivo XML conforme al estándar sitemaps.org con frecuencia de cambio diaria y prioridad máxima 1.0 para indexación rápida.
+
 ---
 
 ## 4. Estructuras de Datos y Persistencia

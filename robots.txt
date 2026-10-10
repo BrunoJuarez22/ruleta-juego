@@ -1,0 +1,6 @@
+# robots.txt para Shiny Roulette (https://shiny-roulette.fly.dev)
+User-agent: *
+Allow: /
+Disallow: /api/
+
+Sitemap: https://shiny-roulette.fly.dev/sitemap.xml
