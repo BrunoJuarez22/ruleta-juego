@@ -335,8 +335,186 @@ main {
 .type-Normal { background-color: #78716c; }
 
 /* ==========================================================================
-   RULETA & AGUJA
+   INSIGNIAS Y DISTINTIVOS DE EDICIÓN / JUEGO (ESCARLATA & PÚRPURA)
    ========================================================================== */
+
+.game-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 6px;
+  border-radius: 2px;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  vertical-align: middle;
+  line-height: 1.2;
+}
+
+.game-badge-mini {
+  padding: 1px 4px;
+  font-size: 0.62rem;
+  gap: 3px;
+}
+
+.game-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 1px;
+  flex-shrink: 0;
+}
+
+/* Escarlata: Rojo vivo / escarlata oficial */
+.game-badge-scarlet {
+  background-color: rgba(225, 29, 72, 0.12);
+  color: #be123c;
+  border: 1px solid #fda4af;
+}
+
+.game-dot-scarlet {
+  background-color: #e11d48;
+}
+
+/* Púrpura: Violeta / uva oficial */
+.game-badge-violet {
+  background-color: rgba(124, 58, 237, 0.12);
+  color: #6d28d9;
+  border: 1px solid #c4b5fd;
+}
+
+.game-dot-violet {
+  background-color: #7c3aed;
+}
+
+/* Ambos: Slate / Neutro de alto contraste */
+.game-badge-both {
+  background-color: rgba(100, 116, 139, 0.09);
+  color: #475569;
+  border: 1px solid #cbd5e1;
+}
+
+.game-dot-both {
+  background-color: #64748b;
+}
+
+/* Modo Noche para insignias de juego */
+[data-theme="dark"] .game-badge-scarlet {
+  background-color: rgba(225, 29, 72, 0.22);
+  color: #fb7185;
+  border-color: rgba(244, 63, 94, 0.45);
+}
+
+[data-theme="dark"] .game-badge-violet {
+  background-color: rgba(124, 58, 237, 0.22);
+  color: #c4b5fd;
+  border-color: rgba(168, 85, 247, 0.45);
+}
+
+[data-theme="dark"] .game-badge-both {
+  background-color: rgba(100, 116, 139, 0.2);
+  color: #94a3b8;
+  border-color: rgba(148, 163, 184, 0.35);
+}
+
+/* Banner de Juego en el Modal Ganador */
+.winner-game-banner {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 3px;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.winner-game-banner.winner-game-scarlet {
+  background: linear-gradient(135deg, rgba(225, 29, 72, 0.16) 0%, rgba(225, 29, 72, 0.08) 100%);
+  color: #be123c;
+  border: 1px solid #fda4af;
+}
+
+.winner-game-banner.winner-game-violet {
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.16) 0%, rgba(124, 58, 237, 0.08) 100%);
+  color: #6d28d9;
+  border: 1px solid #c4b5fd;
+}
+
+.winner-game-banner.winner-game-both {
+  background: var(--bg-surface);
+  color: var(--text-muted);
+  border: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .winner-game-banner.winner-game-scarlet {
+  background: linear-gradient(135deg, rgba(225, 29, 72, 0.26) 0%, rgba(225, 29, 72, 0.12) 100%);
+  color: #fb7185;
+  border-color: rgba(244, 63, 94, 0.5);
+}
+
+[data-theme="dark"] .winner-game-banner.winner-game-violet {
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.26) 0%, rgba(124, 58, 237, 0.12) 100%);
+  color: #c4b5fd;
+  border-color: rgba(168, 85, 247, 0.5);
+}
+
+/* Chips de filtro de juego en la matriz */
+.matrix-chip.chip-game-scarlet {
+  border-color: rgba(225, 29, 72, 0.35);
+}
+.matrix-chip.chip-game-scarlet:hover {
+  border-color: #e11d48;
+  color: #e11d48;
+}
+.matrix-chip.chip-game-scarlet.active {
+  background-color: #e11d48;
+  border-color: #e11d48;
+  color: #ffffff;
+}
+
+.matrix-chip.chip-game-violet {
+  border-color: rgba(124, 58, 237, 0.35);
+}
+.matrix-chip.chip-game-violet:hover {
+  border-color: #7c3aed;
+  color: #7c3aed;
+}
+.matrix-chip.chip-game-violet.active {
+  background-color: #7c3aed;
+  border-color: #7c3aed;
+  color: #ffffff;
+}
+
+.matrix-chip.chip-game-both:hover {
+  border-color: var(--text-main);
+  color: var(--text-main);
+}
+.matrix-chip.chip-game-both.active {
+  background-color: #475569;
+  border-color: #475569;
+  color: #ffffff;
+}
+
+.matrix-header-left {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.shiny-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ==========================================
+   RULETA & AGUJA
+   ========================================== */
 
 .roulette-wrapper {
   position: relative;

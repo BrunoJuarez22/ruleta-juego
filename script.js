@@ -39,6 +39,66 @@ const ALL_PALDEA_POKEMON = (window.PALDEA_POKEMON || []).map((p, index) => {
 const PALDEA_BY_NUM = new Map();
 ALL_PALDEA_POKEMON.forEach(p => PALDEA_BY_NUM.set(p.numPal, p));
 
+// Conjuntos oficiales de exclusivos de Paldea
+const SCARLET_EXCLUSIVE_SET = new Set([
+  '143', '144', '166', '226', '227', '313', '316', '317', '318', '319',
+  '337', '338', '370', '371', '372', '376', '377', '378', '379', '380',
+  '381', '397', '399'
+]);
+
+const VIOLET_EXCLUSIVE_SET = new Set([
+  '114', '115', '139', '140', '167', '276', '277', '278', '305', '306',
+  '307', '314', '320', '339', '340', '382', '383', '384', '385', '386',
+  '387', '398', '400'
+]);
+
+function getPokemonGame(pokemon) {
+  if (!pokemon) return 'both';
+  if (pokemon.game) return pokemon.game;
+  const num = pokemon.numPal;
+  if (SCARLET_EXCLUSIVE_SET.has(num)) return 'scarlet';
+  if (VIOLET_EXCLUSIVE_SET.has(num)) return 'violet';
+  return 'both';
+}
+
+function getGameBadgeHtml(pokemon, variant = 'normal') {
+  const game = getPokemonGame(pokemon);
+  let shortLabel = 'AMBOS';
+  let fullLabel = 'AMBOS';
+  let title = 'Disponible en Pokémon Escarlata y Púrpura';
+
+  if (game === 'scarlet') {
+    shortLabel = 'ESC';
+    fullLabel = 'ESCARLATA';
+    title = 'Exclusivo de Pokémon Escarlata';
+  } else if (game === 'violet') {
+    shortLabel = 'PÚR';
+    fullLabel = 'PÚRPURA';
+    title = 'Exclusivo de Pokémon Púrpura';
+  }
+
+  const label = (variant === 'mini') ? shortLabel : fullLabel;
+
+  return `<span class="game-badge game-badge-${game} ${variant === 'mini' ? 'game-badge-mini' : ''}" title="${title}">
+    <span class="game-dot game-dot-${game}"></span>
+    <span class="game-text">${label}</span>
+  </span>`;
+}
+
+function getWinnerGameBannerHtml(pokemon) {
+  const game = getPokemonGame(pokemon);
+  let text = 'DISPONIBLE EN AMBOS JUEGOS (ESCARLATA & PÚRPURA)';
+  if (game === 'scarlet') {
+    text = '★ EXCLUSIVO DE POKÉMON ESCARLATA';
+  } else if (game === 'violet') {
+    text = '★ EXCLUSIVO DE POKÉMON PÚRPURA';
+  }
+  return `<div class="winner-game-banner winner-game-${game}">
+    <span class="game-dot game-dot-${game}"></span>
+    <span>${text}</span>
+  </div>`;
+}
+
 let items = [...ALL_PALDEA_POKEMON];
 let currentRotation = 0;
 let isSpinning = false;
@@ -499,9 +559,12 @@ function updateLivePointerTracker(rotationDegrees) {
       liveTrackerImg.src = p.sprite;
     }
 
-    liveTrackerBadges.innerHTML = (p.types || []).map(t => 
+    const gameBadge = getGameBadgeHtml(p, 'normal');
+    const typeBadges = (p.types || []).map(t => 
       `<span class="type-badge type-${t}">${t}</span>`
     ).join('');
+
+    liveTrackerBadges.innerHTML = `${gameBadge}${typeBadges}`;
   }
 }
 
@@ -586,6 +649,8 @@ function clearModalContent() {
   winnerImg.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg"/%3E';
   winnerTitle.textContent = '';
   winnerDexNum.textContent = '';
+  const winnerGameBanner = document.getElementById('winnerGameBanner');
+  if (winnerGameBanner) winnerGameBanner.innerHTML = '';
   winnerTypes.innerHTML = '';
   evolutionLineContainer.innerHTML = '';
   selectedEvoIds.clear();
@@ -609,9 +674,10 @@ function onWheelStopped(targetIndex) {
   lastTrackedIndex = targetIndex;
   liveTrackerName.textContent = `#${winner.numPal} ${winner.name}`;
   if (winner.sprite) liveTrackerImg.src = winner.sprite;
-  liveTrackerBadges.innerHTML = (winner.types || []).map(t => 
-    `<span class="type-badge type-${t}">${t}</span>`
-  ).join('');
+  liveTrackerBadges.innerHTML = `
+    ${getGameBadgeHtml(winner, 'normal')}
+    ${(winner.types || []).map(t => `<span class="type-badge type-${t}">${t}</span>`).join('')}
+  `;
 
   playVictoryFanfare();
   startConfetti();
@@ -636,9 +702,13 @@ function openEvolutionLineModal(pokemon, source = 'wheel') {
   winnerImg.style.visibility = 'hidden';
   winnerImg.style.opacity = '0';
 
-  // 2. Actualizar textos, número y tipos del nuevo Pokémon
+  // 2. Actualizar textos, número, banner de juego y tipos del nuevo Pokémon
   winnerDexNum.textContent = `Nº PALDEA: #${fullPokemon.numPal} · NAC: #${fullPokemon.numNac}`;
   winnerTitle.textContent = fullPokemon.name;
+  const winnerGameBanner = document.getElementById('winnerGameBanner');
+  if (winnerGameBanner) {
+    winnerGameBanner.innerHTML = getWinnerGameBannerHtml(fullPokemon);
+  }
   winnerTypes.innerHTML = (fullPokemon.types || []).map(t => 
     `<span class="type-badge type-${t}">${t}</span>`
   ).join('');
@@ -729,6 +799,7 @@ function renderEvolutionLineSelector(pokemon, source = 'wheel') {
       <div class="evo-card-info">
         <span class="evo-card-num">#${m.numPal}</span>
         <span class="evo-card-name">${m.name}</span>
+        ${getGameBadgeHtml(m, 'mini')}
       </div>
       <span class="evo-status-badge">${statusLabel}</span>
     `;
@@ -933,10 +1004,15 @@ function renderPaldeaMatrix() {
       const matchName = p.name.toLowerCase().includes(q);
       const matchNum = p.numPal.includes(q) || (p.numNac && p.numNac.includes(q));
       const matchType = p.types && p.types.some(t => t.toLowerCase().includes(q));
-      if (!matchName && !matchNum && !matchType) return false;
+      const g = getPokemonGame(p);
+      const matchGame = (q === 'escarlata' && g === 'scarlet') ||
+                        (q === 'purpura' && g === 'violet') ||
+                        (q === 'púrpura' && g === 'violet') ||
+                        (q === 'ambos' && g === 'both');
+      if (!matchName && !matchNum && !matchType && !matchGame) return false;
     }
 
-    // Filtro por pestaña de estado
+    // Filtro por pestaña de estado o edición
     const isCaptured = capturedSet.has(p.numPal);
     const isLastSpin = lastSpinPendingIds.has(p.numPal) && !isCaptured;
     const isPending = pendingSet.has(p.numPal) && !isCaptured;
@@ -949,6 +1025,12 @@ function renderPaldeaMatrix() {
       return isCaptured;
     } else if (currentMatrixFilter === 'uncaptured') {
       return !isCaptured;
+    } else if (currentMatrixFilter === 'scarlet') {
+      return getPokemonGame(p) === 'scarlet';
+    } else if (currentMatrixFilter === 'violet') {
+      return getPokemonGame(p) === 'violet';
+    } else if (currentMatrixFilter === 'both') {
+      return getPokemonGame(p) === 'both';
     }
     return true;
   });
@@ -1007,7 +1089,10 @@ function renderPaldeaMatrix() {
 
     card.innerHTML = `
       <div class="matrix-card-header">
-        <span class="matrix-num">#${p.numPal}</span>
+        <div class="matrix-header-left">
+          <span class="matrix-num">#${p.numPal}</span>
+          ${getGameBadgeHtml(p, 'mini')}
+        </div>
         ${badgeHtml}
       </div>
       <div class="matrix-thumb-container">
@@ -1084,7 +1169,10 @@ function renderCapturedList() {
     card.innerHTML = `
       <img src="${item.shinySprite || item.sprite || 'assets/pokeball.svg'}" class="shiny-thumb" alt="${item.name}" title="Forma Shiny" onerror="this.src='assets/pokeball.svg'">
       <div class="shiny-item-info">
-        <span class="shiny-dex-num">#${item.numPal}</span>
+        <div class="shiny-meta-row">
+          <span class="shiny-dex-num">#${item.numPal}</span>
+          ${getGameBadgeHtml(item, 'mini')}
+        </div>
         <span class="shiny-item-name">${item.name}</span>
         <span class="type-badge type-${mainType}">${mainType}</span>
         <span class="shiny-item-date">${item.time || ''}</span>
@@ -1179,6 +1267,7 @@ function addHistoryItem(item) {
     name: item.name,
     types: item.types,
     sprite: item.sprite,
+    game: getPokemonGame(item),
     time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
   });
 
@@ -1201,6 +1290,7 @@ function renderHistory() {
       <img src="${hist.sprite || 'assets/pokeball.svg'}" alt="${hist.name}" onerror="this.src='assets/pokeball.svg'">
       <span>#${hist.numPal} <strong>${hist.name}</strong></span>
       <span class="type-badge type-${mainType}">${mainType}</span>
+      ${getGameBadgeHtml(hist, 'mini')}
     `;
     historyListEl.appendChild(chip);
   });
@@ -1244,6 +1334,12 @@ function applyFilters() {
     });
   } else if (selectedRange === 'paradox') {
     filtered = filtered.filter(p => parseInt(p.numPal, 10) >= 376);
+  } else if (selectedRange === 'scarlet') {
+    filtered = filtered.filter(p => getPokemonGame(p) === 'scarlet');
+  } else if (selectedRange === 'violet') {
+    filtered = filtered.filter(p => getPokemonGame(p) === 'violet');
+  } else if (selectedRange === 'both') {
+    filtered = filtered.filter(p => getPokemonGame(p) === 'both');
   }
 
   items = filtered.length >= 2 ? filtered : [...ALL_PALDEA_POKEMON];
@@ -1284,9 +1380,15 @@ function renderPokedexModalList(filterQuery = '') {
 
   const results = ALL_PALDEA_POKEMON.filter(p => {
     if (!q) return true;
+    const g = getPokemonGame(p);
+    const matchGame = (q === 'escarlata' && g === 'scarlet') ||
+                      (q === 'purpura' && g === 'violet') ||
+                      (q === 'púrpura' && g === 'violet') ||
+                      (q === 'ambos' && g === 'both');
     return p.name.toLowerCase().includes(q) ||
            p.numPal.includes(q) ||
-           (p.types && p.types.some(t => t.toLowerCase().includes(q)));
+           (p.types && p.types.some(t => t.toLowerCase().includes(q))) ||
+           matchGame;
   });
 
   if (results.length === 0) {
@@ -1304,8 +1406,9 @@ function renderPokedexModalList(filterQuery = '') {
       <img src="${isCaptured ? (p.shinySprite || p.sprite) : p.sprite}" class="pokedex-row-thumb" alt="${p.name}" loading="lazy" onerror="this.src='assets/pokeball.svg'">
       <span class="item-row-num">#${p.numPal}</span>
       <span class="item-row-name">${p.name} ${isCaptured ? '★' : ''}</span>
-      <div style="display: flex; gap: 4px;">
+      <div style="display: flex; gap: 4px; align-items: center;">
         ${(p.types || []).map(t => `<span class="type-badge type-${t}">${t}</span>`).join('')}
+        ${getGameBadgeHtml(p, 'mini')}
       </div>
     `;
     itemsListContainer.appendChild(row);

@@ -179,6 +179,26 @@ ruleta-juego/
     - **Verificación de Inventario Publicitario:** `GET /ads.txt` responde con HTTP 200 y sirve la especificación de editor para monetización.
     - **Integración Continua (CI/CD):** Flujo de trabajo de GitHub Actions generado en `.github/workflows/fly-deploy.yml` para despliegues continuos.
 
+21. **Distintivos y Filtros de Exclusividad de Juego (Escarlata vs Púrpura):**
+    - **Clasificación Oficial de los 400 Pokémon:**
+      - **Exclusivos de Escarlata (23 Pokémon):** Drifloon (#143), Drifblim (#144), Armarouge (#166), Stunky (#226), Skuntank (#227), Oranguru (#313), Larvitar (#316), Pupitar (#317), Tyranitar (#318), Stonjourner (#319), Skrelp (#337), Dragalge (#338), Deino (#370), Zweilous (#371), Hydreigon (#372), Paradojas Pasadas: Colmilargo (#376), Colagrito (#377), Furioseta (#378), Melenaleteo (#379), Reptalada (#380), Pelarena (#381), Bramaluna (#397), y Koraidon (#399).
+      - **Exclusivos de Púrpura (23 Pokémon):** Misdreavus (#114), Mismagius (#115), Gulpin (#139), Swalot (#140), Ceruledge (#167), Bagon (#276), Shelgon (#277), Salamence (#278), Dreepy (#305), Drakloak (#306), Dragapult (#307), Passimian (#314), Eiscue (#320), Clauncher (#339), Clawitzer (#340), Paradojas Futuras: Ferrodada (#382), Ferrosaco (#383), Ferropalmas (#384), Ferrocuello (#385), Ferropolilla (#386), Ferropúas (#387), Ferropaladín (#398), y Miraidon (#400).
+      - **Ambos Juegos (354 Pokémon):** Los restantes 354 Pokémon disponibles en ambas ediciones.
+    - **Visualización Integral en Todos los Puntos Clave de la Aplicación:**
+      - **Live Pointer Tracker:** Distintivo rectangular nítido (`ESCARLATA` / `PÚRPURA` / `AMBOS`) junto a los tipos del Pokémon al que apunta la aguja en tiempo real.
+      - **Modal Ganador / Línea Evolutiva:**
+        - Banner superior destacado con indicador de punto de color (`★ EXCLUSIVO DE POKÉMON ESCARLATA`, `★ EXCLUSIVO DE POKÉMON PÚRPURA`, o `DISPONIBLE EN AMBOS JUEGOS`).
+        - Distintivos mini (`ESC`, `PÚR`, `AMB`) dentro de cada tarjeta de miembro evolutivo (`.evo-card`).
+      - **Matriz Paldea 400:** Distintivo mini nítido en la cabecera izquierda de cada una de las 400 tarjetas (`.matrix-card-header`).
+      - **Capturados Shiny:** Distintivo mini en la fila de metadatos (`.shiny-meta-row`).
+      - **Historial de Giros:** Distintivo mini dentro de cada chip de giro reciente (`.history-item`).
+      - **Explorador Pokédex:** Distintivo mini junto a los tipos en cada fila de resultados (`.item-row`).
+    - **Filtros por Juego:**
+      - Selector de rango principal (`#rangeFilter`): Opciones `EXCLUSIVOS ESCARLATA (23)` y `EXCLUSIVOS PÚRPURA (23)` para girar únicamente con Pokémon exclusivos.
+      - Barra de chips de la matriz: Nuevos botones `ESCARLATA (23)`, `PÚRPURA (23)` y `AMBOS (354)`.
+      - Buscador global y de matriz: Soporte para buscar `escarlata`, `purpura`, `púrpura` o `ambos`.
+    - **Estilo Visual:** Cero emojis; puntos vectoriales CSS circulares (`.game-dot`), bordes rectos nítidos (2-3px), paleta oficial (rojo escarlata `#e11d48`, violeta púrpura `#7c3aed`, neutro slate `#64748b`) con soporte impecable en Modo Día y Modo Noche.
+
 ---
 
 ## 4. Estructuras de Datos y Persistencia
@@ -196,7 +216,8 @@ ruleta-juego/
   "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/906.png",
   "shinySprite": "assets/sprites/shiny/906.png",
   "chainId": 478,
-  "evolutionLine": ["001", "002", "003"]
+  "evolutionLine": ["001", "002", "003"],
+  "game": "both"
 }
 ```
 

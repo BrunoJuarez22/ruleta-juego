@@ -16,7 +16,8 @@ window.PALDEA_POKEMON = [
       "002",
       "003"
     ],
-    "color": "#16a34a"
+    "color": "#16a34a",
+    "game": "both"
   },
   {
     "numPal": "002",
@@ -35,7 +36,8 @@ window.PALDEA_POKEMON = [
       "002",
       "003"
     ],
-    "color": "#16a34a"
+    "color": "#16a34a",
+    "game": "both"
   },
   {
     "numPal": "003",
@@ -55,7 +57,8 @@ window.PALDEA_POKEMON = [
       "002",
       "003"
     ],
-    "color": "#16a34a"
+    "color": "#16a34a",
+    "game": "both"
   },
   {
     "numPal": "004",
@@ -74,7 +77,8 @@ window.PALDEA_POKEMON = [
       "005",
       "006"
     ],
-    "color": "#ea580c"
+    "color": "#ea580c",
+    "game": "both"
   },
   {
     "numPal": "005",
@@ -93,7 +97,8 @@ window.PALDEA_POKEMON = [
       "005",
       "006"
     ],
-    "color": "#ea580c"
+    "color": "#ea580c",
+    "game": "both"
   },
   {
     "numPal": "006",
@@ -113,7 +118,8 @@ window.PALDEA_POKEMON = [
       "005",
       "006"
     ],
-    "color": "#ea580c"
+    "color": "#ea580c",
+    "game": "both"
   },
   {
     "numPal": "007",
@@ -132,7 +138,8 @@ window.PALDEA_POKEMON = [
       "008",
       "009"
     ],
-    "color": "#0284c7"
+    "color": "#0284c7",
+    "game": "both"
   },
   {
     "numPal": "008",
@@ -151,7 +158,8 @@ window.PALDEA_POKEMON = [
       "008",
       "009"
     ],
-    "color": "#0284c7"
+    "color": "#0284c7",
+    "game": "both"
   },
   {
     "numPal": "009",
@@ -171,7 +179,8 @@ window.PALDEA_POKEMON = [
       "008",
       "009"
     ],
-    "color": "#0284c7"
+    "color": "#0284c7",
+    "game": "both"
   },
   {
     "numPal": "010",
@@ -189,7 +198,8 @@ window.PALDEA_POKEMON = [
       "010",
       "011"
     ],
-    "color": "#78716c"
+    "color": "#78716c",
+    "game": "both"
   },
   {
     "numPal": "011",
@@ -207,7 +217,8 @@ window.PALDEA_POKEMON = [
       "010",
       "011"
     ],
-    "color": "#78716c"
+    "color": "#78716c",
+    "game": "both"
   },
   {
     "numPal": "012",
@@ -225,7 +236,8 @@ window.PALDEA_POKEMON = [
       "012",
       "013"
     ],
-    "color": "#65a30d"
+    "color": "#65a30d",
+    "game": "both"
   },
   {
     "numPal": "013",
@@ -243,7 +255,8 @@ window.PALDEA_POKEMON = [
       "012",
       "013"
     ],
-    "color": "#65a30d"
+    "color": "#65a30d",
+    "game": "both"
   },
   {
     "numPal": "014",
@@ -261,7 +274,8 @@ window.PALDEA_POKEMON = [
       "014",
       "015"
     ],
-    "color": "#65a30d"
+    "color": "#65a30d",
+    "game": "both"
   },
   {
     "numPal": "015",
@@ -280,7 +294,8 @@ window.PALDEA_POKEMON = [
       "014",
       "015"
     ],
-    "color": "#65a30d"
+    "color": "#65a30d",
+    "game": "both"
   },
   {
     "numPal": "016",
@@ -300,7 +315,8 @@ window.PALDEA_POKEMON = [
       "017",
       "018"
     ],
-    "color": "#16a34a"
+    "color": "#16a34a",
+    "game": "both"
   },
   {
     "numPal": "017",
@@ -320,7 +336,8 @@ window.PALDEA_POKEMON = [
       "017",
       "018"
     ],
-    "color": "#16a34a"
+    "color": "#16a34a",
+    "game": "both"
   },
   {
     "numPal": "018",
@@ -340,7 +357,8 @@ window.PALDEA_POKEMON = [
       "017",
       "018"
     ],
-    "color": "#16a34a"
+    "color": "#16a34a",
+    "game": "both"
   },
   {
     "numPal": "019",
@@ -360,7 +378,8 @@ window.PALDEA_POKEMON = [
       "020",
       "021"
     ],
-    "color": "#78716c"
+    "color": "#78716c",
+    "game": "both"
   },
   {
     "numPal": "020",
@@ -380,7 +399,8 @@ window.PALDEA_POKEMON = [
       "020",
       "021"
     ],
-    "color": "#ea580c"
+    "color": "#ea580c",
+    "game": "both"
   },
   {
     "numPal": "021",
@@ -400,7 +420,8 @@ window.PALDEA_POKEMON = [
       "020",
       "021"
     ],
-    "color": "#ea580c"
+    "color": "#ea580c",
+    "game": "both"
   },
   {
     "numPal": "022",
@@ -419,7 +440,8 @@ window.PALDEA_POKEMON = [
       "023",
       "024"
     ],
-    "color": "#eab308"
+    "color": "#eab308",
+    "game": "both"
   },
   {
     "numPal": "023",
@@ -439,7 +461,8 @@ window.PALDEA_POKEMON = [
       "023",
       "024"
     ],
-    "color": "#eab308"
+    "color": "#eab308",
+    "game": "both"
   },
   {
     "numPal": "024",
@@ -459,7 +482,8 @@ window.PALDEA_POKEMON = [
       "023",
       "024"
     ],
-    "color": "#eab308"
+    "color": "#eab308",
+    "game": "both"
   },
   {
     "numPal": "025",
@@ -478,7 +502,8 @@ window.PALDEA_POKEMON = [
       "025",
       "026"
     ],
-    "color": "#334155"
+    "color": "#334155",
+    "game": "both"
   },
   {
     "numPal": "026",
@@ -497,7 +522,8 @@ window.PALDEA_POKEMON = [
       "025",
       "026"
     ],
-    "color": "#334155"
+    "color": "#334155",
+    "game": "both"
   },
   {
     "numPal": "027",
@@ -515,7 +541,8 @@ window.PALDEA_POKEMON = [
       "027",
       "028"
     ],
-    "color": "#78716c"
+    "color": "#78716c",
+    "game": "both"
   },
   {
     "numPal": "028",
@@ -533,7 +560,8 @@ window.PALDEA_POKEMON = [
       "027",
       "028"
     ],
-    "color": "#78716c"
+    "color": "#78716c",
+    "game": "both"
   },
   {
     "numPal": "029",
@@ -551,7 +579,8 @@ window.PALDEA_POKEMON = [
       "029",
       "030"
     ],
-    "color": "#78716c"
+    "color": "#78716c",
+    "game": "both"
   },
   {
     "numPal": "030",
@@ -569,7 +598,8 @@ window.PALDEA_POKEMON = [
       "029",
       "030"
     ],
-    "color": "#78716c"
+    "color": "#78716c",
+    "game": "both"
   },
   {
     "numPal": "031",
@@ -587,7 +617,8 @@ window.PALDEA_POKEMON = [
       "031",
       "032"
     ],
-    "color": "#16a34a"
+    "color": "#16a34a",
+    "game": "both"
   },
   {
     "numPal": "032",
@@ -605,7 +636,8 @@ window.PALDEA_POKEMON = [
       "031",
       "032"
     ],
-    "color": "#16a34a"
+    "color": "#16a34a",
+    "game": "both"
   },
   {
     "numPal": "033",
@@ -623,7 +655,8 @@ window.PALDEA_POKEMON = [
       "033",
       "034"
     ],
-    "color": "#65a30d"
+    "color": "#65a30d",
+    "game": "both"
   },
   {
     "numPal": "034",
@@ -641,7 +674,8 @@ window.PALDEA_POKEMON = [
       "033",
       "034"
     ],
-    "color": "#65a30d"
+    "color": "#65a30d",
+    "game": "both"
   },
   {
     "numPal": "035",
@@ -660,7 +694,8 @@ window.PALDEA_POKEMON = [
       "036",
       "037"
     ],
-    "color": "#65a30d"
+    "color": "#65a30d",
+    "game": "both"
   },
   {
     "numPal": "036",
@@ -679,7 +714,8 @@ window.PALDEA_POKEMON = [
       "036",
       "037"
     ],
-    "color": "#65a30d"
+    "color": "#65a30d",
+    "game": "both"
   },
   {
     "numPal": "037",
@@ -699,7 +735,8 @@ window.PALDEA_POKEMON = [
       "036",
       "037"
     ],
-    "color": "#65a30d"
+    "color": "#65a30d",
+    "game": "both"
   },
   {
     "numPal": "038",
@@ -718,7 +755,8 @@ window.PALDEA_POKEMON = [
       "038",
       "039"
     ],
-    "color": "#65a30d"
+    "color": "#65a30d",
+    "game": "both"
   },
   {
     "numPal": "039",
@@ -737,7 +775,8 @@ window.PALDEA_POKEMON = [
       "038",
       "039"
     ],
-    "color": "#65a30d"
+    "color": "#65a30d",
+    "game": "both"
   },
   {
     "numPal": "040",
@@ -756,7 +795,8 @@ window.PALDEA_POKEMON = [
       "041",
       "042"
     ],
-    "color": "#6366f1"
+    "color": "#6366f1",
+    "game": "both"
   },
   {
     "numPal": "041",
@@ -775,7 +815,8 @@ window.PALDEA_POKEMON = [
       "041",
       "042"
     ],
-    "color": "#6366f1"
+    "color": "#6366f1",
+    "game": "both"
   },
   {
     "numPal": "042",
@@ -795,7 +836,8 @@ window.PALDEA_POKEMON = [
       "041",
       "042"
     ],
-    "color": "#6366f1"
+    "color": "#6366f1",
+    "game": "both"
   },
   {
     "numPal": "043",
@@ -814,7 +856,8 @@ window.PALDEA_POKEMON = [
       "044",
       "045"
     ],
-    "color": "#78716c"
+    "color": "#78716c",
+    "game": "both"
   },
   {
     "numPal": "044",
@@ -833,7 +876,8 @@ window.PALDEA_POKEMON = [
       "044",
       "045"
     ],
-    "color": "#78716c"
+    "color": "#78716c",
+    "game": "both"
   },
   {
     "numPal": "045",
@@ -852,7 +896,8 @@ window.PALDEA_POKEMON = [
       "044",
       "045"
     ],
-    "color": "#78716c"
+    "color": "#78716c",
+    "game": "both"
   },
   {
     "numPal": "046",
@@ -872,7 +917,8 @@ window.PALDEA_POKEMON = [
       "047",
       "048"
     ],
-    "color": "#78716c"
+    "color": "#78716c",
+    "game": "both"
   },
   {
     "numPal": "047",
@@ -892,7 +938,8 @@ window.PALDEA_POKEMON = [
       "047",
       "048"
     ],
-    "color": "#0284c7"
+    "color": "#0284c7",
+    "game": "both"
   },
   {
     "numPal": "048",
@@ -912,7 +959,8 @@ window.PALDEA_POKEMON = [
       "047",
       "048"
     ],
-    "color": "#0284c7"
+    "color": "#0284c7",
+    "game": "both"
   },
   {
     "numPal": "049",
@@ -931,7 +979,8 @@ window.PALDEA_POKEMON = [
       "049",
       "050"
     ],
-    "color": "#65a30d"
+    "color": "#65a30d",
+    "game": "both"
   },
   {
     "numPal": "050",
@@ -950,7 +999,8 @@ window.PALDEA_POKEMON = [
       "049",
       "050"
     ],
-    "color": "#65a30d"
+    "color": "#65a30d",
+    "game": "both"
   },
   {
     "numPal": "051",
@@ -968,7 +1018,8 @@ window.PALDEA_POKEMON = [
       "051",
       "052"
     ],
-    "color": "#0284c7"
+    "color": "#0284c7",
+    "game": "both"
   },
   {
     "numPal": "052",
@@ -986,7 +1037,8 @@ window.PALDEA_POKEMON = [
       "051",
       "052"
     ],
-    "color": "#0284c7"
+    "color": "#0284c7",
+    "game": "both"
   },
   {
     "numPal": "053",
@@ -1006,7 +1058,8 @@ window.PALDEA_POKEMON = [
       "054"
     ],
     "color": "#9333ea",
-    "remoteImage": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10253.png"
+    "remoteImage": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10253.png",
+    "game": "both"
   },
   {
     "numPal": "054",
@@ -1025,7 +1078,8 @@ window.PALDEA_POKEMON = [
       "053",
       "054"
     ],
-    "color": "#9333ea"
+    "color": "#9333ea",
+    "game": "both"
   },
   {
     "numPal": "055",
@@ -1043,7 +1097,8 @@ window.PALDEA_POKEMON = [
       "055",
       "056"
     ],
-    "color": "#0284c7"
+    "color": "#0284c7",
+    "game": "both"
   },
   {
     "numPal": "056",
@@ -1061,7 +1116,8 @@ window.PALDEA_POKEMON = [
       "055",
       "056"
     ],
-    "color": "#0284c7"
+    "color": "#0284c7",
+    "game": "both"
   },
   {
     "numPal": "057",
@@ -1079,7 +1135,8 @@ window.PALDEA_POKEMON = [
       "057",
       "058"
     ],
-    "color": "#0284c7"
+    "color": "#0284c7",
+    "game": "both"
   },
   {
     "numPal": "058",
@@ -1098,7 +1155,8 @@ window.PALDEA_POKEMON = [
       "057",
       "058"
     ],
-    "color": "#0284c7"
+    "color": "#0284c7",
+    "game": "both"
   },
   {
     "numPal": "059",
@@ -1118,7 +1176,8 @@ window.PALDEA_POKEMON = [
       "060",
       "061"
     ],
-    "color": "#78716c"
+    "color": "#78716c",
+    "game": "both"
   },
   {
     "numPal": "060",
@@ -1138,7 +1197,8 @@ window.PALDEA_POKEMON = [
       "060",
       "061"
     ],
-    "color": "#78716c"
+    "color": "#78716c",
+    "game": "both"
   },
   {
     "numPal": "061",
@@ -1158,7 +1218,8 @@ window.PALDEA_POKEMON = [
       "060",
       "061"
     ],
-    "color": "#78716c"
+    "color": "#78716c",
+    "game": "both"
   },
   {
     "numPal": "062",
@@ -1179,7 +1240,8 @@ window.PALDEA_POKEMON = [
       "064",
       "065"
     ],
-    "color": "#db2777"
+    "color": "#db2777",
+    "game": "both"
   },
   {
     "numPal": "063",
@@ -1200,7 +1262,8 @@ window.PALDEA_POKEMON = [
       "064",
       "065"
     ],
-    "color": "#db2777"
+    "color": "#db2777",
+    "game": "both"
   },
   {
     "numPal": "064",
@@ -1221,7 +1284,8 @@ window.PALDEA_POKEMON = [
       "064",
       "065"
     ],
-    "color": "#db2777"
+    "color": "#db2777",
+    "game": "both"
   },
   {
     "numPal": "065",
@@ -1242,7 +1306,8 @@ window.PALDEA_POKEMON = [
       "064",
       "065"
     ],
-    "color": "#db2777"
+    "color": "#db2777",
+    "game": "both"
   },
   {
     "numPal": "066",
@@ -1260,7 +1325,8 @@ window.PALDEA_POKEMON = [
       "066",
       "067"
     ],
-    "color": "#db2777"
+    "color": "#db2777",
+    "game": "both"
   },
   {
     "numPal": "067",
@@ -1278,7 +1344,8 @@ window.PALDEA_POKEMON = [
       "066",
       "067"
     ],
-    "color": "#db2777"
+    "color": "#db2777",
+    "game": "both"
   },
   {
     "numPal": "068",
@@ -1298,7 +1365,8 @@ window.PALDEA_POKEMON = [
       "069",
       "070"
     ],
-    "color": "#7c3aed"
+    "color": "#7c3aed",
+    "game": "both"
   },
   {
     "numPal": "069",
@@ -1318,7 +1386,8 @@ window.PALDEA_POKEMON = [
       "069",
       "070"
     ],
-    "color": "#7c3aed"
+    "color": "#7c3aed",
+    "game": "both"
   },
   {
     "numPal": "070",
@@ -1338,7 +1407,8 @@ window.PALDEA_POKEMON = [
       "069",
       "070"
     ],
-    "color": "#7c3aed"
+    "color": "#7c3aed",
+    "game": "both"
   },
   {
     "numPal": "071",
@@ -1356,7 +1426,8 @@ window.PALDEA_POKEMON = [
       "071",
       "072"
     ],
-    "color": "#78716c"
+    "color": "#78716c",
+    "game": "both"
   },
   {
     "numPal": "072",
@@ -1374,7 +1445,8 @@ window.PALDEA_POKEMON = [
       "071",
       "072"
     ],
-    "color": "#78716c"
+    "color": "#78716c",
+    "game": "both"
   },
   {
     "numPal": "073",
@@ -1393,7 +1465,8 @@ window.PALDEA_POKEMON = [
       "074",
       "075"
     ],
-    "color": "#eab308"
+    "color": "#eab308",
+    "game": "both"
   },
   {
     "numPal": "074",
@@ -1412,7 +1485,8 @@ window.PALDEA_POKEMON = [
       "074",
       "075"
     ],
-    "color": "#eab308"
+    "color": "#eab308",
+    "game": "both"
   },
   {
     "numPal": "075",
@@ -1431,7 +1505,8 @@ window.PALDEA_POKEMON = [
       "074",
       "075"
     ],
-    "color": "#eab308"
+    "color": "#eab308",
+    "game": "both"
   },
   {
     "numPal": "076",
@@ -1449,7 +1524,8 @@ window.PALDEA_POKEMON = [
       "076",
       "077"
     ],
-    "color": "#ec4899"
+    "color": "#ec4899",
+    "game": "both"
   },
   {
     "numPal": "077",
@@ -1467,7 +1543,8 @@ window.PALDEA_POKEMON = [
       "076",
       "077"
     ],
-    "color": "#ec4899"
+    "color": "#ec4899",
+    "game": "both"
   },
   {
     "numPal": "078",
@@ -1486,7 +1563,8 @@ window.PALDEA_POKEMON = [
       "079",
       "080"
     ],
-    "color": "#78716c"
+    "color": "#78716c",
+    "game": "both"
   },
   {
     "numPal": "079",
@@ -1505,7 +1583,8 @@ window.PALDEA_POKEMON = [
       "079",
       "080"
     ],
-    "color": "#78716c"
+    "color": "#78716c",
+    "game": "both"
   },
   {
     "numPal": "080",
@@ -1524,7 +1603,8 @@ window.PALDEA_POKEMON = [
       "079",
       "080"
     ],
-    "color": "#78716c"
+    "color": "#78716c",
+    "game": "both"
   },
   {
     "numPal": "081",
@@ -1543,7 +1623,8 @@ window.PALDEA_POKEMON = [
       "082",
       "083"
     ],
-    "color": "#16a34a"
+    "color": "#16a34a",
+    "game": "both"
   },
   {
     "numPal": "082",
@@ -1562,7 +1643,8 @@ window.PALDEA_POKEMON = [
       "082",
       "083"
     ],
-    "color": "#16a34a"
+    "color": "#16a34a",
+    "game": "both"
   },
   {
     "numPal": "083",
@@ -1581,7 +1663,8 @@ window.PALDEA_POKEMON = [
       "082",
       "083"
     ],
-    "color": "#16a34a"
+    "color": "#16a34a",
+    "game": "both"
   },
   {
     "numPal": "084",
@@ -1601,7 +1684,8 @@ window.PALDEA_POKEMON = [
       "085",
       "086"
     ],
-    "color": "#16a34a"
+    "color": "#16a34a",
+    "game": "both"
   },
   {
     "numPal": "085",
@@ -1621,7 +1705,8 @@ window.PALDEA_POKEMON = [
       "085",
       "086"
     ],
-    "color": "#16a34a"
+    "color": "#16a34a",
+    "game": "both"
   },
   {
     "numPal": "086",
@@ -1641,7 +1726,8 @@ window.PALDEA_POKEMON = [
       "085",
       "086"
     ],
-    "color": "#16a34a"
+    "color": "#16a34a",
+    "game": "both"
   },
   {
     "numPal": "087",
@@ -1659,7 +1745,8 @@ window.PALDEA_POKEMON = [
       "087",
       "088"
     ],
-    "color": "#a16207"
+    "color": "#a16207",
+    "game": "both"
   },
   {
     "numPal": "088",
@@ -1677,7 +1764,8 @@ window.PALDEA_POKEMON = [
       "087",
       "088"
     ],
-    "color": "#a16207"
+    "color": "#a16207",
+    "game": "both"
   },
   {
     "numPal": "089",
@@ -1695,7 +1783,8 @@ window.PALDEA_POKEMON = [
       "089",
       "090"
     ],
-    "color": "#a16207"
+    "color": "#a16207",
+    "game": "both"
   },
   {
     "numPal": "090",
@@ -1713,7 +1802,8 @@ window.PALDEA_POKEMON = [
       "089",
       "090"
     ],
-    "color": "#a16207"
+    "color": "#a16207",
+    "game": "both"
   },
   {
     "numPal": "091",
@@ -1732,7 +1822,8 @@ window.PALDEA_POKEMON = [
       "092",
       "093"
     ],
-    "color": "#a16207"
+    "color": "#a16207",
+    "game": "both"
   },
   {
     "numPal": "092",
@@ -1752,7 +1843,8 @@ window.PALDEA_POKEMON = [
       "092",
       "093"
     ],
-    "color": "#a16207"
+    "color": "#a16207",
+    "game": "both"
   },
   {
     "numPal": "093",
@@ -1772,7 +1864,8 @@ window.PALDEA_POKEMON = [
       "092",
       "093"
     ],
-    "color": "#a16207"
+    "color": "#a16207",
+    "game": "both"
   },
   {
     "numPal": "094",
@@ -1791,7 +1884,8 @@ window.PALDEA_POKEMON = [
       "095",
       "096"
     ],
-    "color": "#eab308"
+    "color": "#eab308",
+    "game": "both"
   },
   {
     "numPal": "095",
@@ -1810,7 +1904,8 @@ window.PALDEA_POKEMON = [
       "095",
       "096"
     ],
-    "color": "#eab308"
+    "color": "#eab308",
+    "game": "both"
   },
   {
     "numPal": "096",
@@ -1829,7 +1924,8 @@ window.PALDEA_POKEMON = [
       "095",
       "096"
     ],
-    "color": "#eab308"
+    "color": "#eab308",
+    "game": "both"
   },
   {
     "numPal": "097",
@@ -1849,7 +1945,8 @@ window.PALDEA_POKEMON = [
       "098",
       "099"
     ],
-    "color": "#78716c"
+    "color": "#78716c",
+    "game": "both"
   },
   {
     "numPal": "098",
@@ -1869,7 +1966,8 @@ window.PALDEA_POKEMON = [
       "098",
       "099"
     ],
-    "color": "#78716c"
+    "color": "#78716c",
+    "game": "both"
   },
   {
     "numPal": "099",
@@ -1889,7 +1987,8 @@ window.PALDEA_POKEMON = [
       "098",
       "099"
     ],
-    "color": "#78716c"
+    "color": "#78716c",
+    "game": "both"
   },
   {
     "numPal": "100",
@@ -1907,7 +2006,8 @@ window.PALDEA_POKEMON = [
     "evolutionLine": [
       "100"
     ],
-    "color": "#ea580c"
+    "color": "#ea580c",
+    "game": "both"
   },
   {
     "numPal": "101",
@@ -1926,7 +2026,8 @@ window.PALDEA_POKEMON = [
       "102",
       "103"
     ],
-    "color": "#eab308"
+    "color": "#eab308",
+    "game": "both"
   },
   {
     "numPal": "102",
@@ -1945,7 +2046,8 @@ window.PALDEA_POKEMON = [
       "102",
       "103"
     ],
-    "color": "#eab308"
+    "color": "#eab308",
+    "game": "both"
   },
   {
     "numPal": "103",
@@ -1964,7 +2066,8 @@ window.PALDEA_POKEMON = [
       "102",
       "103"
     ],
-    "color": "#eab308"
+    "color": "#eab308",
+    "game": "both"
   },
   {
     "numPal": "104",
@@ -1982,7 +2085,8 @@ window.PALDEA_POKEMON = [
       "104",
       "105"
     ],
-    "color": "#16a34a"
+    "color": "#16a34a",
+    "game": "both"
   },
   {
     "numPal": "105",
@@ -2000,7 +2104,8 @@ window.PALDEA_POKEMON = [
       "104",
       "105"
     ],
-    "color": "#16a34a"
+    "color": "#16a34a",
+    "game": "both"
   },
   {
     "numPal": "106",
@@ -2018,7 +2123,8 @@ window.PALDEA_POKEMON = [
       "106",
       "107"
     ],
-    "color": "#16a34a"
+    "color": "#16a34a",
+    "game": "both"
   },
   {
     "numPal": "107",
@@ -2037,7 +2143,8 @@ window.PALDEA_POKEMON = [
       "106",
       "107"
     ],
-    "color": "#16a34a"
+    "color": "#16a34a",
+    "game": "both"
   },
   {
     "numPal": "108",
@@ -2057,7 +2164,8 @@ window.PALDEA_POKEMON = [
       "109",
       "110"
     ],
-    "color": "#16a34a"
+    "color": "#16a34a",
+    "game": "both"
   },
   {
     "numPal": "109",
@@ -2077,7 +2185,8 @@ window.PALDEA_POKEMON = [
       "109",
       "110"
     ],
-    "color": "#16a34a"
+    "color": "#16a34a",
+    "game": "both"
   },
   {
     "numPal": "110",
@@ -2097,7 +2206,8 @@ window.PALDEA_POKEMON = [
       "109",
       "110"
     ],
-    "color": "#16a34a"
+    "color": "#16a34a",
+    "game": "both"
   },
   {
     "numPal": "111",
@@ -2115,7 +2225,8 @@ window.PALDEA_POKEMON = [
       "111",
       "112"
     ],
-    "color": "#db2777"
+    "color": "#db2777",
+    "game": "both"
   },
   {
     "numPal": "112",
@@ -2133,7 +2244,8 @@ window.PALDEA_POKEMON = [
       "111",
       "112"
     ],
-    "color": "#db2777"
+    "color": "#db2777",
+    "game": "both"
   },
   {
     "numPal": "113",
@@ -2151,7 +2263,8 @@ window.PALDEA_POKEMON = [
     "evolutionLine": [
       "113"
     ],
-    "color": "#78716c"
+    "color": "#78716c",
+    "game": "both"
   },
   {
     "numPal": "114",
@@ -2169,7 +2282,8 @@ window.PALDEA_POKEMON = [
       "114",
       "115"
     ],
-    "color": "#7c3aed"
+    "color": "#7c3aed",
+    "game": "violet"
   },
   {
     "numPal": "115",
@@ -2187,7 +2301,8 @@ window.PALDEA_POKEMON = [
       "114",
       "115"
     ],
-    "color": "#7c3aed"
+    "color": "#7c3aed",
+    "game": "violet"
   },
   {
     "numPal": "116",
@@ -2205,7 +2320,8 @@ window.PALDEA_POKEMON = [
       "116",
       "117"
     ],
-    "color": "#c2410c"
+    "color": "#c2410c",
+    "game": "both"
   },
   {
     "numPal": "117",
@@ -2223,7 +2339,8 @@ window.PALDEA_POKEMON = [
       "116",
       "117"
     ],
-    "color": "#c2410c"
+    "color": "#c2410c",
+    "game": "both"
   },
   {
     "numPal": "118",
@@ -2241,7 +2358,8 @@ window.PALDEA_POKEMON = [
       "118",
       "119"
     ],
-    "color": "#c2410c"
+    "color": "#c2410c",
+    "game": "both"
   },
   {
     "numPal": "119",
@@ -2260,7 +2378,8 @@ window.PALDEA_POKEMON = [
       "118",
       "119"
     ],
-    "color": "#c2410c"
+    "color": "#c2410c",
+    "game": "both"
   },
   {
     "numPal": "120",
@@ -2279,7 +2398,8 @@ window.PALDEA_POKEMON = [
       "120",
       "121"
     ],
-    "color": "#9333ea"
+    "color": "#9333ea",
+    "game": "both"
   },
   {
     "numPal": "121",
@@ -2298,7 +2418,8 @@ window.PALDEA_POKEMON = [
       "120",
       "121"
     ],
-    "color": "#9333ea"
+    "color": "#9333ea",
+    "game": "both"
   },
   {
     "numPal": "122",
@@ -2316,7 +2437,8 @@ window.PALDEA_POKEMON = [
       "122",
       "123"
     ],
-    "color": "#d97706"
+    "color": "#d97706",
+    "game": "both"
   },
   {
     "numPal": "123",
@@ -2334,7 +2456,8 @@ window.PALDEA_POKEMON = [
       "122",
       "123"
     ],
-    "color": "#d97706"
+    "color": "#d97706",
+    "game": "both"
   },
   {
     "numPal": "124",
@@ -2352,7 +2475,8 @@ window.PALDEA_POKEMON = [
       "124",
       "125"
     ],
-    "color": "#64748b"
+    "color": "#64748b",
+    "game": "both"
   },
   {
     "numPal": "125",
@@ -2370,7 +2494,8 @@ window.PALDEA_POKEMON = [
       "124",
       "125"
     ],
-    "color": "#64748b"
+    "color": "#64748b",
+    "game": "both"
   },
   {
     "numPal": "126",
@@ -2390,7 +2515,8 @@ window.PALDEA_POKEMON = [
       "127",
       "128"
     ],
-    "color": "#4f46e5"
+    "color": "#4f46e5",
+    "game": "both"
   },
   {
     "numPal": "127",
@@ -2410,7 +2536,8 @@ window.PALDEA_POKEMON = [
       "127",
       "128"
     ],
-    "color": "#4f46e5"
+    "color": "#4f46e5",
+    "game": "both"
   },
   {
     "numPal": "128",
@@ -2430,7 +2557,8 @@ window.PALDEA_POKEMON = [
       "127",
       "128"
     ],
-    "color": "#4f46e5"
+    "color": "#4f46e5",
+    "game": "both"
   },
   {
     "numPal": "129",
@@ -2449,7 +2577,8 @@ window.PALDEA_POKEMON = [
       "130",
       "131"
     ],
-    "color": "#a16207"
+    "color": "#a16207",
+    "game": "both"
   },
   {
     "numPal": "130",
@@ -2468,7 +2597,8 @@ window.PALDEA_POKEMON = [
       "130",
       "131"
     ],
-    "color": "#a16207"
+    "color": "#a16207",
+    "game": "both"
   },
   {
     "numPal": "131",
@@ -2487,7 +2617,8 @@ window.PALDEA_POKEMON = [
       "130",
       "131"
     ],
-    "color": "#a16207"
+    "color": "#a16207",
+    "game": "both"
   },
   {
     "numPal": "132",
@@ -2506,7 +2637,8 @@ window.PALDEA_POKEMON = [
       "132",
       "133"
     ],
-    "color": "#0284c7"
+    "color": "#0284c7",
+    "game": "both"
   },
   {
     "numPal": "133",
@@ -2525,7 +2657,8 @@ window.PALDEA_POKEMON = [
       "132",
       "133"
     ],
-    "color": "#0284c7"
+    "color": "#0284c7",
+    "game": "both"
   },
   {
     "numPal": "134",
@@ -2543,7 +2676,8 @@ window.PALDEA_POKEMON = [
       "134",
       "135"
     ],
-    "color": "#0284c7"
+    "color": "#0284c7",
+    "game": "both"
   },
   {
     "numPal": "135",
@@ -2562,7 +2696,8 @@ window.PALDEA_POKEMON = [
       "134",
       "135"
     ],
-    "color": "#0284c7"
+    "color": "#0284c7",
+    "game": "both"
   },
   {
     "numPal": "136",
@@ -2580,7 +2715,8 @@ window.PALDEA_POKEMON = [
       "136",
       "137"
     ],
-    "color": "#0284c7"
+    "color": "#0284c7",
+    "game": "both"
   },
   {
     "numPal": "137",
@@ -2598,7 +2734,8 @@ window.PALDEA_POKEMON = [
       "136",
       "137"
     ],
-    "color": "#0284c7"
+    "color": "#0284c7",
+    "game": "both"
   },
   {
     "numPal": "138",
@@ -2615,7 +2752,8 @@ window.PALDEA_POKEMON = [
     "evolutionLine": [
       "138"
     ],
-    "color": "#0284c7"
+    "color": "#0284c7",
+    "game": "both"
   },
   {
     "numPal": "139",
@@ -2633,7 +2771,8 @@ window.PALDEA_POKEMON = [
       "139",
       "140"
     ],
-    "color": "#9333ea"
+    "color": "#9333ea",
+    "game": "violet"
   },
   {
     "numPal": "140",
@@ -2651,7 +2790,8 @@ window.PALDEA_POKEMON = [
       "139",
       "140"
     ],
-    "color": "#9333ea"
+    "color": "#9333ea",
+    "game": "violet"
   },
   {
     "numPal": "141",
@@ -2669,7 +2809,8 @@ window.PALDEA_POKEMON = [
       "141",
       "142"
     ],
-    "color": "#78716c"
+    "color": "#78716c",
+    "game": "both"
   },
   {
     "numPal": "142",
@@ -2687,7 +2828,8 @@ window.PALDEA_POKEMON = [
       "141",
       "142"
     ],
-    "color": "#78716c"
+    "color": "#78716c",
+    "game": "both"
   },
   {
     "numPal": "143",
@@ -2706,7 +2848,8 @@ window.PALDEA_POKEMON = [
       "143",
       "144"
     ],
-    "color": "#7c3aed"
+    "color": "#7c3aed",
+    "game": "scarlet"
   },
   {
     "numPal": "144",
@@ -2725,7 +2868,8 @@ window.PALDEA_POKEMON = [
       "143",
       "144"
     ],
-    "color": "#7c3aed"
+    "color": "#7c3aed",
+    "game": "scarlet"
   },
   {
     "numPal": "145",
@@ -2744,7 +2888,8 @@ window.PALDEA_POKEMON = [
       "146",
       "147"
     ],
-    "color": "#ec4899"
+    "color": "#ec4899",
+    "game": "both"
   },
   {
     "numPal": "146",
@@ -2763,7 +2908,8 @@ window.PALDEA_POKEMON = [
       "146",
       "147"
     ],
-    "color": "#ec4899"
+    "color": "#ec4899",
+    "game": "both"
   },
   {
     "numPal": "147",
@@ -2782,7 +2928,8 @@ window.PALDEA_POKEMON = [
       "146",
       "147"
     ],
-    "color": "#ec4899"
+    "color": "#ec4899",
+    "game": "both"
   },
   {
     "numPal": "148",
@@ -2800,7 +2947,8 @@ window.PALDEA_POKEMON = [
       "148",
       "149"
     ],
-    "color": "#d97706"
+    "color": "#d97706",
+    "game": "both"
   },
   {
     "numPal": "149",
@@ -2818,7 +2966,8 @@ window.PALDEA_POKEMON = [
       "148",
       "149"
     ],
-    "color": "#d97706"
+    "color": "#d97706",
+    "game": "both"
   },
   {
     "numPal": "150",
@@ -2835,7 +2984,8 @@ window.PALDEA_POKEMON = [
     "evolutionLine": [
       "150"
     ],
-    "color": "#ea580c"
+    "color": "#ea580c",
+    "game": "both"
   },
   {
     "numPal": "151",
@@ -2854,7 +3004,8 @@ window.PALDEA_POKEMON = [
       "151",
       "152"
     ],
-    "color": "#ea580c"
+    "color": "#ea580c",
+    "game": "both"
   },
   {
     "numPal": "152",
@@ -2873,7 +3024,8 @@ window.PALDEA_POKEMON = [
       "151",
       "152"
     ],
-    "color": "#ea580c"
+    "color": "#ea580c",
+    "game": "both"
   },
   {
     "numPal": "153",
@@ -2892,7 +3044,8 @@ window.PALDEA_POKEMON = [
       "153",
       "154"
     ],
-    "color": "#64748b"
+    "color": "#64748b",
+    "game": "both"
   },
   {
     "numPal": "154",
@@ -2911,7 +3064,8 @@ window.PALDEA_POKEMON = [
       "153",
       "154"
     ],
-    "color": "#64748b"
+    "color": "#64748b",
+    "game": "both"
   },
   {
     "numPal": "155",
@@ -2930,7 +3084,8 @@ window.PALDEA_POKEMON = [
       "156",
       "157"
     ],
-    "color": "#4f46e5"
+    "color": "#4f46e5",
+    "game": "both"
   },
   {
     "numPal": "156",
@@ -2949,7 +3104,8 @@ window.PALDEA_POKEMON = [
       "156",
       "157"
     ],
-    "color": "#4f46e5"
+    "color": "#4f46e5",
+    "game": "both"
   },
   {
     "numPal": "157",
@@ -2968,7 +3124,8 @@ window.PALDEA_POKEMON = [
       "156",
       "157"
     ],
-    "color": "#4f46e5"
+    "color": "#4f46e5",
+    "game": "both"
   },
   {
     "numPal": "158",
@@ -2987,7 +3144,8 @@ window.PALDEA_POKEMON = [
       "159",
       "160"
     ],
-    "color": "#c2410c"
+    "color": "#c2410c",
+    "game": "both"
   },
   {
     "numPal": "159",
@@ -3006,7 +3164,8 @@ window.PALDEA_POKEMON = [
       "159",
       "160"
     ],
-    "color": "#c2410c"
+    "color": "#c2410c",
+    "game": "both"
   },
   {
     "numPal": "160",
@@ -3026,7 +3185,8 @@ window.PALDEA_POKEMON = [
       "159",
       "160"
     ],
-    "color": "#c2410c"
+    "color": "#c2410c",
+    "game": "both"
   },
   {
     "numPal": "161",
@@ -3045,7 +3205,8 @@ window.PALDEA_POKEMON = [
       "161",
       "162"
     ],
-    "color": "#c2410c"
+    "color": "#c2410c",
+    "game": "both"
   },
   {
     "numPal": "162",
@@ -3064,7 +3225,8 @@ window.PALDEA_POKEMON = [
       "161",
       "162"
     ],
-    "color": "#c2410c"
+    "color": "#c2410c",
+    "game": "both"
   },
   {
     "numPal": "163",
@@ -3082,7 +3244,8 @@ window.PALDEA_POKEMON = [
       "163",
       "164"
     ],
-    "color": "#c2410c"
+    "color": "#c2410c",
+    "game": "both"
   },
   {
     "numPal": "164",
@@ -3101,7 +3264,8 @@ window.PALDEA_POKEMON = [
       "163",
       "164"
     ],
-    "color": "#c2410c"
+    "color": "#c2410c",
+    "game": "both"
   },
   {
     "numPal": "165",
@@ -3120,7 +3284,8 @@ window.PALDEA_POKEMON = [
       "166",
       "167"
     ],
-    "color": "#ea580c"
+    "color": "#ea580c",
+    "game": "both"
   },
   {
     "numPal": "166",
@@ -3140,7 +3305,8 @@ window.PALDEA_POKEMON = [
       "166",
       "167"
     ],
-    "color": "#ea580c"
+    "color": "#ea580c",
+    "game": "scarlet"
   },
   {
     "numPal": "167",
@@ -3160,7 +3326,8 @@ window.PALDEA_POKEMON = [
       "166",
       "167"
     ],
-    "color": "#ea580c"
+    "color": "#ea580c",
+    "game": "violet"
   },
   {
     "numPal": "168",
@@ -3179,7 +3346,8 @@ window.PALDEA_POKEMON = [
       "168",
       "169"
     ],
-    "color": "#0284c7"
+    "color": "#0284c7",
+    "game": "both"
   },
   {
     "numPal": "169",
@@ -3198,7 +3366,8 @@ window.PALDEA_POKEMON = [
       "168",
       "169"
     ],
-    "color": "#0284c7"
+    "color": "#0284c7",
+    "game": "both"
   },
   {
     "numPal": "170",
@@ -3216,7 +3385,8 @@ window.PALDEA_POKEMON = [
       "170",
       "171"
     ],
-    "color": "#eab308"
+    "color": "#eab308",
+    "game": "both"
   },
   {
     "numPal": "171",
@@ -3234,7 +3404,8 @@ window.PALDEA_POKEMON = [
       "170",
       "171"
     ],
-    "color": "#eab308"
+    "color": "#eab308",
+    "game": "both"
   },
   {
     "numPal": "172",
@@ -3253,7 +3424,8 @@ window.PALDEA_POKEMON = [
       "173",
       "174"
     ],
-    "color": "#4f46e5"
+    "color": "#4f46e5",
+    "game": "both"
   },
   {
     "numPal": "173",
@@ -3272,7 +3444,8 @@ window.PALDEA_POKEMON = [
       "173",
       "174"
     ],
-    "color": "#4f46e5"
+    "color": "#4f46e5",
+    "game": "both"
   },
   {
     "numPal": "174",
@@ -3291,7 +3464,8 @@ window.PALDEA_POKEMON = [
       "173",
       "174"
     ],
-    "color": "#4f46e5"
+    "color": "#4f46e5",
+    "game": "both"
   },
   {
     "numPal": "175",
@@ -3310,7 +3484,8 @@ window.PALDEA_POKEMON = [
       "175",
       "176"
     ],
-    "color": "#9333ea"
+    "color": "#9333ea",
+    "game": "both"
   },
   {
     "numPal": "176",
@@ -3329,7 +3504,8 @@ window.PALDEA_POKEMON = [
       "175",
       "176"
     ],
-    "color": "#9333ea"
+    "color": "#9333ea",
+    "game": "both"
   },
   {
     "numPal": "177",
@@ -3348,7 +3524,8 @@ window.PALDEA_POKEMON = [
       "177",
       "178"
     ],
-    "color": "#eab308"
+    "color": "#eab308",
+    "game": "both"
   },
   {
     "numPal": "178",
@@ -3367,7 +3544,8 @@ window.PALDEA_POKEMON = [
       "177",
       "178"
     ],
-    "color": "#eab308"
+    "color": "#eab308",
+    "game": "both"
   },
   {
     "numPal": "179",
@@ -3392,7 +3570,8 @@ window.PALDEA_POKEMON = [
       "186",
       "187"
     ],
-    "color": "#78716c"
+    "color": "#78716c",
+    "game": "both"
   },
   {
     "numPal": "180",
@@ -3417,7 +3596,8 @@ window.PALDEA_POKEMON = [
       "186",
       "187"
     ],
-    "color": "#0284c7"
+    "color": "#0284c7",
+    "game": "both"
   },
   {
     "numPal": "181",
@@ -3442,7 +3622,8 @@ window.PALDEA_POKEMON = [
       "186",
       "187"
     ],
-    "color": "#eab308"
+    "color": "#eab308",
+    "game": "both"
   },
   {
     "numPal": "182",
@@ -3467,7 +3648,8 @@ window.PALDEA_POKEMON = [
       "186",
       "187"
     ],
-    "color": "#ea580c"
+    "color": "#ea580c",
+    "game": "both"
   },
   {
     "numPal": "183",
@@ -3492,7 +3674,8 @@ window.PALDEA_POKEMON = [
       "186",
       "187"
     ],
-    "color": "#db2777"
+    "color": "#db2777",
+    "game": "both"
   },
   {
     "numPal": "184",
@@ -3517,7 +3700,8 @@ window.PALDEA_POKEMON = [
       "186",
       "187"
     ],
-    "color": "#334155"
+    "color": "#334155",
+    "game": "both"
   },
   {
     "numPal": "185",
@@ -3542,7 +3726,8 @@ window.PALDEA_POKEMON = [
       "186",
       "187"
     ],
-    "color": "#16a34a"
+    "color": "#16a34a",
+    "game": "both"
   },
   {
     "numPal": "186",
@@ -3567,7 +3752,8 @@ window.PALDEA_POKEMON = [
       "186",
       "187"
     ],
-    "color": "#0891b2"
+    "color": "#0891b2",
+    "game": "both"
   },
   {
     "numPal": "187",
@@ -3592,7 +3778,8 @@ window.PALDEA_POKEMON = [
       "186",
       "187"
     ],
-    "color": "#ec4899"
+    "color": "#ec4899",
+    "game": "both"
   },
   {
     "numPal": "188",
@@ -3610,7 +3797,8 @@ window.PALDEA_POKEMON = [
       "188",
       "189"
     ],
-    "color": "#78716c"
+    "color": "#78716c",
+    "game": "both"
   },
   {
     "numPal": "189",
@@ -3628,7 +3816,8 @@ window.PALDEA_POKEMON = [
       "188",
       "189"
     ],
-    "color": "#78716c"
+    "color": "#78716c",
+    "game": "both"
   },
   {
     "numPal": "190",
@@ -3647,7 +3836,8 @@ window.PALDEA_POKEMON = [
       "190",
       "191"
     ],
-    "color": "#78716c"
+    "color": "#78716c",
+    "game": "both"
   },
   {
     "numPal": "191",
@@ -3666,7 +3856,8 @@ window.PALDEA_POKEMON = [
       "190",
       "191"
     ],
-    "color": "#78716c"
+    "color": "#78716c",
+    "game": "both"
   },
   {
     "numPal": "192",
@@ -3685,7 +3876,8 @@ window.PALDEA_POKEMON = [
       "192",
       "193"
     ],
-    "color": "#78716c"
+    "color": "#78716c",
+    "game": "both"
   },
   {
     "numPal": "193",
@@ -3704,7 +3896,8 @@ window.PALDEA_POKEMON = [
       "192",
       "193"
     ],
-    "color": "#78716c"
+    "color": "#78716c",
+    "game": "both"
   },
   {
     "numPal": "194",
@@ -3722,7 +3915,8 @@ window.PALDEA_POKEMON = [
       "194",
       "195"
     ],
-    "color": "#9333ea"
+    "color": "#9333ea",
+    "game": "both"
   },
   {
     "numPal": "195",
@@ -3740,7 +3934,8 @@ window.PALDEA_POKEMON = [
       "194",
       "195"
     ],
-    "color": "#9333ea"
+    "color": "#9333ea",
+    "game": "both"
   },
   {
     "numPal": "196",
@@ -3758,7 +3953,8 @@ window.PALDEA_POKEMON = [
       "196",
       "197"
     ],
-    "color": "#334155"
+    "color": "#334155",
+    "game": "both"
   },
   {
     "numPal": "197",
@@ -3776,7 +3972,8 @@ window.PALDEA_POKEMON = [
       "196",
       "197"
     ],
-    "color": "#334155"
+    "color": "#334155",
+    "game": "both"
   },
   {
     "numPal": "198",
@@ -3795,7 +3992,8 @@ window.PALDEA_POKEMON = [
       "198",
       "199"
     ],
-    "color": "#eab308"
+    "color": "#eab308",
+    "game": "both"
   },
   {
     "numPal": "199",
@@ -3814,7 +4012,8 @@ window.PALDEA_POKEMON = [
       "198",
       "199"
     ],
-    "color": "#eab308"
+    "color": "#eab308",
+    "game": "both"
   },
   {
     "numPal": "200",
@@ -3832,7 +4031,8 @@ window.PALDEA_POKEMON = [
     "evolutionLine": [
       "200"
     ],
-    "color": "#eab308"
+    "color": "#eab308",
+    "game": "both"
   },
   {
     "numPal": "201",
@@ -3849,7 +4049,8 @@ window.PALDEA_POKEMON = [
     "evolutionLine": [
       "201"
     ],
-    "color": "#eab308"
+    "color": "#eab308",
+    "game": "both"
   },
   {
     "numPal": "202",
@@ -3868,7 +4069,8 @@ window.PALDEA_POKEMON = [
       "202",
       "203"
     ],
-    "color": "#9333ea"
+    "color": "#9333ea",
+    "game": "both"
   },
   {
     "numPal": "203",
@@ -3887,7 +4089,8 @@ window.PALDEA_POKEMON = [
       "202",
       "203"
     ],
-    "color": "#9333ea"
+    "color": "#9333ea",
+    "game": "both"
   },
   {
     "numPal": "204",
@@ -3904,7 +4107,8 @@ window.PALDEA_POKEMON = [
     "evolutionLine": [
       "204"
     ],
-    "color": "#78716c"
+    "color": "#78716c",
+    "game": "both"
   },
   {
     "numPal": "205",
@@ -3923,7 +4127,8 @@ window.PALDEA_POKEMON = [
       "205",
       "206"
     ],
-    "color": "#16a34a"
+    "color": "#16a34a",
+    "game": "both"
   },
   {
     "numPal": "206",
@@ -3942,7 +4147,8 @@ window.PALDEA_POKEMON = [
       "205",
       "206"
     ],
-    "color": "#16a34a"
+    "color": "#16a34a",
+    "game": "both"
   },
   {
     "numPal": "207",
@@ -3960,7 +4166,8 @@ window.PALDEA_POKEMON = [
       "207",
       "208"
     ],
-    "color": "#eab308"
+    "color": "#eab308",
+    "game": "both"
   },
   {
     "numPal": "208",
@@ -3978,7 +4185,8 @@ window.PALDEA_POKEMON = [
       "207",
       "208"
     ],
-    "color": "#eab308"
+    "color": "#eab308",
+    "game": "both"
   },
   {
     "numPal": "209",
@@ -3998,7 +4206,8 @@ window.PALDEA_POKEMON = [
       "210",
       "211"
     ],
-    "color": "#eab308"
+    "color": "#eab308",
+    "game": "both"
   },
   {
     "numPal": "210",
@@ -4018,7 +4227,8 @@ window.PALDEA_POKEMON = [
       "210",
       "211"
     ],
-    "color": "#eab308"
+    "color": "#eab308",
+    "game": "both"
   },
   {
     "numPal": "211",
@@ -4038,7 +4248,8 @@ window.PALDEA_POKEMON = [
       "210",
       "211"
     ],
-    "color": "#eab308"
+    "color": "#eab308",
+    "game": "both"
   },
   {
     "numPal": "212",
@@ -4055,7 +4266,8 @@ window.PALDEA_POKEMON = [
     "evolutionLine": [
       "212"
     ],
-    "color": "#78716c"
+    "color": "#78716c",
+    "game": "both"
   },
   {
     "numPal": "213",
@@ -4073,7 +4285,8 @@ window.PALDEA_POKEMON = [
       "213",
       "214"
     ],
-    "color": "#ea580c"
+    "color": "#ea580c",
+    "game": "both"
   },
   {
     "numPal": "214",
@@ -4091,7 +4304,8 @@ window.PALDEA_POKEMON = [
       "213",
       "214"
     ],
-    "color": "#ea580c"
+    "color": "#ea580c",
+    "game": "both"
   },
   {
     "numPal": "215",
@@ -4109,7 +4323,8 @@ window.PALDEA_POKEMON = [
       "215",
       "216"
     ],
-    "color": "#78716c"
+    "color": "#78716c",
+    "game": "both"
   },
   {
     "numPal": "216",
@@ -4127,7 +4342,8 @@ window.PALDEA_POKEMON = [
       "215",
       "216"
     ],
-    "color": "#78716c"
+    "color": "#78716c",
+    "game": "both"
   },
   {
     "numPal": "217",
@@ -4144,7 +4360,8 @@ window.PALDEA_POKEMON = [
     "evolutionLine": [
       "217"
     ],
-    "color": "#78716c"
+    "color": "#78716c",
+    "game": "both"
   },
   {
     "numPal": "218",
@@ -4161,7 +4378,8 @@ window.PALDEA_POKEMON = [
     "evolutionLine": [
       "218"
     ],
-    "color": "#9333ea"
+    "color": "#9333ea",
+    "game": "both"
   },
   {
     "numPal": "219",
@@ -4180,7 +4398,8 @@ window.PALDEA_POKEMON = [
       "219",
       "220"
     ],
-    "color": "#78716c"
+    "color": "#78716c",
+    "game": "both"
   },
   {
     "numPal": "220",
@@ -4199,7 +4418,8 @@ window.PALDEA_POKEMON = [
       "219",
       "220"
     ],
-    "color": "#4f46e5"
+    "color": "#4f46e5",
+    "game": "both"
   },
   {
     "numPal": "221",
@@ -4217,7 +4437,8 @@ window.PALDEA_POKEMON = [
       "221",
       "222"
     ],
-    "color": "#16a34a"
+    "color": "#16a34a",
+    "game": "both"
   },
   {
     "numPal": "222",
@@ -4235,7 +4456,8 @@ window.PALDEA_POKEMON = [
       "221",
       "222"
     ],
-    "color": "#16a34a"
+    "color": "#16a34a",
+    "game": "both"
   },
   {
     "numPal": "223",
@@ -4253,7 +4475,8 @@ window.PALDEA_POKEMON = [
       "223"
     ],
     "color": "#c2410c",
-    "remoteImage": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10250.png"
+    "remoteImage": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10250.png",
+    "game": "both"
   },
   {
     "numPal": "224",
@@ -4272,7 +4495,8 @@ window.PALDEA_POKEMON = [
       "224",
       "225"
     ],
-    "color": "#ea580c"
+    "color": "#ea580c",
+    "game": "both"
   },
   {
     "numPal": "225",
@@ -4291,7 +4515,8 @@ window.PALDEA_POKEMON = [
       "224",
       "225"
     ],
-    "color": "#ea580c"
+    "color": "#ea580c",
+    "game": "both"
   },
   {
     "numPal": "226",
@@ -4310,7 +4535,8 @@ window.PALDEA_POKEMON = [
       "226",
       "227"
     ],
-    "color": "#9333ea"
+    "color": "#9333ea",
+    "game": "scarlet"
   },
   {
     "numPal": "227",
@@ -4329,7 +4555,8 @@ window.PALDEA_POKEMON = [
       "226",
       "227"
     ],
-    "color": "#9333ea"
+    "color": "#9333ea",
+    "game": "scarlet"
   },
   {
     "numPal": "228",
@@ -4347,7 +4574,8 @@ window.PALDEA_POKEMON = [
       "228",
       "229"
     ],
-    "color": "#334155"
+    "color": "#334155",
+    "game": "both"
   },
   {
     "numPal": "229",
@@ -4365,7 +4593,8 @@ window.PALDEA_POKEMON = [
       "228",
       "229"
     ],
-    "color": "#334155"
+    "color": "#334155",
+    "game": "both"
   },
   {
     "numPal": "230",
@@ -4384,7 +4613,8 @@ window.PALDEA_POKEMON = [
       "230",
       "231"
     ],
-    "color": "#334155"
+    "color": "#334155",
+    "game": "both"
   },
   {
     "numPal": "231",
@@ -4403,7 +4633,8 @@ window.PALDEA_POKEMON = [
       "230",
       "231"
     ],
-    "color": "#334155"
+    "color": "#334155",
+    "game": "both"
   },
   {
     "numPal": "232",
@@ -4422,7 +4653,8 @@ window.PALDEA_POKEMON = [
       "232",
       "233"
     ],
-    "color": "#334155"
+    "color": "#334155",
+    "game": "both"
   },
   {
     "numPal": "233",
@@ -4441,7 +4673,8 @@ window.PALDEA_POKEMON = [
       "232",
       "233"
     ],
-    "color": "#334155"
+    "color": "#334155",
+    "game": "both"
   },
   {
     "numPal": "234",
@@ -4460,7 +4693,8 @@ window.PALDEA_POKEMON = [
       "235",
       "236"
     ],
-    "color": "#db2777"
+    "color": "#db2777",
+    "game": "both"
   },
   {
     "numPal": "235",
@@ -4479,7 +4713,8 @@ window.PALDEA_POKEMON = [
       "235",
       "236"
     ],
-    "color": "#db2777"
+    "color": "#db2777",
+    "game": "both"
   },
   {
     "numPal": "236",
@@ -4498,7 +4733,8 @@ window.PALDEA_POKEMON = [
       "235",
       "236"
     ],
-    "color": "#db2777"
+    "color": "#db2777",
+    "game": "both"
   },
   {
     "numPal": "237",
@@ -4516,7 +4752,8 @@ window.PALDEA_POKEMON = [
       "237",
       "238"
     ],
-    "color": "#7c3aed"
+    "color": "#7c3aed",
+    "game": "both"
   },
   {
     "numPal": "238",
@@ -4534,7 +4771,8 @@ window.PALDEA_POKEMON = [
       "237",
       "238"
     ],
-    "color": "#7c3aed"
+    "color": "#7c3aed",
+    "game": "both"
   },
   {
     "numPal": "239",
@@ -4552,7 +4790,8 @@ window.PALDEA_POKEMON = [
     "evolutionLine": [
       "239"
     ],
-    "color": "#7c3aed"
+    "color": "#7c3aed",
+    "game": "both"
   },
   {
     "numPal": "240",
@@ -4570,7 +4809,8 @@ window.PALDEA_POKEMON = [
     "evolutionLine": [
       "240"
     ],
-    "color": "#64748b"
+    "color": "#64748b",
+    "game": "both"
   },
   {
     "numPal": "241",
@@ -4588,7 +4828,8 @@ window.PALDEA_POKEMON = [
     "evolutionLine": [
       "241"
     ],
-    "color": "#db2777"
+    "color": "#db2777",
+    "game": "both"
   },
   {
     "numPal": "242",
@@ -4607,7 +4848,8 @@ window.PALDEA_POKEMON = [
       "242",
       "243"
     ],
-    "color": "#16a34a"
+    "color": "#16a34a",
+    "game": "both"
   },
   {
     "numPal": "243",
@@ -4626,7 +4868,8 @@ window.PALDEA_POKEMON = [
       "242",
       "243"
     ],
-    "color": "#16a34a"
+    "color": "#16a34a",
+    "game": "both"
   },
   {
     "numPal": "244",
@@ -4645,7 +4888,8 @@ window.PALDEA_POKEMON = [
       "244",
       "245"
     ],
-    "color": "#16a34a"
+    "color": "#16a34a",
+    "game": "both"
   },
   {
     "numPal": "245",
@@ -4664,7 +4908,8 @@ window.PALDEA_POKEMON = [
       "244",
       "245"
     ],
-    "color": "#16a34a"
+    "color": "#16a34a",
+    "game": "both"
   },
   {
     "numPal": "246",
@@ -4682,7 +4927,8 @@ window.PALDEA_POKEMON = [
     "evolutionLine": [
       "246"
     ],
-    "color": "#16a34a"
+    "color": "#16a34a",
+    "game": "both"
   },
   {
     "numPal": "247",
@@ -4700,7 +4946,8 @@ window.PALDEA_POKEMON = [
       "247",
       "248"
     ],
-    "color": "#16a34a"
+    "color": "#16a34a",
+    "game": "both"
   },
   {
     "numPal": "248",
@@ -4718,7 +4965,8 @@ window.PALDEA_POKEMON = [
       "247",
       "248"
     ],
-    "color": "#16a34a"
+    "color": "#16a34a",
+    "game": "both"
   },
   {
     "numPal": "249",
@@ -4735,7 +4983,8 @@ window.PALDEA_POKEMON = [
     "evolutionLine": [
       "249"
     ],
-    "color": "#a16207"
+    "color": "#a16207",
+    "game": "both"
   },
   {
     "numPal": "250",
@@ -4753,7 +5002,8 @@ window.PALDEA_POKEMON = [
       "250",
       "251"
     ],
-    "color": "#16a34a"
+    "color": "#16a34a",
+    "game": "both"
   },
   {
     "numPal": "251",
@@ -4772,7 +5022,8 @@ window.PALDEA_POKEMON = [
       "250",
       "251"
     ],
-    "color": "#16a34a"
+    "color": "#16a34a",
+    "game": "both"
   },
   {
     "numPal": "252",
@@ -4790,7 +5041,8 @@ window.PALDEA_POKEMON = [
       "252",
       "253"
     ],
-    "color": "#16a34a"
+    "color": "#16a34a",
+    "game": "both"
   },
   {
     "numPal": "253",
@@ -4809,7 +5061,8 @@ window.PALDEA_POKEMON = [
       "252",
       "253"
     ],
-    "color": "#16a34a"
+    "color": "#16a34a",
+    "game": "both"
   },
   {
     "numPal": "254",
@@ -4827,7 +5080,8 @@ window.PALDEA_POKEMON = [
       "254",
       "255"
     ],
-    "color": "#65a30d"
+    "color": "#65a30d",
+    "game": "both"
   },
   {
     "numPal": "255",
@@ -4846,7 +5100,8 @@ window.PALDEA_POKEMON = [
       "254",
       "255"
     ],
-    "color": "#65a30d"
+    "color": "#65a30d",
+    "game": "both"
   },
   {
     "numPal": "256",
@@ -4865,7 +5120,8 @@ window.PALDEA_POKEMON = [
       "256",
       "257"
     ],
-    "color": "#65a30d"
+    "color": "#65a30d",
+    "game": "both"
   },
   {
     "numPal": "257",
@@ -4884,7 +5140,8 @@ window.PALDEA_POKEMON = [
       "256",
       "257"
     ],
-    "color": "#65a30d"
+    "color": "#65a30d",
+    "game": "both"
   },
   {
     "numPal": "258",
@@ -4902,7 +5159,8 @@ window.PALDEA_POKEMON = [
       "258",
       "259"
     ],
-    "color": "#65a30d"
+    "color": "#65a30d",
+    "game": "both"
   },
   {
     "numPal": "259",
@@ -4921,7 +5179,8 @@ window.PALDEA_POKEMON = [
       "258",
       "259"
     ],
-    "color": "#65a30d"
+    "color": "#65a30d",
+    "game": "both"
   },
   {
     "numPal": "260",
@@ -4940,7 +5199,8 @@ window.PALDEA_POKEMON = [
       "260",
       "261"
     ],
-    "color": "#65a30d"
+    "color": "#65a30d",
+    "game": "both"
   },
   {
     "numPal": "261",
@@ -4959,7 +5219,8 @@ window.PALDEA_POKEMON = [
       "260",
       "261"
     ],
-    "color": "#65a30d"
+    "color": "#65a30d",
+    "game": "both"
   },
   {
     "numPal": "262",
@@ -4977,7 +5238,8 @@ window.PALDEA_POKEMON = [
     "evolutionLine": [
       "262"
     ],
-    "color": "#65a30d"
+    "color": "#65a30d",
+    "game": "both"
   },
   {
     "numPal": "263",
@@ -4995,7 +5257,8 @@ window.PALDEA_POKEMON = [
       "263",
       "264"
     ],
-    "color": "#db2777"
+    "color": "#db2777",
+    "game": "both"
   },
   {
     "numPal": "264",
@@ -5013,7 +5276,8 @@ window.PALDEA_POKEMON = [
       "263",
       "264"
     ],
-    "color": "#db2777"
+    "color": "#db2777",
+    "game": "both"
   },
   {
     "numPal": "265",
@@ -5031,7 +5295,8 @@ window.PALDEA_POKEMON = [
       "265",
       "266"
     ],
-    "color": "#d97706"
+    "color": "#d97706",
+    "game": "both"
   },
   {
     "numPal": "266",
@@ -5049,7 +5314,8 @@ window.PALDEA_POKEMON = [
       "265",
       "266"
     ],
-    "color": "#d97706"
+    "color": "#d97706",
+    "game": "both"
   },
   {
     "numPal": "267",
@@ -5069,7 +5335,8 @@ window.PALDEA_POKEMON = [
       "268",
       "269"
     ],
-    "color": "#d97706"
+    "color": "#d97706",
+    "game": "both"
   },
   {
     "numPal": "268",
@@ -5089,7 +5356,8 @@ window.PALDEA_POKEMON = [
       "268",
       "269"
     ],
-    "color": "#d97706"
+    "color": "#d97706",
+    "game": "both"
   },
   {
     "numPal": "269",
@@ -5109,7 +5377,8 @@ window.PALDEA_POKEMON = [
       "268",
       "269"
     ],
-    "color": "#d97706"
+    "color": "#d97706",
+    "game": "both"
   },
   {
     "numPal": "270",
@@ -5127,7 +5396,8 @@ window.PALDEA_POKEMON = [
       "270",
       "271"
     ],
-    "color": "#d97706"
+    "color": "#d97706",
+    "game": "both"
   },
   {
     "numPal": "271",
@@ -5145,7 +5415,8 @@ window.PALDEA_POKEMON = [
       "270",
       "271"
     ],
-    "color": "#d97706"
+    "color": "#d97706",
+    "game": "both"
   },
   {
     "numPal": "272",
@@ -5163,7 +5434,8 @@ window.PALDEA_POKEMON = [
       "272",
       "273"
     ],
-    "color": "#d97706"
+    "color": "#d97706",
+    "game": "both"
   },
   {
     "numPal": "273",
@@ -5181,7 +5453,8 @@ window.PALDEA_POKEMON = [
       "272",
       "273"
     ],
-    "color": "#d97706"
+    "color": "#d97706",
+    "game": "both"
   },
   {
     "numPal": "274",
@@ -5200,7 +5473,8 @@ window.PALDEA_POKEMON = [
       "274",
       "275"
     ],
-    "color": "#65a30d"
+    "color": "#65a30d",
+    "game": "both"
   },
   {
     "numPal": "275",
@@ -5219,7 +5493,8 @@ window.PALDEA_POKEMON = [
       "274",
       "275"
     ],
-    "color": "#65a30d"
+    "color": "#65a30d",
+    "game": "both"
   },
   {
     "numPal": "276",
@@ -5238,7 +5513,8 @@ window.PALDEA_POKEMON = [
       "277",
       "278"
     ],
-    "color": "#4f46e5"
+    "color": "#4f46e5",
+    "game": "violet"
   },
   {
     "numPal": "277",
@@ -5257,7 +5533,8 @@ window.PALDEA_POKEMON = [
       "277",
       "278"
     ],
-    "color": "#4f46e5"
+    "color": "#4f46e5",
+    "game": "violet"
   },
   {
     "numPal": "278",
@@ -5277,7 +5554,8 @@ window.PALDEA_POKEMON = [
       "277",
       "278"
     ],
-    "color": "#4f46e5"
+    "color": "#4f46e5",
+    "game": "violet"
   },
   {
     "numPal": "279",
@@ -5297,7 +5575,8 @@ window.PALDEA_POKEMON = [
       "280",
       "281"
     ],
-    "color": "#ec4899"
+    "color": "#ec4899",
+    "game": "both"
   },
   {
     "numPal": "280",
@@ -5317,7 +5596,8 @@ window.PALDEA_POKEMON = [
       "280",
       "281"
     ],
-    "color": "#ec4899"
+    "color": "#ec4899",
+    "game": "both"
   },
   {
     "numPal": "281",
@@ -5337,7 +5617,8 @@ window.PALDEA_POKEMON = [
       "280",
       "281"
     ],
-    "color": "#ec4899"
+    "color": "#ec4899",
+    "game": "both"
   },
   {
     "numPal": "282",
@@ -5356,7 +5637,8 @@ window.PALDEA_POKEMON = [
       "283",
       "284"
     ],
-    "color": "#db2777"
+    "color": "#db2777",
+    "game": "both"
   },
   {
     "numPal": "283",
@@ -5375,7 +5657,8 @@ window.PALDEA_POKEMON = [
       "283",
       "284"
     ],
-    "color": "#db2777"
+    "color": "#db2777",
+    "game": "both"
   },
   {
     "numPal": "284",
@@ -5395,7 +5678,8 @@ window.PALDEA_POKEMON = [
       "283",
       "284"
     ],
-    "color": "#db2777"
+    "color": "#db2777",
+    "game": "both"
   },
   {
     "numPal": "285",
@@ -5415,7 +5699,8 @@ window.PALDEA_POKEMON = [
       "286",
       "287"
     ],
-    "color": "#334155"
+    "color": "#334155",
+    "game": "both"
   },
   {
     "numPal": "286",
@@ -5435,7 +5720,8 @@ window.PALDEA_POKEMON = [
       "286",
       "287"
     ],
-    "color": "#334155"
+    "color": "#334155",
+    "game": "both"
   },
   {
     "numPal": "287",
@@ -5455,7 +5741,8 @@ window.PALDEA_POKEMON = [
       "286",
       "287"
     ],
-    "color": "#334155"
+    "color": "#334155",
+    "game": "both"
   },
   {
     "numPal": "288",
@@ -5473,7 +5760,8 @@ window.PALDEA_POKEMON = [
       "288",
       "289"
     ],
-    "color": "#0284c7"
+    "color": "#0284c7",
+    "game": "both"
   },
   {
     "numPal": "289",
@@ -5491,7 +5779,8 @@ window.PALDEA_POKEMON = [
       "288",
       "289"
     ],
-    "color": "#0284c7"
+    "color": "#0284c7",
+    "game": "both"
   },
   {
     "numPal": "290",
@@ -5509,7 +5798,8 @@ window.PALDEA_POKEMON = [
     "evolutionLine": [
       "290"
     ],
-    "color": "#6366f1"
+    "color": "#6366f1",
+    "game": "both"
   },
   {
     "numPal": "291",
@@ -5527,7 +5817,8 @@ window.PALDEA_POKEMON = [
       "291",
       "292"
     ],
-    "color": "#0284c7"
+    "color": "#0284c7",
+    "game": "both"
   },
   {
     "numPal": "292",
@@ -5545,7 +5836,8 @@ window.PALDEA_POKEMON = [
       "291",
       "292"
     ],
-    "color": "#0284c7"
+    "color": "#0284c7",
+    "game": "both"
   },
   {
     "numPal": "293",
@@ -5564,7 +5856,8 @@ window.PALDEA_POKEMON = [
       "293",
       "294"
     ],
-    "color": "#9333ea"
+    "color": "#9333ea",
+    "game": "both"
   },
   {
     "numPal": "294",
@@ -5583,7 +5876,8 @@ window.PALDEA_POKEMON = [
       "293",
       "294"
     ],
-    "color": "#9333ea"
+    "color": "#9333ea",
+    "game": "both"
   },
   {
     "numPal": "295",
@@ -5601,7 +5895,8 @@ window.PALDEA_POKEMON = [
     "evolutionLine": [
       "295"
     ],
-    "color": "#4f46e5"
+    "color": "#4f46e5",
+    "game": "both"
   },
   {
     "numPal": "296",
@@ -5618,7 +5913,8 @@ window.PALDEA_POKEMON = [
     "evolutionLine": [
       "296"
     ],
-    "color": "#64748b"
+    "color": "#64748b",
+    "game": "both"
   },
   {
     "numPal": "297",
@@ -5636,7 +5932,8 @@ window.PALDEA_POKEMON = [
     "evolutionLine": [
       "297"
     ],
-    "color": "#334155"
+    "color": "#334155",
+    "game": "both"
   },
   {
     "numPal": "298",
@@ -5654,7 +5951,8 @@ window.PALDEA_POKEMON = [
       "298",
       "299"
     ],
-    "color": "#7c3aed"
+    "color": "#7c3aed",
+    "game": "both"
   },
   {
     "numPal": "299",
@@ -5672,7 +5970,8 @@ window.PALDEA_POKEMON = [
       "298",
       "299"
     ],
-    "color": "#7c3aed"
+    "color": "#7c3aed",
+    "game": "both"
   },
   {
     "numPal": "300",
@@ -5689,7 +5988,8 @@ window.PALDEA_POKEMON = [
     "evolutionLine": [
       "300"
     ],
-    "color": "#c2410c"
+    "color": "#c2410c",
+    "game": "both"
   },
   {
     "numPal": "301",
@@ -5707,7 +6007,8 @@ window.PALDEA_POKEMON = [
     "evolutionLine": [
       "301"
     ],
-    "color": "#c2410c"
+    "color": "#c2410c",
+    "game": "both"
   },
   {
     "numPal": "302",
@@ -5725,7 +6026,8 @@ window.PALDEA_POKEMON = [
     "evolutionLine": [
       "302"
     ],
-    "color": "#7c3aed"
+    "color": "#7c3aed",
+    "game": "both"
   },
   {
     "numPal": "303",
@@ -5744,7 +6046,8 @@ window.PALDEA_POKEMON = [
       "303",
       "304"
     ],
-    "color": "#6366f1"
+    "color": "#6366f1",
+    "game": "both"
   },
   {
     "numPal": "304",
@@ -5763,7 +6066,8 @@ window.PALDEA_POKEMON = [
       "303",
       "304"
     ],
-    "color": "#6366f1"
+    "color": "#6366f1",
+    "game": "both"
   },
   {
     "numPal": "305",
@@ -5783,7 +6087,8 @@ window.PALDEA_POKEMON = [
       "306",
       "307"
     ],
-    "color": "#4f46e5"
+    "color": "#4f46e5",
+    "game": "violet"
   },
   {
     "numPal": "306",
@@ -5803,7 +6108,8 @@ window.PALDEA_POKEMON = [
       "306",
       "307"
     ],
-    "color": "#4f46e5"
+    "color": "#4f46e5",
+    "game": "violet"
   },
   {
     "numPal": "307",
@@ -5823,7 +6129,8 @@ window.PALDEA_POKEMON = [
       "306",
       "307"
     ],
-    "color": "#4f46e5"
+    "color": "#4f46e5",
+    "game": "violet"
   },
   {
     "numPal": "308",
@@ -5842,7 +6149,8 @@ window.PALDEA_POKEMON = [
       "308",
       "309"
     ],
-    "color": "#9333ea"
+    "color": "#9333ea",
+    "game": "both"
   },
   {
     "numPal": "309",
@@ -5861,7 +6169,8 @@ window.PALDEA_POKEMON = [
       "308",
       "309"
     ],
-    "color": "#9333ea"
+    "color": "#9333ea",
+    "game": "both"
   },
   {
     "numPal": "310",
@@ -5879,7 +6188,8 @@ window.PALDEA_POKEMON = [
     "evolutionLine": [
       "310"
     ],
-    "color": "#eab308"
+    "color": "#eab308",
+    "game": "both"
   },
   {
     "numPal": "311",
@@ -5897,7 +6207,8 @@ window.PALDEA_POKEMON = [
       "311",
       "312"
     ],
-    "color": "#7c3aed"
+    "color": "#7c3aed",
+    "game": "both"
   },
   {
     "numPal": "312",
@@ -5915,7 +6226,8 @@ window.PALDEA_POKEMON = [
       "311",
       "312"
     ],
-    "color": "#7c3aed"
+    "color": "#7c3aed",
+    "game": "both"
   },
   {
     "numPal": "313",
@@ -5933,7 +6245,8 @@ window.PALDEA_POKEMON = [
     "evolutionLine": [
       "313"
     ],
-    "color": "#78716c"
+    "color": "#78716c",
+    "game": "scarlet"
   },
   {
     "numPal": "314",
@@ -5950,7 +6263,8 @@ window.PALDEA_POKEMON = [
     "evolutionLine": [
       "314"
     ],
-    "color": "#c2410c"
+    "color": "#c2410c",
+    "game": "violet"
   },
   {
     "numPal": "315",
@@ -5967,7 +6281,8 @@ window.PALDEA_POKEMON = [
     "evolutionLine": [
       "315"
     ],
-    "color": "#78716c"
+    "color": "#78716c",
+    "game": "both"
   },
   {
     "numPal": "316",
@@ -5987,7 +6302,8 @@ window.PALDEA_POKEMON = [
       "317",
       "318"
     ],
-    "color": "#a16207"
+    "color": "#a16207",
+    "game": "scarlet"
   },
   {
     "numPal": "317",
@@ -6007,7 +6323,8 @@ window.PALDEA_POKEMON = [
       "317",
       "318"
     ],
-    "color": "#a16207"
+    "color": "#a16207",
+    "game": "scarlet"
   },
   {
     "numPal": "318",
@@ -6027,7 +6344,8 @@ window.PALDEA_POKEMON = [
       "317",
       "318"
     ],
-    "color": "#a16207"
+    "color": "#a16207",
+    "game": "scarlet"
   },
   {
     "numPal": "319",
@@ -6044,7 +6362,8 @@ window.PALDEA_POKEMON = [
     "evolutionLine": [
       "319"
     ],
-    "color": "#a16207"
+    "color": "#a16207",
+    "game": "scarlet"
   },
   {
     "numPal": "320",
@@ -6061,7 +6380,8 @@ window.PALDEA_POKEMON = [
     "evolutionLine": [
       "320"
     ],
-    "color": "#0891b2"
+    "color": "#0891b2",
+    "game": "violet"
   },
   {
     "numPal": "321",
@@ -6078,7 +6398,8 @@ window.PALDEA_POKEMON = [
     "evolutionLine": [
       "321"
     ],
-    "color": "#eab308"
+    "color": "#eab308",
+    "game": "both"
   },
   {
     "numPal": "322",
@@ -6097,7 +6418,8 @@ window.PALDEA_POKEMON = [
       "322",
       "323"
     ],
-    "color": "#7c3aed"
+    "color": "#7c3aed",
+    "game": "both"
   },
   {
     "numPal": "323",
@@ -6116,7 +6438,8 @@ window.PALDEA_POKEMON = [
       "322",
       "323"
     ],
-    "color": "#7c3aed"
+    "color": "#7c3aed",
+    "game": "both"
   },
   {
     "numPal": "324",
@@ -6136,7 +6459,8 @@ window.PALDEA_POKEMON = [
       "325",
       "326"
     ],
-    "color": "#0284c7"
+    "color": "#0284c7",
+    "game": "both"
   },
   {
     "numPal": "325",
@@ -6156,7 +6480,8 @@ window.PALDEA_POKEMON = [
       "325",
       "326"
     ],
-    "color": "#0284c7"
+    "color": "#0284c7",
+    "game": "both"
   },
   {
     "numPal": "326",
@@ -6176,7 +6501,8 @@ window.PALDEA_POKEMON = [
       "325",
       "326"
     ],
-    "color": "#0284c7"
+    "color": "#0284c7",
+    "game": "both"
   },
   {
     "numPal": "327",
@@ -6194,7 +6520,8 @@ window.PALDEA_POKEMON = [
       "327",
       "328"
     ],
-    "color": "#0284c7"
+    "color": "#0284c7",
+    "game": "both"
   },
   {
     "numPal": "328",
@@ -6213,7 +6540,8 @@ window.PALDEA_POKEMON = [
       "327",
       "328"
     ],
-    "color": "#0284c7"
+    "color": "#0284c7",
+    "game": "both"
   },
   {
     "numPal": "329",
@@ -6231,7 +6559,8 @@ window.PALDEA_POKEMON = [
       "329",
       "330"
     ],
-    "color": "#0284c7"
+    "color": "#0284c7",
+    "game": "both"
   },
   {
     "numPal": "330",
@@ -6250,7 +6579,8 @@ window.PALDEA_POKEMON = [
       "329",
       "330"
     ],
-    "color": "#0284c7"
+    "color": "#0284c7",
+    "game": "both"
   },
   {
     "numPal": "331",
@@ -6268,7 +6598,8 @@ window.PALDEA_POKEMON = [
     "evolutionLine": [
       "331"
     ],
-    "color": "#0284c7"
+    "color": "#0284c7",
+    "game": "both"
   },
   {
     "numPal": "332",
@@ -6285,7 +6616,8 @@ window.PALDEA_POKEMON = [
     "evolutionLine": [
       "332"
     ],
-    "color": "#0284c7"
+    "color": "#0284c7",
+    "game": "both"
   },
   {
     "numPal": "333",
@@ -6303,7 +6635,8 @@ window.PALDEA_POKEMON = [
       "333",
       "334"
     ],
-    "color": "#0284c7"
+    "color": "#0284c7",
+    "game": "both"
   },
   {
     "numPal": "334",
@@ -6321,7 +6654,8 @@ window.PALDEA_POKEMON = [
       "333",
       "334"
     ],
-    "color": "#0284c7"
+    "color": "#0284c7",
+    "game": "both"
   },
   {
     "numPal": "335",
@@ -6339,7 +6673,8 @@ window.PALDEA_POKEMON = [
     "evolutionLine": [
       "335"
     ],
-    "color": "#0284c7"
+    "color": "#0284c7",
+    "game": "both"
   },
   {
     "numPal": "336",
@@ -6356,7 +6691,8 @@ window.PALDEA_POKEMON = [
     "evolutionLine": [
       "336"
     ],
-    "color": "#0284c7"
+    "color": "#0284c7",
+    "game": "both"
   },
   {
     "numPal": "337",
@@ -6375,7 +6711,8 @@ window.PALDEA_POKEMON = [
       "337",
       "338"
     ],
-    "color": "#9333ea"
+    "color": "#9333ea",
+    "game": "scarlet"
   },
   {
     "numPal": "338",
@@ -6394,7 +6731,8 @@ window.PALDEA_POKEMON = [
       "337",
       "338"
     ],
-    "color": "#9333ea"
+    "color": "#9333ea",
+    "game": "scarlet"
   },
   {
     "numPal": "339",
@@ -6412,7 +6750,8 @@ window.PALDEA_POKEMON = [
       "339",
       "340"
     ],
-    "color": "#0284c7"
+    "color": "#0284c7",
+    "game": "violet"
   },
   {
     "numPal": "340",
@@ -6430,7 +6769,8 @@ window.PALDEA_POKEMON = [
       "339",
       "340"
     ],
-    "color": "#0284c7"
+    "color": "#0284c7",
+    "game": "violet"
   },
   {
     "numPal": "341",
@@ -6449,7 +6789,8 @@ window.PALDEA_POKEMON = [
       "342",
       "343"
     ],
-    "color": "#eab308"
+    "color": "#eab308",
+    "game": "both"
   },
   {
     "numPal": "342",
@@ -6468,7 +6809,8 @@ window.PALDEA_POKEMON = [
       "342",
       "343"
     ],
-    "color": "#eab308"
+    "color": "#eab308",
+    "game": "both"
   },
   {
     "numPal": "343",
@@ -6487,7 +6829,8 @@ window.PALDEA_POKEMON = [
       "342",
       "343"
     ],
-    "color": "#eab308"
+    "color": "#eab308",
+    "game": "both"
   },
   {
     "numPal": "344",
@@ -6506,7 +6849,8 @@ window.PALDEA_POKEMON = [
       "344",
       "345"
     ],
-    "color": "#9333ea"
+    "color": "#9333ea",
+    "game": "both"
   },
   {
     "numPal": "345",
@@ -6525,7 +6869,8 @@ window.PALDEA_POKEMON = [
       "344",
       "345"
     ],
-    "color": "#9333ea"
+    "color": "#9333ea",
+    "game": "both"
   },
   {
     "numPal": "346",
@@ -6543,7 +6888,8 @@ window.PALDEA_POKEMON = [
     "evolutionLine": [
       "346"
     ],
-    "color": "#6366f1"
+    "color": "#6366f1",
+    "game": "both"
   },
   {
     "numPal": "347",
@@ -6562,7 +6908,8 @@ window.PALDEA_POKEMON = [
       "348",
       "349"
     ],
-    "color": "#4f46e5"
+    "color": "#4f46e5",
+    "game": "both"
   },
   {
     "numPal": "348",
@@ -6581,7 +6928,8 @@ window.PALDEA_POKEMON = [
       "348",
       "349"
     ],
-    "color": "#4f46e5"
+    "color": "#4f46e5",
+    "game": "both"
   },
   {
     "numPal": "349",
@@ -6601,7 +6949,8 @@ window.PALDEA_POKEMON = [
       "348",
       "349"
     ],
-    "color": "#4f46e5"
+    "color": "#4f46e5",
+    "game": "both"
   },
   {
     "numPal": "350",
@@ -6620,7 +6969,8 @@ window.PALDEA_POKEMON = [
       "350",
       "351"
     ],
-    "color": "#0891b2"
+    "color": "#0891b2",
+    "game": "both"
   },
   {
     "numPal": "351",
@@ -6639,7 +6989,8 @@ window.PALDEA_POKEMON = [
       "350",
       "351"
     ],
-    "color": "#0891b2"
+    "color": "#0891b2",
+    "game": "both"
   },
   {
     "numPal": "352",
@@ -6658,7 +7009,8 @@ window.PALDEA_POKEMON = [
       "352",
       "353"
     ],
-    "color": "#16a34a"
+    "color": "#16a34a",
+    "game": "both"
   },
   {
     "numPal": "353",
@@ -6677,7 +7029,8 @@ window.PALDEA_POKEMON = [
       "352",
       "353"
     ],
-    "color": "#16a34a"
+    "color": "#16a34a",
+    "game": "both"
   },
   {
     "numPal": "354",
@@ -6695,7 +7048,8 @@ window.PALDEA_POKEMON = [
     "evolutionLine": [
       "354"
     ],
-    "color": "#0891b2"
+    "color": "#0891b2",
+    "game": "both"
   },
   {
     "numPal": "355",
@@ -6713,7 +7067,8 @@ window.PALDEA_POKEMON = [
       "355",
       "356"
     ],
-    "color": "#0891b2"
+    "color": "#0891b2",
+    "game": "both"
   },
   {
     "numPal": "356",
@@ -6731,7 +7086,8 @@ window.PALDEA_POKEMON = [
       "355",
       "356"
     ],
-    "color": "#0891b2"
+    "color": "#0891b2",
+    "game": "both"
   },
   {
     "numPal": "357",
@@ -6750,7 +7106,8 @@ window.PALDEA_POKEMON = [
       "358",
       "359"
     ],
-    "color": "#0891b2"
+    "color": "#0891b2",
+    "game": "both"
   },
   {
     "numPal": "358",
@@ -6769,7 +7126,8 @@ window.PALDEA_POKEMON = [
       "358",
       "359"
     ],
-    "color": "#0891b2"
+    "color": "#0891b2",
+    "game": "both"
   },
   {
     "numPal": "359",
@@ -6789,7 +7147,8 @@ window.PALDEA_POKEMON = [
       "358",
       "359"
     ],
-    "color": "#0891b2"
+    "color": "#0891b2",
+    "game": "both"
   },
   {
     "numPal": "360",
@@ -6806,7 +7165,8 @@ window.PALDEA_POKEMON = [
     "evolutionLine": [
       "360"
     ],
-    "color": "#0891b2"
+    "color": "#0891b2",
+    "game": "both"
   },
   {
     "numPal": "361",
@@ -6824,7 +7184,8 @@ window.PALDEA_POKEMON = [
       "361",
       "362"
     ],
-    "color": "#0891b2"
+    "color": "#0891b2",
+    "game": "both"
   },
   {
     "numPal": "362",
@@ -6842,7 +7203,8 @@ window.PALDEA_POKEMON = [
       "361",
       "362"
     ],
-    "color": "#0891b2"
+    "color": "#0891b2",
+    "game": "both"
   },
   {
     "numPal": "363",
@@ -6860,7 +7222,8 @@ window.PALDEA_POKEMON = [
       "363",
       "364"
     ],
-    "color": "#0891b2"
+    "color": "#0891b2",
+    "game": "both"
   },
   {
     "numPal": "364",
@@ -6878,7 +7241,8 @@ window.PALDEA_POKEMON = [
       "363",
       "364"
     ],
-    "color": "#0891b2"
+    "color": "#0891b2",
+    "game": "both"
   },
   {
     "numPal": "365",
@@ -6897,7 +7261,8 @@ window.PALDEA_POKEMON = [
       "365",
       "366"
     ],
-    "color": "#78716c"
+    "color": "#78716c",
+    "game": "both"
   },
   {
     "numPal": "366",
@@ -6916,7 +7281,8 @@ window.PALDEA_POKEMON = [
       "365",
       "366"
     ],
-    "color": "#78716c"
+    "color": "#78716c",
+    "game": "both"
   },
   {
     "numPal": "367",
@@ -6936,7 +7302,8 @@ window.PALDEA_POKEMON = [
       "368",
       "369"
     ],
-    "color": "#334155"
+    "color": "#334155",
+    "game": "both"
   },
   {
     "numPal": "368",
@@ -6956,7 +7323,8 @@ window.PALDEA_POKEMON = [
       "368",
       "369"
     ],
-    "color": "#334155"
+    "color": "#334155",
+    "game": "both"
   },
   {
     "numPal": "369",
@@ -6976,7 +7344,8 @@ window.PALDEA_POKEMON = [
       "368",
       "369"
     ],
-    "color": "#334155"
+    "color": "#334155",
+    "game": "both"
   },
   {
     "numPal": "370",
@@ -6996,7 +7365,8 @@ window.PALDEA_POKEMON = [
       "371",
       "372"
     ],
-    "color": "#334155"
+    "color": "#334155",
+    "game": "scarlet"
   },
   {
     "numPal": "371",
@@ -7016,7 +7386,8 @@ window.PALDEA_POKEMON = [
       "371",
       "372"
     ],
-    "color": "#334155"
+    "color": "#334155",
+    "game": "scarlet"
   },
   {
     "numPal": "372",
@@ -7036,7 +7407,8 @@ window.PALDEA_POKEMON = [
       "371",
       "372"
     ],
-    "color": "#334155"
+    "color": "#334155",
+    "game": "scarlet"
   },
   {
     "numPal": "373",
@@ -7054,7 +7426,8 @@ window.PALDEA_POKEMON = [
     "evolutionLine": [
       "373"
     ],
-    "color": "#0284c7"
+    "color": "#0284c7",
+    "game": "both"
   },
   {
     "numPal": "374",
@@ -7071,7 +7444,8 @@ window.PALDEA_POKEMON = [
     "evolutionLine": [
       "374"
     ],
-    "color": "#0284c7"
+    "color": "#0284c7",
+    "game": "both"
   },
   {
     "numPal": "375",
@@ -7089,7 +7463,8 @@ window.PALDEA_POKEMON = [
     "evolutionLine": [
       "375"
     ],
-    "color": "#4f46e5"
+    "color": "#4f46e5",
+    "game": "both"
   },
   {
     "numPal": "376",
@@ -7107,7 +7482,8 @@ window.PALDEA_POKEMON = [
     "evolutionLine": [
       "376"
     ],
-    "color": "#d97706"
+    "color": "#d97706",
+    "game": "scarlet"
   },
   {
     "numPal": "377",
@@ -7125,7 +7501,8 @@ window.PALDEA_POKEMON = [
     "evolutionLine": [
       "377"
     ],
-    "color": "#ec4899"
+    "color": "#ec4899",
+    "game": "scarlet"
   },
   {
     "numPal": "378",
@@ -7143,7 +7520,8 @@ window.PALDEA_POKEMON = [
     "evolutionLine": [
       "378"
     ],
-    "color": "#16a34a"
+    "color": "#16a34a",
+    "game": "scarlet"
   },
   {
     "numPal": "379",
@@ -7161,7 +7539,8 @@ window.PALDEA_POKEMON = [
     "evolutionLine": [
       "379"
     ],
-    "color": "#7c3aed"
+    "color": "#7c3aed",
+    "game": "scarlet"
   },
   {
     "numPal": "380",
@@ -7179,7 +7558,8 @@ window.PALDEA_POKEMON = [
     "evolutionLine": [
       "380"
     ],
-    "color": "#65a30d"
+    "color": "#65a30d",
+    "game": "scarlet"
   },
   {
     "numPal": "381",
@@ -7197,7 +7577,8 @@ window.PALDEA_POKEMON = [
     "evolutionLine": [
       "381"
     ],
-    "color": "#eab308"
+    "color": "#eab308",
+    "game": "scarlet"
   },
   {
     "numPal": "382",
@@ -7215,7 +7596,8 @@ window.PALDEA_POKEMON = [
     "evolutionLine": [
       "382"
     ],
-    "color": "#d97706"
+    "color": "#d97706",
+    "game": "violet"
   },
   {
     "numPal": "383",
@@ -7233,7 +7615,8 @@ window.PALDEA_POKEMON = [
     "evolutionLine": [
       "383"
     ],
-    "color": "#0891b2"
+    "color": "#0891b2",
+    "game": "violet"
   },
   {
     "numPal": "384",
@@ -7251,7 +7634,8 @@ window.PALDEA_POKEMON = [
     "evolutionLine": [
       "384"
     ],
-    "color": "#c2410c"
+    "color": "#c2410c",
+    "game": "violet"
   },
   {
     "numPal": "385",
@@ -7269,7 +7653,8 @@ window.PALDEA_POKEMON = [
     "evolutionLine": [
       "385"
     ],
-    "color": "#334155"
+    "color": "#334155",
+    "game": "violet"
   },
   {
     "numPal": "386",
@@ -7287,7 +7672,8 @@ window.PALDEA_POKEMON = [
     "evolutionLine": [
       "386"
     ],
-    "color": "#ea580c"
+    "color": "#ea580c",
+    "game": "violet"
   },
   {
     "numPal": "387",
@@ -7305,7 +7691,8 @@ window.PALDEA_POKEMON = [
     "evolutionLine": [
       "387"
     ],
-    "color": "#a16207"
+    "color": "#a16207",
+    "game": "violet"
   },
   {
     "numPal": "388",
@@ -7325,7 +7712,8 @@ window.PALDEA_POKEMON = [
       "389",
       "390"
     ],
-    "color": "#4f46e5"
+    "color": "#4f46e5",
+    "game": "both"
   },
   {
     "numPal": "389",
@@ -7345,7 +7733,8 @@ window.PALDEA_POKEMON = [
       "389",
       "390"
     ],
-    "color": "#4f46e5"
+    "color": "#4f46e5",
+    "game": "both"
   },
   {
     "numPal": "390",
@@ -7365,7 +7754,8 @@ window.PALDEA_POKEMON = [
       "389",
       "390"
     ],
-    "color": "#4f46e5"
+    "color": "#4f46e5",
+    "game": "both"
   },
   {
     "numPal": "391",
@@ -7383,7 +7773,8 @@ window.PALDEA_POKEMON = [
       "391",
       "392"
     ],
-    "color": "#7c3aed"
+    "color": "#7c3aed",
+    "game": "both"
   },
   {
     "numPal": "392",
@@ -7402,7 +7793,8 @@ window.PALDEA_POKEMON = [
       "391",
       "392"
     ],
-    "color": "#7c3aed"
+    "color": "#7c3aed",
+    "game": "both"
   },
   {
     "numPal": "393",
@@ -7420,7 +7812,8 @@ window.PALDEA_POKEMON = [
     "evolutionLine": [
       "393"
     ],
-    "color": "#334155"
+    "color": "#334155",
+    "game": "both"
   },
   {
     "numPal": "394",
@@ -7438,7 +7831,8 @@ window.PALDEA_POKEMON = [
     "evolutionLine": [
       "394"
     ],
-    "color": "#334155"
+    "color": "#334155",
+    "game": "both"
   },
   {
     "numPal": "395",
@@ -7456,7 +7850,8 @@ window.PALDEA_POKEMON = [
     "evolutionLine": [
       "395"
     ],
-    "color": "#334155"
+    "color": "#334155",
+    "game": "both"
   },
   {
     "numPal": "396",
@@ -7474,7 +7869,8 @@ window.PALDEA_POKEMON = [
     "evolutionLine": [
       "396"
     ],
-    "color": "#334155"
+    "color": "#334155",
+    "game": "both"
   },
   {
     "numPal": "397",
@@ -7492,7 +7888,8 @@ window.PALDEA_POKEMON = [
     "evolutionLine": [
       "397"
     ],
-    "color": "#4f46e5"
+    "color": "#4f46e5",
+    "game": "scarlet"
   },
   {
     "numPal": "398",
@@ -7510,7 +7907,8 @@ window.PALDEA_POKEMON = [
     "evolutionLine": [
       "398"
     ],
-    "color": "#ec4899"
+    "color": "#ec4899",
+    "game": "violet"
   },
   {
     "numPal": "399",
@@ -7528,7 +7926,8 @@ window.PALDEA_POKEMON = [
     "evolutionLine": [
       "399"
     ],
-    "color": "#c2410c"
+    "color": "#c2410c",
+    "game": "scarlet"
   },
   {
     "numPal": "400",
@@ -7546,6 +7945,7 @@ window.PALDEA_POKEMON = [
     "evolutionLine": [
       "400"
     ],
-    "color": "#eab308"
+    "color": "#eab308",
+    "game": "violet"
   }
 ];
