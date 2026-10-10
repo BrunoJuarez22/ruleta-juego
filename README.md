@@ -51,13 +51,27 @@ Si no deseas ejecutar Node.js, simplemente haz doble clic en el archivo [index.h
 
 No necesitas comprar un dominio para que cualquier persona acceda a tu ruleta y guarde sus datos. El servidor `server/server.js` sirve tanto la API como la interfaz web.
 
-### Despliegue en Render.com (Gratis)
-1. Sube tu proyecto a un repositorio en **GitHub**.
-2. Entra en [Render.com](https://render.com) e inicia sesión.
-3. Haz clic en **New +** > **Web Service** y conecta tu repositorio.
-4. Configura:
+### Opción 1: Despliegue en Fly.io (Recomendado — Soporta Disco Persistente para SQLite)
+Fly.io permite adjuntar un disco duro virtual gratuito (`[mounts]`) de modo que la base de datos `data/shiny_roulette.db` **nunca se borra al reiniciar**:
+
+1. En la terminal de tu computadora:
+   ```powershell
+   # 1. Iniciar sesión en Fly.io (se abrirá en tu navegador)
+   fly auth login
+
+   # 2. Desplegar la aplicación (crea la máquina y el volumen de disco automáticamente)
+   fly launch
+   ```
+2. Fly.io te proporcionará una URL pública gratuita con HTTPS como:
+   👉 **`https://shiny-roulette.fly.dev`**
+
+### Opción 2: Despliegue en Render.com (Gratis)
+1. Entra en [Render.com](https://render.com) e inicia sesión con GitHub.
+2. Haz clic en **New +** > **Web Service** y selecciona tu repositorio `ruleta-juego`.
+3. Configura:
    - **Environment:** Node
    - **Build Command:** `npm install`
    - **Start Command:** `npm start`
-5. Render te asignará automáticamente una URL gratuita con HTTPS (ejemplo: `https://shiny-roulette.onrender.com`).
+4. Render te asignará automáticamente una URL gratuita (ej. `https://shiny-roulette.onrender.com`).
+
 

@@ -42,6 +42,9 @@ ruleta-juego/
 ├── paldea_data.js                # Definición de window.PALDEA_POKEMON (400 registros completos)
 ├── paldea_pokemon.json           # Base de datos canónica en formato JSON
 ├── package.json                  # Dependencias de backend (express, bcryptjs, jsonwebtoken, cors)
+├── Dockerfile                    # Imagen de contenedor Node 22 para despliegue en Fly.io
+├── .dockerignore                 # Exclusiones de build de contenedor
+├── fly.toml                      # Manifiesto de Fly.io con volumen persistente para SQLite
 ├── ads.txt                       # Archivo de autorización de inventario publicitario (IAB Tech Lab)
 ├── README.md                     # Documentación general para usuarios
 ├── memory.md                     # Memoria del proyecto, arquitectura y changelog
@@ -162,6 +165,12 @@ ruleta-juego/
     - **Rama Principal:** `main`.
     - **Contenido Sincronizado:** Todo el código fuente, backend Express, esquemas SQLite, 400 sprites regulares y 400 shiny offline, ilustraciones de alta resolución locales (incluyendo Wooper y Tauros de Paldea), assets SVG, archivo normativo `ads.txt`, políticas de privacidad y documentación completa.
     - **Seguridad en `.gitignore`:** Exclusión garantizada de `node_modules/`, bases de datos SQLite locales (`*.db`, `*.db-wal`, `*.db-shm`) y variables `.env`. Se preserva la carpeta `data/` con `data/.gitkeep`.
+
+19. **Infraestructura de Despliegue en Fly.io con Disco Persistente para SQLite:**
+    - **Configuración de Contenedor:** Creación de `Dockerfile` (Node 22 Alpine) optimizado para producción y `.dockerignore` para excluir artefactos pesados o temporales.
+    - **Configuración de Fly (`fly.toml`):** Configurado con puerto interno `3000`, HTTPS forzado y sección `[mounts]` con volumen persistente (`roulette_data`) montado en `/app/data`.
+    - **Persistencia de Base de Datos:** Garantiza que el archivo `data/shiny_roulette.db` no se pierda ante reinicios o suspensión por inactividad de máquinas virtuales.
+    - **Herramienta CLI:** Instalación de `flyctl` en `$HOME/.fly/bin/` y adición al `PATH` del sistema.
 
 ---
 
