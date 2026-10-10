@@ -157,6 +157,12 @@ ruleta-juego/
     - **Arquitectura Fullstack Unificada:** `server/server.js` sirve simultáneamente las rutas de API REST (`/api/auth`, `/api/user`, `/api/health`) y los archivos estáticos de la aplicación mediante `express.static(ROOT_DIR)`.
     - **Detección Dinámica de URL en Frontend (`api.js`):** Detecta automáticamente si se ejecuta bajo protocolo HTTP/HTTPS (usando rutas relativas `/api/...`) o vía archivo local `file://` (apuntando a `http://localhost:3000`), permitiendo el despliegue directo en cualquier servicio en la nube (Render, Railway, Koyeb) sin requerir configuración manual de dominio ni variables de entorno adicionales.
 
+18. **Creación de Repositorio Git y Publicación en GitHub:**
+    - **Repositorio Oficial:** Publicado con éxito en GitHub bajo la cuenta del usuario: `https://github.com/BrunoJuarez22/ruleta-juego`.
+    - **Rama Principal:** `main`.
+    - **Contenido Sincronizado:** Todo el código fuente, backend Express, esquemas SQLite, 400 sprites regulares y 400 shiny offline, ilustraciones de alta resolución locales (incluyendo Wooper y Tauros de Paldea), assets SVG, archivo normativo `ads.txt`, políticas de privacidad y documentación completa.
+    - **Seguridad en `.gitignore`:** Exclusión garantizada de `node_modules/`, bases de datos SQLite locales (`*.db`, `*.db-wal`, `*.db-shm`) y variables `.env`. Se preserva la carpeta `data/` con `data/.gitkeep`.
+
 ---
 
 ## 4. Estructuras de Datos y Persistencia
