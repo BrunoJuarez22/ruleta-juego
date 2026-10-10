@@ -14,6 +14,11 @@ primary_region = 'qro'
   min_machines_running = 0
   processes = ['app']
 
+[http_service.concurrency]
+  type = 'requests'
+  soft_limit = 20
+  hard_limit = 25
+
 # Disco persistente para SQLite (nunca se borra al reiniciar ni al entrar en reposo)
 [mounts]
   source = 'roulette_data'

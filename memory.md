@@ -169,6 +169,7 @@ ruleta-juego/
 19. **Infraestructura de Despliegue en Fly.io con Disco Persistente para SQLite:**
     - **Configuración de Contenedor:** Creación de `Dockerfile` (Node 22 Alpine) optimizado para producción y `.dockerignore` para excluir artefactos pesados o temporales.
     - **Configuración de Fly (`fly.toml`):** Configurado con puerto interno `3000`, HTTPS forzado y sección `[mounts]` con volumen persistente (`roulette_data`) montado en `/app/data`.
+    - **Protección contra Sobrecostes por Tráfico:** Integración de límites duros de concurrencia (`soft_limit = 20`, `hard_limit = 25`) en `[http_service.concurrency]` y contención de 1 máquina máxima para evitar escalados automáticos o cobros sorpresivos por tráfico anómalo.
     - **Persistencia de Base de Datos:** Garantiza que el archivo `data/shiny_roulette.db` no se pierda ante reinicios o suspensión por inactividad de máquinas virtuales.
     - **Herramienta CLI:** Instalación de `flyctl` en `$HOME/.fly/bin/` y adición al `PATH` del sistema.
 
