@@ -173,6 +173,12 @@ ruleta-juego/
     - **Persistencia de Base de Datos:** Garantiza que el archivo `data/shiny_roulette.db` no se pierda ante reinicios o suspensión por inactividad de máquinas virtuales.
     - **Herramienta CLI:** Instalación de `flyctl` en `$HOME/.fly/bin/` y adición al `PATH` del sistema.
 
+20. **Despliegue Exitoso en Producción (Fly.io):**
+    - **URL Pública en Vivo:** `https://shiny-roulette.fly.dev` operativa con certificado SSL/HTTPS activo y latencia mínima.
+    - **Verificación de Healthcheck:** `GET /api/health` responde con HTTP 200 y confirma la base de datos `SQLite (node:sqlite)` operativa.
+    - **Verificación de Inventario Publicitario:** `GET /ads.txt` responde con HTTP 200 y sirve la especificación de editor para monetización.
+    - **Integración Continua (CI/CD):** Flujo de trabajo de GitHub Actions generado en `.github/workflows/fly-deploy.yml` para despliegues continuos.
+
 ---
 
 ## 4. Estructuras de Datos y Persistencia

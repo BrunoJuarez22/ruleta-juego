@@ -1,10 +1,16 @@
-# fly.toml — Configuración de despliegue para Shiny Roulette en Fly.io
-# Documentación: https://fly.io/docs/reference/configuration/
+# fly.toml app configuration file generated for shiny-roulette on 2026-10-09T20:20:15-06:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
 
 app = 'shiny-roulette'
-primary_region = 'qro'
+primary_region = 'dfw'
 
 [build]
+[[mounts]]
+  source = 'roulette_data'
+  destination = '/app/data'
+  initial_size = '1gb'
 
 [http_service]
   internal_port = 3000
@@ -14,18 +20,13 @@ primary_region = 'qro'
   min_machines_running = 0
   processes = ['app']
 
-[http_service.concurrency]
-  type = 'requests'
-  soft_limit = 20
-  hard_limit = 25
-
-# Disco persistente para SQLite (nunca se borra al reiniciar ni al entrar en reposo)
-[mounts]
-  source = 'roulette_data'
-  destination = '/app/data'
-  initial_size = '1gb'
+  [http_service.concurrency]
+    type = 'requests'
+    hard_limit = 25
+    soft_limit = 20
 
 [[vm]]
   memory = '512mb'
   cpu_kind = 'shared'
   cpus = 1
+  memory_mb = 512
