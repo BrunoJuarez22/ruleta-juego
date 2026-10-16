@@ -292,6 +292,13 @@ ruleta-juego/
       - Cada Pokédex cuenta con su propio almacenamiento en `localStorage` (`shiny_captured_${dexId}`, `shiny_pending_${dexId}`, `shiny_last_spin_pending_${dexId}`).
       - Sincronización en SQLite particionada por `user_id` y `dex_id` (`user_captured`, `user_pending`, `user_dex_state`).
       - 100% verificado con suite de pruebas automáticas en scratch (`test_switch_integration.js`).
+28. **Corrección de Mapeo de Líneas Evolutivas Multi-Dex y Desambiguación de IDs:**
+    - **Diagnóstico del Error:** En las Pokédexes de Switch (`swsh`, `pla`, `bdsp`, `lgpe`, `plza`), el campo `evolutionLine` contenía números Nacionales de 4 dígitos (`"0001"`, `"0002"`, etc.) en lugar de los números Regionales de ese juego. Al mismo tiempo, `getPokemonByAnyId` parseaba los IDs a enteros (`numInt = "1"`), haciendo que al buscar el miembro nacional `"0001"` (Bulbasaur) en la Pokédex de Luminalia (`plza`), coincidiera erróneamente con el Pokémon regional #001 (`numLum = "001"`, que es Chikorita).
+    - **Solución Implementada:**
+      1. Se regeneraron los campos `evolutionLine` en `switch_pokemon.json` y `switch_data.js` para usar los identificadores regionales canónicos de cada juego (`numGal`, `numHis`, `numSin`, `numKan`, `numLum`), agrupados rigurosamente por `chainId` evolutivo.
+      2. Se refactorizó `getPokemonByAnyId` en `script.js` para diferenciar con exactitud búsquedas de 4 dígitos (Nacionales) de búsquedas de 1 a 3 dígitos (Regionales).
+      3. Se actualizó el parámetro anti-caché a `v=4.1` en `index.html`.
+      4. Verificado con 0 discrepancias sobre 5,935 referencias evolutivas comprobadas en `test_switch_integration.js`.
 
 ---
 
