@@ -125,6 +125,25 @@
     </div>
   </header>
 
+  <!-- Selector de Pokédex / Juego (Multi-Dex) -->
+  <section class="dex-selection-section" aria-label="Selección de Pokédex">
+    <div class="dex-selector-container">
+      <span class="dex-selector-label">POKÉDEX / JUEGO:</span>
+      <div class="dex-selector-pills" role="tablist">
+        <button id="dexBtnGeneral" class="dex-pill active" data-dex="general" role="tab" aria-selected="true" title="Ruleta con todos los Pokémon existentes (Generaciones 1 a 9)">
+          <span class="dex-pill-icon">★</span>
+          <span class="dex-pill-name">RULETA GENERAL</span>
+          <span class="dex-pill-count">1025</span>
+        </button>
+        <button id="dexBtnPaldea" class="dex-pill" data-dex="paldea" role="tab" aria-selected="false" title="Pokédex de Paldea (Pokémon Escarlata y Púrpura)">
+          <span class="dex-pill-dot dot-paldea"></span>
+          <span class="dex-pill-name">PALDEA (ESC / PÚR)</span>
+          <span class="dex-pill-count">400</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
   <!-- Barra de Filtros y Modos -->
   <div class="filter-toolbar">
     <div class="filter-group">
@@ -179,15 +198,15 @@
         <span>16 ALEATORIOS</span>
       </button>
 
-      <button id="resetAllPokemonBtn" class="btn-subaction" title="Restablecer los 400 Pokémon">
+      <button id="resetAllPokemonBtn" class="btn-subaction" title="Restablecer todos los Pokémon">
         <svg class="icon-svg-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <polyline points="23 4 23 10 17 10"></polyline>
           <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
         </svg>
-        <span>VER LOS 400</span>
+        <span id="resetAllBtnText">VER LOS 1025</span>
       </button>
 
-      <span id="counterBadge" class="badge-counter">400 POKÉMON</span>
+      <span id="counterBadge" class="badge-counter">1025 POKÉMON</span>
     </div>
   </div>
 
@@ -235,7 +254,7 @@
     <section class="status-dashboard">
       <div class="dashboard-tabs">
         <button id="tabPendingBtn" class="tab-btn active">
-          MATRIZ PALDEA 400 (<span id="pendingCount">0</span> PENDIENTES)
+          <span id="tabPendingTitle">MATRIZ GENERAL</span> (<span id="pendingCount">0</span> PENDIENTES)
         </button>
         <button id="tabCapturedBtn" class="tab-btn">
           CAPTURADOS SHINY (<span id="capturedCount">0</span>)
@@ -245,13 +264,13 @@
         </button>
       </div>
 
-      <!-- Vista 1: Matriz Gigante de Paldea (400) & Pendientes -->
+      <!-- Vista 1: Matriz Gigante & Pendientes -->
       <div id="pendingView" class="dashboard-view active">
         <div class="matrix-toolbar">
           <div class="matrix-stats-bar">
             <span class="matrix-stat-pill">
               <span class="stat-label">CAPTURADOS:</span>
-              <strong id="matrixCapturedCount">0</strong>/400
+              <strong id="matrixCapturedCount">0</strong>/<span id="matrixTotalCount">1025</span>
               <span id="matrixCapturedPercent" class="stat-percentage">(0%)</span>
             </span>
             <span class="matrix-stat-pill is-highlight" id="matrixLastSpinPill" title="Pendientes del giro anterior">
@@ -280,7 +299,7 @@
               </button>
             </div>
 
-            <div class="matrix-filter-chips">
+            <div class="matrix-filter-chips" id="matrixFilterChips">
               <button class="matrix-chip active" data-matrix-filter="all">TODOS (400)</button>
               <button class="matrix-chip chip-last-spin" data-matrix-filter="last-spin">
                 <span>GIRO ANTERIOR</span>
@@ -431,7 +450,7 @@
   <div id="settingsModal" class="modal-overlay">
     <div class="modal-box pokedex-modal">
       <div class="modal-header">
-        <h2>CATÁLOGO POKÉDEX DE PALDEA (400)</h2>
+        <h2 id="catalogModalTitle">CATÁLOGO POKÉDEX (1025)</h2>
         <button id="closeSettingsBtn" class="modal-close" title="Cerrar">
           <svg class="icon-svg-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <line x1="18" y1="6" x2="6" y2="18"></line>

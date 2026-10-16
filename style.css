@@ -152,6 +152,107 @@ header {
 }
 
 /* ==========================================================================
+   SELECTOR DE POKÉDEX / JUEGO (MULTI-DEX)
+   ========================================================================== */
+
+.dex-selection-section {
+  width: 100%;
+  max-width: 1100px;
+  background-color: var(--bg-surface);
+  border-bottom: 1px solid var(--border-color);
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+}
+
+.dex-selector-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.dex-selector-label {
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: var(--text-muted);
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+
+.dex-selector-pills {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.dex-pill {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  transition: all 0.15s ease;
+  letter-spacing: 0.4px;
+  user-select: none;
+}
+
+.dex-pill:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--text-muted);
+}
+
+.dex-pill.active {
+  background: var(--text-main);
+  color: var(--bg-surface);
+  border-color: var(--text-main);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+.dex-pill-icon {
+  font-size: 0.85rem;
+  color: var(--accent-gold);
+}
+
+.dex-pill.active .dex-pill-icon {
+  color: #fbbf24;
+}
+
+.dex-pill-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.dex-pill-dot.dot-paldea {
+  background: linear-gradient(135deg, #e11d48 50%, #7c3aed 50%);
+}
+
+.dex-pill-count {
+  background: rgba(100, 116, 139, 0.2);
+  color: inherit;
+  padding: 1px 6px;
+  border-radius: 3px;
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.dex-pill.active .dex-pill-count {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* ==========================================================================
    BARRA DE FILTROS Y OPCIONES
    ========================================================================== */
 
@@ -449,6 +550,46 @@ main {
   background: var(--bg-surface);
   color: var(--text-muted);
   border: 1px solid var(--border-color);
+}
+
+.winner-game-banner.winner-game-general {
+  background: var(--bg-card);
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+  flex-direction: column;
+  padding: 8px 12px;
+  gap: 6px;
+  width: 100%;
+}
+
+.game-chips-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  justify-content: center;
+}
+
+.game-chip-tag {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-main);
+  padding: 2px 6px;
+  border-radius: 2px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.game-chip-tag.highlight-sv {
+  border-color: #fda4af;
+  color: #be123c;
+  background: rgba(225, 29, 72, 0.08);
+}
+
+.game-chip-tag.highlight-plza {
+  border-color: #c4b5fd;
+  color: #6d28d9;
+  background: rgba(124, 58, 237, 0.08);
 }
 
 [data-theme="dark"] .winner-game-banner.winner-game-scarlet {

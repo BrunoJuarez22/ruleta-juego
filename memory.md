@@ -252,6 +252,24 @@ ruleta-juego/
       - Descarga de los 625 sprites estándar restantes (`assets/sprites/1.png` a `1025.png`) y 625 sprites shiny (`assets/sprites/shiny/1.png` a `1025.png`).
       - Total de archivos en disco: 1,027 sprites regulares y 1,027 sprites shiny (incluyendo las formas de Paldea Tauros #10250 y Wooper #10253). Cero dependencias de red en tiempo de ejecución.
 
+26. **Selector de Pokédex / Juego e Interfaz Multi-Dex Dinámica (Fase 3):**
+    - **Selector Multi-Dex con Píldoras Nítidas:**
+      - Nueva sección de navegación accesible (`.dex-selection-section`) ubicada estratégicamente debajo del encabezado principal.
+      - Píldoras de selección interactiva: `RULETA GENERAL (1025)` (estrella dorada `★`, seleccionada por defecto como solicitó el usuario) y `PALDEA (ESC / PÚR) (400)` (punto de gradiente escarlata/púrpura).
+      - Conmutación en caliente fluida mediante `switchDexContext(dexId)` sin recarga de página: redibuja la ruleta al instante (1025 vs 400 gajos), conmuta la matriz, actualiza contadores y títulos dinámicos (`#tabPendingTitle`, `#catalogModalTitle`, `#matrixTotalCount`, `#resetAllBtnText`).
+    - **Filtros Adaptativos y Reconstrucción Dinámica:**
+      - En Ruleta General:
+        - Selector de rango (`#rangeFilter`) con opciones por Generación (`GEN 1: KANTO` a `GEN 9: PALDEA`) y disponibilidad (`DISPONIBLE EN ESC/PÚR (S/V)`, `CONFIRMADO LEYENDAS Z-A`).
+        - Chips de matriz dinámicos para Gens 1 a 9 con conteos oficiales y juegos destacados (`EN S/V`, `EN Z-A`).
+      - En Pokédex de Paldea:
+        - Mantiene rangos clásicos (`INICIALES`, `#001-#100`...`#301-#400`, `PARADOJAS`) y chips exclusivos (`ESCARLATA (23)`, `PÚRPURA (23)`, `AMBOS (354)`).
+    - **Visualización Universal de Juegos Disponibles y Formato de Número:**
+      - Helper unificado `getPokemonDisplayNum(pokemon)`: muestra `#0001` - `#1025` en General y `#001` - `#400` en Paldea sin valores `undefined`.
+      - En Ruleta General: el modal ganador despliega fila de chips vectoriales (`.winner-game-general`, `.game-chips-row`) indicando los juegos donde cada Pokémon puede capturarse o transferirse, con resaltado visual para S/V y Legends Z-A.
+      - Live Pointer Tracker, historial de giros, modal evolutivo y catálogo Pokédex adaptados a ambos contextos.
+    - **Aislamiento Total de Datos Verificado:**
+      - Pruebas automatizadas en scratch script confirman que capturas y pendientes en Paldea no contaminan General y viceversa.
+
 ---
 
 ## 4. Estructuras de Datos y Persistencia

@@ -37,7 +37,83 @@ const ALL_PALDEA_POKEMON = (window.PALDEA_POKEMON || []).map((p, index) => {
   return p;
 });
 const PALDEA_BY_NUM = new Map();
-ALL_PALDEA_POKEMON.forEach(p => PALDEA_BY_NUM.set(p.numPal, p));
+ALL_PALDEA_POKEMON.forEach(p => {
+  PALDEA_BY_NUM.set(p.numPal, p);
+  PALDEA_BY_NUM.set(String(parseInt(p.numPal, 10)), p);
+});
+
+const ALL_NATIONAL_POKEMON = (window.ALL_NATIONAL_POKEMON || []).map((p, index) => {
+  p.color = p.color || getPokemonColor(p, index);
+  return p;
+});
+const NATIONAL_BY_ID = new Map();
+ALL_NATIONAL_POKEMON.forEach(p => {
+  NATIONAL_BY_ID.set(p.pokemonId, p);
+  NATIONAL_BY_ID.set(p.numNac, p);
+  NATIONAL_BY_ID.set(String(parseInt(p.numNac, 10)), p);
+});
+
+// Catálogos Oficiales de Pokédex disponibles
+const DEX_CONFIGS = {
+  general: {
+    id: 'general',
+    name: 'Ruleta General (Gens 1-9)',
+    shortName: 'GENERAL',
+    totalCount: 1025,
+    matrixTitle: 'MATRIZ GENERAL (1025)',
+    catalogTitle: 'CATÁLOGO NACIONAL COMPLETO (1025)',
+    getItems: () => ALL_NATIONAL_POKEMON
+  },
+  paldea: {
+    id: 'paldea',
+    name: 'Pokédex de Paldea (Escarlata / Púrpura)',
+    shortName: 'PALDEA',
+    totalCount: 400,
+    matrixTitle: 'MATRIZ PALDEA (400)',
+    catalogTitle: 'CATÁLOGO POKÉDEX DE PALDEA (400)',
+    getItems: () => ALL_PALDEA_POKEMON
+  }
+};
+
+// Contexto activo de Pokédex / Juego (por defecto 'general' como solicitó el usuario)
+let currentDexId = localStorage.getItem('ruleta_active_dex') || 'general';
+
+function getActiveDexConfig() {
+  return DEX_CONFIGS[currentDexId] || DEX_CONFIGS.general;
+}
+
+function getActiveDexFullList() {
+  return getActiveDexConfig().getItems();
+}
+
+function getPokemonId(pokemon) {
+  if (!pokemon) return '';
+  return String(pokemon.pokemonId || pokemon.numPal || pokemon.numNac || pokemon.id || '');
+}
+
+function getPokemonDisplayNum(pokemon) {
+  if (!pokemon) return '';
+  if (currentDexId === 'paldea') {
+    return pokemon.numPal || pokemon.numNac || pokemon.pokemonId || '';
+  }
+  return pokemon.numNac || pokemon.numPal || pokemon.pokemonId || '';
+}
+
+function getPokemonByAnyId(id) {
+  if (!id) return null;
+  const idStr = String(id);
+  const pad4 = idStr.padStart(4, '0');
+  const pad3 = idStr.padStart(3, '0');
+  const numInt = String(parseInt(idStr, 10));
+
+  if (currentDexId === 'paldea') {
+    return PALDEA_BY_NUM.get(pad3) || PALDEA_BY_NUM.get(idStr) || PALDEA_BY_NUM.get(numInt) ||
+           NATIONAL_BY_ID.get(pad4) || NATIONAL_BY_ID.get(idStr) || null;
+  } else {
+    return NATIONAL_BY_ID.get(pad4) || NATIONAL_BY_ID.get(idStr) || NATIONAL_BY_ID.get(numInt) ||
+           PALDEA_BY_NUM.get(pad3) || PALDEA_BY_NUM.get(idStr) || null;
+  }
+}
 
 // Conjuntos oficiales de exclusivos de Paldea
 const SCARLET_EXCLUSIVE_SET = new Set([
@@ -56,50 +132,121 @@ function getPokemonGame(pokemon) {
   if (!pokemon) return 'both';
   if (pokemon.game) return pokemon.game;
   const num = pokemon.numPal;
-  if (SCARLET_EXCLUSIVE_SET.has(num)) return 'scarlet';
-  if (VIOLET_EXCLUSIVE_SET.has(num)) return 'violet';
+  if (num && SCARLET_EXCLUSIVE_SET.has(String(parseInt(num, 10)))) return 'scarlet';
+  if (num && VIOLET_EXCLUSIVE_SET.has(String(parseInt(num, 10)))) return 'violet';
   return 'both';
 }
 
 function getGameBadgeHtml(pokemon, variant = 'normal') {
-  const game = getPokemonGame(pokemon);
-  let shortLabel = 'AMBOS';
-  let fullLabel = 'AMBOS';
-  let title = 'Disponible en Pokémon Escarlata y Púrpura';
+  if (!pokemon) return '';
 
-  if (game === 'scarlet') {
-    shortLabel = 'ESC';
-    fullLabel = 'ESCARLATA';
-    title = 'Exclusivo de Pokémon Escarlata';
-  } else if (game === 'violet') {
-    shortLabel = 'PÚR';
-    fullLabel = 'PÚRPURA';
-    title = 'Exclusivo de Pokémon Púrpura';
+  if (currentDexId === 'paldea') {
+    const game = getPokemonGame(pokemon);
+    let shortLabel = 'AMBOS';
+    let fullLabel = 'AMBOS';
+    let title = 'Disponible en Pokémon Escarlata y Púrpura';
+
+    if (game === 'scarlet') {
+      shortLabel = 'ESC';
+      fullLabel = 'ESCARLATA';
+      title = 'Exclusivo de Pokémon Escarlata';
+    } else if (game === 'violet') {
+      shortLabel = 'PÚR';
+      fullLabel = 'PÚRPURA';
+      title = 'Exclusivo de Pokémon Púrpura';
+    }
+
+    const label = (variant === 'mini') ? shortLabel : fullLabel;
+
+    return `<span class="game-badge game-badge-${game} ${variant === 'mini' ? 'game-badge-mini' : ''}" title="${title}">
+      <span class="game-dot game-dot-${game}"></span>
+      <span class="game-text">${label}</span>
+    </span>`;
   }
 
-  const label = (variant === 'mini') ? shortLabel : fullLabel;
+  // Ruleta General (Gens 1 a 9)
+  const games = Array.isArray(pokemon.games) ? pokemon.games : [];
+  const gen = pokemon.generation ? `GEN ${pokemon.generation}` : '';
 
-  return `<span class="game-badge game-badge-${game} ${variant === 'mini' ? 'game-badge-mini' : ''}" title="${title}">
-    <span class="game-dot game-dot-${game}"></span>
-    <span class="game-text">${label}</span>
+  if (variant === 'mini') {
+    let badgeText = gen || 'GEN';
+    let badgeClass = 'game-badge-both';
+    let dotClass = 'game-dot-both';
+
+    if (games.includes('SV')) {
+      badgeText = 'S/V';
+      badgeClass = 'game-badge-scarlet';
+      dotClass = 'game-dot-scarlet';
+    } else if (games.includes('PLZA')) {
+      badgeText = 'Z-A';
+      badgeClass = 'game-badge-violet';
+      dotClass = 'game-dot-violet';
+    } else if (games.includes('SwSh')) {
+      badgeText = 'SwSh';
+    }
+
+    const titleGames = games.length > 0 ? `Juegos disponibles: ${games.join(', ')}` : (gen || 'Nacional');
+
+    return `<span class="game-badge ${badgeClass} game-badge-mini" title="${titleGames}">
+      <span class="game-dot ${dotClass}"></span>
+      <span class="game-text">${badgeText}</span>
+    </span>`;
+  }
+
+  // Variante normal para Live Pointer Tracker
+  const topGames = games.slice(0, 3).join('/');
+  const moreCount = games.length > 3 ? ` (+${games.length - 3})` : '';
+  const gamesText = games.length > 0 ? `${topGames}${moreCount}` : gen;
+  const titleFull = games.length > 0 ? `Disponible en: ${games.join(', ')}` : gen;
+
+  return `<span class="game-badge game-badge-both" title="${titleFull}">
+    <span class="game-dot game-dot-both"></span>
+    <span class="game-text">${gamesText}</span>
   </span>`;
 }
 
 function getWinnerGameBannerHtml(pokemon) {
-  const game = getPokemonGame(pokemon);
-  let text = 'DISPONIBLE EN AMBOS JUEGOS (ESCARLATA & PÚRPURA)';
-  if (game === 'scarlet') {
-    text = '★ EXCLUSIVO DE POKÉMON ESCARLATA';
-  } else if (game === 'violet') {
-    text = '★ EXCLUSIVO DE POKÉMON PÚRPURA';
+  if (!pokemon) return '';
+
+  if (currentDexId === 'paldea') {
+    const game = getPokemonGame(pokemon);
+    let text = 'DISPONIBLE EN AMBOS JUEGOS (ESCARLATA & PÚRPURA)';
+    if (game === 'scarlet') {
+      text = '★ EXCLUSIVO DE POKÉMON ESCARLATA';
+    } else if (game === 'violet') {
+      text = '★ EXCLUSIVO DE POKÉMON PÚRPURA';
+    }
+    return `<div id="winnerGameBanner" class="winner-game-banner winner-game-${game}">
+      <span class="game-dot game-dot-${game}"></span>
+      <span>${text}</span>
+    </div>`;
   }
-  return `<div class="winner-game-banner winner-game-${game}">
-    <span class="game-dot game-dot-${game}"></span>
-    <span>${text}</span>
+
+  // Ruleta General: Mostrar listado completo de juegos con chips vectoriales
+  const games = Array.isArray(pokemon.games) ? pokemon.games : [];
+  if (games.length === 0) {
+    return `<div id="winnerGameBanner" class="winner-game-banner winner-game-both">
+      <span class="game-dot game-dot-both"></span>
+      <span>GENERACIÓN ${pokemon.generation || 1}</span>
+    </div>`;
+  }
+
+  const chipsHtml = games.map(g => {
+    let highlightClass = '';
+    if (g === 'SV' || g === 'SV-DLC') highlightClass = 'highlight-sv';
+    if (g === 'PLZA') highlightClass = 'highlight-plza';
+    return `<span class="game-chip-tag ${highlightClass}">${g}</span>`;
+  }).join('');
+
+  return `<div id="winnerGameBanner" class="winner-game-banner winner-game-general">
+    <div style="font-size: 0.72rem; letter-spacing: 0.5px; opacity: 0.85;">
+      ★ DISPONIBLE EN ${games.length} ${games.length === 1 ? 'JUEGO' : 'JUEGOS'}:
+    </div>
+    <div class="game-chips-row">${chipsHtml}</div>
   </div>`;
 }
 
-let items = [...ALL_PALDEA_POKEMON];
+let items = [];
 let currentRotation = 0;
 let isSpinning = false;
 let audioEnabled = true;
@@ -110,16 +257,8 @@ let modalSource = 'wheel'; // 'wheel' | 'pending'
 // Conjunto de Pokémon seleccionados en la línea evolutiva del modal
 let selectedEvoIds = new Set();
 
-// Contexto activo de Pokédex / Juego (ej. 'paldea', 'general', etc.)
-let currentDexId = 'paldea';
-
 function getStorageKey(baseKey, dexId = currentDexId) {
   return `${baseKey}_${dexId}`;
-}
-
-function getPokemonId(pokemon) {
-  if (!pokemon) return '';
-  return String(pokemon.pokemonId || pokemon.numPal || pokemon.numNac || pokemon.id || '');
 }
 
 function migrateLocalStorageIfNeeded() {
@@ -306,18 +445,19 @@ function toggleTheme() {
 // 2. PRECARGA DE SPRITES
 // ==========================================
 function preloadAllSprites() {
-  ALL_PALDEA_POKEMON.forEach(p => {
-    if (p.sprite) {
+  const list = getActiveDexFullList();
+  list.forEach(p => {
+    if (p.sprite && !imageCache.has(p.sprite)) {
       const img = new Image();
       img.src = p.sprite;
       imageCache.set(p.sprite, img);
     }
-    if (p.shinySprite) {
+    if (p.shinySprite && !imageCache.has(p.shinySprite)) {
       const imgS = new Image();
       imgS.src = p.shinySprite;
       imageCache.set(p.shinySprite, imgS);
     }
-    if (p.image && !p.image.startsWith('http')) {
+    if (p.image && !p.image.startsWith('http') && !imageCache.has(p.image)) {
       const imgA = new Image();
       imgA.src = p.image;
       imageCache.set(p.image, imgA);
@@ -524,7 +664,8 @@ function drawWheel(rotationDegrees = 0) {
         ctx.font = 'bold 10px system-ui, sans-serif';
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
-        ctx.fillText(item.numPal ? `#${item.numPal}` : String(i + 1), badgeDistance, 0);
+        const dispNum = getPokemonDisplayNum(item);
+        ctx.fillText(dispNum ? `#${dispNum}` : String(i + 1), badgeDistance, 0);
       }
 
       ctx.fillStyle = '#ffffff';
@@ -580,8 +721,8 @@ function updateLivePointerTracker(rotationDegrees) {
   if (active.index !== lastTrackedIndex) {
     lastTrackedIndex = active.index;
     const p = active.item;
-
-    liveTrackerName.textContent = `#${p.numPal} ${p.name}`;
+    const dispNum = getPokemonDisplayNum(p);
+    liveTrackerName.textContent = `#${dispNum} ${p.name}`;
 
     if (p.sprite) {
       liveTrackerImg.src = p.sprite;
@@ -700,7 +841,8 @@ function onWheelStopped(targetIndex) {
 
   // Sincronizar tracker en vivo con el ganador final de forma exacta
   lastTrackedIndex = targetIndex;
-  liveTrackerName.textContent = `#${winner.numPal} ${winner.name}`;
+  const dispNum = getPokemonDisplayNum(winner);
+  liveTrackerName.textContent = `#${dispNum} ${winner.name}`;
   if (winner.sprite) liveTrackerImg.src = winner.sprite;
   liveTrackerBadges.innerHTML = `
     ${getGameBadgeHtml(winner, 'normal')}
@@ -722,7 +864,7 @@ function onWheelStopped(targetIndex) {
 function openEvolutionLineModal(pokemon, source = 'wheel') {
   if (!pokemon) return;
 
-  const fullPokemon = PALDEA_BY_NUM.get(pokemon.numPal) || pokemon;
+  const fullPokemon = getPokemonByAnyId(getPokemonId(pokemon)) || pokemon;
   currentWonPokemon = fullPokemon;
   modalSource = source;
 
@@ -731,22 +873,30 @@ function openEvolutionLineModal(pokemon, source = 'wheel') {
   winnerImg.style.opacity = '0';
 
   // 2. Actualizar textos, número, banner de juego y tipos del nuevo Pokémon
-  winnerDexNum.textContent = `Nº PALDEA: #${fullPokemon.numPal} · NAC: #${fullPokemon.numNac}`;
+  if (currentDexId === 'paldea') {
+    winnerDexNum.textContent = `Nº PALDEA: #${fullPokemon.numPal || fullPokemon.numNac} · NAC: #${fullPokemon.numNac || fullPokemon.numPal}`;
+  } else {
+    const genText = fullPokemon.generation ? ` · GENERACIÓN ${fullPokemon.generation}` : '';
+    winnerDexNum.textContent = `Nº NACIONAL: #${fullPokemon.numNac || fullPokemon.numPal || getPokemonId(fullPokemon)}${genText}`;
+  }
   winnerTitle.textContent = fullPokemon.name;
   const winnerGameBanner = document.getElementById('winnerGameBanner');
   if (winnerGameBanner) {
-    winnerGameBanner.innerHTML = getWinnerGameBannerHtml(fullPokemon);
+    winnerGameBanner.outerHTML = getWinnerGameBannerHtml(fullPokemon);
   }
   winnerTypes.innerHTML = (fullPokemon.types || []).map(t => 
     `<span class="type-badge type-${t}">${t}</span>`
   ).join('');
 
   // 3. Configurar interfaz según el origen (Ruleta vs Matriz / Pendientes)
+  const pokeId = getPokemonId(fullPokemon);
   if (source === 'wheel') {
     if (modalCardTag) modalCardTag.textContent = 'OBJETIVO SHINY RULETA';
     if (winnerWheelActions) winnerWheelActions.style.display = 'flex';
   } else {
-    const isPend = pendingList.some(p => p.numPal === fullPokemon.numPal) || lastSpinPendingIds.has(fullPokemon.numPal);
+    const isPend = pendingList.some(p => getPokemonId(p) === pokeId || p.numPal === fullPokemon.numPal) || 
+                   lastSpinPendingIds.has(pokeId) || 
+                   (fullPokemon.numPal && lastSpinPendingIds.has(fullPokemon.numPal));
     if (modalCardTag) modalCardTag.textContent = isPend ? 'CAPTURAR O DESMARCAR PENDIENTE' : 'CAPTURAR LÍNEA EVOLUTIVA';
     if (winnerWheelActions) winnerWheelActions.style.display = 'none';
     if (winnerPendingActions) winnerPendingActions.style.display = 'flex';
@@ -797,19 +947,21 @@ function renderEvolutionLineSelector(pokemon, source = 'wheel') {
   evolutionLineContainer.innerHTML = '';
   selectedEvoIds.clear();
 
-  const fullPokemon = PALDEA_BY_NUM.get(pokemon.numPal) || pokemon;
+  const fullPokemon = getPokemonByAnyId(getPokemonId(pokemon)) || pokemon;
+  const currentPokeId = getPokemonId(fullPokemon);
   const lineIds = (fullPokemon.evolutionLine && fullPokemon.evolutionLine.length > 0)
     ? fullPokemon.evolutionLine
-    : [fullPokemon.numPal];
+    : [currentPokeId];
 
-  const members = lineIds.map(id => PALDEA_BY_NUM.get(id)).filter(Boolean);
+  const members = lineIds.map(id => getPokemonByAnyId(id)).filter(Boolean);
 
   // Por defecto, el Pokémon abierto está seleccionado
-  selectedEvoIds.add(fullPokemon.numPal);
+  selectedEvoIds.add(currentPokeId);
 
   members.forEach(m => {
-    const isTarget = (m.numPal === fullPokemon.numPal);
-    const isAlreadyCaptured = capturedShinyList.some(c => c.numPal === m.numPal);
+    const mId = getPokemonId(m);
+    const isTarget = (mId === currentPokeId || m.numPal === fullPokemon.numPal);
+    const isAlreadyCaptured = capturedShinyList.some(c => getPokemonId(c) === mId || (m.numPal && c.numPal === m.numPal));
 
     let statusLabel = '';
     if (isAlreadyCaptured) {
@@ -819,13 +971,13 @@ function renderEvolutionLineSelector(pokemon, source = 'wheel') {
     }
 
     const card = document.createElement('label');
-    card.className = 'evo-card' + (selectedEvoIds.has(m.numPal) ? ' selected' : '') + (isAlreadyCaptured ? ' already-captured' : '');
+    card.className = 'evo-card' + (selectedEvoIds.has(mId) ? ' selected' : '') + (isAlreadyCaptured ? ' already-captured' : '');
 
     card.innerHTML = `
-      <input type="checkbox" class="evo-checkbox" value="${m.numPal}" ${selectedEvoIds.has(m.numPal) ? 'checked' : ''}>
+      <input type="checkbox" class="evo-checkbox" value="${mId}" ${selectedEvoIds.has(mId) ? 'checked' : ''}>
       <img src="${m.shinySprite || m.sprite}" class="evo-thumb" alt="${m.name}" title="Forma Shiny" onerror="this.src='assets/pokeball.svg'">
       <div class="evo-card-info">
-        <span class="evo-card-num">#${m.numPal}</span>
+        <span class="evo-card-num">#${getPokemonDisplayNum(m)}</span>
         <span class="evo-card-name">${m.name}</span>
         ${getGameBadgeHtml(m, 'mini')}
       </div>
@@ -837,11 +989,11 @@ function renderEvolutionLineSelector(pokemon, source = 'wheel') {
 
     checkbox.addEventListener('change', () => {
       if (checkbox.checked) {
-        selectedEvoIds.add(m.numPal);
+        selectedEvoIds.add(mId);
         card.classList.add('selected');
         if (!isAlreadyCaptured) badge.textContent = 'SHINY';
       } else {
-        selectedEvoIds.delete(m.numPal);
+        selectedEvoIds.delete(mId);
         card.classList.remove('selected');
         if (!isAlreadyCaptured) {
           badge.textContent = isTarget ? (source === 'wheel' ? 'RULETA' : 'PENDIENTE') : '';
@@ -1009,22 +1161,26 @@ function removePending(pokemon) {
 }
 
 // ==========================================
-// 8. MATRIZ GIGANTE DE PALDEA (400 POKÉMON)
+// 8. MATRIZ GIGANTE Y SEGUIMIENTO (MULTI-DEX)
 // ==========================================
 function updateMatrixToolbarStats(capturedSet, pendingSet) {
   const capCount = capturedSet.size;
   const lastSpinCount = [...lastSpinPendingIds].filter(id => !capturedSet.has(id)).length;
   const pendCount = pendingSet.size;
-  const percent = ((capCount / ALL_PALDEA_POKEMON.length) * 100).toFixed(1);
+  const total = getActiveDexFullList().length || 1;
+  const percent = ((capCount / total) * 100).toFixed(1);
 
   if (matrixCapturedCount) matrixCapturedCount.textContent = capCount;
   if (matrixCapturedPercent) matrixCapturedPercent.textContent = `(${percent}%)`;
   if (matrixLastSpinCount) matrixLastSpinCount.textContent = lastSpinCount;
   if (matrixPendingCount) matrixPendingCount.textContent = pendCount;
 
-  if (chipLastSpinBadge) chipLastSpinBadge.textContent = lastSpinCount;
-  if (chipPendingBadge) chipPendingBadge.textContent = pendCount;
-  if (chipCapturedBadge) chipCapturedBadge.textContent = capCount;
+  const chipLast = document.getElementById('chipLastSpinBadge');
+  const chipPend = document.getElementById('chipPendingBadge');
+  const chipCap = document.getElementById('chipCapturedBadge');
+  if (chipLast) chipLast.textContent = lastSpinCount;
+  if (chipPend) chipPend.textContent = pendCount;
+  if (chipCap) chipCap.textContent = capCount;
 
   if (pendingCountEl) pendingCountEl.textContent = pendCount;
   if (capturedCountEl) capturedCountEl.textContent = capCount;
@@ -1035,30 +1191,43 @@ function renderPaldeaMatrix() {
   matrixGrid.innerHTML = '';
 
   const q = matrixSearchQuery.toLowerCase().trim();
-  const capturedSet = new Set(capturedShinyList.map(c => c.numPal));
-  const pendingSet = new Set(pendingList.map(p => p.numPal));
+  const capturedSet = new Set(capturedShinyList.map(c => getPokemonId(c)));
+  const pendingSet = new Set(pendingList.map(p => getPokemonId(p)));
 
   updateMatrixToolbarStats(capturedSet, pendingSet);
 
-  const filtered = ALL_PALDEA_POKEMON.filter(p => {
+  const fullList = getActiveDexFullList();
+
+  const filtered = fullList.filter(p => {
+    const pokeId = getPokemonId(p);
+    const isCaptured = capturedSet.has(pokeId) || (p.numPal && capturedSet.has(p.numPal));
+    const isLastSpin = (lastSpinPendingIds.has(pokeId) || (p.numPal && lastSpinPendingIds.has(p.numPal))) && !isCaptured;
+    const isPending = (pendingSet.has(pokeId) || (p.numPal && pendingSet.has(p.numPal))) && !isCaptured;
+
     // Filtro por texto de búsqueda
     if (q) {
       const matchName = p.name.toLowerCase().includes(q);
-      const matchNum = p.numPal.includes(q) || (p.numNac && p.numNac.includes(q));
+      const matchNum = (p.numPal && p.numPal.includes(q)) || (p.numNac && p.numNac.includes(q)) || pokeId.includes(q);
       const matchType = p.types && p.types.some(t => t.toLowerCase().includes(q));
-      const g = getPokemonGame(p);
-      const matchGame = (q === 'escarlata' && g === 'scarlet') ||
-                        (q === 'purpura' && g === 'violet') ||
-                        (q === 'púrpura' && g === 'violet') ||
-                        (q === 'ambos' && g === 'both');
+
+      let matchGame = false;
+      if (currentDexId === 'paldea') {
+        const g = getPokemonGame(p);
+        matchGame = (q === 'escarlata' && g === 'scarlet') ||
+                    (q === 'purpura' && g === 'violet') ||
+                    (q === 'púrpura' && g === 'violet') ||
+                    (q === 'ambos' && g === 'both');
+      } else {
+        matchGame = Array.isArray(p.games) && p.games.some(g => g.toLowerCase().includes(q));
+        if (!matchGame && p.generation) {
+          matchGame = q === `gen ${p.generation}` || q === `gen${p.generation}` || q === `generacion ${p.generation}` || q === `generación ${p.generation}`;
+        }
+      }
+
       if (!matchName && !matchNum && !matchType && !matchGame) return false;
     }
 
     // Filtro por pestaña de estado o edición
-    const isCaptured = capturedSet.has(p.numPal);
-    const isLastSpin = lastSpinPendingIds.has(p.numPal) && !isCaptured;
-    const isPending = pendingSet.has(p.numPal) && !isCaptured;
-
     if (currentMatrixFilter === 'last-spin') {
       return isLastSpin;
     } else if (currentMatrixFilter === 'pending') {
@@ -1067,13 +1236,32 @@ function renderPaldeaMatrix() {
       return isCaptured;
     } else if (currentMatrixFilter === 'uncaptured') {
       return !isCaptured;
-    } else if (currentMatrixFilter === 'scarlet') {
-      return getPokemonGame(p) === 'scarlet';
-    } else if (currentMatrixFilter === 'violet') {
-      return getPokemonGame(p) === 'violet';
-    } else if (currentMatrixFilter === 'both') {
-      return getPokemonGame(p) === 'both';
     }
+
+    // Filtros específicos de Paldea
+    if (currentDexId === 'paldea') {
+      if (currentMatrixFilter === 'scarlet') {
+        return getPokemonGame(p) === 'scarlet';
+      } else if (currentMatrixFilter === 'violet') {
+        return getPokemonGame(p) === 'violet';
+      } else if (currentMatrixFilter === 'both') {
+        return getPokemonGame(p) === 'both';
+      }
+    } else {
+      // Filtros específicos de Ruleta General
+      if (currentMatrixFilter === 'gen1') return p.generation === 1;
+      if (currentMatrixFilter === 'gen2') return p.generation === 2;
+      if (currentMatrixFilter === 'gen3') return p.generation === 3;
+      if (currentMatrixFilter === 'gen4') return p.generation === 4;
+      if (currentMatrixFilter === 'gen5') return p.generation === 5;
+      if (currentMatrixFilter === 'gen6') return p.generation === 6;
+      if (currentMatrixFilter === 'gen7') return p.generation === 7;
+      if (currentMatrixFilter === 'gen8') return p.generation === 8;
+      if (currentMatrixFilter === 'gen9') return p.generation === 9;
+      if (currentMatrixFilter === 'game_sv') return Array.isArray(p.games) && p.games.includes('SV');
+      if (currentMatrixFilter === 'game_plza') return Array.isArray(p.games) && p.games.includes('PLZA');
+    }
+
     return true;
   });
 
@@ -1085,9 +1273,10 @@ function renderPaldeaMatrix() {
   const fragment = document.createDocumentFragment();
 
   filtered.forEach(p => {
-    const isCaptured = capturedSet.has(p.numPal);
-    const isLastSpin = lastSpinPendingIds.has(p.numPal) && !isCaptured;
-    const isPending = !isLastSpin && pendingSet.has(p.numPal) && !isCaptured;
+    const pokeId = getPokemonId(p);
+    const isCaptured = capturedSet.has(pokeId) || (p.numPal && capturedSet.has(p.numPal));
+    const isLastSpin = (lastSpinPendingIds.has(pokeId) || (p.numPal && lastSpinPendingIds.has(p.numPal))) && !isCaptured;
+    const isPending = !isLastSpin && (pendingSet.has(pokeId) || (p.numPal && pendingSet.has(p.numPal))) && !isCaptured;
     const isPendingOrLastSpin = isPending || isLastSpin;
     const hasEvo = (p.evolutionLine && p.evolutionLine.length > 1);
 
@@ -1127,12 +1316,14 @@ function renderPaldeaMatrix() {
 
     const card = document.createElement('div');
     card.className = `matrix-card ${statusClass}`;
-    card.dataset.num = p.numPal;
+    card.dataset.num = pokeId;
+
+    const displayNum = getPokemonDisplayNum(p);
 
     card.innerHTML = `
       <div class="matrix-card-header">
         <div class="matrix-header-left">
-          <span class="matrix-num">#${p.numPal}</span>
+          <span class="matrix-num">#${displayNum}</span>
           ${getGameBadgeHtml(p, 'mini')}
         </div>
         ${badgeHtml}
@@ -1200,19 +1391,21 @@ function renderPaldeaMatrix() {
 function renderCapturedList() {
   capturedListEl.innerHTML = '';
   if (capturedShinyList.length === 0) {
-    capturedListEl.innerHTML = '<div class="empty-state">Aún no has registrado ningún Pokémon shiny capturado.</div>';
+    capturedListEl.innerHTML = '<div class="empty-state">Aún no has registrado ningún Pokémon shiny capturado en esta Pokédex.</div>';
     return;
   }
 
-  capturedShinyList.forEach((item, index) => {
+  capturedShinyList.forEach((item) => {
     const card = document.createElement('div');
     card.className = 'shiny-card-item is-captured';
     const mainType = (item.types && item.types[0]) || 'Normal';
+    const dispNum = getPokemonDisplayNum(item);
+
     card.innerHTML = `
       <img src="${item.shinySprite || item.sprite || 'assets/pokeball.svg'}" class="shiny-thumb" alt="${item.name}" title="Forma Shiny" onerror="this.src='assets/pokeball.svg'">
       <div class="shiny-item-info">
         <div class="shiny-meta-row">
-          <span class="shiny-dex-num">#${item.numPal}</span>
+          <span class="shiny-dex-num">#${dispNum}</span>
           ${getGameBadgeHtml(item, 'mini')}
         </div>
         <span class="shiny-item-name">${item.name}</span>
@@ -1225,8 +1418,7 @@ function renderCapturedList() {
     `;
 
     card.querySelector('.remove-btn').addEventListener('click', () => {
-      capturedShinyList.splice(index, 1);
-      saveShinyTracking();
+      removeShinyCaptured(item);
     });
 
     capturedListEl.appendChild(card);
@@ -1305,10 +1497,14 @@ function startConfetti() {
 // ==========================================
 function addHistoryItem(item) {
   spinHistory.unshift({
-    numPal: item.numPal,
+    pokemonId: getPokemonId(item),
+    numPal: item.numPal || '',
+    numNac: item.numNac || '',
+    displayNum: getPokemonDisplayNum(item),
     name: item.name,
     types: item.types,
     sprite: item.sprite,
+    games: item.games || [],
     game: getPokemonGame(item),
     time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
   });
@@ -1328,9 +1524,10 @@ function renderHistory() {
     const chip = document.createElement('div');
     chip.className = 'history-item';
     const mainType = (hist.types && hist.types[0]) || 'Normal';
+    const dispNum = hist.displayNum || getPokemonDisplayNum(hist);
     chip.innerHTML = `
       <img src="${hist.sprite || 'assets/pokeball.svg'}" alt="${hist.name}" onerror="this.src='assets/pokeball.svg'">
-      <span>#${hist.numPal} <strong>${hist.name}</strong></span>
+      <span>#${dispNum} <strong>${hist.name}</strong></span>
       <span class="type-badge type-${mainType}">${mainType}</span>
       ${getGameBadgeHtml(hist, 'mini')}
     `;
@@ -1339,76 +1536,195 @@ function renderHistory() {
 }
 
 // ==========================================
-// 10. FILTROS
+// 10. RECONSTRUCCIÓN DINÁMICA DE FILTROS & REGLAS
 // ==========================================
+function rebuildRangeFilterOptions(dexId = currentDexId) {
+  if (!rangeFilter) return;
+  if (dexId === 'paldea') {
+    rangeFilter.innerHTML = `
+      <option value="all">TODOS (#001 - #400)</option>
+      <option value="starters">INICIALES (#001 - #024)</option>
+      <option value="1-100">#001 - #100</option>
+      <option value="101-200">#101 - #200</option>
+      <option value="201-300">#201 - #300</option>
+      <option value="301-400">#301 - #400</option>
+      <option value="paradox">PARADOJAS (#376 - #400)</option>
+      <option value="scarlet">EXCLUSIVOS ESCARLATA (23)</option>
+      <option value="violet">EXCLUSIVOS PÚRPURA (23)</option>
+      <option value="both">DISPONIBLE EN AMBOS (354)</option>
+    `;
+  } else {
+    rangeFilter.innerHTML = `
+      <option value="all">TODOS (#0001 - #1025)</option>
+      <option value="gen1">GEN 1: KANTO (#0001 - #0151)</option>
+      <option value="gen2">GEN 2: JOHTO (#0152 - #0251)</option>
+      <option value="gen3">GEN 3: HOENN (#0252 - #0386)</option>
+      <option value="gen4">GEN 4: SINNOH (#0387 - #0493)</option>
+      <option value="gen5">GEN 5: TESELIA / UNOVA (#0494 - #0649)</option>
+      <option value="gen6">GEN 6: KALOS (#0650 - #0721)</option>
+      <option value="gen7">GEN 7: ALOLA (#0722 - #0809)</option>
+      <option value="gen8">GEN 8: GALAR / HISUI (#0810 - #0905)</option>
+      <option value="gen9">GEN 9: PALDEA (#0906 - #1025)</option>
+      <option value="game_sv">DISPONIBLE EN ESC/PÚR (S/V)</option>
+      <option value="game_plza">CONFIRMADO LEYENDAS Z-A</option>
+    `;
+  }
+  rangeFilter.value = 'all';
+}
+
+function rebuildMatrixFilterChips(dexId = currentDexId) {
+  const container = document.getElementById('matrixFilterChips');
+  if (!container) return;
+
+  const total = (dexId === 'paldea') ? 400 : 1025;
+  currentMatrixFilter = 'all';
+
+  if (dexId === 'paldea') {
+    container.innerHTML = `
+      <button class="matrix-chip active" data-matrix-filter="all">TODOS (${total})</button>
+      <button class="matrix-chip chip-last-spin" data-matrix-filter="last-spin">
+        <span>GIRO ANTERIOR</span>
+        <span id="chipLastSpinBadge" class="chip-badge">0</span>
+      </button>
+      <button class="matrix-chip" data-matrix-filter="pending">
+        <span>PENDIENTES</span>
+        <span id="chipPendingBadge" class="chip-badge">0</span>
+      </button>
+      <button class="matrix-chip" data-matrix-filter="captured">
+        <span>CAPTURADOS</span>
+        <span id="chipCapturedBadge" class="chip-badge">0</span>
+      </button>
+      <button class="matrix-chip" data-matrix-filter="uncaptured">POR CAPTURAR</button>
+      <button class="matrix-chip chip-game-scarlet" data-matrix-filter="scarlet">ESCARLATA (23)</button>
+      <button class="matrix-chip chip-game-violet" data-matrix-filter="violet">PÚRPURA (23)</button>
+      <button class="matrix-chip chip-game-both" data-matrix-filter="both">AMBOS (354)</button>
+    `;
+  } else {
+    container.innerHTML = `
+      <button class="matrix-chip active" data-matrix-filter="all">TODOS (${total})</button>
+      <button class="matrix-chip chip-last-spin" data-matrix-filter="last-spin">
+        <span>GIRO ANTERIOR</span>
+        <span id="chipLastSpinBadge" class="chip-badge">0</span>
+      </button>
+      <button class="matrix-chip" data-matrix-filter="pending">
+        <span>PENDIENTES</span>
+        <span id="chipPendingBadge" class="chip-badge">0</span>
+      </button>
+      <button class="matrix-chip" data-matrix-filter="captured">
+        <span>CAPTURADOS</span>
+        <span id="chipCapturedBadge" class="chip-badge">0</span>
+      </button>
+      <button class="matrix-chip" data-matrix-filter="uncaptured">POR CAPTURAR</button>
+      <button class="matrix-chip chip-gen" data-matrix-filter="gen1">GEN 1 (151)</button>
+      <button class="matrix-chip chip-gen" data-matrix-filter="gen2">GEN 2 (100)</button>
+      <button class="matrix-chip chip-gen" data-matrix-filter="gen3">GEN 3 (135)</button>
+      <button class="matrix-chip chip-gen" data-matrix-filter="gen4">GEN 4 (107)</button>
+      <button class="matrix-chip chip-gen" data-matrix-filter="gen5">GEN 5 (156)</button>
+      <button class="matrix-chip chip-gen" data-matrix-filter="gen6">GEN 6 (72)</button>
+      <button class="matrix-chip chip-gen" data-matrix-filter="gen7">GEN 7 (88)</button>
+      <button class="matrix-chip chip-gen" data-matrix-filter="gen8">GEN 8 (96)</button>
+      <button class="matrix-chip chip-gen" data-matrix-filter="gen9">GEN 9 (120)</button>
+      <button class="matrix-chip chip-game-scarlet" data-matrix-filter="game_sv">EN S/V</button>
+      <button class="matrix-chip chip-game-violet" data-matrix-filter="game_plza">EN Z-A</button>
+    `;
+  }
+
+  const chips = container.querySelectorAll('[data-matrix-filter]');
+  chips.forEach(btn => {
+    btn.addEventListener('click', () => {
+      chips.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentMatrixFilter = btn.dataset.matrixFilter || 'all';
+      renderPaldeaMatrix();
+    });
+  });
+}
+
 function applyFilters() {
   if (isSpinning) return;
-  const selectedType = typeFilter.value;
-  const selectedRange = rangeFilter.value;
+  const selectedType = typeFilter ? typeFilter.value : 'all';
+  const selectedRange = rangeFilter ? rangeFilter.value : 'all';
 
-  let filtered = [...ALL_PALDEA_POKEMON];
+  let filtered = [...getActiveDexFullList()];
 
   if (selectedType !== 'all') {
     filtered = filtered.filter(p => p.types && p.types.includes(selectedType));
   }
 
-  if (selectedRange === 'starters') {
-    filtered = filtered.filter(p => parseInt(p.numPal, 10) <= 24);
-  } else if (selectedRange === '1-100') {
-    filtered = filtered.filter(p => {
-      const n = parseInt(p.numPal, 10);
-      return n >= 1 && n <= 100;
-    });
-  } else if (selectedRange === '101-200') {
-    filtered = filtered.filter(p => {
-      const n = parseInt(p.numPal, 10);
-      return n >= 101 && n <= 200;
-    });
-  } else if (selectedRange === '201-300') {
-    filtered = filtered.filter(p => {
-      const n = parseInt(p.numPal, 10);
-      return n >= 201 && n <= 300;
-    });
-  } else if (selectedRange === '301-400') {
-    filtered = filtered.filter(p => {
-      const n = parseInt(p.numPal, 10);
-      return n >= 301 && n <= 400;
-    });
-  } else if (selectedRange === 'paradox') {
-    filtered = filtered.filter(p => parseInt(p.numPal, 10) >= 376);
-  } else if (selectedRange === 'scarlet') {
-    filtered = filtered.filter(p => getPokemonGame(p) === 'scarlet');
-  } else if (selectedRange === 'violet') {
-    filtered = filtered.filter(p => getPokemonGame(p) === 'violet');
-  } else if (selectedRange === 'both') {
-    filtered = filtered.filter(p => getPokemonGame(p) === 'both');
+  if (selectedRange !== 'all') {
+    if (currentDexId === 'paldea') {
+      if (selectedRange === 'starters') {
+        filtered = filtered.filter(p => parseInt(p.numPal || '999', 10) <= 24);
+      } else if (selectedRange === '1-100') {
+        filtered = filtered.filter(p => {
+          const n = parseInt(p.numPal || '0', 10);
+          return n >= 1 && n <= 100;
+        });
+      } else if (selectedRange === '101-200') {
+        filtered = filtered.filter(p => {
+          const n = parseInt(p.numPal || '0', 10);
+          return n >= 101 && n <= 200;
+        });
+      } else if (selectedRange === '201-300') {
+        filtered = filtered.filter(p => {
+          const n = parseInt(p.numPal || '0', 10);
+          return n >= 201 && n <= 300;
+        });
+      } else if (selectedRange === '301-400') {
+        filtered = filtered.filter(p => {
+          const n = parseInt(p.numPal || '0', 10);
+          return n >= 301 && n <= 400;
+        });
+      } else if (selectedRange === 'paradox') {
+        filtered = filtered.filter(p => parseInt(p.numPal || '0', 10) >= 376);
+      } else if (selectedRange === 'scarlet') {
+        filtered = filtered.filter(p => getPokemonGame(p) === 'scarlet');
+      } else if (selectedRange === 'violet') {
+        filtered = filtered.filter(p => getPokemonGame(p) === 'violet');
+      } else if (selectedRange === 'both') {
+        filtered = filtered.filter(p => getPokemonGame(p) === 'both');
+      }
+    } else {
+      if (selectedRange === 'gen1') filtered = filtered.filter(p => p.generation === 1);
+      else if (selectedRange === 'gen2') filtered = filtered.filter(p => p.generation === 2);
+      else if (selectedRange === 'gen3') filtered = filtered.filter(p => p.generation === 3);
+      else if (selectedRange === 'gen4') filtered = filtered.filter(p => p.generation === 4);
+      else if (selectedRange === 'gen5') filtered = filtered.filter(p => p.generation === 5);
+      else if (selectedRange === 'gen6') filtered = filtered.filter(p => p.generation === 6);
+      else if (selectedRange === 'gen7') filtered = filtered.filter(p => p.generation === 7);
+      else if (selectedRange === 'gen8') filtered = filtered.filter(p => p.generation === 8);
+      else if (selectedRange === 'gen9') filtered = filtered.filter(p => p.generation === 9);
+      else if (selectedRange === 'game_sv') filtered = filtered.filter(p => Array.isArray(p.games) && p.games.includes('SV'));
+      else if (selectedRange === 'game_plza') filtered = filtered.filter(p => Array.isArray(p.games) && p.games.includes('PLZA'));
+    }
   }
 
-  items = filtered.length >= 2 ? filtered : [...ALL_PALDEA_POKEMON];
-  counterBadge.textContent = `${items.length} POKÉMON`;
+  items = filtered.length >= 2 ? filtered : [...getActiveDexFullList()];
+  if (counterBadge) counterBadge.textContent = `${items.length} POKÉMON`;
   lastTrackedIndex = -1;
   drawWheel(currentRotation);
 }
 
 function selectRandomSubset(count = 16) {
   if (isSpinning) return;
-  const shuffled = [...ALL_PALDEA_POKEMON].sort(() => Math.random() - 0.5);
-  items = shuffled.slice(0, count);
-  items.sort((a, b) => parseInt(a.numPal, 10) - parseInt(b.numPal, 10));
+  const full = getActiveDexFullList();
+  const shuffled = [...full].sort(() => Math.random() - 0.5);
+  items = shuffled.slice(0, Math.min(count, full.length));
+  items.sort((a, b) => parseInt(getPokemonDisplayNum(a) || '0', 10) - parseInt(getPokemonDisplayNum(b) || '0', 10));
 
-  typeFilter.value = 'all';
-  rangeFilter.value = 'all';
-  counterBadge.textContent = `${items.length} ALEATORIOS`;
+  if (typeFilter) typeFilter.value = 'all';
+  if (rangeFilter) rangeFilter.value = 'all';
+  if (counterBadge) counterBadge.textContent = `${items.length} ALEATORIOS`;
   lastTrackedIndex = -1;
   drawWheel(currentRotation);
 }
 
 function resetAllPokemon() {
   if (isSpinning) return;
-  typeFilter.value = 'all';
-  rangeFilter.value = 'all';
-  items = [...ALL_PALDEA_POKEMON];
-  counterBadge.textContent = `${items.length} POKÉMON`;
+  if (typeFilter) typeFilter.value = 'all';
+  if (rangeFilter) rangeFilter.value = 'all';
+  items = [...getActiveDexFullList()];
+  if (counterBadge) counterBadge.textContent = `${items.length} POKÉMON`;
   lastTrackedIndex = -1;
   drawWheel(currentRotation);
 }
@@ -1419,18 +1735,31 @@ function resetAllPokemon() {
 function renderPokedexModalList(filterQuery = '') {
   itemsListContainer.innerHTML = '';
   const q = filterQuery.toLowerCase().trim();
+  const fullList = getActiveDexFullList();
 
-  const results = ALL_PALDEA_POKEMON.filter(p => {
+  const results = fullList.filter(p => {
     if (!q) return true;
-    const g = getPokemonGame(p);
-    const matchGame = (q === 'escarlata' && g === 'scarlet') ||
-                      (q === 'purpura' && g === 'violet') ||
-                      (q === 'púrpura' && g === 'violet') ||
-                      (q === 'ambos' && g === 'both');
-    return p.name.toLowerCase().includes(q) ||
-           p.numPal.includes(q) ||
-           (p.types && p.types.some(t => t.toLowerCase().includes(q))) ||
-           matchGame;
+    const pokeId = getPokemonId(p);
+    const dispNum = getPokemonDisplayNum(p);
+    const matchName = p.name.toLowerCase().includes(q);
+    const matchNum = dispNum.includes(q) || (p.numNac && p.numNac.includes(q)) || (p.numPal && p.numPal.includes(q)) || pokeId.includes(q);
+    const matchType = p.types && p.types.some(t => t.toLowerCase().includes(q));
+
+    let matchGame = false;
+    if (currentDexId === 'paldea') {
+      const g = getPokemonGame(p);
+      matchGame = (q === 'escarlata' && g === 'scarlet') ||
+                  (q === 'purpura' && g === 'violet') ||
+                  (q === 'púrpura' && g === 'violet') ||
+                  (q === 'ambos' && g === 'both');
+    } else {
+      matchGame = Array.isArray(p.games) && p.games.some(g => g.toLowerCase().includes(q));
+      if (!matchGame && p.generation) {
+        matchGame = q === `gen ${p.generation}` || q === `gen${p.generation}`;
+      }
+    }
+
+    return matchName || matchNum || matchType || matchGame;
   });
 
   if (results.length === 0) {
@@ -1441,12 +1770,15 @@ function renderPokedexModalList(filterQuery = '') {
   const limit = Math.min(results.length, 100);
   for (let i = 0; i < limit; i++) {
     const p = results[i];
-    const isCaptured = capturedShinyList.some(c => c.numPal === p.numPal);
+    const pokeId = getPokemonId(p);
+    const isCaptured = capturedShinyList.some(c => getPokemonId(c) === pokeId || (p.numPal && c.numPal === p.numPal));
+    const dispNum = getPokemonDisplayNum(p);
+
     const row = document.createElement('div');
     row.className = 'item-row';
     row.innerHTML = `
       <img src="${isCaptured ? (p.shinySprite || p.sprite) : p.sprite}" class="pokedex-row-thumb" alt="${p.name}" loading="lazy" onerror="this.src='assets/pokeball.svg'">
-      <span class="item-row-num">#${p.numPal}</span>
+      <span class="item-row-num">#${dispNum}</span>
       <span class="item-row-name">${p.name} ${isCaptured ? '★' : ''}</span>
       <div style="display: flex; gap: 4px; align-items: center;">
         ${(p.types || []).map(t => `<span class="type-badge type-${t}">${t}</span>`).join('')}
@@ -1468,15 +1800,86 @@ function renderPokedexModalList(filterQuery = '') {
 }
 
 // ==========================================
-// 12. INICIALIZACIÓN & EVENTOS
+// 12. GESTIÓN MULTI-POKÉDEX / JUEGOS
+// ==========================================
+function switchDexContext(newDexId) {
+  if (isSpinning) return;
+  if (!DEX_CONFIGS[newDexId]) newDexId = 'general';
+
+  currentDexId = newDexId;
+  localStorage.setItem('ruleta_active_dex', newDexId);
+
+  // Actualizar botones de píldoras
+  const btnGeneral = document.getElementById('dexBtnGeneral');
+  const btnPaldea = document.getElementById('dexBtnPaldea');
+  if (btnGeneral) {
+    const isG = newDexId === 'general';
+    btnGeneral.classList.toggle('active', isG);
+    btnGeneral.setAttribute('aria-selected', isG ? 'true' : 'false');
+  }
+  if (btnPaldea) {
+    const isP = newDexId === 'paldea';
+    btnPaldea.classList.toggle('active', isP);
+    btnPaldea.setAttribute('aria-selected', isP ? 'true' : 'false');
+  }
+
+  const config = getActiveDexConfig();
+
+  // Títulos dinámicos
+  const tabPendingTitle = document.getElementById('tabPendingTitle');
+  if (tabPendingTitle) tabPendingTitle.textContent = config.matrixTitle;
+
+  const catalogModalTitle = document.getElementById('catalogModalTitle');
+  if (catalogModalTitle) catalogModalTitle.textContent = config.catalogTitle;
+
+  const matrixTotalCount = document.getElementById('matrixTotalCount');
+  if (matrixTotalCount) matrixTotalCount.textContent = config.totalCount;
+
+  const resetAllBtnText = document.getElementById('resetAllBtnText');
+  if (resetAllBtnText) resetAllBtnText.textContent = `VER LOS ${config.totalCount}`;
+
+  // Reconstruir opciones de filtros
+  rebuildRangeFilterOptions(currentDexId);
+  rebuildMatrixFilterChips(currentDexId);
+
+  // Resetear filtros
+  if (typeFilter) typeFilter.value = 'all';
+  if (matrixSearchInput) {
+    matrixSearchInput.value = '';
+    matrixSearchQuery = '';
+    if (matrixClearSearchBtn) matrixClearSearchBtn.style.display = 'none';
+  }
+
+  // Cargar lista completa del dex activo
+  items = [...getActiveDexFullList()];
+  if (counterBadge) counterBadge.textContent = `${items.length} POKÉMON`;
+
+  currentRotation = 0;
+  lastTrackedIndex = -1;
+
+  // Precargar sprites del dex activo
+  preloadAllSprites();
+
+  // Cargar datos de seguimiento aislados (localStorage y nube)
+  loadShinyTracking(currentDexId);
+
+  // Redibujar ruleta y tracker
+  drawWheel(currentRotation);
+  updateLivePointerTracker(currentRotation);
+
+  // Si el usuario está autenticado, sincronizar datos con la nube para el dex activo
+  if (window.ShinyAPI && window.ShinyAPI.isLoggedIn()) {
+    syncCloudData(false);
+  }
+}
+
+// ==========================================
+// 13. INICIALIZACIÓN & EVENTOS
 // ==========================================
 function initApp() {
   initTheme();
   setupCanvasResolution();
-  preloadAllSprites();
-  loadShinyTracking();
   updateSoundUI();
-  drawWheel(currentRotation);
   renderHistory();
 
   // Giro
@@ -1490,6 +1893,19 @@ function initApp() {
       spinWheel();
     }
   });
+
+  // Selector Multi-Dex (Píldoras)
+  const dexBtnGeneral = document.getElementById('dexBtnGeneral');
+  const dexBtnPaldea = document.getElementById('dexBtnPaldea');
+  if (dexBtnGeneral) {
+    dexBtnGeneral.addEventListener('click', () => switchDexContext('general'));
+  }
+  if (dexBtnPaldea) {
+    dexBtnPaldea.addEventListener('click', () => switchDexContext('paldea'));
+  }
+
+  // Inicializar contexto de Pokédex activo (por defecto 'general' o el guardado)
+  switchDexContext(localStorage.getItem('ruleta_active_dex') || 'general');
 
   // Tema
   themeToggleBtn.addEventListener('click', toggleTheme);
@@ -1540,16 +1956,16 @@ function initApp() {
     if (selectedEvoIds.size > 0) {
       const selectedPokemonList = [];
       selectedEvoIds.forEach(id => {
-        const p = PALDEA_BY_NUM.get(id);
+        const p = getPokemonByAnyId(id);
         if (p) selectedPokemonList.push(p);
       });
       markMultipleAsShinyCaptured(selectedPokemonList);
 
       if (modalSource === 'wheel') {
-        // Si el ganador de la ruleta no fue marcado como shiny, guardarlo como pendiente del giro anterior
-        if (currentWonPokemon && !selectedEvoIds.has(currentWonPokemon.numPal)) {
+        const wonId = currentWonPokemon ? getPokemonId(currentWonPokemon) : '';
+        if (currentWonPokemon && !selectedEvoIds.has(wonId)) {
           markAsPending(currentWonPokemon);
-          lastSpinPendingIds = new Set([currentWonPokemon.numPal]);
+          lastSpinPendingIds = new Set([wonId]);
           saveShinyTracking();
         } else {
           lastSpinPendingIds.clear();
@@ -1558,9 +1974,9 @@ function initApp() {
       }
       playVictoryFanfare();
     } else if (modalSource === 'wheel' && currentWonPokemon) {
-      // Si ninguno fue seleccionado desde la ruleta, guardar el ganador como pendiente del giro anterior
+      const wonId = getPokemonId(currentWonPokemon);
       markAsPending(currentWonPokemon);
-      lastSpinPendingIds = new Set([currentWonPokemon.numPal]);
+      lastSpinPendingIds = new Set([wonId]);
       saveShinyTracking();
     }
     closeWinnerModal();
@@ -1569,8 +1985,9 @@ function initApp() {
   // 2. Girar de Nuevo (guarda ganador en pendientes del giro anterior)
   winnerSpinAgainBtn.addEventListener('click', () => {
     if (currentWonPokemon) {
+      const wonId = getPokemonId(currentWonPokemon);
       markAsPending(currentWonPokemon);
-      lastSpinPendingIds = new Set([currentWonPokemon.numPal]);
+      lastSpinPendingIds = new Set([wonId]);
       saveShinyTracking();
     }
     closeWinnerModal();
@@ -1582,8 +1999,9 @@ function initApp() {
   // 3. Aceptar / Guardar Pendiente y Cerrar (ruleta)
   winnerAcceptBtn.addEventListener('click', () => {
     if (currentWonPokemon) {
+      const wonId = getPokemonId(currentWonPokemon);
       markAsPending(currentWonPokemon);
-      lastSpinPendingIds = new Set([currentWonPokemon.numPal]);
+      lastSpinPendingIds = new Set([wonId]);
       saveShinyTracking();
     }
     closeWinnerModal();
@@ -1609,8 +2027,9 @@ function initApp() {
   winnerModal.addEventListener('click', (e) => {
     if (e.target === winnerModal) {
       if (modalSource === 'wheel' && currentWonPokemon) {
+        const wonId = getPokemonId(currentWonPokemon);
         markAsPending(currentWonPokemon);
-        lastSpinPendingIds = new Set([currentWonPokemon.numPal]);
+        lastSpinPendingIds = new Set([wonId]);
         saveShinyTracking();
       }
       closeWinnerModal();
@@ -1637,20 +2056,11 @@ function initApp() {
     });
   }
 
-  const matrixFilterBtns = document.querySelectorAll('[data-matrix-filter]');
-  matrixFilterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      matrixFilterBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      currentMatrixFilter = btn.dataset.matrixFilter || 'all';
-      renderPaldeaMatrix();
-    });
-  });
-
   if (matrixLastSpinPill) {
     matrixLastSpinPill.style.cursor = 'pointer';
     matrixLastSpinPill.addEventListener('click', () => {
-      matrixFilterBtns.forEach(b => {
+      const allChips = document.querySelectorAll('[data-matrix-filter]');
+      allChips.forEach(b => {
         if (b.dataset.matrixFilter === 'last-spin') {
           b.classList.add('active');
         } else {
