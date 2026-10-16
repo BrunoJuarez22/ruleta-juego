@@ -299,6 +299,17 @@ ruleta-juego/
       2. Se refactorizó `getPokemonByAnyId` en `script.js` para diferenciar con exactitud búsquedas de 4 dígitos (Nacionales) de búsquedas de 1 a 3 dígitos (Regionales).
       3. Se actualizó el parámetro anti-caché a `v=4.1` en `index.html`.
       4. Verificado con 0 discrepancias sobre 5,935 referencias evolutivas comprobadas en `test_switch_integration.js`.
+29. **Eliminación de Botones Aislados en Ruleta General e Indicador Integral de Juegos Disponibles:**
+    - **Requerimiento del Usuario:** Eliminar los botones `EN S/V` y `EN Z-A` de la ruleta general, y en su lugar marcar en cada Pokémon de la ruleta general en qué juegos está disponible.
+    - **Ajustes Realizados:**
+      1. Se eliminaron los botones de filtro de matriz `EN S/V` y `EN Z-A` en `rebuildMatrixFilterChips`, manteniendo limpiamente los chips por generaciones (`GEN 1` a `GEN 9`).
+      2. Se eliminaron las opciones `DISPONIBLE EN ESC/PÚR (S/V)` y `CONFIRMADO LEYENDAS Z-A` del selector de rango `rangeFilter`.
+      3. Se reemplazó la insignia unitaria aislada (`S/V` o `Z-A`) en la ruleta general por un sistema integral de insignias multi-juego:
+         - En las tarjetas del catálogo/matriz: se muestra la fila `.matrix-games-row` con insignias para todos los juegos de Nintendo Switch donde está disponible (`SV`, `Z-A`, `SwSh`, `PLA`, `BDSP`, `LGPE`, `+CLÁS`) con sus colores oficiales y tooltip informativo.
+         - En el Live Tracker: muestra los tipos elementales junto con las insignias de los juegos disponibles.
+         - En el Modal Ganador: organiza las entregas de Nintendo Switch y las entregas clásicas con etiquetas descriptivas.
+         - En los selectores de línea evolutiva, lista de pendientes, capturados e historial de giros: muestra las insignias de juegos disponibles de cada integrante.
+      4. Se actualizó el parámetro anti-caché a `v=4.2` en `index.html`.
 
 ---
 

@@ -515,58 +515,78 @@ function getGameBadgeHtml(pokemon, variant = 'normal') {
   }
 
   // Ruleta General (Gens 1 a 9)
-  const games = Array.isArray(pokemon.games) ? pokemon.games : [];
-  const gen = pokemon.generation ? `GEN ${pokemon.generation}` : '';
-
   if (variant === 'mini') {
-    let badgeText = gen || 'GEN';
-    let badgeClass = 'game-badge-both';
-    let dotClass = 'game-dot-both';
-
-    if (games.includes('SV')) {
-      badgeText = 'S/V';
-      badgeClass = 'game-badge-scarlet';
-      dotClass = 'game-dot-scarlet';
-    } else if (games.includes('PLZA')) {
-      badgeText = 'Z-A';
-      badgeClass = 'game-badge-lumina';
-      dotClass = 'game-dot-lumina';
-    } else if (games.includes('SwSh')) {
-      badgeText = 'SwSh';
-      badgeClass = 'game-badge-sword';
-      dotClass = 'game-dot-sword';
-    } else if (games.includes('PLA')) {
-      badgeText = 'PLA';
-      badgeClass = 'game-badge-hisui';
-      dotClass = 'game-dot-hisui';
-    } else if (games.includes('BDSP')) {
-      badgeText = 'BDSP';
-      badgeClass = 'game-badge-diamond';
-      dotClass = 'game-dot-diamond';
-    } else if (games.includes('LGPE')) {
-      badgeText = 'LGPE';
-      badgeClass = 'game-badge-pikachu';
-      dotClass = 'game-dot-pikachu';
-    }
-
-    const titleGames = games.length > 0 ? `Juegos disponibles: ${games.join(', ')}` : (gen || 'Nacional');
-
-    return `<span class="game-badge ${badgeClass} game-badge-mini" title="${titleGames}">
-      <span class="game-dot ${dotClass}"></span>
-      <span class="game-text">${badgeText}</span>
-    </span>`;
+    return getPokemonGamesBadgesHtml(pokemon);
   }
 
   // Variante normal para Live Pointer Tracker
-  const topGames = games.slice(0, 3).join('/');
-  const moreCount = games.length > 3 ? ` (+${games.length - 3})` : '';
-  const gamesText = games.length > 0 ? `${topGames}${moreCount}` : gen;
-  const titleFull = games.length > 0 ? `Disponible en: ${games.join(', ')}` : gen;
+  const tooltip = getPokemonGamesTooltipText(pokemon);
+  return `<div class="tracker-games-row" title="Disponible en: ${tooltip}">
+    <span class="tracker-games-label">JUEGOS:</span>
+    ${getPokemonGamesBadgesHtml(pokemon)}
+  </div>`;
+}
 
-  return `<span class="game-badge game-badge-both" title="${titleFull}">
-    <span class="game-dot game-dot-both"></span>
-    <span class="game-text">${gamesText}</span>
-  </span>`;
+const GAME_NAMES_MAP = {
+  'SV': 'Escarlata / Púrpura',
+  'SV-DLC': 'Escarlata / Púrpura (DLC)',
+  'PLZA': 'Leyendas Z-A',
+  'SwSh': 'Espada / Escudo',
+  'SwSh-DLC': 'Espada / Escudo (DLC)',
+  'PLA': 'Leyendas Arceus',
+  'BDSP': 'Diamante B. / Perla R.',
+  'LGPE': "Let's Go Pikachu / Eevee",
+  'SM': 'Sol / Luna',
+  'USUM': 'Ultrasol / Ultraluna',
+  'XY': 'X / Y',
+  'ORAS': 'Rubí Omega / Zafiro Alfa',
+  'BW': 'Negro / Blanco',
+  'B2W2': 'Negro 2 / Blanco 2',
+  'DP': 'Diamante / Perla',
+  'Pt': 'Platino',
+  'HGSS': 'HeartGold / SoulSilver',
+  'RS': 'Rubí / Zafiro',
+  'E': 'Esmeralda',
+  'FRLG': 'Rojo Fuego / Verde Hoja',
+  'GS': 'Oro / Plata',
+  'C': 'Cristal',
+  'RB': 'Rojo / Azul',
+  'Y': 'Amarillo'
+};
+
+const SWITCH_GAME_DEFS = [
+  { code: 'SV', dlc: 'SV-DLC', label: 'SV', name: 'Pokémon Escarlata y Púrpura', cls: 'pill-sv' },
+  { code: 'PLZA', label: 'Z-A', name: 'Leyendas Pokémon: Z-A', cls: 'pill-plza' },
+  { code: 'SwSh', dlc: 'SwSh-DLC', label: 'SwSh', name: 'Pokémon Espada y Escudo', cls: 'pill-swsh' },
+  { code: 'PLA', label: 'PLA', name: 'Leyendas Pokémon: Arceus', cls: 'pill-pla' },
+  { code: 'BDSP', label: 'BDSP', name: 'Pokémon Diamante B. y Perla R.', cls: 'pill-bdsp' },
+  { code: 'LGPE', label: 'LGPE', name: "Pokémon Let's Go Pikachu / Eevee", cls: 'pill-lgpe' }
+];
+
+function getPokemonGamesTooltipText(pokemon) {
+  if (!pokemon || !Array.isArray(pokemon.games)) return '';
+  return pokemon.games.map(g => GAME_NAMES_MAP[g] || g).join(', ');
+}
+
+function getPokemonGamesBadgesHtml(pokemon) {
+  if (!pokemon) return '';
+  const games = Array.isArray(pokemon.games) ? pokemon.games : [];
+  const pills = [];
+
+  for (const def of SWITCH_GAME_DEFS) {
+    const isAvail = games.includes(def.code) || (def.dlc && games.includes(def.dlc));
+    if (isAvail) {
+      pills.push(`<span class="game-pill ${def.cls}" title="Disponible en ${def.name}">${def.label}</span>`);
+    }
+  }
+
+  const classicCount = games.filter(c => !['SV', 'SV-DLC', 'PLZA', 'SwSh', 'SwSh-DLC', 'PLA', 'BDSP', 'LGPE'].includes(c)).length;
+  if (classicCount > 0) {
+    pills.push(`<span class="game-pill pill-retro" title="También disponible en ${classicCount} entregas clásicas (Gens 1 a 7)">+CLÁS</span>`);
+  }
+
+  const tooltip = getPokemonGamesTooltipText(pokemon);
+  return `<div class="games-pill-group" title="Juegos disponibles: ${tooltip}">${pills.join('')}</div>`;
 }
 
 function getWinnerGameBannerHtml(pokemon) {
@@ -642,7 +662,7 @@ function getWinnerGameBannerHtml(pokemon) {
     </div>`;
   }
 
-  // Ruleta General: Mostrar listado completo de juegos con chips vectoriales
+  // Ruleta General: Mostrar listado completo de juegos agrupados por consola / generación
   const games = Array.isArray(pokemon.games) ? pokemon.games : [];
   if (games.length === 0) {
     return `<div id="winnerGameBanner" class="winner-game-banner winner-game-both">
@@ -651,22 +671,36 @@ function getWinnerGameBannerHtml(pokemon) {
     </div>`;
   }
 
-  const chipsHtml = games.map(g => {
+  const switchCodes = ['SV', 'SV-DLC', 'PLZA', 'SwSh', 'SwSh-DLC', 'PLA', 'BDSP', 'LGPE'];
+  const switchGames = games.filter(g => switchCodes.includes(g));
+  const classicGames = games.filter(g => !switchCodes.includes(g));
+
+  const renderChip = (g) => {
     let highlightClass = '';
     if (g === 'SV' || g === 'SV-DLC') highlightClass = 'highlight-sv';
-    if (g === 'PLZA') highlightClass = 'highlight-plza';
-    if (g === 'SwSh' || g === 'SwSh-DLC') highlightClass = 'highlight-swsh';
-    if (g === 'PLA') highlightClass = 'highlight-pla';
-    if (g === 'BDSP') highlightClass = 'highlight-bdsp';
-    if (g === 'LGPE') highlightClass = 'highlight-lgpe';
-    return `<span class="game-chip-tag ${highlightClass}">${g}</span>`;
-  }).join('');
+    else if (g === 'PLZA') highlightClass = 'highlight-plza';
+    else if (g === 'SwSh' || g === 'SwSh-DLC') highlightClass = 'highlight-swsh';
+    else if (g === 'PLA') highlightClass = 'highlight-pla';
+    else if (g === 'BDSP') highlightClass = 'highlight-bdsp';
+    else if (g === 'LGPE') highlightClass = 'highlight-lgpe';
+    const name = GAME_NAMES_MAP[g] || g;
+    return `<span class="game-chip-tag ${highlightClass}" title="${name}">${name}</span>`;
+  };
+
+  const switchChipsHtml = switchGames.map(renderChip).join('');
+  const classicChipsHtml = classicGames.map(g => `<span class="game-chip-tag tag-retro" title="${GAME_NAMES_MAP[g] || g}">${g}</span>`).join('');
 
   return `<div id="winnerGameBanner" class="winner-game-banner winner-game-general">
-    <div style="font-size: 0.72rem; letter-spacing: 0.5px; opacity: 0.85;">
-      ★ DISPONIBLE EN ${games.length} ${games.length === 1 ? 'JUEGO' : 'JUEGOS'}:
+    <div class="winner-banner-section">
+      <div class="banner-section-title">★ DISPONIBLE EN NINTENDO SWITCH:</div>
+      <div class="game-chips-row">${switchChipsHtml || '<span class="text-muted">Ninguno</span>'}</div>
     </div>
-    <div class="game-chips-row">${chipsHtml}</div>
+    ${classicChipsHtml ? `
+      <div class="winner-banner-section classic-section">
+        <div class="banner-section-title">★ ENTREGAS CLÁSICAS (${classicGames.length}):</div>
+        <div class="game-chips-row">${classicChipsHtml}</div>
+      </div>
+    ` : ''}
   </div>`;
 }
 
@@ -1858,7 +1892,7 @@ function renderPaldeaMatrix() {
       <div class="matrix-card-header">
         <div class="matrix-header-left">
           <span class="matrix-num">#${displayNum}</span>
-          ${getGameBadgeHtml(p, 'mini')}
+          ${currentDexId === 'general' ? `<span class="matrix-gen-badge">GEN ${p.generation || 1}</span>` : getGameBadgeHtml(p, 'mini')}
         </div>
         ${badgeHtml}
       </div>
@@ -1869,6 +1903,11 @@ function renderPaldeaMatrix() {
       <div class="matrix-types">
         ${(p.types || []).map(t => `<span class="type-badge-mini type-${t}">${t}</span>`).join('')}
       </div>
+      ${currentDexId === 'general' ? `
+        <div class="matrix-games-row" title="Disponible en: ${getPokemonGamesTooltipText(p)}">
+          ${getPokemonGamesBadgesHtml(p)}
+        </div>
+      ` : ''}
       <div class="matrix-actions">
         <div class="matrix-actions-row">
           <button class="btn-matrix-toggle ${isCaptured ? 'is-desmarcar' : 'is-capturar'}" title="${isCaptured ? 'Desmarcar de Shiny' : 'Marcar como Shiny capturado'}">
@@ -2153,8 +2192,6 @@ function rebuildRangeFilterOptions(dexId = currentDexId) {
       <option value="gen7">GEN 7: ALOLA (#0722 - #0809)</option>
       <option value="gen8">GEN 8: GALAR / HISUI (#0810 - #0905)</option>
       <option value="gen9">GEN 9: PALDEA (#0906 - #1025)</option>
-      <option value="game_sv">DISPONIBLE EN ESC/PÚR (S/V)</option>
-      <option value="game_plza">CONFIRMADO LEYENDAS Z-A</option>
     `;
   }
   rangeFilter.value = 'all';
@@ -2203,7 +2240,7 @@ function rebuildMatrixFilterChips(dexId = currentDexId) {
       <button class="matrix-chip chip-game-lumina" data-matrix-filter="lumina">LUMINALIA (232)</button>
     `;
   } else {
-    // Ruleta General
+    // Ruleta General (Gens 1 a 9)
     specificChipsHtml = `
       <button class="matrix-chip chip-gen" data-matrix-filter="gen1">GEN 1 (151)</button>
       <button class="matrix-chip chip-gen" data-matrix-filter="gen2">GEN 2 (100)</button>
@@ -2214,8 +2251,6 @@ function rebuildMatrixFilterChips(dexId = currentDexId) {
       <button class="matrix-chip chip-gen" data-matrix-filter="gen7">GEN 7 (88)</button>
       <button class="matrix-chip chip-gen" data-matrix-filter="gen8">GEN 8 (96)</button>
       <button class="matrix-chip chip-gen" data-matrix-filter="gen9">GEN 9 (120)</button>
-      <button class="matrix-chip chip-game-scarlet" data-matrix-filter="game_sv">EN S/V</button>
-      <button class="matrix-chip chip-game-lumina" data-matrix-filter="game_plza">EN Z-A</button>
     `;
   }
 
