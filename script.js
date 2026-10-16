@@ -37,9 +37,14 @@ const ALL_PALDEA_POKEMON = (window.PALDEA_POKEMON || []).map((p, index) => {
   return p;
 });
 const PALDEA_BY_NUM = new Map();
+const PALDEA_BY_NAT = new Map();
 ALL_PALDEA_POKEMON.forEach(p => {
   PALDEA_BY_NUM.set(p.numPal, p);
   PALDEA_BY_NUM.set(String(parseInt(p.numPal, 10)), p);
+  if (p.numNac) {
+    PALDEA_BY_NAT.set(p.numNac, p);
+    PALDEA_BY_NAT.set(String(parseInt(p.numNac, 10)), p);
+  }
 });
 
 const ALL_NATIONAL_POKEMON = (window.ALL_NATIONAL_POKEMON || []).map((p, index) => {
@@ -53,7 +58,83 @@ ALL_NATIONAL_POKEMON.forEach(p => {
   NATIONAL_BY_ID.set(String(parseInt(p.numNac, 10)), p);
 });
 
-// Catálogos Oficiales de Pokédex disponibles
+// Datasets canónicos para todos los juegos de Nintendo Switch
+const ALL_GALAR_POKEMON = (window.GALAR_POKEMON || []).map((p, index) => {
+  p.color = p.color || getPokemonColor(p, index);
+  return p;
+});
+const GALAR_BY_NUM = new Map();
+const GALAR_BY_NAT = new Map();
+ALL_GALAR_POKEMON.forEach(p => {
+  GALAR_BY_NUM.set(p.numGal, p);
+  GALAR_BY_NUM.set(String(parseInt(p.numGal, 10)), p);
+  if (p.numNac) {
+    GALAR_BY_NAT.set(p.numNac, p);
+    GALAR_BY_NAT.set(String(parseInt(p.numNac, 10)), p);
+  }
+});
+
+const ALL_HISUI_POKEMON = (window.HISUI_POKEMON || []).map((p, index) => {
+  p.color = p.color || getPokemonColor(p, index);
+  return p;
+});
+const HISUI_BY_NUM = new Map();
+const HISUI_BY_NAT = new Map();
+ALL_HISUI_POKEMON.forEach(p => {
+  HISUI_BY_NUM.set(p.numHis, p);
+  HISUI_BY_NUM.set(String(parseInt(p.numHis, 10)), p);
+  if (p.numNac) {
+    HISUI_BY_NAT.set(p.numNac, p);
+    HISUI_BY_NAT.set(String(parseInt(p.numNac, 10)), p);
+  }
+});
+
+const ALL_SINNOH_POKEMON = (window.SINNOH_POKEMON || []).map((p, index) => {
+  p.color = p.color || getPokemonColor(p, index);
+  return p;
+});
+const SINNOH_BY_NUM = new Map();
+const SINNOH_BY_NAT = new Map();
+ALL_SINNOH_POKEMON.forEach(p => {
+  SINNOH_BY_NUM.set(p.numSin, p);
+  SINNOH_BY_NUM.set(String(parseInt(p.numSin, 10)), p);
+  if (p.numNac) {
+    SINNOH_BY_NAT.set(p.numNac, p);
+    SINNOH_BY_NAT.set(String(parseInt(p.numNac, 10)), p);
+  }
+});
+
+const ALL_LETSGO_POKEMON = (window.LETSGO_POKEMON || []).map((p, index) => {
+  p.color = p.color || getPokemonColor(p, index);
+  return p;
+});
+const LETSGO_BY_NUM = new Map();
+const LETSGO_BY_NAT = new Map();
+ALL_LETSGO_POKEMON.forEach(p => {
+  LETSGO_BY_NUM.set(p.numKan, p);
+  LETSGO_BY_NUM.set(String(parseInt(p.numKan, 10)), p);
+  if (p.numNac) {
+    LETSGO_BY_NAT.set(p.numNac, p);
+    LETSGO_BY_NAT.set(String(parseInt(p.numNac, 10)), p);
+  }
+});
+
+const ALL_LUMIOSE_POKEMON = (window.LUMIOSE_POKEMON || []).map((p, index) => {
+  p.color = p.color || getPokemonColor(p, index);
+  return p;
+});
+const LUMIOSE_BY_NUM = new Map();
+const LUMIOSE_BY_NAT = new Map();
+ALL_LUMIOSE_POKEMON.forEach(p => {
+  LUMIOSE_BY_NUM.set(p.numLum, p);
+  LUMIOSE_BY_NUM.set(String(parseInt(p.numLum, 10)), p);
+  if (p.numNac) {
+    LUMIOSE_BY_NAT.set(p.numNac, p);
+    LUMIOSE_BY_NAT.set(String(parseInt(p.numNac, 10)), p);
+  }
+});
+
+// Catálogos Oficiales de Pokédex disponibles (7 Pokédexes independientes)
 const DEX_CONFIGS = {
   general: {
     id: 'general',
@@ -72,6 +153,51 @@ const DEX_CONFIGS = {
     matrixTitle: 'MATRIZ PALDEA (400)',
     catalogTitle: 'CATÁLOGO POKÉDEX DE PALDEA (400)',
     getItems: () => ALL_PALDEA_POKEMON
+  },
+  swsh: {
+    id: 'swsh',
+    name: 'Pokédex de Galar (Espada / Escudo)',
+    shortName: 'ESPADA / ESCUDO',
+    totalCount: 400,
+    matrixTitle: 'MATRIZ GALAR (400)',
+    catalogTitle: 'CATÁLOGO POKÉDEX DE GALAR (400)',
+    getItems: () => ALL_GALAR_POKEMON
+  },
+  pla: {
+    id: 'pla',
+    name: 'Pokédex de Hisui (Leyendas Arceus)',
+    shortName: 'LEYENDAS ARCEUS',
+    totalCount: 242,
+    matrixTitle: 'MATRIZ HISUI (242)',
+    catalogTitle: 'CATÁLOGO POKÉDEX DE HISUI (242)',
+    getItems: () => ALL_HISUI_POKEMON
+  },
+  bdsp: {
+    id: 'bdsp',
+    name: 'Pokédex de Sinnoh (DB / PR)',
+    shortName: 'DIAMANTE / PERLA',
+    totalCount: 151,
+    matrixTitle: 'MATRIZ SINNOH (151)',
+    catalogTitle: 'CATÁLOGO POKÉDEX DE SINNOH (151)',
+    getItems: () => ALL_SINNOH_POKEMON
+  },
+  lgpe: {
+    id: 'lgpe',
+    name: "Pokédex de Kanto (Let's Go P/E)",
+    shortName: "LET'S GO",
+    totalCount: 153,
+    matrixTitle: "MATRIZ KANTO LET'S GO (153)",
+    catalogTitle: "CATÁLOGO POKÉDEX LET'S GO (153)",
+    getItems: () => ALL_LETSGO_POKEMON
+  },
+  plza: {
+    id: 'plza',
+    name: 'Pokédex de Luminalia (Leyendas Z-A)',
+    shortName: 'LEYENDAS Z-A',
+    totalCount: 232,
+    matrixTitle: 'MATRIZ LUMINALIA (232)',
+    catalogTitle: 'CATÁLOGO POKÉDEX DE LUMINALIA (232)',
+    getItems: () => ALL_LUMIOSE_POKEMON
   }
 };
 
@@ -88,15 +214,42 @@ function getActiveDexFullList() {
 
 function getPokemonId(pokemon) {
   if (!pokemon) return '';
-  return String(pokemon.pokemonId || pokemon.numPal || pokemon.numNac || pokemon.id || '');
+  switch (currentDexId) {
+    case 'paldea':
+      return String(pokemon.numPal || pokemon.pokemonId || pokemon.numNac || pokemon.id || '');
+    case 'swsh':
+      return String(pokemon.numGal || pokemon.pokemonId || pokemon.numNac || pokemon.id || '');
+    case 'pla':
+      return String(pokemon.numHis || pokemon.pokemonId || pokemon.numNac || pokemon.id || '');
+    case 'bdsp':
+      return String(pokemon.numSin || pokemon.pokemonId || pokemon.numNac || pokemon.id || '');
+    case 'lgpe':
+      return String(pokemon.numKan || pokemon.pokemonId || pokemon.numNac || pokemon.id || '');
+    case 'plza':
+      return String(pokemon.numLum || pokemon.pokemonId || pokemon.numNac || pokemon.id || '');
+    default:
+      return String(pokemon.pokemonId || pokemon.numNac || pokemon.numPal || pokemon.id || '');
+  }
 }
 
 function getPokemonDisplayNum(pokemon) {
   if (!pokemon) return '';
-  if (currentDexId === 'paldea') {
-    return pokemon.numPal || pokemon.numNac || pokemon.pokemonId || '';
+  switch (currentDexId) {
+    case 'paldea':
+      return pokemon.numPal || pokemon.numNac || pokemon.pokemonId || '';
+    case 'swsh':
+      return pokemon.numGal || pokemon.numNac || pokemon.pokemonId || '';
+    case 'pla':
+      return pokemon.numHis || pokemon.numNac || pokemon.pokemonId || '';
+    case 'bdsp':
+      return pokemon.numSin || pokemon.numNac || pokemon.pokemonId || '';
+    case 'lgpe':
+      return pokemon.numKan || pokemon.numNac || pokemon.pokemonId || '';
+    case 'plza':
+      return pokemon.numLum || pokemon.numNac || pokemon.pokemonId || '';
+    default:
+      return pokemon.numNac || pokemon.pokemonId || '';
   }
-  return pokemon.numNac || pokemon.numPal || pokemon.pokemonId || '';
 }
 
 function getPokemonByAnyId(id) {
@@ -106,13 +259,40 @@ function getPokemonByAnyId(id) {
   const pad3 = idStr.padStart(3, '0');
   const numInt = String(parseInt(idStr, 10));
 
+  // 1. Buscar en la Pokédex activa (por número regional y por número nacional)
   if (currentDexId === 'paldea') {
-    return PALDEA_BY_NUM.get(pad3) || PALDEA_BY_NUM.get(idStr) || PALDEA_BY_NUM.get(numInt) ||
-           NATIONAL_BY_ID.get(pad4) || NATIONAL_BY_ID.get(idStr) || null;
-  } else {
-    return NATIONAL_BY_ID.get(pad4) || NATIONAL_BY_ID.get(idStr) || NATIONAL_BY_ID.get(numInt) ||
-           PALDEA_BY_NUM.get(pad3) || PALDEA_BY_NUM.get(idStr) || null;
+    const found = PALDEA_BY_NUM.get(pad3) || PALDEA_BY_NUM.get(idStr) || PALDEA_BY_NUM.get(numInt) ||
+                  PALDEA_BY_NAT.get(pad4) || PALDEA_BY_NAT.get(idStr) || PALDEA_BY_NAT.get(numInt);
+    if (found) return found;
+  } else if (currentDexId === 'swsh') {
+    const found = GALAR_BY_NUM.get(pad3) || GALAR_BY_NUM.get(idStr) || GALAR_BY_NUM.get(numInt) ||
+                  GALAR_BY_NAT.get(pad4) || GALAR_BY_NAT.get(idStr) || GALAR_BY_NAT.get(numInt);
+    if (found) return found;
+  } else if (currentDexId === 'pla') {
+    const found = HISUI_BY_NUM.get(pad3) || HISUI_BY_NUM.get(idStr) || HISUI_BY_NUM.get(numInt) ||
+                  HISUI_BY_NAT.get(pad4) || HISUI_BY_NAT.get(idStr) || HISUI_BY_NAT.get(numInt);
+    if (found) return found;
+  } else if (currentDexId === 'bdsp') {
+    const found = SINNOH_BY_NUM.get(pad3) || SINNOH_BY_NUM.get(idStr) || SINNOH_BY_NUM.get(numInt) ||
+                  SINNOH_BY_NAT.get(pad4) || SINNOH_BY_NAT.get(idStr) || SINNOH_BY_NAT.get(numInt);
+    if (found) return found;
+  } else if (currentDexId === 'lgpe') {
+    const found = LETSGO_BY_NUM.get(pad3) || LETSGO_BY_NUM.get(idStr) || LETSGO_BY_NUM.get(numInt) ||
+                  LETSGO_BY_NAT.get(pad4) || LETSGO_BY_NAT.get(idStr) || LETSGO_BY_NAT.get(numInt);
+    if (found) return found;
+  } else if (currentDexId === 'plza') {
+    const found = LUMIOSE_BY_NUM.get(pad3) || LUMIOSE_BY_NUM.get(idStr) || LUMIOSE_BY_NUM.get(numInt) ||
+                  LUMIOSE_BY_NAT.get(pad4) || LUMIOSE_BY_NAT.get(idStr) || LUMIOSE_BY_NAT.get(numInt);
+    if (found) return found;
   }
+
+  // 2. Búsqueda de respaldo en Catálogo Nacional
+  const nat = NATIONAL_BY_ID.get(pad4) || NATIONAL_BY_ID.get(idStr) || NATIONAL_BY_ID.get(numInt);
+  if (nat) return nat;
+
+  // 3. Respaldo general en otros catálogos
+  return PALDEA_BY_NUM.get(pad3) || GALAR_BY_NUM.get(pad3) || HISUI_BY_NUM.get(pad3) ||
+         SINNOH_BY_NUM.get(pad3) || LETSGO_BY_NUM.get(pad3) || LUMIOSE_BY_NUM.get(pad3) || null;
 }
 
 // Conjuntos oficiales de exclusivos de Paldea
@@ -128,12 +308,66 @@ const VIOLET_EXCLUSIVE_SET = new Set([
   '387', '398', '400'
 ]);
 
+// Conjuntos oficiales de exclusivos de Espada y Escudo (Nº Nacional)
+const SWORD_EXCLUSIVE_SET = new Set([
+  '83', '865', '273', '274', '275', '303', '338', '554', '555', '559', '560',
+  '574', '575', '576', '627', '628', '633', '634', '635', '684', '685',
+  '766', '776', '782', '783', '784', '841', '874', '888'
+]);
+
+const SHIELD_EXCLUSIVE_SET = new Set([
+  '77', '78', '222', '864', '246', '247', '248', '270', '271', '272', '302', '337',
+  '453', '454', '577', '578', '579', '629', '630', '682', '683', '704', '705', '706',
+  '765', '780', '842', '875', '889'
+]);
+
+// Conjuntos oficiales de exclusivos de Diamante Brillante y Perla Reluciente (Nº Nacional)
+const DIAMOND_EXCLUSIVE_SET = new Set(['408', '409', '434', '435', '198', '430', '483']);
+const PEARL_EXCLUSIVE_SET = new Set(['410', '411', '431', '432', '200', '429', '484']);
+
+// Conjuntos oficiales de exclusivos de Let's Go Pikachu y Eevee (Nº Nacional)
+const PIKACHU_EXCLUSIVE_SET = new Set(['27', '28', '43', '44', '45', '56', '57', '58', '59', '88', '89', '123']);
+const EEVEE_EXCLUSIVE_SET = new Set(['23', '24', '37', '38', '52', '53', '69', '70', '71', '109', '110', '127']);
+
 function getPokemonGame(pokemon) {
   if (!pokemon) return 'both';
   if (pokemon.game) return pokemon.game;
-  const num = pokemon.numPal;
-  if (num && SCARLET_EXCLUSIVE_SET.has(String(parseInt(num, 10)))) return 'scarlet';
-  if (num && VIOLET_EXCLUSIVE_SET.has(String(parseInt(num, 10)))) return 'violet';
+
+  const natId = String(parseInt(pokemon.numNac || pokemon.pokemonId || '0', 10));
+
+  if (currentDexId === 'paldea') {
+    const num = pokemon.numPal;
+    if (num && SCARLET_EXCLUSIVE_SET.has(String(parseInt(num, 10)))) return 'scarlet';
+    if (num && VIOLET_EXCLUSIVE_SET.has(String(parseInt(num, 10)))) return 'violet';
+    return 'both';
+  }
+
+  if (currentDexId === 'swsh') {
+    if (SWORD_EXCLUSIVE_SET.has(natId)) return 'sword';
+    if (SHIELD_EXCLUSIVE_SET.has(natId)) return 'shield';
+    return 'both';
+  }
+
+  if (currentDexId === 'bdsp') {
+    if (DIAMOND_EXCLUSIVE_SET.has(natId)) return 'diamond';
+    if (PEARL_EXCLUSIVE_SET.has(natId)) return 'pearl';
+    return 'both';
+  }
+
+  if (currentDexId === 'lgpe') {
+    if (PIKACHU_EXCLUSIVE_SET.has(natId)) return 'pikachu';
+    if (EEVEE_EXCLUSIVE_SET.has(natId)) return 'eevee';
+    return 'both';
+  }
+
+  if (currentDexId === 'pla') {
+    return 'hisui';
+  }
+
+  if (currentDexId === 'plza') {
+    return 'lumina';
+  }
+
   return 'both';
 }
 
@@ -164,6 +398,102 @@ function getGameBadgeHtml(pokemon, variant = 'normal') {
     </span>`;
   }
 
+  if (currentDexId === 'swsh') {
+    const game = getPokemonGame(pokemon);
+    let shortLabel = 'AMBOS';
+    let fullLabel = 'AMBOS';
+    let title = 'Disponible en Pokémon Espada y Escudo';
+
+    if (game === 'sword') {
+      shortLabel = 'ESP';
+      fullLabel = 'ESPADA';
+      title = 'Exclusivo de Pokémon Espada';
+    } else if (game === 'shield') {
+      shortLabel = 'ESC';
+      fullLabel = 'ESCUDO';
+      title = 'Exclusivo de Pokémon Escudo';
+    }
+
+    const label = (variant === 'mini') ? shortLabel : fullLabel;
+
+    return `<span class="game-badge game-badge-${game} ${variant === 'mini' ? 'game-badge-mini' : ''}" title="${title}">
+      <span class="game-dot game-dot-${game}"></span>
+      <span class="game-text">${label}</span>
+    </span>`;
+  }
+
+  if (currentDexId === 'bdsp') {
+    const game = getPokemonGame(pokemon);
+    let shortLabel = 'AMBOS';
+    let fullLabel = 'AMBOS';
+    let title = 'Disponible en Diamante Brillante y Perla Reluciente';
+
+    if (game === 'diamond') {
+      shortLabel = 'DB';
+      fullLabel = 'DIAMANTE';
+      title = 'Exclusivo de Diamante Brillante';
+    } else if (game === 'pearl') {
+      shortLabel = 'PR';
+      fullLabel = 'PERLA';
+      title = 'Exclusivo de Perla Reluciente';
+    }
+
+    const label = (variant === 'mini') ? shortLabel : fullLabel;
+
+    return `<span class="game-badge game-badge-${game} ${variant === 'mini' ? 'game-badge-mini' : ''}" title="${title}">
+      <span class="game-dot game-dot-${game}"></span>
+      <span class="game-text">${label}</span>
+    </span>`;
+  }
+
+  if (currentDexId === 'lgpe') {
+    const game = getPokemonGame(pokemon);
+    let shortLabel = 'AMBOS';
+    let fullLabel = 'AMBOS';
+    let title = "Disponible en Let's Go, Pikachu! y Let's Go, Eevee!";
+
+    if (game === 'pikachu') {
+      shortLabel = 'LGP';
+      fullLabel = 'PIKACHU';
+      title = "Exclusivo de Pokémon: Let's Go, Pikachu!";
+    } else if (game === 'eevee') {
+      shortLabel = 'LGE';
+      fullLabel = 'EEVEE';
+      title = "Exclusivo de Pokémon: Let's Go, Eevee!";
+    }
+
+    const label = (variant === 'mini') ? shortLabel : fullLabel;
+
+    return `<span class="game-badge game-badge-${game} ${variant === 'mini' ? 'game-badge-mini' : ''}" title="${title}">
+      <span class="game-dot game-dot-${game}"></span>
+      <span class="game-text">${label}</span>
+    </span>`;
+  }
+
+  if (currentDexId === 'pla') {
+    const shortLabel = 'HISUI';
+    const fullLabel = 'HISUI';
+    const title = 'Pokédex de Hisui (Leyendas Pokémon: Arceus)';
+    const label = (variant === 'mini') ? shortLabel : fullLabel;
+
+    return `<span class="game-badge game-badge-hisui ${variant === 'mini' ? 'game-badge-mini' : ''}" title="${title}">
+      <span class="game-dot game-dot-hisui"></span>
+      <span class="game-text">${label}</span>
+    </span>`;
+  }
+
+  if (currentDexId === 'plza') {
+    const shortLabel = 'Z-A';
+    const fullLabel = 'LUMINALIA';
+    const title = 'Pokédex de Ciudad Luminalia (Leyendas Pokémon: Z-A)';
+    const label = (variant === 'mini') ? shortLabel : fullLabel;
+
+    return `<span class="game-badge game-badge-lumina ${variant === 'mini' ? 'game-badge-mini' : ''}" title="${title}">
+      <span class="game-dot game-dot-lumina"></span>
+      <span class="game-text">${label}</span>
+    </span>`;
+  }
+
   // Ruleta General (Gens 1 a 9)
   const games = Array.isArray(pokemon.games) ? pokemon.games : [];
   const gen = pokemon.generation ? `GEN ${pokemon.generation}` : '';
@@ -179,10 +509,24 @@ function getGameBadgeHtml(pokemon, variant = 'normal') {
       dotClass = 'game-dot-scarlet';
     } else if (games.includes('PLZA')) {
       badgeText = 'Z-A';
-      badgeClass = 'game-badge-violet';
-      dotClass = 'game-dot-violet';
+      badgeClass = 'game-badge-lumina';
+      dotClass = 'game-dot-lumina';
     } else if (games.includes('SwSh')) {
       badgeText = 'SwSh';
+      badgeClass = 'game-badge-sword';
+      dotClass = 'game-dot-sword';
+    } else if (games.includes('PLA')) {
+      badgeText = 'PLA';
+      badgeClass = 'game-badge-hisui';
+      dotClass = 'game-dot-hisui';
+    } else if (games.includes('BDSP')) {
+      badgeText = 'BDSP';
+      badgeClass = 'game-badge-diamond';
+      dotClass = 'game-dot-diamond';
+    } else if (games.includes('LGPE')) {
+      badgeText = 'LGPE';
+      badgeClass = 'game-badge-pikachu';
+      dotClass = 'game-dot-pikachu';
     }
 
     const titleGames = games.length > 0 ? `Juegos disponibles: ${games.join(', ')}` : (gen || 'Nacional');
@@ -222,6 +566,62 @@ function getWinnerGameBannerHtml(pokemon) {
     </div>`;
   }
 
+  if (currentDexId === 'swsh') {
+    const game = getPokemonGame(pokemon);
+    let text = 'DISPONIBLE EN AMBOS JUEGOS (ESPADA & ESCUDO)';
+    if (game === 'sword') {
+      text = '★ EXCLUSIVO DE POKÉMON ESPADA';
+    } else if (game === 'shield') {
+      text = '★ EXCLUSIVO DE POKÉMON ESCUDO';
+    }
+    return `<div id="winnerGameBanner" class="winner-game-banner winner-game-${game}">
+      <span class="game-dot game-dot-${game}"></span>
+      <span>${text}</span>
+    </div>`;
+  }
+
+  if (currentDexId === 'bdsp') {
+    const game = getPokemonGame(pokemon);
+    let text = 'DISPONIBLE EN AMBOS JUEGOS (DIAMANTE & PERLA)';
+    if (game === 'diamond') {
+      text = '★ EXCLUSIVO DE DIAMANTE BRILLANTE';
+    } else if (game === 'pearl') {
+      text = '★ EXCLUSIVO DE PERLA RELUCIENTE';
+    }
+    return `<div id="winnerGameBanner" class="winner-game-banner winner-game-${game}">
+      <span class="game-dot game-dot-${game}"></span>
+      <span>${text}</span>
+    </div>`;
+  }
+
+  if (currentDexId === 'lgpe') {
+    const game = getPokemonGame(pokemon);
+    let text = "DISPONIBLE EN AMBOS JUEGOS (PIKACHU & EEVEE)";
+    if (game === 'pikachu') {
+      text = "★ EXCLUSIVO DE POKÉMON: LET'S GO, PIKACHU!";
+    } else if (game === 'eevee') {
+      text = "★ EXCLUSIVO DE POKÉMON: LET'S GO, EEVEE!";
+    }
+    return `<div id="winnerGameBanner" class="winner-game-banner winner-game-${game}">
+      <span class="game-dot game-dot-${game}"></span>
+      <span>${text}</span>
+    </div>`;
+  }
+
+  if (currentDexId === 'pla') {
+    return `<div id="winnerGameBanner" class="winner-game-banner winner-game-hisui">
+      <span class="game-dot game-dot-hisui"></span>
+      <span>★ POKÉDEX OFICIAL DE HISUI (LEYENDAS ARCEUS)</span>
+    </div>`;
+  }
+
+  if (currentDexId === 'plza') {
+    return `<div id="winnerGameBanner" class="winner-game-banner winner-game-lumina">
+      <span class="game-dot game-dot-lumina"></span>
+      <span>★ POKÉDEX OFICIAL DE LUMINALIA (LEYENDAS Z-A)</span>
+    </div>`;
+  }
+
   // Ruleta General: Mostrar listado completo de juegos con chips vectoriales
   const games = Array.isArray(pokemon.games) ? pokemon.games : [];
   if (games.length === 0) {
@@ -235,6 +635,10 @@ function getWinnerGameBannerHtml(pokemon) {
     let highlightClass = '';
     if (g === 'SV' || g === 'SV-DLC') highlightClass = 'highlight-sv';
     if (g === 'PLZA') highlightClass = 'highlight-plza';
+    if (g === 'SwSh' || g === 'SwSh-DLC') highlightClass = 'highlight-swsh';
+    if (g === 'PLA') highlightClass = 'highlight-pla';
+    if (g === 'BDSP') highlightClass = 'highlight-bdsp';
+    if (g === 'LGPE') highlightClass = 'highlight-lgpe';
     return `<span class="game-chip-tag ${highlightClass}">${g}</span>`;
   }).join('');
 
@@ -875,6 +1279,16 @@ function openEvolutionLineModal(pokemon, source = 'wheel') {
   // 2. Actualizar textos, número, banner de juego y tipos del nuevo Pokémon
   if (currentDexId === 'paldea') {
     winnerDexNum.textContent = `Nº PALDEA: #${fullPokemon.numPal || fullPokemon.numNac} · NAC: #${fullPokemon.numNac || fullPokemon.numPal}`;
+  } else if (currentDexId === 'swsh') {
+    winnerDexNum.textContent = `Nº GALAR: #${fullPokemon.numGal || fullPokemon.numNac} · NAC: #${fullPokemon.numNac || fullPokemon.numGal}`;
+  } else if (currentDexId === 'pla') {
+    winnerDexNum.textContent = `Nº HISUI: #${fullPokemon.numHis || fullPokemon.numNac} · NAC: #${fullPokemon.numNac || fullPokemon.numHis}`;
+  } else if (currentDexId === 'bdsp') {
+    winnerDexNum.textContent = `Nº SINNOH: #${fullPokemon.numSin || fullPokemon.numNac} · NAC: #${fullPokemon.numNac || fullPokemon.numSin}`;
+  } else if (currentDexId === 'lgpe') {
+    winnerDexNum.textContent = `Nº KANTO: #${fullPokemon.numKan || fullPokemon.numNac} · NAC: #${fullPokemon.numNac || fullPokemon.numKan}`;
+  } else if (currentDexId === 'plza') {
+    winnerDexNum.textContent = `Nº LUMINALIA: #${fullPokemon.numLum || fullPokemon.numNac} · NAC: #${fullPokemon.numNac || fullPokemon.numLum}`;
   } else {
     const genText = fullPokemon.generation ? ` · GENERACIÓN ${fullPokemon.generation}` : '';
     winnerDexNum.textContent = `Nº NACIONAL: #${fullPokemon.numNac || fullPokemon.numPal || getPokemonId(fullPokemon)}${genText}`;
@@ -894,9 +1308,7 @@ function openEvolutionLineModal(pokemon, source = 'wheel') {
     if (modalCardTag) modalCardTag.textContent = 'OBJETIVO SHINY RULETA';
     if (winnerWheelActions) winnerWheelActions.style.display = 'flex';
   } else {
-    const isPend = pendingList.some(p => getPokemonId(p) === pokeId || p.numPal === fullPokemon.numPal) || 
-                   lastSpinPendingIds.has(pokeId) || 
-                   (fullPokemon.numPal && lastSpinPendingIds.has(fullPokemon.numPal));
+    const isPend = isPokemonPending(fullPokemon) || isPokemonLastSpin(fullPokemon);
     if (modalCardTag) modalCardTag.textContent = isPend ? 'CAPTURAR O DESMARCAR PENDIENTE' : 'CAPTURAR LÍNEA EVOLUTIVA';
     if (winnerWheelActions) winnerWheelActions.style.display = 'none';
     if (winnerPendingActions) winnerPendingActions.style.display = 'flex';
@@ -960,8 +1372,8 @@ function renderEvolutionLineSelector(pokemon, source = 'wheel') {
 
   members.forEach(m => {
     const mId = getPokemonId(m);
-    const isTarget = (mId === currentPokeId || m.numPal === fullPokemon.numPal);
-    const isAlreadyCaptured = capturedShinyList.some(c => getPokemonId(c) === mId || (m.numPal && c.numPal === m.numPal));
+    const isTarget = (mId === currentPokeId || (m.numNac && m.numNac === fullPokemon.numNac));
+    const isAlreadyCaptured = isPokemonCaptured(m);
 
     let statusLabel = '';
     if (isAlreadyCaptured) {
@@ -1024,6 +1436,47 @@ function updateCaptureButtonText() {
 // ==========================================
 // 7. GESTIÓN DE PENDIENTES Y CAPTURADOS SHINY
 // ==========================================
+function isPokemonCaptured(p, capSet) {
+  if (!p) return false;
+  const set = capSet || new Set(capturedShinyList.map(c => getPokemonId(c)));
+  const pid = getPokemonId(p);
+  return set.has(pid) ||
+    (p.numPal && set.has(p.numPal)) ||
+    (p.numGal && set.has(p.numGal)) ||
+    (p.numHis && set.has(p.numHis)) ||
+    (p.numSin && set.has(p.numSin)) ||
+    (p.numKan && set.has(p.numKan)) ||
+    (p.numLum && set.has(p.numLum)) ||
+    (p.numNac && set.has(p.numNac));
+}
+
+function isPokemonLastSpin(p) {
+  if (!p) return false;
+  const pid = getPokemonId(p);
+  return lastSpinPendingIds.has(pid) ||
+    (p.numPal && lastSpinPendingIds.has(p.numPal)) ||
+    (p.numGal && lastSpinPendingIds.has(p.numGal)) ||
+    (p.numHis && lastSpinPendingIds.has(p.numHis)) ||
+    (p.numSin && lastSpinPendingIds.has(p.numSin)) ||
+    (p.numKan && lastSpinPendingIds.has(p.numKan)) ||
+    (p.numLum && lastSpinPendingIds.has(p.numLum)) ||
+    (p.numNac && lastSpinPendingIds.has(p.numNac));
+}
+
+function isPokemonPending(p, pendSet) {
+  if (!p) return false;
+  const set = pendSet || new Set(pendingList.map(item => getPokemonId(item)));
+  const pid = getPokemonId(p);
+  return set.has(pid) ||
+    (p.numPal && set.has(p.numPal)) ||
+    (p.numGal && set.has(p.numGal)) ||
+    (p.numHis && set.has(p.numHis)) ||
+    (p.numSin && set.has(p.numSin)) ||
+    (p.numKan && set.has(p.numKan)) ||
+    (p.numLum && set.has(p.numLum)) ||
+    (p.numNac && set.has(p.numNac));
+}
+
 function loadShinyTracking(dexId = currentDexId) {
   migrateLocalStorageIfNeeded();
   try {
@@ -1061,30 +1514,44 @@ function updateDashboardViews() {
 function markMultipleAsShinyCaptured(pokemonList) {
   if (!pokemonList || pokemonList.length === 0) return;
   const nowStr = new Date().toLocaleDateString() + ' ' + new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-  const idsToRemove = new Set();
 
   pokemonList.forEach(pokemon => {
     if (!pokemon) return;
     const pokeId = getPokemonId(pokemon);
-    idsToRemove.add(pokeId);
+
     lastSpinPendingIds.delete(pokeId);
-    if (!capturedShinyList.some(p => getPokemonId(p) === pokeId || p.numPal === pokemon.numPal)) {
+    if (pokemon.numPal) lastSpinPendingIds.delete(pokemon.numPal);
+    if (pokemon.numGal) lastSpinPendingIds.delete(pokemon.numGal);
+    if (pokemon.numHis) lastSpinPendingIds.delete(pokemon.numHis);
+    if (pokemon.numSin) lastSpinPendingIds.delete(pokemon.numSin);
+    if (pokemon.numKan) lastSpinPendingIds.delete(pokemon.numKan);
+    if (pokemon.numLum) lastSpinPendingIds.delete(pokemon.numLum);
+    if (pokemon.numNac) lastSpinPendingIds.delete(pokemon.numNac);
+
+    if (!isPokemonCaptured(pokemon)) {
       capturedShinyList.unshift({
         pokemonId: pokeId,
-        numPal: pokemon.numPal || pokeId,
+        numPal: pokemon.numPal || '',
+        numGal: pokemon.numGal || '',
+        numHis: pokemon.numHis || '',
+        numSin: pokemon.numSin || '',
+        numKan: pokemon.numKan || '',
+        numLum: pokemon.numLum || '',
         numNac: pokemon.numNac || '',
         name: pokemon.name,
         types: pokemon.types,
         sprite: pokemon.sprite,
         shinySprite: pokemon.shinySprite,
         evolutionLine: pokemon.evolutionLine,
+        games: pokemon.games || [],
+        game: getPokemonGame(pokemon),
         time: nowStr
       });
     }
   });
 
   // Quitar de pendientes los que ahora son capturados
-  pendingList = pendingList.filter(p => !idsToRemove.has(getPokemonId(p)) && !idsToRemove.has(p.numPal));
+  pendingList = pendingList.filter(p => !isPokemonCaptured(p));
   saveShinyTracking();
 
   // Sincronizar con la base de datos en la nube si hay sesión activa
@@ -1102,7 +1569,9 @@ function markAsShinyCaptured(pokemon) {
 function removeShinyCaptured(pokemon) {
   if (!pokemon) return;
   const pokeId = getPokemonId(pokemon);
-  capturedShinyList = capturedShinyList.filter(p => getPokemonId(p) !== pokeId && p.numPal !== pokeId);
+  capturedShinyList = capturedShinyList.filter(p => {
+    return getPokemonId(p) !== pokeId && !(pokemon.numNac && p.numNac === pokemon.numNac);
+  });
   saveShinyTracking();
 
   // Sincronizar desmarcado en la base de datos en la nube
@@ -1117,20 +1586,27 @@ function markAsPending(pokemon) {
   if (!pokemon) return;
   const pokeId = getPokemonId(pokemon);
 
-  if (capturedShinyList.some(p => getPokemonId(p) === pokeId || p.numPal === pokeId)) {
+  if (isPokemonCaptured(pokemon)) {
     return;
   }
 
-  if (!pendingList.some(p => getPokemonId(p) === pokeId || p.numPal === pokeId)) {
+  if (!isPokemonPending(pokemon)) {
     pendingList.unshift({
       pokemonId: pokeId,
-      numPal: pokemon.numPal || pokeId,
+      numPal: pokemon.numPal || '',
+      numGal: pokemon.numGal || '',
+      numHis: pokemon.numHis || '',
+      numSin: pokemon.numSin || '',
+      numKan: pokemon.numKan || '',
+      numLum: pokemon.numLum || '',
       numNac: pokemon.numNac || '',
       name: pokemon.name,
       types: pokemon.types,
       sprite: pokemon.sprite,
       shinySprite: pokemon.shinySprite,
       evolutionLine: pokemon.evolutionLine,
+      games: pokemon.games || [],
+      game: getPokemonGame(pokemon),
       time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
     });
     saveShinyTracking();
@@ -1147,9 +1623,17 @@ function markAsPending(pokemon) {
 function removePending(pokemon) {
   if (!pokemon) return;
   const pokeId = getPokemonId(pokemon);
-  pendingList = pendingList.filter(p => getPokemonId(p) !== pokeId && p.numPal !== pokeId);
+  pendingList = pendingList.filter(p => {
+    return getPokemonId(p) !== pokeId && !(pokemon.numNac && p.numNac === pokemon.numNac);
+  });
   lastSpinPendingIds.delete(pokeId);
-  lastSpinPendingIds.delete(pokemon.numPal);
+  if (pokemon.numPal) lastSpinPendingIds.delete(pokemon.numPal);
+  if (pokemon.numGal) lastSpinPendingIds.delete(pokemon.numGal);
+  if (pokemon.numHis) lastSpinPendingIds.delete(pokemon.numHis);
+  if (pokemon.numSin) lastSpinPendingIds.delete(pokemon.numSin);
+  if (pokemon.numKan) lastSpinPendingIds.delete(pokemon.numKan);
+  if (pokemon.numLum) lastSpinPendingIds.delete(pokemon.numLum);
+  if (pokemon.numNac) lastSpinPendingIds.delete(pokemon.numNac);
   saveShinyTracking();
 
   // Sincronizar eliminación de pendiente en la nube si hay sesión activa
@@ -1199,15 +1683,15 @@ function renderPaldeaMatrix() {
   const fullList = getActiveDexFullList();
 
   const filtered = fullList.filter(p => {
-    const pokeId = getPokemonId(p);
-    const isCaptured = capturedSet.has(pokeId) || (p.numPal && capturedSet.has(p.numPal));
-    const isLastSpin = (lastSpinPendingIds.has(pokeId) || (p.numPal && lastSpinPendingIds.has(p.numPal))) && !isCaptured;
-    const isPending = (pendingSet.has(pokeId) || (p.numPal && pendingSet.has(p.numPal))) && !isCaptured;
+    const isCaptured = isPokemonCaptured(p, capturedSet);
+    const isLastSpin = isPokemonLastSpin(p) && !isCaptured;
+    const isPending = isPokemonPending(p, pendingSet) && !isCaptured;
 
     // Filtro por texto de búsqueda
     if (q) {
       const matchName = p.name.toLowerCase().includes(q);
-      const matchNum = (p.numPal && p.numPal.includes(q)) || (p.numNac && p.numNac.includes(q)) || pokeId.includes(q);
+      const dispNum = getPokemonDisplayNum(p);
+      const matchNum = dispNum.includes(q) || (p.numNac && p.numNac.includes(q)) || (p.pokemonId && p.pokemonId.includes(q));
       const matchType = p.types && p.types.some(t => t.toLowerCase().includes(q));
 
       let matchGame = false;
@@ -1217,6 +1701,25 @@ function renderPaldeaMatrix() {
                     (q === 'purpura' && g === 'violet') ||
                     (q === 'púrpura' && g === 'violet') ||
                     (q === 'ambos' && g === 'both');
+      } else if (currentDexId === 'swsh') {
+        const g = getPokemonGame(p);
+        matchGame = (q === 'espada' && g === 'sword') ||
+                    (q === 'escudo' && g === 'shield') ||
+                    (q === 'ambos' && g === 'both');
+      } else if (currentDexId === 'bdsp') {
+        const g = getPokemonGame(p);
+        matchGame = (q === 'diamante' && g === 'diamond') ||
+                    (q === 'perla' && g === 'pearl') ||
+                    (q === 'ambos' && g === 'both');
+      } else if (currentDexId === 'lgpe') {
+        const g = getPokemonGame(p);
+        matchGame = (q === 'pikachu' && g === 'pikachu') ||
+                    (q === 'eevee' && g === 'eevee') ||
+                    (q === 'ambos' && g === 'both');
+      } else if (currentDexId === 'pla') {
+        matchGame = q === 'hisui' || q === 'arceus' || q === 'leyendas';
+      } else if (currentDexId === 'plza') {
+        matchGame = q === 'luminalia' || q === 'za' || q === 'z-a';
       } else {
         matchGame = Array.isArray(p.games) && p.games.some(g => g.toLowerCase().includes(q));
         if (!matchGame && p.generation) {
@@ -1227,7 +1730,7 @@ function renderPaldeaMatrix() {
       if (!matchName && !matchNum && !matchType && !matchGame) return false;
     }
 
-    // Filtro por pestaña de estado o edición
+    // Filtros por pestaña de estado o edición
     if (currentMatrixFilter === 'last-spin') {
       return isLastSpin;
     } else if (currentMatrixFilter === 'pending') {
@@ -1238,17 +1741,28 @@ function renderPaldeaMatrix() {
       return !isCaptured;
     }
 
-    // Filtros específicos de Paldea
     if (currentDexId === 'paldea') {
-      if (currentMatrixFilter === 'scarlet') {
-        return getPokemonGame(p) === 'scarlet';
-      } else if (currentMatrixFilter === 'violet') {
-        return getPokemonGame(p) === 'violet';
-      } else if (currentMatrixFilter === 'both') {
-        return getPokemonGame(p) === 'both';
-      }
+      if (currentMatrixFilter === 'scarlet') return getPokemonGame(p) === 'scarlet';
+      if (currentMatrixFilter === 'violet') return getPokemonGame(p) === 'violet';
+      if (currentMatrixFilter === 'both') return getPokemonGame(p) === 'both';
+    } else if (currentDexId === 'swsh') {
+      if (currentMatrixFilter === 'sword') return getPokemonGame(p) === 'sword';
+      if (currentMatrixFilter === 'shield') return getPokemonGame(p) === 'shield';
+      if (currentMatrixFilter === 'both') return getPokemonGame(p) === 'both';
+    } else if (currentDexId === 'bdsp') {
+      if (currentMatrixFilter === 'diamond') return getPokemonGame(p) === 'diamond';
+      if (currentMatrixFilter === 'pearl') return getPokemonGame(p) === 'pearl';
+      if (currentMatrixFilter === 'both') return getPokemonGame(p) === 'both';
+    } else if (currentDexId === 'lgpe') {
+      if (currentMatrixFilter === 'pikachu') return getPokemonGame(p) === 'pikachu';
+      if (currentMatrixFilter === 'eevee') return getPokemonGame(p) === 'eevee';
+      if (currentMatrixFilter === 'both') return getPokemonGame(p) === 'both';
+    } else if (currentDexId === 'pla') {
+      if (currentMatrixFilter === 'hisui') return true;
+    } else if (currentDexId === 'plza') {
+      if (currentMatrixFilter === 'lumina') return true;
     } else {
-      // Filtros específicos de Ruleta General
+      // General
       if (currentMatrixFilter === 'gen1') return p.generation === 1;
       if (currentMatrixFilter === 'gen2') return p.generation === 2;
       if (currentMatrixFilter === 'gen3') return p.generation === 3;
@@ -1274,9 +1788,9 @@ function renderPaldeaMatrix() {
 
   filtered.forEach(p => {
     const pokeId = getPokemonId(p);
-    const isCaptured = capturedSet.has(pokeId) || (p.numPal && capturedSet.has(p.numPal));
-    const isLastSpin = (lastSpinPendingIds.has(pokeId) || (p.numPal && lastSpinPendingIds.has(p.numPal))) && !isCaptured;
-    const isPending = !isLastSpin && (pendingSet.has(pokeId) || (p.numPal && pendingSet.has(p.numPal))) && !isCaptured;
+    const isCaptured = isPokemonCaptured(p, capturedSet);
+    const isLastSpin = isPokemonLastSpin(p) && !isCaptured;
+    const isPending = !isLastSpin && isPokemonPending(p, pendingSet) && !isCaptured;
     const isPendingOrLastSpin = isPending || isLastSpin;
     const hasEvo = (p.evolutionLine && p.evolutionLine.length > 1);
 
@@ -1553,6 +2067,60 @@ function rebuildRangeFilterOptions(dexId = currentDexId) {
       <option value="violet">EXCLUSIVOS PÚRPURA (23)</option>
       <option value="both">DISPONIBLE EN AMBOS (354)</option>
     `;
+  } else if (dexId === 'swsh') {
+    rangeFilter.innerHTML = `
+      <option value="all">TODOS (#001 - #400)</option>
+      <option value="starters">INICIALES (#001 - #009)</option>
+      <option value="1-100">#001 - #100</option>
+      <option value="101-200">#101 - #200</option>
+      <option value="201-300">#201 - #300</option>
+      <option value="301-400">#301 - #400</option>
+      <option value="sword">EXCLUSIVOS ESPADA (29)</option>
+      <option value="shield">EXCLUSIVOS ESCUDO (29)</option>
+      <option value="both">DISPONIBLE EN AMBOS (342)</option>
+    `;
+  } else if (dexId === 'pla') {
+    rangeFilter.innerHTML = `
+      <option value="all">TODOS (#001 - #242)</option>
+      <option value="starters">INICIALES (#001 - #009)</option>
+      <option value="1-50">#001 - #050</option>
+      <option value="51-100">#051 - #100</option>
+      <option value="101-150">#101 - #150</option>
+      <option value="151-200">#151 - #200</option>
+      <option value="201-242">#201 - #242</option>
+      <option value="hisui_forms">FORMAS REGIONALES DE HISUI</option>
+    `;
+  } else if (dexId === 'bdsp') {
+    rangeFilter.innerHTML = `
+      <option value="all">TODOS (#001 - #151)</option>
+      <option value="starters">INICIALES (#001 - #009)</option>
+      <option value="1-50">#001 - #050</option>
+      <option value="51-100">#051 - #100</option>
+      <option value="101-151">#101 - #151</option>
+      <option value="diamond">EXCLUSIVOS DIAMANTE (7)</option>
+      <option value="pearl">EXCLUSIVOS PERLA (7)</option>
+      <option value="both">DISPONIBLE EN AMBOS (137)</option>
+    `;
+  } else if (dexId === 'lgpe') {
+    rangeFilter.innerHTML = `
+      <option value="all">TODOS (#001 - #153)</option>
+      <option value="starters">INICIALES (#001 - #009)</option>
+      <option value="1-50">#001 - #050</option>
+      <option value="51-100">#051 - #100</option>
+      <option value="101-153">#101 - #153</option>
+      <option value="pikachu">EXCLUSIVOS PIKACHU (12)</option>
+      <option value="eevee">EXCLUSIVOS EEVEE (12)</option>
+      <option value="both">DISPONIBLE EN AMBOS (129)</option>
+    `;
+  } else if (dexId === 'plza') {
+    rangeFilter.innerHTML = `
+      <option value="all">TODOS (#001 - #232)</option>
+      <option value="starters">INICIALES (#001 - #009)</option>
+      <option value="1-80">#001 - #080</option>
+      <option value="81-160">#081 - #160</option>
+      <option value="161-232">#161 - #232</option>
+      <option value="kalos_natives">NATIVOS DE KALOS (GEN 6)</option>
+    `;
   } else {
     rangeFilter.innerHTML = `
       <option value="all">TODOS (#0001 - #1025)</option>
@@ -1576,45 +2144,47 @@ function rebuildMatrixFilterChips(dexId = currentDexId) {
   const container = document.getElementById('matrixFilterChips');
   if (!container) return;
 
-  const total = (dexId === 'paldea') ? 400 : 1025;
+  const config = getActiveDexConfig();
+  const total = config.totalCount;
   currentMatrixFilter = 'all';
 
+  let specificChipsHtml = '';
+
   if (dexId === 'paldea') {
-    container.innerHTML = `
-      <button class="matrix-chip active" data-matrix-filter="all">TODOS (${total})</button>
-      <button class="matrix-chip chip-last-spin" data-matrix-filter="last-spin">
-        <span>GIRO ANTERIOR</span>
-        <span id="chipLastSpinBadge" class="chip-badge">0</span>
-      </button>
-      <button class="matrix-chip" data-matrix-filter="pending">
-        <span>PENDIENTES</span>
-        <span id="chipPendingBadge" class="chip-badge">0</span>
-      </button>
-      <button class="matrix-chip" data-matrix-filter="captured">
-        <span>CAPTURADOS</span>
-        <span id="chipCapturedBadge" class="chip-badge">0</span>
-      </button>
-      <button class="matrix-chip" data-matrix-filter="uncaptured">POR CAPTURAR</button>
+    specificChipsHtml = `
       <button class="matrix-chip chip-game-scarlet" data-matrix-filter="scarlet">ESCARLATA (23)</button>
       <button class="matrix-chip chip-game-violet" data-matrix-filter="violet">PÚRPURA (23)</button>
       <button class="matrix-chip chip-game-both" data-matrix-filter="both">AMBOS (354)</button>
     `;
+  } else if (dexId === 'swsh') {
+    specificChipsHtml = `
+      <button class="matrix-chip chip-game-sword" data-matrix-filter="sword">ESPADA (29)</button>
+      <button class="matrix-chip chip-game-shield" data-matrix-filter="shield">ESCUDO (29)</button>
+      <button class="matrix-chip chip-game-both" data-matrix-filter="both">AMBOS (342)</button>
+    `;
+  } else if (dexId === 'bdsp') {
+    specificChipsHtml = `
+      <button class="matrix-chip chip-game-diamond" data-matrix-filter="diamond">DIAMANTE (7)</button>
+      <button class="matrix-chip chip-game-pearl" data-matrix-filter="pearl">PERLA (7)</button>
+      <button class="matrix-chip chip-game-both" data-matrix-filter="both">AMBOS (137)</button>
+    `;
+  } else if (dexId === 'lgpe') {
+    specificChipsHtml = `
+      <button class="matrix-chip chip-game-pikachu" data-matrix-filter="pikachu">PIKACHU (12)</button>
+      <button class="matrix-chip chip-game-eevee" data-matrix-filter="eevee">EEVEE (12)</button>
+      <button class="matrix-chip chip-game-both" data-matrix-filter="both">AMBOS (129)</button>
+    `;
+  } else if (dexId === 'pla') {
+    specificChipsHtml = `
+      <button class="matrix-chip chip-game-hisui" data-matrix-filter="hisui">HISUI (242)</button>
+    `;
+  } else if (dexId === 'plza') {
+    specificChipsHtml = `
+      <button class="matrix-chip chip-game-lumina" data-matrix-filter="lumina">LUMINALIA (232)</button>
+    `;
   } else {
-    container.innerHTML = `
-      <button class="matrix-chip active" data-matrix-filter="all">TODOS (${total})</button>
-      <button class="matrix-chip chip-last-spin" data-matrix-filter="last-spin">
-        <span>GIRO ANTERIOR</span>
-        <span id="chipLastSpinBadge" class="chip-badge">0</span>
-      </button>
-      <button class="matrix-chip" data-matrix-filter="pending">
-        <span>PENDIENTES</span>
-        <span id="chipPendingBadge" class="chip-badge">0</span>
-      </button>
-      <button class="matrix-chip" data-matrix-filter="captured">
-        <span>CAPTURADOS</span>
-        <span id="chipCapturedBadge" class="chip-badge">0</span>
-      </button>
-      <button class="matrix-chip" data-matrix-filter="uncaptured">POR CAPTURAR</button>
+    // Ruleta General
+    specificChipsHtml = `
       <button class="matrix-chip chip-gen" data-matrix-filter="gen1">GEN 1 (151)</button>
       <button class="matrix-chip chip-gen" data-matrix-filter="gen2">GEN 2 (100)</button>
       <button class="matrix-chip chip-gen" data-matrix-filter="gen3">GEN 3 (135)</button>
@@ -1625,9 +2195,27 @@ function rebuildMatrixFilterChips(dexId = currentDexId) {
       <button class="matrix-chip chip-gen" data-matrix-filter="gen8">GEN 8 (96)</button>
       <button class="matrix-chip chip-gen" data-matrix-filter="gen9">GEN 9 (120)</button>
       <button class="matrix-chip chip-game-scarlet" data-matrix-filter="game_sv">EN S/V</button>
-      <button class="matrix-chip chip-game-violet" data-matrix-filter="game_plza">EN Z-A</button>
+      <button class="matrix-chip chip-game-lumina" data-matrix-filter="game_plza">EN Z-A</button>
     `;
   }
+
+  container.innerHTML = `
+    <button class="matrix-chip active" data-matrix-filter="all">TODOS (${total})</button>
+    <button class="matrix-chip chip-last-spin" data-matrix-filter="last-spin">
+      <span>GIRO ANTERIOR</span>
+      <span id="chipLastSpinBadge" class="chip-badge">0</span>
+    </button>
+    <button class="matrix-chip" data-matrix-filter="pending">
+      <span>PENDIENTES</span>
+      <span id="chipPendingBadge" class="chip-badge">0</span>
+    </button>
+    <button class="matrix-chip" data-matrix-filter="captured">
+      <span>CAPTURADOS</span>
+      <span id="chipCapturedBadge" class="chip-badge">0</span>
+    </button>
+    <button class="matrix-chip" data-matrix-filter="uncaptured">POR CAPTURAR</button>
+    ${specificChipsHtml}
+  `;
 
   const chips = container.querySelectorAll('[data-matrix-filter]');
   chips.forEach(btn => {
@@ -1656,25 +2244,13 @@ function applyFilters() {
       if (selectedRange === 'starters') {
         filtered = filtered.filter(p => parseInt(p.numPal || '999', 10) <= 24);
       } else if (selectedRange === '1-100') {
-        filtered = filtered.filter(p => {
-          const n = parseInt(p.numPal || '0', 10);
-          return n >= 1 && n <= 100;
-        });
+        filtered = filtered.filter(p => { const n = parseInt(p.numPal || '0', 10); return n >= 1 && n <= 100; });
       } else if (selectedRange === '101-200') {
-        filtered = filtered.filter(p => {
-          const n = parseInt(p.numPal || '0', 10);
-          return n >= 101 && n <= 200;
-        });
+        filtered = filtered.filter(p => { const n = parseInt(p.numPal || '0', 10); return n >= 101 && n <= 200; });
       } else if (selectedRange === '201-300') {
-        filtered = filtered.filter(p => {
-          const n = parseInt(p.numPal || '0', 10);
-          return n >= 201 && n <= 300;
-        });
+        filtered = filtered.filter(p => { const n = parseInt(p.numPal || '0', 10); return n >= 201 && n <= 300; });
       } else if (selectedRange === '301-400') {
-        filtered = filtered.filter(p => {
-          const n = parseInt(p.numPal || '0', 10);
-          return n >= 301 && n <= 400;
-        });
+        filtered = filtered.filter(p => { const n = parseInt(p.numPal || '0', 10); return n >= 301 && n <= 400; });
       } else if (selectedRange === 'paradox') {
         filtered = filtered.filter(p => parseInt(p.numPal || '0', 10) >= 376);
       } else if (selectedRange === 'scarlet') {
@@ -1684,7 +2260,86 @@ function applyFilters() {
       } else if (selectedRange === 'both') {
         filtered = filtered.filter(p => getPokemonGame(p) === 'both');
       }
+    } else if (currentDexId === 'swsh') {
+      if (selectedRange === 'starters') {
+        filtered = filtered.filter(p => parseInt(p.numGal || '999', 10) <= 9);
+      } else if (selectedRange === '1-100') {
+        filtered = filtered.filter(p => { const n = parseInt(p.numGal || '0', 10); return n >= 1 && n <= 100; });
+      } else if (selectedRange === '101-200') {
+        filtered = filtered.filter(p => { const n = parseInt(p.numGal || '0', 10); return n >= 101 && n <= 200; });
+      } else if (selectedRange === '201-300') {
+        filtered = filtered.filter(p => { const n = parseInt(p.numGal || '0', 10); return n >= 201 && n <= 300; });
+      } else if (selectedRange === '301-400') {
+        filtered = filtered.filter(p => { const n = parseInt(p.numGal || '0', 10); return n >= 301 && n <= 400; });
+      } else if (selectedRange === 'sword') {
+        filtered = filtered.filter(p => getPokemonGame(p) === 'sword');
+      } else if (selectedRange === 'shield') {
+        filtered = filtered.filter(p => getPokemonGame(p) === 'shield');
+      } else if (selectedRange === 'both') {
+        filtered = filtered.filter(p => getPokemonGame(p) === 'both');
+      }
+    } else if (currentDexId === 'pla') {
+      if (selectedRange === 'starters') {
+        filtered = filtered.filter(p => parseInt(p.numHis || '999', 10) <= 9);
+      } else if (selectedRange === '1-50') {
+        filtered = filtered.filter(p => { const n = parseInt(p.numHis || '0', 10); return n >= 1 && n <= 50; });
+      } else if (selectedRange === '51-100') {
+        filtered = filtered.filter(p => { const n = parseInt(p.numHis || '0', 10); return n >= 51 && n <= 100; });
+      } else if (selectedRange === '101-150') {
+        filtered = filtered.filter(p => { const n = parseInt(p.numHis || '0', 10); return n >= 101 && n <= 150; });
+      } else if (selectedRange === '151-200') {
+        filtered = filtered.filter(p => { const n = parseInt(p.numHis || '0', 10); return n >= 151 && n <= 200; });
+      } else if (selectedRange === '201-242') {
+        filtered = filtered.filter(p => { const n = parseInt(p.numHis || '0', 10); return n >= 201 && n <= 242; });
+      } else if (selectedRange === 'hisui_forms') {
+        filtered = filtered.filter(p => (p.name || '').includes('Hisui') || (p.name || '').includes('hisui'));
+      }
+    } else if (currentDexId === 'bdsp') {
+      if (selectedRange === 'starters') {
+        filtered = filtered.filter(p => parseInt(p.numSin || '999', 10) <= 9);
+      } else if (selectedRange === '1-50') {
+        filtered = filtered.filter(p => { const n = parseInt(p.numSin || '0', 10); return n >= 1 && n <= 50; });
+      } else if (selectedRange === '51-100') {
+        filtered = filtered.filter(p => { const n = parseInt(p.numSin || '0', 10); return n >= 51 && n <= 100; });
+      } else if (selectedRange === '101-151') {
+        filtered = filtered.filter(p => { const n = parseInt(p.numSin || '0', 10); return n >= 101 && n <= 151; });
+      } else if (selectedRange === 'diamond') {
+        filtered = filtered.filter(p => getPokemonGame(p) === 'diamond');
+      } else if (selectedRange === 'pearl') {
+        filtered = filtered.filter(p => getPokemonGame(p) === 'pearl');
+      } else if (selectedRange === 'both') {
+        filtered = filtered.filter(p => getPokemonGame(p) === 'both');
+      }
+    } else if (currentDexId === 'lgpe') {
+      if (selectedRange === 'starters') {
+        filtered = filtered.filter(p => parseInt(p.numKan || '999', 10) <= 9);
+      } else if (selectedRange === '1-50') {
+        filtered = filtered.filter(p => { const n = parseInt(p.numKan || '0', 10); return n >= 1 && n <= 50; });
+      } else if (selectedRange === '51-100') {
+        filtered = filtered.filter(p => { const n = parseInt(p.numKan || '0', 10); return n >= 51 && n <= 100; });
+      } else if (selectedRange === '101-153') {
+        filtered = filtered.filter(p => { const n = parseInt(p.numKan || '0', 10); return n >= 101 && n <= 153; });
+      } else if (selectedRange === 'pikachu') {
+        filtered = filtered.filter(p => getPokemonGame(p) === 'pikachu');
+      } else if (selectedRange === 'eevee') {
+        filtered = filtered.filter(p => getPokemonGame(p) === 'eevee');
+      } else if (selectedRange === 'both') {
+        filtered = filtered.filter(p => getPokemonGame(p) === 'both');
+      }
+    } else if (currentDexId === 'plza') {
+      if (selectedRange === 'starters') {
+        filtered = filtered.filter(p => parseInt(p.numLum || '999', 10) <= 9);
+      } else if (selectedRange === '1-80') {
+        filtered = filtered.filter(p => { const n = parseInt(p.numLum || '0', 10); return n >= 1 && n <= 80; });
+      } else if (selectedRange === '81-160') {
+        filtered = filtered.filter(p => { const n = parseInt(p.numLum || '0', 10); return n >= 81 && n <= 160; });
+      } else if (selectedRange === '161-232') {
+        filtered = filtered.filter(p => { const n = parseInt(p.numLum || '0', 10); return n >= 161 && n <= 232; });
+      } else if (selectedRange === 'kalos_natives') {
+        filtered = filtered.filter(p => p.generation === 6);
+      }
     } else {
+      // Ruleta General
       if (selectedRange === 'gen1') filtered = filtered.filter(p => p.generation === 1);
       else if (selectedRange === 'gen2') filtered = filtered.filter(p => p.generation === 2);
       else if (selectedRange === 'gen3') filtered = filtered.filter(p => p.generation === 3);
@@ -1752,6 +2407,25 @@ function renderPokedexModalList(filterQuery = '') {
                   (q === 'purpura' && g === 'violet') ||
                   (q === 'púrpura' && g === 'violet') ||
                   (q === 'ambos' && g === 'both');
+    } else if (currentDexId === 'swsh') {
+      const g = getPokemonGame(p);
+      matchGame = (q === 'espada' && g === 'sword') ||
+                  (q === 'escudo' && g === 'shield') ||
+                  (q === 'ambos' && g === 'both');
+    } else if (currentDexId === 'bdsp') {
+      const g = getPokemonGame(p);
+      matchGame = (q === 'diamante' && g === 'diamond') ||
+                  (q === 'perla' && g === 'pearl') ||
+                  (q === 'ambos' && g === 'both');
+    } else if (currentDexId === 'lgpe') {
+      const g = getPokemonGame(p);
+      matchGame = (q === 'pikachu' && g === 'pikachu') ||
+                  (q === 'eevee' && g === 'eevee') ||
+                  (q === 'ambos' && g === 'both');
+    } else if (currentDexId === 'pla') {
+      matchGame = q === 'hisui' || q === 'arceus' || q === 'leyendas';
+    } else if (currentDexId === 'plza') {
+      matchGame = q === 'luminalia' || q === 'za' || q === 'z-a';
     } else {
       matchGame = Array.isArray(p.games) && p.games.some(g => g.toLowerCase().includes(q));
       if (!matchGame && p.generation) {
@@ -1770,8 +2444,7 @@ function renderPokedexModalList(filterQuery = '') {
   const limit = Math.min(results.length, 100);
   for (let i = 0; i < limit; i++) {
     const p = results[i];
-    const pokeId = getPokemonId(p);
-    const isCaptured = capturedShinyList.some(c => getPokemonId(c) === pokeId || (p.numPal && c.numPal === p.numPal));
+    const isCaptured = isPokemonCaptured(p);
     const dispNum = getPokemonDisplayNum(p);
 
     const row = document.createElement('div');
@@ -1809,19 +2482,13 @@ function switchDexContext(newDexId) {
   currentDexId = newDexId;
   localStorage.setItem('ruleta_active_dex', newDexId);
 
-  // Actualizar botones de píldoras
-  const btnGeneral = document.getElementById('dexBtnGeneral');
-  const btnPaldea = document.getElementById('dexBtnPaldea');
-  if (btnGeneral) {
-    const isG = newDexId === 'general';
-    btnGeneral.classList.toggle('active', isG);
-    btnGeneral.setAttribute('aria-selected', isG ? 'true' : 'false');
-  }
-  if (btnPaldea) {
-    const isP = newDexId === 'paldea';
-    btnPaldea.classList.toggle('active', isP);
-    btnPaldea.setAttribute('aria-selected', isP ? 'true' : 'false');
-  }
+  // Actualizar botones de todas las píldoras
+  const pills = document.querySelectorAll('.dex-pill[data-dex]');
+  pills.forEach(pill => {
+    const isActive = pill.dataset.dex === newDexId;
+    pill.classList.toggle('active', isActive);
+    pill.setAttribute('aria-selected', isActive ? 'true' : 'false');
+  });
 
   const config = getActiveDexConfig();
 
@@ -1894,15 +2561,14 @@ function initApp() {
     }
   });
 
-  // Selector Multi-Dex (Píldoras)
-  const dexBtnGeneral = document.getElementById('dexBtnGeneral');
-  const dexBtnPaldea = document.getElementById('dexBtnPaldea');
-  if (dexBtnGeneral) {
-    dexBtnGeneral.addEventListener('click', () => switchDexContext('general'));
-  }
-  if (dexBtnPaldea) {
-    dexBtnPaldea.addEventListener('click', () => switchDexContext('paldea'));
-  }
+  // Selector Multi-Dex (Píldoras para todos los juegos de Switch)
+  const dexPills = document.querySelectorAll('.dex-pill[data-dex]');
+  dexPills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      const targetDex = pill.dataset.dex;
+      if (targetDex) switchDexContext(targetDex);
+    });
+  });
 
   // Inicializar contexto de Pokédex activo (por defecto 'general' o el guardado)
   switchDexContext(localStorage.getItem('ruleta_active_dex') || 'general');

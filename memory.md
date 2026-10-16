@@ -267,8 +267,31 @@ ruleta-juego/
       - Helper unificado `getPokemonDisplayNum(pokemon)`: muestra `#0001` - `#1025` en General y `#001` - `#400` en Paldea sin valores `undefined`.
       - En Ruleta General: el modal ganador despliega fila de chips vectoriales (`.winner-game-general`, `.game-chips-row`) indicando los juegos donde cada Pokémon puede capturarse o transferirse, con resaltado visual para S/V y Legends Z-A.
       - Live Pointer Tracker, historial de giros, modal evolutivo y catálogo Pokédex adaptados a ambos contextos.
-    - **Aislamiento Total de Datos Verificado:**
-      - Pruebas automatizadas en scratch script confirman que capturas y pendientes en Paldea no contaminan General y viceversa.
+27. **Integración Completa de Todos los Juegos de Nintendo Switch (Fase 4):**
+    - **7 Pokédexes Oficiales e Independientes:**
+      1. **Ruleta General (Gens 1-9):** 1,025 Pokémon (`dexId: 'general'`).
+      2. **Paldea (Escarlata / Púrpura):** 400 Pokémon (`dexId: 'paldea'`).
+      3. **Galar (Espada / Escudo):** 400 Pokémon (`dexId: 'swsh'`, `numGal` #001 a #400).
+      4. **Hisui (Leyendas Arceus):** 242 Pokémon (`dexId: 'pla'`, `numHis` #001 a #242).
+      5. **Sinnoh (Diamante Brillante / Perla Reluciente):** 151 Pokémon (`dexId: 'bdsp'`, `numSin` #001 a #151).
+      6. **Kanto (Let's Go Pikachu / Eevee):** 153 Pokémon (`dexId: 'lgpe'`, `numKan` #001 a #153).
+      7. **Ciudad Luminalia (Leyendas Z-A):** 232 Pokémon (`dexId: 'plza'`, `numLum` #001 a #232).
+    - **Datasets y Lookup Multi-Dimensional (`switch_pokemon.json` y `switch_data.js`):**
+      - Generados e integrados en el cliente en `window.GALAR_POKEMON`, `window.HISUI_POKEMON`, `window.SINNOH_POKEMON`, `window.LETSGO_POKEMON`, `window.LUMIOSE_POKEMON`.
+      - Indexación por número regional (`BY_NUM`) y número nacional (`BY_NAT`) para resolución instantánea y sin ambigüedad en ruleta, matriz y selectores de líneas evolutivas.
+    - **Determinación Oficial de Exclusivos por Pareja de Juegos:**
+      - **SwSh:** 29 exclusivos de Espada (Sirfetch'd, Zacian, Darumaka Galar, Farfetch'd Galar, etc.), 29 exclusivos de Escudo (Cursola, Zamazenta, Ponyta Galar, Rapidash Galar, etc.) y 342 comunes.
+      - **BDSP:** 7 exclusivos de Diamante Brillante (Cranidos, Rampardos, Stunky, Skuntank, Murkrow, Honchkrow, Dialga), 7 exclusivos de Perla Reluciente (Shieldon, Bastiodon, Glameow, Purugly, Misdreavus, Mismagius, Palkia) y 137 comunes.
+      - **LGPE:** 12 exclusivos de Let's Go Pikachu (Sandshrew, Oddish, Mankey, Growlithe, Grimer, Scyther y sus evoluciones), 12 exclusivos de Let's Go Eevee (Ekans, Vulpix, Meowth, Bellsprout, Koffing, Pinsir y sus evoluciones) y 129 comunes.
+      - **PLA y PLZA:** Pokédex regional única con badges canónicos de Hisui y Luminalia.
+    - **Filtros Dinámicos, Matriz Adaptativa y Banners:**
+      - Selector de rango (`#rangeFilter`) adaptado a cada juego (iniciales, bloques numéricos, exclusivos y formas regionales).
+      - Chips de filtro en la matriz (`#matrixFilterChips`) con botones dedicados por juego (`ESPADA`, `ESCUDO`, `DIAMANTE`, `PERLA`, `PIKACHU`, `EEVEE`, `HISUI`, `LUMINALIA`).
+      - Banners temáticos en modal ganador y badges vectoriales (`.game-badge`, `.winner-game-banner`) con soporte completo en Modo Día (predeterminado) y Modo Noche.
+    - **Aislamiento Estricto y Sincronización en Nube:**
+      - Cada Pokédex cuenta con su propio almacenamiento en `localStorage` (`shiny_captured_${dexId}`, `shiny_pending_${dexId}`, `shiny_last_spin_pending_${dexId}`).
+      - Sincronización en SQLite particionada por `user_id` y `dex_id` (`user_captured`, `user_pending`, `user_dex_state`).
+      - 100% verificado con suite de pruebas automáticas en scratch (`test_switch_integration.js`).
 
 ---
 
