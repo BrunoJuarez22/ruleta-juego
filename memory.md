@@ -40,7 +40,9 @@ ruleta-juego/
 ├── api.js                        # Cliente frontend para API REST, JWT y sincronización
 ├── script.js                     # Motor de ruleta (Canvas 2D), Web Audio API, matriz y lógica shiny
 ├── paldea_data.js                # Definición de window.PALDEA_POKEMON (400 registros completos)
-├── paldea_pokemon.json           # Base de datos canónica en formato JSON
+├── paldea_pokemon.json           # Base de datos canónica de Paldea en formato JSON
+├── all_data.js                   # Definición de window.ALL_NATIONAL_POKEMON (1025 Pokémon de Gens 1 a 9)
+├── all_pokemon.json              # Base de datos canónica Nacional de 1025 Pokémon con disponibilidad de juegos
 ├── package.json                  # Dependencias de backend (express, bcryptjs, jsonwebtoken, cors)
 ├── Dockerfile                    # Imagen de contenedor Node 22 para despliegue en Fly.io
 ├── .dockerignore                 # Exclusiones de build de contenedor
@@ -241,11 +243,40 @@ ruleta-juego/
       - Función `migrateLocalStorageIfNeeded()` para transferir datos heredados de `shiny_captured` a `shiny_captured_paldea` en el primer arranque, manteniendo compatibilidad bidireccional.
       - Función universal `getPokemonId(pokemon)` para indexar Pokémon tanto por número regional como nacional o identificador único.
 
+25. **Dataset Canónico Nacional de 1025 Pokémon y Descarga Completa de Sprites Offline (Fase 2):**
+    - **Dataset Completo de 1 a 1025 (`all_pokemon.json` y `all_data.js`):**
+      - Generación canónica a partir de los datos oficiales de PokéAPI para los 1025 Pokémon de la Pokédex Nacional (Generaciones 1 a 9: Kanto 151, Johto 100, Hoenn 135, Sinnoh 107, Teselia 156, Kalos 72, Alola 88, Galar 96, Paldea 120).
+      - Metadatos normalizados: nombres oficiales en español, tipos elementales en español, asignación cromática hex según `TYPE_COLORS`, líneas evolutivas nacionales completas e identificación de los juegos principales donde cada especie está disponible (`games`: RB, Y, GS, C, RS, E, FRLG, DP, Pt, HGSS, BW, B2W2, XY, ORAS, SM, USUM, LGPE, SwSh, BDSP, PLA, SV, PLZA).
+      - Precarga en el cliente a través de `window.ALL_NATIONAL_POKEMON` mediante `all_data.js` integrado en `index.html`.
+    - **Descarga Masiva de Sprites Offline (100% Offline-First):**
+      - Descarga de los 625 sprites estándar restantes (`assets/sprites/1.png` a `1025.png`) y 625 sprites shiny (`assets/sprites/shiny/1.png` a `1025.png`).
+      - Total de archivos en disco: 1,027 sprites regulares y 1,027 sprites shiny (incluyendo las formas de Paldea Tauros #10250 y Wooper #10253). Cero dependencias de red en tiempo de ejecución.
+
 ---
 
 ## 4. Estructuras de Datos y Persistencia
 
-### Modelo de Datos del Pokémon
+### Modelo de Datos del Pokémon (Nacional / General)
+```json
+{
+  "pokemonId": "0001",
+  "numNac": "0001",
+  "numPal": null,
+  "name": "Bulbasaur",
+  "generation": 1,
+  "types": ["Planta", "Veneno"],
+  "color": "#16a34a",
+  "sprite": "assets/sprites/1.png",
+  "remoteSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
+  "shinySprite": "assets/sprites/shiny/1.png",
+  "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
+  "chainId": 1,
+  "evolutionLine": ["0001", "0002", "0003"],
+  "games": ["RB", "Y", "GS", "C", "FRLG", "HGSS", "XY", "LGPE", "SwSh", "BDSP", "SV", "PLZA"]
+}
+```
+
+### Modelo de Datos del Pokémon (Paldea)
 ```json
 {
   "pokemonId": "001",
