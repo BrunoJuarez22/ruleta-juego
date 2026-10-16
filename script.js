@@ -254,43 +254,63 @@ function getPokemonDisplayNum(pokemon) {
 
 function getPokemonByAnyId(id) {
   if (!id) return null;
-  const idStr = String(id);
-  const pad4 = idStr.padStart(4, '0');
-  const pad3 = idStr.padStart(3, '0');
-  const numInt = String(parseInt(idStr, 10));
+  const idStr = String(id).trim();
+  const numInt = parseInt(idStr, 10);
+  if (isNaN(numInt)) return null;
 
-  // 1. Buscar en la Pokédex activa (por número regional y por número nacional)
+  const numIntStr = String(numInt);
+  const pad3 = numIntStr.padStart(3, '0');
+  const pad4 = numIntStr.padStart(4, '0');
+  const isExplicitNational = idStr.length === 4;
+
+  // 1. Si estamos en Ruleta General (Gens 1-9), la fuente canónica es el catálogo Nacional
+  if (currentDexId === 'general') {
+    const nat = NATIONAL_BY_ID.get(pad4) || NATIONAL_BY_ID.get(numIntStr);
+    if (nat) return nat;
+  }
+
+  // 2. Si es una búsqueda explícitamente nacional de 4 dígitos (ej. "0001", "0152", "0906"):
+  if (isExplicitNational) {
+    let natInDex = null;
+    if (currentDexId === 'paldea') natInDex = PALDEA_BY_NAT.get(pad4) || PALDEA_BY_NAT.get(numIntStr);
+    else if (currentDexId === 'swsh') natInDex = GALAR_BY_NAT.get(pad4) || GALAR_BY_NAT.get(numIntStr);
+    else if (currentDexId === 'pla') natInDex = HISUI_BY_NAT.get(pad4) || HISUI_BY_NAT.get(numIntStr);
+    else if (currentDexId === 'bdsp') natInDex = SINNOH_BY_NAT.get(pad4) || SINNOH_BY_NAT.get(numIntStr);
+    else if (currentDexId === 'lgpe') natInDex = LETSGO_BY_NAT.get(pad4) || LETSGO_BY_NAT.get(numIntStr);
+    else if (currentDexId === 'plza') natInDex = LUMIOSE_BY_NAT.get(pad4) || LUMIOSE_BY_NAT.get(numIntStr);
+
+    if (natInDex) return natInDex;
+
+    const nat = NATIONAL_BY_ID.get(pad4) || NATIONAL_BY_ID.get(numIntStr);
+    if (nat) return nat;
+  }
+
+  // 3. Búsqueda por número regional en la Pokédex activa (1 a 3 dígitos)
   if (currentDexId === 'paldea') {
-    const found = PALDEA_BY_NUM.get(pad3) || PALDEA_BY_NUM.get(idStr) || PALDEA_BY_NUM.get(numInt) ||
-                  PALDEA_BY_NAT.get(pad4) || PALDEA_BY_NAT.get(idStr) || PALDEA_BY_NAT.get(numInt);
+    const found = PALDEA_BY_NUM.get(pad3) || PALDEA_BY_NUM.get(numIntStr);
     if (found) return found;
   } else if (currentDexId === 'swsh') {
-    const found = GALAR_BY_NUM.get(pad3) || GALAR_BY_NUM.get(idStr) || GALAR_BY_NUM.get(numInt) ||
-                  GALAR_BY_NAT.get(pad4) || GALAR_BY_NAT.get(idStr) || GALAR_BY_NAT.get(numInt);
+    const found = GALAR_BY_NUM.get(pad3) || GALAR_BY_NUM.get(numIntStr);
     if (found) return found;
   } else if (currentDexId === 'pla') {
-    const found = HISUI_BY_NUM.get(pad3) || HISUI_BY_NUM.get(idStr) || HISUI_BY_NUM.get(numInt) ||
-                  HISUI_BY_NAT.get(pad4) || HISUI_BY_NAT.get(idStr) || HISUI_BY_NAT.get(numInt);
+    const found = HISUI_BY_NUM.get(pad3) || HISUI_BY_NUM.get(numIntStr);
     if (found) return found;
   } else if (currentDexId === 'bdsp') {
-    const found = SINNOH_BY_NUM.get(pad3) || SINNOH_BY_NUM.get(idStr) || SINNOH_BY_NUM.get(numInt) ||
-                  SINNOH_BY_NAT.get(pad4) || SINNOH_BY_NAT.get(idStr) || SINNOH_BY_NAT.get(numInt);
+    const found = SINNOH_BY_NUM.get(pad3) || SINNOH_BY_NUM.get(numIntStr);
     if (found) return found;
   } else if (currentDexId === 'lgpe') {
-    const found = LETSGO_BY_NUM.get(pad3) || LETSGO_BY_NUM.get(idStr) || LETSGO_BY_NUM.get(numInt) ||
-                  LETSGO_BY_NAT.get(pad4) || LETSGO_BY_NAT.get(idStr) || LETSGO_BY_NAT.get(numInt);
+    const found = LETSGO_BY_NUM.get(pad3) || LETSGO_BY_NUM.get(numIntStr);
     if (found) return found;
   } else if (currentDexId === 'plza') {
-    const found = LUMIOSE_BY_NUM.get(pad3) || LUMIOSE_BY_NUM.get(idStr) || LUMIOSE_BY_NUM.get(numInt) ||
-                  LUMIOSE_BY_NAT.get(pad4) || LUMIOSE_BY_NAT.get(idStr) || LUMIOSE_BY_NAT.get(numInt);
+    const found = LUMIOSE_BY_NUM.get(pad3) || LUMIOSE_BY_NUM.get(numIntStr);
     if (found) return found;
   }
 
-  // 2. Búsqueda de respaldo en Catálogo Nacional
-  const nat = NATIONAL_BY_ID.get(pad4) || NATIONAL_BY_ID.get(idStr) || NATIONAL_BY_ID.get(numInt);
+  // 4. Respaldo general: catálogo Nacional
+  const nat = NATIONAL_BY_ID.get(pad4) || NATIONAL_BY_ID.get(numIntStr);
   if (nat) return nat;
 
-  // 3. Respaldo general en otros catálogos
+  // 5. Último recurso: otros catálogos regionales
   return PALDEA_BY_NUM.get(pad3) || GALAR_BY_NUM.get(pad3) || HISUI_BY_NUM.get(pad3) ||
          SINNOH_BY_NUM.get(pad3) || LETSGO_BY_NUM.get(pad3) || LUMIOSE_BY_NUM.get(pad3) || null;
 }
