@@ -65,6 +65,7 @@ Cualquier cambio de interfaz o estilo debe cumplir estrictamente con los siguien
 - **Tolerancia a Fallos y Modo Invitado:** La aplicación nunca debe romperse si el servidor backend no está corriendo o no hay internet. Siempre debe conservar su capacidad 100% offline-first operando sobre `localStorage`.
 - **Sincronización Asíncrona:** Cuando el usuario tiene una sesión activa, el guardado en la nube se ejecuta en segundo plano sin bloquear el hilo principal ni la animación de la ruleta.
 - **Seguridad y Cifrado:** Nunca almacenar contraseñas en texto plano (usar `bcryptjs` con salt 10). Las peticiones autenticadas deben usar `Authorization: Bearer <token>`.
+- **Aislamiento Multi-Pokedex / Multi-Juego:** Cada apartado o juego (Ruleta General, Paldea, etc.) opera bajo un identificador `dexId`. Cualquier guardado en SQLite o `localStorage` debe conservar las capturas, pendientes y estados estrictamente aislados por `dexId` (`shiny_captured_${dexId}`, `UNIQUE(user_id, dex_id, pokemon_id)`), impidiendo que las partidas de diferentes juegos colisionen o se sobreescriban.
 
 ### E. Directrices de Publicidad, Monetización y Blindaje Legal (AdSense & IP)
 - **Separación de Tráfico Seguro:** Prohibido ubicar bloques de anuncios inmediatamente contiguos o superpuestos a los controles interactivos de alta frecuencia (como el botón central de giro `#centerSpinHub` o los botones de captura). Mantener siempre la separación vertical segura para evitar clics accidentales penalizables por AdSense.

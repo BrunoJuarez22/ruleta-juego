@@ -26,7 +26,7 @@ try {
   throw err;
 }
 
-// Inicialización del Esquema DDL
+// Inicialización del Esquema DDL con soporte multi-dex / multi-juego
 function initDatabaseSchema() {
   db.exec(`
     CREATE TABLE IF NOT EXISTS users (
@@ -38,38 +38,9 @@ function initDatabaseSchema() {
       updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
     );
 
-    CREATE TABLE IF NOT EXISTS user_captured (
-      id INTEGER PRIMARY KEY AUTOINCREMENT,
-      user_id INTEGER NOT NULL,
-      num_pal TEXT NOT NULL,
-      num_nac TEXT,
-      name TEXT NOT NULL,
-      types TEXT,
-      color TEXT,
-      sprite TEXT,
-      shiny_sprite TEXT,
-      captured_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-      FOREIGN KEY(user_id) REFERENCES users(id) ON DELETE CASCADE,
-      UNIQUE(user_id, num_pal)
-    );
-
-    CREATE TABLE IF NOT EXISTS user_pending (
-      id INTEGER PRIMARY KEY AUTOINCREMENT,
-      user_id INTEGER NOT NULL,
-      num_pal TEXT NOT NULL,
-      num_nac TEXT,
-      name TEXT NOT NULL,
-      types TEXT,
-      color TEXT,
-      sprite TEXT,
-      shiny_sprite TEXT,
-      added_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-      FOREIGN KEY(user_id) REFERENCES users(id) ON DELETE CASCADE,
-      UNIQUE(user_id, num_pal)
-    );
-
     CREATE TABLE IF NOT EXISTS user_state (
       user_id INTEGER PRIMARY KEY,
+      current_dex TEXT DEFAULT 'paldea',
       last_spin_pending TEXT DEFAULT '[]',
       theme_pref TEXT DEFAULT 'light',
       audio_pref INTEGER DEFAULT 1,
@@ -77,8 +48,130 @@ function initDatabaseSchema() {
       FOREIGN KEY(user_id) REFERENCES users(id) ON DELETE CASCADE
     );
 
-    CREATE INDEX IF NOT EXISTS idx_captured_user ON user_captured(user_id);
-    CREATE INDEX IF NOT EXISTS idx_pending_user ON user_pending(user_id);
+    CREATE TABLE IF NOT EXISTS user_dex_state (
+      user_id INTEGER NOT NULL,
+      dex_id TEXT NOT NULL DEFAULT 'paldea',
+      last_spin_pending TEXT DEFAULT '[]',
+      updated_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+      PRIMARY KEY(user_id, dex_id),
+      FOREIGN KEY(user_id) REFERENCES users(id) ON DELETE CASCADE
+    );
+  `);
+
+  // Migración o creación de user_captured con contexto dex_id y pokemon_id
+  const capturedCols = db.prepare("PRAGMA table_info(user_captured)").all();
+  if (capturedCols.length === 0) {
+    db.exec(`
+      CREATE TABLE user_captured (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        user_id INTEGER NOT NULL,
+        dex_id TEXT NOT NULL DEFAULT 'paldea',
+        pokemon_id TEXT NOT NULL,
+        num_pal TEXT,
+        num_nac TEXT,
+        name TEXT NOT NULL,
+        types TEXT,
+        color TEXT,
+        sprite TEXT,
+        shiny_sprite TEXT,
+        captured_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+        FOREIGN KEY(user_id) REFERENCES users(id) ON DELETE CASCADE,
+        UNIQUE(user_id, dex_id, pokemon_id)
+      );
+    `);
+  } else if (!capturedCols.some(c => c.name === 'dex_id')) {
+    db.exec(`
+      ALTER TABLE user_captured RENAME TO user_captured_old;
+      CREATE TABLE user_captured (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        user_id INTEGER NOT NULL,
+        dex_id TEXT NOT NULL DEFAULT 'paldea',
+        pokemon_id TEXT NOT NULL,
+        num_pal TEXT,
+        num_nac TEXT,
+        name TEXT NOT NULL,
+        types TEXT,
+        color TEXT,
+        sprite TEXT,
+        shiny_sprite TEXT,
+        captured_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+        FOREIGN KEY(user_id) REFERENCES users(id) ON DELETE CASCADE,
+        UNIQUE(user_id, dex_id, pokemon_id)
+      );
+      INSERT INTO user_captured (id, user_id, dex_id, pokemon_id, num_pal, num_nac, name, types, color, sprite, shiny_sprite, captured_at)
+      SELECT id, user_id, 'paldea', num_pal, num_pal, num_nac, name, types, color, sprite, shiny_sprite, captured_at
+      FROM user_captured_old;
+      DROP TABLE user_captured_old;
+    `);
+  }
+
+  // Migración o creación de user_pending con contexto dex_id y pokemon_id
+  const pendingCols = db.prepare("PRAGMA table_info(user_pending)").all();
+  if (pendingCols.length === 0) {
+    db.exec(`
+      CREATE TABLE user_pending (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        user_id INTEGER NOT NULL,
+        dex_id TEXT NOT NULL DEFAULT 'paldea',
+        pokemon_id TEXT NOT NULL,
+        num_pal TEXT,
+        num_nac TEXT,
+        name TEXT NOT NULL,
+        types TEXT,
+        color TEXT,
+        sprite TEXT,
+        shiny_sprite TEXT,
+        added_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+        FOREIGN KEY(user_id) REFERENCES users(id) ON DELETE CASCADE,
+        UNIQUE(user_id, dex_id, pokemon_id)
+      );
+    `);
+  } else if (!pendingCols.some(c => c.name === 'dex_id')) {
+    db.exec(`
+      ALTER TABLE user_pending RENAME TO user_pending_old;
+      CREATE TABLE user_pending (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        user_id INTEGER NOT NULL,
+        dex_id TEXT NOT NULL DEFAULT 'paldea',
+        pokemon_id TEXT NOT NULL,
+        num_pal TEXT,
+        num_nac TEXT,
+        name TEXT NOT NULL,
+        types TEXT,
+        color TEXT,
+        sprite TEXT,
+        shiny_sprite TEXT,
+        added_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+        FOREIGN KEY(user_id) REFERENCES users(id) ON DELETE CASCADE,
+        UNIQUE(user_id, dex_id, pokemon_id)
+      );
+      INSERT INTO user_pending (id, user_id, dex_id, pokemon_id, num_pal, num_nac, name, types, color, sprite, shiny_sprite, added_at)
+      SELECT id, user_id, 'paldea', num_pal, num_pal, num_nac, name, types, color, sprite, shiny_sprite, added_at
+      FROM user_pending_old;
+      DROP TABLE user_pending_old;
+    `);
+  }
+
+  // Comprobar columna current_dex en user_state
+  const stateCols = db.prepare("PRAGMA table_info(user_state)").all();
+  if (stateCols.length > 0 && !stateCols.some(c => c.name === 'current_dex')) {
+    try {
+      db.exec("ALTER TABLE user_state ADD COLUMN current_dex TEXT DEFAULT 'paldea';");
+    } catch {}
+  }
+
+  // Poblar user_dex_state con datos preexistentes si procede
+  try {
+    db.exec(`
+      INSERT OR IGNORE INTO user_dex_state (user_id, dex_id, last_spin_pending, updated_at)
+      SELECT user_id, 'paldea', last_spin_pending, updated_at FROM user_state;
+    `);
+  } catch {}
+
+  // Índices para consultas de alta velocidad aisladas por dex_id
+  db.exec(`
+    CREATE INDEX IF NOT EXISTS idx_captured_user_dex ON user_captured(user_id, dex_id);
+    CREATE INDEX IF NOT EXISTS idx_pending_user_dex ON user_pending(user_id, dex_id);
   `);
 }
 
@@ -112,106 +205,135 @@ const userRepo = {
 
     // Inicializar estado por defecto
     const stateStmt = db.prepare(`
-      INSERT INTO user_state (user_id, last_spin_pending, theme_pref, audio_pref)
-      VALUES (?, '[]', 'light', 1)
+      INSERT INTO user_state (user_id, current_dex, last_spin_pending, theme_pref, audio_pref)
+      VALUES (?, 'paldea', '[]', 'light', 1)
     `);
     stateStmt.run(userId);
+
+    const dexStmt = db.prepare(`
+      INSERT INTO user_dex_state (user_id, dex_id, last_spin_pending)
+      VALUES (?, 'paldea', '[]')
+    `);
+    dexStmt.run(userId);
 
     return this.findById(userId);
   }
 };
 
-// Métodos de Progreso y Datos Shiny
+// Métodos de Progreso y Datos Shiny (Aislados por dex_id)
 const progressRepo = {
-  getCaptured(userId) {
+  getCaptured(userId, dexId = 'paldea') {
     const stmt = db.prepare(`
-      SELECT num_pal AS numPal, num_nac AS numNac, name, types, color, sprite, shiny_sprite AS shinySprite, captured_at AS capturedAt
+      SELECT pokemon_id AS pokemonId, num_pal AS numPal, num_nac AS numNac, name, types, color, sprite, shiny_sprite AS shinySprite, captured_at AS capturedAt
       FROM user_captured
-      WHERE user_id = ?
+      WHERE user_id = ? AND dex_id = ?
       ORDER BY id ASC
     `);
-    const rows = stmt.all(userId);
+    const rows = stmt.all(userId, dexId);
     return rows.map(r => ({
       ...r,
       types: r.types ? JSON.parse(r.types) : []
     }));
   },
 
-  getPending(userId) {
+  getPending(userId, dexId = 'paldea') {
     const stmt = db.prepare(`
-      SELECT num_pal AS numPal, num_nac AS numNac, name, types, color, sprite, shiny_sprite AS shinySprite, added_at AS addedAt
+      SELECT pokemon_id AS pokemonId, num_pal AS numPal, num_nac AS numNac, name, types, color, sprite, shiny_sprite AS shinySprite, added_at AS addedAt
       FROM user_pending
-      WHERE user_id = ?
+      WHERE user_id = ? AND dex_id = ?
       ORDER BY id ASC
     `);
-    const rows = stmt.all(userId);
+    const rows = stmt.all(userId, dexId);
     return rows.map(r => ({
       ...r,
       types: r.types ? JSON.parse(r.types) : []
     }));
   },
 
-  getState(userId) {
-    const stmt = db.prepare('SELECT last_spin_pending, theme_pref, audio_pref FROM user_state WHERE user_id = ?');
-    const row = stmt.get(userId);
-    if (!row) {
-      return { lastSpinPending: [], theme: 'light', audio: true };
-    }
+  getState(userId, dexId = 'paldea') {
+    const userState = db.prepare('SELECT current_dex, theme_pref, audio_pref FROM user_state WHERE user_id = ?').get(userId);
+    const dexRow = db.prepare('SELECT last_spin_pending FROM user_dex_state WHERE user_id = ? AND dex_id = ?').get(userId, dexId);
+
     let lastSpinPending = [];
-    try {
-      lastSpinPending = JSON.parse(row.last_spin_pending || '[]');
-    } catch {
-      lastSpinPending = [];
+    if (dexRow && dexRow.last_spin_pending) {
+      try {
+        lastSpinPending = JSON.parse(dexRow.last_spin_pending);
+      } catch {
+        lastSpinPending = [];
+      }
     }
+
     return {
+      dexId,
       lastSpinPending,
-      theme: row.theme_pref || 'light',
-      audio: Boolean(row.audio_pref)
+      currentDex: (userState && userState.current_dex) ? userState.current_dex : dexId,
+      theme: (userState && userState.theme_pref) ? userState.theme_pref : 'light',
+      audio: (userState && userState.audio_pref !== undefined) ? Boolean(userState.audio_pref) : true
     };
   },
 
-  saveState(userId, { lastSpinPending, theme, audio }) {
+  saveState(userId, { dexId = 'paldea', lastSpinPending, theme, audio, currentDex }) {
     const existing = db.prepare('SELECT user_id FROM user_state WHERE user_id = ?').get(userId);
-    const lastSpinStr = JSON.stringify(lastSpinPending || []);
     const themeVal = theme || 'light';
     const audioVal = audio === false ? 0 : 1;
+    const curDex = currentDex || dexId || 'paldea';
 
     if (existing) {
       const stmt = db.prepare(`
         UPDATE user_state
-        SET last_spin_pending = ?, theme_pref = ?, audio_pref = ?, updated_at = CURRENT_TIMESTAMP
+        SET current_dex = COALESCE(?, current_dex), theme_pref = ?, audio_pref = ?, updated_at = CURRENT_TIMESTAMP
         WHERE user_id = ?
       `);
-      stmt.run(lastSpinStr, themeVal, audioVal, userId);
+      stmt.run(curDex, themeVal, audioVal, userId);
     } else {
       const stmt = db.prepare(`
-        INSERT INTO user_state (user_id, last_spin_pending, theme_pref, audio_pref)
+        INSERT INTO user_state (user_id, current_dex, theme_pref, audio_pref)
         VALUES (?, ?, ?, ?)
       `);
-      stmt.run(userId, lastSpinStr, themeVal, audioVal);
+      stmt.run(userId, curDex, themeVal, audioVal);
+    }
+
+    if (lastSpinPending !== undefined) {
+      const lastSpinStr = JSON.stringify(lastSpinPending || []);
+      const existingDex = db.prepare('SELECT user_id FROM user_dex_state WHERE user_id = ? AND dex_id = ?').get(userId, dexId);
+      if (existingDex) {
+        db.prepare(`
+          UPDATE user_dex_state
+          SET last_spin_pending = ?, updated_at = CURRENT_TIMESTAMP
+          WHERE user_id = ? AND dex_id = ?
+        `).run(lastSpinStr, userId, dexId);
+      } else {
+        db.prepare(`
+          INSERT INTO user_dex_state (user_id, dex_id, last_spin_pending)
+          VALUES (?, ?, ?)
+        `).run(userId, dexId, lastSpinStr);
+      }
     }
   },
 
-  addCaptured(userId, pokemonList) {
+  addCaptured(userId, pokemonList, dexId = 'paldea') {
     if (!Array.isArray(pokemonList) || pokemonList.length === 0) return;
 
     const insertCap = db.prepare(`
-      INSERT INTO user_captured (user_id, num_pal, num_nac, name, types, color, sprite, shiny_sprite, captured_at)
-      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
-      ON CONFLICT(user_id, num_pal) DO UPDATE SET
+      INSERT INTO user_captured (user_id, dex_id, pokemon_id, num_pal, num_nac, name, types, color, sprite, shiny_sprite, captured_at)
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+      ON CONFLICT(user_id, dex_id, pokemon_id) DO UPDATE SET
         captured_at = excluded.captured_at
     `);
 
     const removePend = db.prepare(`
-      DELETE FROM user_pending WHERE user_id = ? AND num_pal = ?
+      DELETE FROM user_pending WHERE user_id = ? AND dex_id = ? AND (pokemon_id = ? OR num_pal = ?)
     `);
 
     for (const poke of pokemonList) {
+      const pokeId = String(poke.pokemonId || poke.numPal || poke.numNac || poke.id);
       const typesStr = JSON.stringify(poke.types || []);
       const capturedAt = poke.capturedAt || new Date().toISOString();
       insertCap.run(
         userId,
-        poke.numPal,
+        dexId,
+        pokeId,
+        poke.numPal || pokeId,
         poke.numNac || '',
         poke.name,
         typesStr,
@@ -220,34 +342,36 @@ const progressRepo = {
         poke.shinySprite || '',
         capturedAt
       );
-      // Regla de negocio: al ser capturado se retira de pendientes
-      removePend.run(userId, poke.numPal);
+      removePend.run(userId, dexId, pokeId, pokeId);
     }
   },
 
-  removeCaptured(userId, numPal) {
-    const stmt = db.prepare('DELETE FROM user_captured WHERE user_id = ? AND num_pal = ?');
-    stmt.run(userId, numPal);
+  removeCaptured(userId, pokemonId, dexId = 'paldea') {
+    const pokeId = String(pokemonId);
+    const stmt = db.prepare('DELETE FROM user_captured WHERE user_id = ? AND dex_id = ? AND (pokemon_id = ? OR num_pal = ?)');
+    stmt.run(userId, dexId, pokeId, pokeId);
   },
 
-  addPending(userId, pokemonList) {
+  addPending(userId, pokemonList, dexId = 'paldea') {
     if (!Array.isArray(pokemonList) || pokemonList.length === 0) return;
 
-    // Solo agregar a pendientes si no está ya capturado
-    const isCaptured = db.prepare('SELECT 1 FROM user_captured WHERE user_id = ? AND num_pal = ?');
+    const isCaptured = db.prepare('SELECT 1 FROM user_captured WHERE user_id = ? AND dex_id = ? AND (pokemon_id = ? OR num_pal = ?)');
     const insertPend = db.prepare(`
-      INSERT INTO user_pending (user_id, num_pal, num_nac, name, types, color, sprite, shiny_sprite, added_at)
-      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
-      ON CONFLICT(user_id, num_pal) DO NOTHING
+      INSERT INTO user_pending (user_id, dex_id, pokemon_id, num_pal, num_nac, name, types, color, sprite, shiny_sprite, added_at)
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+      ON CONFLICT(user_id, dex_id, pokemon_id) DO NOTHING
     `);
 
     for (const poke of pokemonList) {
-      if (!isCaptured.get(userId, poke.numPal)) {
+      const pokeId = String(poke.pokemonId || poke.numPal || poke.numNac || poke.id);
+      if (!isCaptured.get(userId, dexId, pokeId, pokeId)) {
         const typesStr = JSON.stringify(poke.types || []);
         const addedAt = poke.addedAt || new Date().toISOString();
         insertPend.run(
           userId,
-          poke.numPal,
+          dexId,
+          pokeId,
+          poke.numPal || pokeId,
           poke.numNac || '',
           poke.name,
           typesStr,
@@ -260,30 +384,28 @@ const progressRepo = {
     }
   },
 
-  removePending(userId, numPal) {
-    const stmt = db.prepare('DELETE FROM user_pending WHERE user_id = ? AND num_pal = ?');
-    stmt.run(userId, numPal);
+  removePending(userId, pokemonId, dexId = 'paldea') {
+    const pokeId = String(pokemonId);
+    const stmt = db.prepare('DELETE FROM user_pending WHERE user_id = ? AND dex_id = ? AND (pokemon_id = ? OR num_pal = ?)');
+    stmt.run(userId, dexId, pokeId, pokeId);
   },
 
-  merge(userId, { captured = [], pending = [], lastSpinPending = [], theme, audio }) {
-    // 1. Fusionar capturados
+  merge(userId, { dexId = 'paldea', captured = [], pending = [], lastSpinPending = [], theme, audio, currentDex }) {
     if (captured && captured.length > 0) {
-      this.addCaptured(userId, captured);
+      this.addCaptured(userId, captured, dexId);
     }
 
-    // 2. Fusionar pendientes
     if (pending && pending.length > 0) {
-      this.addPending(userId, pending);
+      this.addPending(userId, pending, dexId);
     }
 
-    // 3. Actualizar estado
-    this.saveState(userId, { lastSpinPending, theme, audio });
+    this.saveState(userId, { dexId, lastSpinPending, theme, audio, currentDex });
 
-    // Devolver estado final consolidado
     return {
-      captured: this.getCaptured(userId),
-      pending: this.getPending(userId),
-      ...this.getState(userId)
+      dexId,
+      captured: this.getCaptured(userId, dexId),
+      pending: this.getPending(userId, dexId),
+      ...this.getState(userId, dexId)
     };
   }
 };

@@ -223,6 +223,24 @@ ruleta-juego/
     - **Banner de Cookies Neutralizado:** Se suavizó la redacción del banner de consentimiento para enfocarlo en "Privacidad y Preferencias" (guardado de capturas, analítica y rendimiento) en lugar de mencionar explícitamente publicidad.
     - **Archivos Legales y de Monetización Preservados:** `ads.txt` en la raíz y las políticas legales en `#legalModal` permanecen completamente operativos para salvaguardar la cuenta y el cumplimiento normativo.
 
+24. **Arquitectura Multi-Pokedex y Persistencia Aislada por Juego/Contexto (Fase 1 del Plan de Expansión):**
+    - **Objetivo:** Sentar las bases para la expansión hacia todas las generaciones (1 a 9) y futuros apartados independientes por juego (Ruleta General, Escarlata/Púrpura, Leyendas Z-A, etc.), asegurando que una misma cuenta de usuario y el almacenamiento local conserven registros, matrices, capturas y pendientes 100% aislados por cada juego sin mezclas.
+    - **Evolución del Esquema SQLite (`server/db.js`):**
+      - Migración transparente y sin pérdida de datos en `initDatabaseSchema()`. Si las tablas existentes carecían de `dex_id`, se migran automáticamente preservando todos los registros anteriores bajo el contexto `'paldea'`.
+      - **`user_captured`:** Incorpora `dex_id TEXT NOT NULL DEFAULT 'paldea'` y `pokemon_id TEXT NOT NULL`, con restricción de unicidad aislada: `UNIQUE(user_id, dex_id, pokemon_id)`.
+      - **`user_pending`:** Incorpora `dex_id TEXT NOT NULL DEFAULT 'paldea'` y `pokemon_id TEXT NOT NULL`, con restricción de unicidad aislada: `UNIQUE(user_id, dex_id, pokemon_id)`.
+      - **`user_dex_state`:** Nueva tabla para persistir el estado específico de cada juego/ruleta (`user_id`, `dex_id`, `last_spin_pending`, `updated_at`, `PRIMARY KEY(user_id, dex_id)`).
+      - **`user_state`:** Almacena preferencias globales de usuario y el contexto activo (`current_dex TEXT DEFAULT 'paldea'`).
+      - **Índices de Alto Rendimiento:** `idx_captured_user_dex` y `idx_pending_user_dex` sobre `(user_id, dex_id)`.
+    - **Endpoints de Backend (`server/routes/userRoutes.js`):**
+      - Todos los endpoints (`/progress`, `/sync`, `/capture`, `/uncapture`, `/pending`, `/remove-pending`, `/state`) aceptan y procesan el parámetro `dexId` (predeterminado `'paldea'`).
+    - **Cliente Frontend (`api.js`):**
+      - Adaptación de todas las funciones de sincronización y mutación (`fetchCloudProgress`, `syncProgressWithCloud`, `cloudCapture`, `cloudUncapture`, `cloudAddPending`, `cloudRemovePending`, `cloudSaveState`) para enviar `dexId`.
+    - **Persistencia Local y Migración Automática (`script.js`):**
+      - Llaves dinámicas con prefijo de contexto: `shiny_captured_${dexId}`, `shiny_pending_${dexId}`, `shiny_last_spin_pending_${dexId}`.
+      - Función `migrateLocalStorageIfNeeded()` para transferir datos heredados de `shiny_captured` a `shiny_captured_paldea` en el primer arranque, manteniendo compatibilidad bidireccional.
+      - Función universal `getPokemonId(pokemon)` para indexar Pokémon tanto por número regional como nacional o identificador único.
+
 ---
 
 ## 4. Estructuras de Datos y Persistencia
@@ -230,6 +248,7 @@ ruleta-juego/
 ### Modelo de Datos del Pokémon
 ```json
 {
+  "pokemonId": "001",
   "numPal": "001",
   "numNac": "0906",
   "name": "Sprigatito",
@@ -245,18 +264,19 @@ ruleta-juego/
 }
 ```
 
-### Esquema de Base de Datos Relacional (SQLite)
+### Esquema de Base de Datos Relacional (SQLite Multi-Dex)
 - **`users`:** `id` (INTEGER PK), `username` (TEXT UNIQUE NOCASE), `email` (TEXT UNIQUE NOCASE), `password_hash` (TEXT), `created_at`, `updated_at`.
-- **`user_captured`:** `id` (INTEGER PK), `user_id` (FK users), `num_pal` (TEXT), `num_nac` (TEXT), `name` (TEXT), `types` (TEXT JSON), `color` (TEXT), `sprite` (TEXT), `shiny_sprite` (TEXT), `captured_at`. `UNIQUE(user_id, num_pal)`.
-- **`user_pending`:** `id` (INTEGER PK), `user_id` (FK users), `num_pal` (TEXT), `num_nac` (TEXT), `name` (TEXT), `types` (TEXT JSON), `color` (TEXT), `sprite` (TEXT), `shiny_sprite` (TEXT), `added_at`. `UNIQUE(user_id, num_pal)`.
-- **`user_state`:** `user_id` (PK FK users), `last_spin_pending` (TEXT JSON), `theme_pref` (TEXT), `audio_pref` (INTEGER), `updated_at`.
+- **`user_captured`:** `id` (INTEGER PK), `user_id` (FK users), `dex_id` (TEXT, ej. 'paldea', 'general'), `pokemon_id` (TEXT), `num_pal` (TEXT), `num_nac` (TEXT), `name` (TEXT), `types` (TEXT JSON), `color` (TEXT), `sprite` (TEXT), `shiny_sprite` (TEXT), `captured_at`. `UNIQUE(user_id, dex_id, pokemon_id)`.
+- **`user_pending`:** `id` (INTEGER PK), `user_id` (FK users), `dex_id` (TEXT), `pokemon_id` (TEXT), `num_pal` (TEXT), `num_nac` (TEXT), `name` (TEXT), `types` (TEXT JSON), `color` (TEXT), `sprite` (TEXT), `shiny_sprite` (TEXT), `added_at`. `UNIQUE(user_id, dex_id, pokemon_id)`.
+- **`user_dex_state`:** `user_id` (FK users), `dex_id` (TEXT), `last_spin_pending` (TEXT JSON), `updated_at`. `PRIMARY KEY(user_id, dex_id)`.
+- **`user_state`:** `user_id` (PK FK users), `current_dex` (TEXT), `last_spin_pending` (TEXT JSON legado), `theme_pref` (TEXT), `audio_pref` (INTEGER), `updated_at`.
 
 ### Llaves de `localStorage`
 - `ruleta_theme`: `'light'` (predeterminado) o `'dark'`.
 - `ruleta_audio`: `'true'` o `'false'`.
-- `shiny_captured`: Arreglo JSON de objetos Pokémon capturados en modo local.
-- `shiny_pending`: Arreglo JSON de objetos Pokémon pendientes en modo local.
-- `shiny_last_spin_pending`: Arreglo JSON de strings `numPal` del giro anterior en modo local.
+- `shiny_captured_${dexId}`: Arreglo JSON de Pokémon capturados en el contexto activo (ej. `shiny_captured_paldea`, `shiny_captured_general`).
+- `shiny_pending_${dexId}`: Arreglo JSON de Pokémon pendientes en el contexto activo.
+- `shiny_last_spin_pending_${dexId}`: Arreglo JSON de IDs del giro anterior en el contexto activo.
 - `ruleta_jwt_token`: Token JWT de autenticación para llamadas a la API REST.
 - `ruleta_current_user`: Objeto JSON con el perfil del usuario autenticado (`id`, `username`, `email`).
 - `ruleta_last_sync_time`: Marca de tiempo ISO de la última sincronización exitosa con la base de datos.

@@ -203,23 +203,25 @@
     notifyChange();
   }
 
-  // Métodos de Sincronización y Progreso
-  async function fetchCloudProgress() {
+  // Métodos de Sincronización y Progreso (Soporte Multi-Pokedex / Multi-Juego)
+  async function fetchCloudProgress(dexId = 'paldea') {
     if (!isLoggedIn()) return { ok: false, error: 'No autenticado.' };
-    return await request('/api/user/progress', { method: 'GET' });
+    return await request(`/api/user/progress?dex=${encodeURIComponent(dexId)}`, { method: 'GET' });
   }
 
-  async function syncProgressWithCloud({ captured, pending, lastSpinPending, theme, audio }) {
+  async function syncProgressWithCloud({ dexId = 'paldea', captured, pending, lastSpinPending, theme, audio, currentDex }) {
     if (!isLoggedIn()) return { ok: false, error: 'No autenticado.' };
 
     const res = await request('/api/user/sync', {
       method: 'POST',
       body: JSON.stringify({
+        dexId,
         captured,
         pending,
         lastSpinPending,
         theme,
-        audio
+        audio,
+        currentDex
       })
     });
 
@@ -231,43 +233,43 @@
     return res;
   }
 
-  async function cloudCapture(pokemonList) {
+  async function cloudCapture(pokemonList, dexId = 'paldea') {
     if (!isLoggedIn()) return { ok: false, guest: true };
     return await request('/api/user/capture', {
       method: 'POST',
-      body: JSON.stringify({ pokemon: pokemonList })
+      body: JSON.stringify({ dexId, pokemon: pokemonList })
     });
   }
 
-  async function cloudUncapture(numPal) {
+  async function cloudUncapture(pokemonId, dexId = 'paldea') {
     if (!isLoggedIn()) return { ok: false, guest: true };
     return await request('/api/user/uncapture', {
       method: 'POST',
-      body: JSON.stringify({ numPal })
+      body: JSON.stringify({ dexId, pokemonId, numPal: pokemonId })
     });
   }
 
-  async function cloudAddPending(pokemonList, lastSpinPending) {
+  async function cloudAddPending(pokemonList, lastSpinPending, dexId = 'paldea') {
     if (!isLoggedIn()) return { ok: false, guest: true };
     return await request('/api/user/pending', {
       method: 'POST',
-      body: JSON.stringify({ pokemon: pokemonList, lastSpinPending })
+      body: JSON.stringify({ dexId, pokemon: pokemonList, lastSpinPending })
     });
   }
 
-  async function cloudRemovePending(numPal) {
+  async function cloudRemovePending(pokemonId, dexId = 'paldea') {
     if (!isLoggedIn()) return { ok: false, guest: true };
     return await request('/api/user/remove-pending', {
       method: 'POST',
-      body: JSON.stringify({ numPal })
+      body: JSON.stringify({ dexId, pokemonId, numPal: pokemonId })
     });
   }
 
-  async function cloudSaveState({ lastSpinPending, theme, audio }) {
+  async function cloudSaveState({ dexId = 'paldea', lastSpinPending, theme, audio, currentDex }) {
     if (!isLoggedIn()) return { ok: false, guest: true };
     return await request('/api/user/state', {
       method: 'POST',
-      body: JSON.stringify({ lastSpinPending, theme, audio })
+      body: JSON.stringify({ dexId, lastSpinPending, theme, audio, currentDex })
     });
   }
 

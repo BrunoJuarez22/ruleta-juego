@@ -110,6 +110,34 @@ let modalSource = 'wheel'; // 'wheel' | 'pending'
 // Conjunto de Pokémon seleccionados en la línea evolutiva del modal
 let selectedEvoIds = new Set();
 
+// Contexto activo de Pokédex / Juego (ej. 'paldea', 'general', etc.)
+let currentDexId = 'paldea';
+
+function getStorageKey(baseKey, dexId = currentDexId) {
+  return `${baseKey}_${dexId}`;
+}
+
+function getPokemonId(pokemon) {
+  if (!pokemon) return '';
+  return String(pokemon.pokemonId || pokemon.numPal || pokemon.numNac || pokemon.id || '');
+}
+
+function migrateLocalStorageIfNeeded() {
+  try {
+    if (localStorage.getItem('shiny_captured') && !localStorage.getItem('shiny_captured_paldea')) {
+      localStorage.setItem('shiny_captured_paldea', localStorage.getItem('shiny_captured'));
+    }
+    if (localStorage.getItem('shiny_pending') && !localStorage.getItem('shiny_pending_paldea')) {
+      localStorage.setItem('shiny_pending_paldea', localStorage.getItem('shiny_pending'));
+    }
+    if (localStorage.getItem('shiny_last_spin_pending') && !localStorage.getItem('shiny_last_spin_pending_paldea')) {
+      localStorage.setItem('shiny_last_spin_pending_paldea', localStorage.getItem('shiny_last_spin_pending'));
+    }
+  } catch (e) {
+    console.warn('[STORAGE] Error en migración local:', e);
+  }
+}
+
 // Listas de seguimiento Shiny y Matriz Gigante
 let pendingList = [];
 let capturedShinyList = [];
@@ -844,11 +872,12 @@ function updateCaptureButtonText() {
 // ==========================================
 // 7. GESTIÓN DE PENDIENTES Y CAPTURADOS SHINY
 // ==========================================
-function loadShinyTracking() {
+function loadShinyTracking(dexId = currentDexId) {
+  migrateLocalStorageIfNeeded();
   try {
-    pendingList = JSON.parse(localStorage.getItem('shiny_pending') || '[]');
-    capturedShinyList = JSON.parse(localStorage.getItem('shiny_captured') || '[]');
-    const savedLastSpin = JSON.parse(localStorage.getItem('shiny_last_spin_pending') || '[]');
+    pendingList = JSON.parse(localStorage.getItem(getStorageKey('shiny_pending', dexId)) || '[]');
+    capturedShinyList = JSON.parse(localStorage.getItem(getStorageKey('shiny_captured', dexId)) || '[]');
+    const savedLastSpin = JSON.parse(localStorage.getItem(getStorageKey('shiny_last_spin_pending', dexId)) || '[]');
     lastSpinPendingIds = new Set(savedLastSpin);
   } catch (e) {
     pendingList = [];
@@ -858,10 +887,17 @@ function loadShinyTracking() {
   updateDashboardViews();
 }
 
-function saveShinyTracking() {
-  localStorage.setItem('shiny_pending', JSON.stringify(pendingList));
-  localStorage.setItem('shiny_captured', JSON.stringify(capturedShinyList));
-  localStorage.setItem('shiny_last_spin_pending', JSON.stringify([...lastSpinPendingIds]));
+function saveShinyTracking(dexId = currentDexId) {
+  localStorage.setItem(getStorageKey('shiny_pending', dexId), JSON.stringify(pendingList));
+  localStorage.setItem(getStorageKey('shiny_captured', dexId), JSON.stringify(capturedShinyList));
+  localStorage.setItem(getStorageKey('shiny_last_spin_pending', dexId), JSON.stringify([...lastSpinPendingIds]));
+
+  // Mantener compatibilidad retroactiva con claves sin prefijo si estamos en Paldea
+  if (dexId === 'paldea') {
+    localStorage.setItem('shiny_pending', JSON.stringify(pendingList));
+    localStorage.setItem('shiny_captured', JSON.stringify(capturedShinyList));
+    localStorage.setItem('shiny_last_spin_pending', JSON.stringify([...lastSpinPendingIds]));
+  }
   updateDashboardViews();
 }
 
@@ -877,12 +913,14 @@ function markMultipleAsShinyCaptured(pokemonList) {
 
   pokemonList.forEach(pokemon => {
     if (!pokemon) return;
-    idsToRemove.add(pokemon.numPal);
-    lastSpinPendingIds.delete(pokemon.numPal);
-    if (!capturedShinyList.some(p => p.numPal === pokemon.numPal)) {
+    const pokeId = getPokemonId(pokemon);
+    idsToRemove.add(pokeId);
+    lastSpinPendingIds.delete(pokeId);
+    if (!capturedShinyList.some(p => getPokemonId(p) === pokeId || p.numPal === pokemon.numPal)) {
       capturedShinyList.unshift({
-        numPal: pokemon.numPal,
-        numNac: pokemon.numNac,
+        pokemonId: pokeId,
+        numPal: pokemon.numPal || pokeId,
+        numNac: pokemon.numNac || '',
         name: pokemon.name,
         types: pokemon.types,
         sprite: pokemon.sprite,
@@ -894,12 +932,12 @@ function markMultipleAsShinyCaptured(pokemonList) {
   });
 
   // Quitar de pendientes los que ahora son capturados
-  pendingList = pendingList.filter(p => !idsToRemove.has(p.numPal));
+  pendingList = pendingList.filter(p => !idsToRemove.has(getPokemonId(p)) && !idsToRemove.has(p.numPal));
   saveShinyTracking();
 
   // Sincronizar con la base de datos en la nube si hay sesión activa
   if (window.ShinyAPI && window.ShinyAPI.isLoggedIn()) {
-    window.ShinyAPI.cloudCapture(pokemonList).catch(err => {
+    window.ShinyAPI.cloudCapture(pokemonList, currentDexId).catch(err => {
       console.warn('[CLOUD] Sincronización diferida:', err);
     });
   }
@@ -911,12 +949,13 @@ function markAsShinyCaptured(pokemon) {
 
 function removeShinyCaptured(pokemon) {
   if (!pokemon) return;
-  capturedShinyList = capturedShinyList.filter(p => p.numPal !== pokemon.numPal);
+  const pokeId = getPokemonId(pokemon);
+  capturedShinyList = capturedShinyList.filter(p => getPokemonId(p) !== pokeId && p.numPal !== pokeId);
   saveShinyTracking();
 
   // Sincronizar desmarcado en la base de datos en la nube
   if (window.ShinyAPI && window.ShinyAPI.isLoggedIn()) {
-    window.ShinyAPI.cloudUncapture(pokemon.numPal).catch(err => {
+    window.ShinyAPI.cloudUncapture(pokeId, currentDexId).catch(err => {
       console.warn('[CLOUD] Sincronización diferida:', err);
     });
   }
@@ -924,15 +963,17 @@ function removeShinyCaptured(pokemon) {
 
 function markAsPending(pokemon) {
   if (!pokemon) return;
+  const pokeId = getPokemonId(pokemon);
 
-  if (capturedShinyList.some(p => p.numPal === pokemon.numPal)) {
+  if (capturedShinyList.some(p => getPokemonId(p) === pokeId || p.numPal === pokeId)) {
     return;
   }
 
-  if (!pendingList.some(p => p.numPal === pokemon.numPal)) {
+  if (!pendingList.some(p => getPokemonId(p) === pokeId || p.numPal === pokeId)) {
     pendingList.unshift({
-      numPal: pokemon.numPal,
-      numNac: pokemon.numNac,
+      pokemonId: pokeId,
+      numPal: pokemon.numPal || pokeId,
+      numNac: pokemon.numNac || '',
       name: pokemon.name,
       types: pokemon.types,
       sprite: pokemon.sprite,
@@ -944,7 +985,7 @@ function markAsPending(pokemon) {
 
     // Sincronizar pendiente en la base de datos en la nube
     if (window.ShinyAPI && window.ShinyAPI.isLoggedIn()) {
-      window.ShinyAPI.cloudAddPending([pokemon], [...lastSpinPendingIds]).catch(err => {
+      window.ShinyAPI.cloudAddPending([pokemon], [...lastSpinPendingIds], currentDexId).catch(err => {
         console.warn('[CLOUD] Sincronización diferida:', err);
       });
     }
@@ -953,14 +994,15 @@ function markAsPending(pokemon) {
 
 function removePending(pokemon) {
   if (!pokemon) return;
-  const num = pokemon.numPal;
-  pendingList = pendingList.filter(p => p.numPal !== num);
-  lastSpinPendingIds.delete(num);
+  const pokeId = getPokemonId(pokemon);
+  pendingList = pendingList.filter(p => getPokemonId(p) !== pokeId && p.numPal !== pokeId);
+  lastSpinPendingIds.delete(pokeId);
+  lastSpinPendingIds.delete(pokemon.numPal);
   saveShinyTracking();
 
   // Sincronizar eliminación de pendiente en la nube si hay sesión activa
   if (window.ShinyAPI && window.ShinyAPI.isLoggedIn()) {
-    window.ShinyAPI.cloudRemovePending(num).catch(err => {
+    window.ShinyAPI.cloudRemovePending(pokeId, currentDexId).catch(err => {
       console.warn('[CLOUD] Sincronización diferida al quitar pendiente:', err);
     });
   }
@@ -1942,11 +1984,13 @@ async function syncCloudData(manual = false) {
 
   try {
     const payload = {
+      dexId: currentDexId,
       captured: capturedShinyList,
       pending: pendingList,
       lastSpinPending: [...lastSpinPendingIds],
       theme: currentTheme,
-      audio: audioEnabled
+      audio: audioEnabled,
+      currentDex: currentDexId
     };
 
     const res = await window.ShinyAPI.syncProgressWithCloud(payload);
@@ -1960,7 +2004,7 @@ async function syncCloudData(manual = false) {
       if (Array.isArray(res.data.lastSpinPending)) {
         lastSpinPendingIds = new Set(res.data.lastSpinPending);
       }
-      saveShinyTracking();
+      saveShinyTracking(currentDexId);
 
       if (profileLastSync) {
         profileLastSync.textContent = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
