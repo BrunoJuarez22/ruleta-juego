@@ -330,20 +330,20 @@ const VIOLET_EXCLUSIVE_SET = new Set([
 
 // Conjuntos oficiales de exclusivos de Espada y Escudo (Nº Nacional)
 const SWORD_EXCLUSIVE_SET = new Set([
-  '83', '865', '273', '274', '275', '303', '338', '554', '555', '559', '560',
+  '83', '865', '273', '274', '275', '303', '338', '539', '554', '555', '559', '560',
   '574', '575', '576', '627', '628', '633', '634', '635', '684', '685',
   '766', '776', '782', '783', '784', '841', '874', '888'
 ]);
 
 const SHIELD_EXCLUSIVE_SET = new Set([
   '77', '78', '222', '864', '246', '247', '248', '270', '271', '272', '302', '337',
-  '453', '454', '577', '578', '579', '629', '630', '682', '683', '704', '705', '706',
+  '453', '454', '538', '577', '578', '579', '629', '630', '682', '683', '704', '705', '706',
   '765', '780', '842', '875', '889'
 ]);
 
 // Conjuntos oficiales de exclusivos de Diamante Brillante y Perla Reluciente (Nº Nacional)
-const DIAMOND_EXCLUSIVE_SET = new Set(['408', '409', '434', '435', '198', '430', '483']);
-const PEARL_EXCLUSIVE_SET = new Set(['410', '411', '431', '432', '200', '429', '484']);
+const DIAMOND_EXCLUSIVE_SET = new Set(['122', '198', '408', '409', '430', '434', '435', '439', '483']);
+const PEARL_EXCLUSIVE_SET = new Set(['185', '200', '410', '411', '429', '431', '432', '438', '484']);
 
 // Conjuntos oficiales de exclusivos de Let's Go Pikachu y Eevee (Nº Nacional)
 const PIKACHU_EXCLUSIVE_SET = new Set(['27', '28', '43', '44', '45', '56', '57', '58', '59', '88', '89', '123']);
@@ -531,6 +531,7 @@ const GAME_NAMES_MAP = {
   'SV': 'Escarlata / Púrpura',
   'SV-DLC': 'Escarlata / Púrpura (DLC)',
   'PLZA': 'Leyendas Z-A',
+  'PLZA-DLC': 'Leyendas Z-A (DLC)',
   'SwSh': 'Espada / Escudo',
   'SwSh-DLC': 'Espada / Escudo (DLC)',
   'PLA': 'Leyendas Arceus',
@@ -556,21 +557,40 @@ const GAME_NAMES_MAP = {
 
 const SWITCH_GAME_DEFS = [
   { code: 'SV', dlc: 'SV-DLC', label: 'SV', name: 'Pokémon Escarlata y Púrpura', cls: 'pill-sv' },
-  { code: 'PLZA', label: 'Z-A', name: 'Leyendas Pokémon: Z-A', cls: 'pill-plza' },
+  { code: 'PLZA', dlc: 'PLZA-DLC', label: 'Z-A', name: 'Leyendas Pokémon: Z-A', cls: 'pill-plza' },
   { code: 'SwSh', dlc: 'SwSh-DLC', label: 'SwSh', name: 'Pokémon Espada y Escudo', cls: 'pill-swsh' },
   { code: 'PLA', label: 'PLA', name: 'Leyendas Pokémon: Arceus', cls: 'pill-pla' },
   { code: 'BDSP', label: 'BDSP', name: 'Pokémon Diamante B. y Perla R.', cls: 'pill-bdsp' },
   { code: 'LGPE', label: 'LGPE', name: "Pokémon Let's Go Pikachu / Eevee", cls: 'pill-lgpe' }
 ];
 
+const ALL_SWITCH_GAME_CODES = ['SV', 'SV-DLC', 'PLZA', 'PLZA-DLC', 'SwSh', 'SwSh-DLC', 'PLA', 'BDSP', 'LGPE'];
+
+function resolvePokemonGames(pokemon) {
+  if (!pokemon) return [];
+  const natKey = pokemon.numNac || (currentDexId === 'general' ? pokemon.pokemonId : '');
+  if (natKey) {
+    const numInt = parseInt(natKey, 10);
+    if (!isNaN(numInt)) {
+      const pad4 = String(numInt).padStart(4, '0');
+      const canonicalNat = NATIONAL_BY_ID.get(pad4) || NATIONAL_BY_ID.get(String(numInt));
+      if (canonicalNat && Array.isArray(canonicalNat.games) && canonicalNat.games.length > 0) {
+        return canonicalNat.games;
+      }
+    }
+  }
+  return Array.isArray(pokemon.games) ? pokemon.games : [];
+}
+
 function getPokemonGamesTooltipText(pokemon) {
-  if (!pokemon || !Array.isArray(pokemon.games)) return '';
-  return pokemon.games.map(g => GAME_NAMES_MAP[g] || g).join(', ');
+  if (!pokemon) return '';
+  const games = resolvePokemonGames(pokemon);
+  return games.map(g => GAME_NAMES_MAP[g] || g).join(', ');
 }
 
 function getPokemonGamesBadgesHtml(pokemon) {
   if (!pokemon) return '';
-  const games = Array.isArray(pokemon.games) ? pokemon.games : [];
+  const games = resolvePokemonGames(pokemon);
   const pills = [];
 
   for (const def of SWITCH_GAME_DEFS) {
@@ -580,7 +600,7 @@ function getPokemonGamesBadgesHtml(pokemon) {
     }
   }
 
-  const classicCount = games.filter(c => !['SV', 'SV-DLC', 'PLZA', 'SwSh', 'SwSh-DLC', 'PLA', 'BDSP', 'LGPE'].includes(c)).length;
+  const classicCount = games.filter(c => !ALL_SWITCH_GAME_CODES.includes(c)).length;
   if (classicCount > 0) {
     pills.push(`<span class="game-pill pill-retro" title="También disponible en ${classicCount} entregas clásicas (Gens 1 a 7)">+CLÁS</span>`);
   }
@@ -663,7 +683,7 @@ function getWinnerGameBannerHtml(pokemon) {
   }
 
   // Ruleta General: Mostrar listado completo de juegos agrupados por consola / generación
-  const games = Array.isArray(pokemon.games) ? pokemon.games : [];
+  const games = resolvePokemonGames(pokemon);
   if (games.length === 0) {
     return `<div id="winnerGameBanner" class="winner-game-banner winner-game-both">
       <span class="game-dot game-dot-both"></span>
@@ -671,14 +691,13 @@ function getWinnerGameBannerHtml(pokemon) {
     </div>`;
   }
 
-  const switchCodes = ['SV', 'SV-DLC', 'PLZA', 'SwSh', 'SwSh-DLC', 'PLA', 'BDSP', 'LGPE'];
-  const switchGames = games.filter(g => switchCodes.includes(g));
-  const classicGames = games.filter(g => !switchCodes.includes(g));
+  const switchGames = games.filter(g => ALL_SWITCH_GAME_CODES.includes(g));
+  const classicGames = games.filter(g => !ALL_SWITCH_GAME_CODES.includes(g));
 
   const renderChip = (g) => {
     let highlightClass = '';
     if (g === 'SV' || g === 'SV-DLC') highlightClass = 'highlight-sv';
-    else if (g === 'PLZA') highlightClass = 'highlight-plza';
+    else if (g === 'PLZA' || g === 'PLZA-DLC') highlightClass = 'highlight-plza';
     else if (g === 'SwSh' || g === 'SwSh-DLC') highlightClass = 'highlight-swsh';
     else if (g === 'PLA') highlightClass = 'highlight-pla';
     else if (g === 'BDSP') highlightClass = 'highlight-bdsp';
@@ -1775,7 +1794,8 @@ function renderPaldeaMatrix() {
       } else if (currentDexId === 'plza') {
         matchGame = q === 'luminalia' || q === 'za' || q === 'z-a';
       } else {
-        matchGame = Array.isArray(p.games) && p.games.some(g => g.toLowerCase().includes(q));
+        const gamesList = resolvePokemonGames(p);
+        matchGame = gamesList.some(g => g.toLowerCase().includes(q) || (GAME_NAMES_MAP[g] || '').toLowerCase().includes(q));
         if (!matchGame && p.generation) {
           matchGame = q === `gen ${p.generation}` || q === `gen${p.generation}` || q === `generacion ${p.generation}` || q === `generación ${p.generation}`;
         }
@@ -1826,8 +1846,14 @@ function renderPaldeaMatrix() {
       if (currentMatrixFilter === 'gen7') return p.generation === 7;
       if (currentMatrixFilter === 'gen8') return p.generation === 8;
       if (currentMatrixFilter === 'gen9') return p.generation === 9;
-      if (currentMatrixFilter === 'game_sv') return Array.isArray(p.games) && p.games.includes('SV');
-      if (currentMatrixFilter === 'game_plza') return Array.isArray(p.games) && p.games.includes('PLZA');
+      if (currentMatrixFilter === 'game_sv') {
+        const g = resolvePokemonGames(p);
+        return g.includes('SV') || g.includes('SV-DLC');
+      }
+      if (currentMatrixFilter === 'game_plza') {
+        const g = resolvePokemonGames(p);
+        return g.includes('PLZA') || g.includes('PLZA-DLC');
+      }
     }
 
     return true;
@@ -2404,8 +2430,14 @@ function applyFilters() {
       else if (selectedRange === 'gen7') filtered = filtered.filter(p => p.generation === 7);
       else if (selectedRange === 'gen8') filtered = filtered.filter(p => p.generation === 8);
       else if (selectedRange === 'gen9') filtered = filtered.filter(p => p.generation === 9);
-      else if (selectedRange === 'game_sv') filtered = filtered.filter(p => Array.isArray(p.games) && p.games.includes('SV'));
-      else if (selectedRange === 'game_plza') filtered = filtered.filter(p => Array.isArray(p.games) && p.games.includes('PLZA'));
+      else if (selectedRange === 'game_sv') filtered = filtered.filter(p => {
+        const g = resolvePokemonGames(p);
+        return g.includes('SV') || g.includes('SV-DLC');
+      });
+      else if (selectedRange === 'game_plza') filtered = filtered.filter(p => {
+        const g = resolvePokemonGames(p);
+        return g.includes('PLZA') || g.includes('PLZA-DLC');
+      });
     }
   }
 
@@ -2482,7 +2514,8 @@ function renderPokedexModalList(filterQuery = '') {
     } else if (currentDexId === 'plza') {
       matchGame = q === 'luminalia' || q === 'za' || q === 'z-a';
     } else {
-      matchGame = Array.isArray(p.games) && p.games.some(g => g.toLowerCase().includes(q));
+      const gamesList = resolvePokemonGames(p);
+      matchGame = gamesList.some(g => g.toLowerCase().includes(q) || (GAME_NAMES_MAP[g] || '').toLowerCase().includes(q));
       if (!matchGame && p.generation) {
         matchGame = q === `gen ${p.generation}` || q === `gen${p.generation}`;
       }

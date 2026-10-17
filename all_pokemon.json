@@ -38,11 +38,8 @@
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -86,11 +83,8 @@
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -134,11 +128,8 @@
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -182,10 +173,7 @@
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -229,10 +217,7 @@
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -277,10 +262,7 @@
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -323,11 +305,8 @@
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -370,11 +349,8 @@
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -417,11 +393,8 @@
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -465,9 +438,7 @@
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -509,9 +480,7 @@
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -554,9 +523,7 @@
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -597,7 +564,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "LGPE",
+      "BDSP",
+      "PLZA"
     ]
   },
   {
@@ -638,7 +607,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "LGPE",
+      "BDSP",
+      "PLZA"
     ]
   },
   {
@@ -679,7 +650,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "LGPE",
+      "BDSP",
+      "PLZA"
     ]
   },
   {
@@ -720,7 +693,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "LGPE",
+      "BDSP",
+      "PLZA"
     ]
   },
   {
@@ -761,7 +736,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "LGPE",
+      "BDSP",
+      "PLZA"
     ]
   },
   {
@@ -802,7 +779,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "LGPE",
+      "BDSP",
+      "PLZA"
     ]
   },
   {
@@ -841,7 +820,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "LGPE",
+      "BDSP"
     ]
   },
   {
@@ -880,7 +860,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "LGPE",
+      "BDSP"
     ]
   },
   {
@@ -920,7 +901,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "LGPE",
+      "BDSP"
     ]
   },
   {
@@ -960,7 +942,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "LGPE",
+      "BDSP"
     ]
   },
   {
@@ -1000,7 +983,7 @@
       "SM",
       "USUM",
       "LGPE",
-      "SV",
+      "BDSP",
       "SV-DLC",
       "PLZA"
     ]
@@ -1042,7 +1025,7 @@
       "SM",
       "USUM",
       "LGPE",
-      "SV",
+      "BDSP",
       "SV-DLC",
       "PLZA"
     ]
@@ -1086,11 +1069,9 @@
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -1133,11 +1114,9 @@
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -1178,13 +1157,9 @@
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -1224,13 +1199,9 @@
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -1271,10 +1242,8 @@
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -1315,10 +1284,8 @@
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -1360,10 +1327,8 @@
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -1404,10 +1369,8 @@
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -1448,10 +1411,8 @@
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -1493,10 +1454,8 @@
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -1538,10 +1497,8 @@
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -1585,10 +1542,8 @@
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -1631,12 +1586,9 @@
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -1677,12 +1629,9 @@
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -1724,13 +1673,10 @@
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -1772,13 +1718,10 @@
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -1820,10 +1763,10 @@
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLA",
+      "PLZA-DLC"
     ]
   },
   {
@@ -1865,10 +1808,10 @@
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLA",
+      "PLZA-DLC"
     ]
   },
   {
@@ -1912,12 +1855,8 @@
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -1961,12 +1900,8 @@
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -2010,12 +1945,8 @@
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -2055,7 +1986,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "LGPE",
+      "BDSP",
+      "PLA"
     ]
   },
   {
@@ -2095,7 +2028,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "LGPE",
+      "BDSP",
+      "PLA"
     ]
   },
   {
@@ -2136,9 +2071,8 @@
       "SM",
       "USUM",
       "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV"
     ]
   },
   {
@@ -2179,9 +2113,8 @@
       "SM",
       "USUM",
       "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV"
     ]
   },
   {
@@ -2222,12 +2155,8 @@
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -2268,12 +2197,8 @@
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -2315,12 +2240,9 @@
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -2362,12 +2284,9 @@
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -2407,13 +2326,10 @@
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -2453,13 +2369,10 @@
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -2500,9 +2413,9 @@
       "SM",
       "USUM",
       "LGPE",
+      "BDSP",
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -2543,9 +2456,9 @@
       "SM",
       "USUM",
       "LGPE",
+      "BDSP",
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -2586,12 +2499,9 @@
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -2632,12 +2542,9 @@
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -2679,13 +2586,9 @@
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -2727,13 +2630,9 @@
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -2776,13 +2675,9 @@
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -2823,10 +2718,10 @@
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLA",
+      "PLZA"
     ]
   },
   {
@@ -2867,10 +2762,10 @@
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLA",
+      "PLZA"
     ]
   },
   {
@@ -2911,10 +2806,10 @@
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLA",
+      "PLZA"
     ]
   },
   {
@@ -2956,9 +2851,9 @@
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLA",
+      "PLZA"
     ]
   },
   {
@@ -3000,9 +2895,9 @@
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLA",
+      "PLZA"
     ]
   },
   {
@@ -3044,9 +2939,9 @@
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLA",
+      "PLZA"
     ]
   },
   {
@@ -3088,7 +2983,7 @@
       "SM",
       "USUM",
       "LGPE",
-      "SV",
+      "BDSP",
       "SV-DLC",
       "PLZA"
     ]
@@ -3132,7 +3027,7 @@
       "SM",
       "USUM",
       "LGPE",
-      "SV",
+      "BDSP",
       "SV-DLC",
       "PLZA"
     ]
@@ -3176,7 +3071,7 @@
       "SM",
       "USUM",
       "LGPE",
-      "SV",
+      "BDSP",
       "SV-DLC",
       "PLZA"
     ]
@@ -3219,13 +3114,10 @@
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -3266,13 +3158,10 @@
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -3314,9 +3203,9 @@
       "SM",
       "USUM",
       "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -3358,9 +3247,9 @@
       "SM",
       "USUM",
       "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -3402,9 +3291,9 @@
       "SM",
       "USUM",
       "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -3445,7 +3334,6 @@
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA"
     ]
@@ -3488,7 +3376,6 @@
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA"
     ]
@@ -3532,12 +3419,9 @@
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -3580,12 +3464,9 @@
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -3628,13 +3509,10 @@
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -3676,13 +3554,10 @@
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -3724,9 +3599,8 @@
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -3767,9 +3641,8 @@
       "SM",
       "USUM",
       "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV-DLC"
     ]
   },
   {
@@ -3810,9 +3683,8 @@
       "SM",
       "USUM",
       "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV-DLC"
     ]
   },
   {
@@ -3852,9 +3724,8 @@
       "SM",
       "USUM",
       "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV-DLC"
     ]
   },
   {
@@ -3895,9 +3766,8 @@
       "SM",
       "USUM",
       "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV-DLC"
     ]
   },
   {
@@ -3937,9 +3807,8 @@
       "SM",
       "USUM",
       "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV"
     ]
   },
   {
@@ -3979,9 +3848,8 @@
       "SM",
       "USUM",
       "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV"
     ]
   },
   {
@@ -4022,12 +3890,8 @@
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -4069,12 +3933,8 @@
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -4117,11 +3977,9 @@
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -4165,11 +4023,9 @@
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -4213,11 +4069,9 @@
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -4260,9 +4114,9 @@
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLA",
+      "PLZA"
     ]
   },
   {
@@ -4302,9 +4156,8 @@
       "SM",
       "USUM",
       "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV"
     ]
   },
   {
@@ -4344,9 +4197,8 @@
       "SM",
       "USUM",
       "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV"
     ]
   },
   {
@@ -4387,9 +4239,7 @@
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -4430,9 +4280,7 @@
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -4472,9 +4320,9 @@
       "SM",
       "USUM",
       "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV"
     ]
   },
   {
@@ -4514,9 +4362,9 @@
       "SM",
       "USUM",
       "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV"
     ]
   },
   {
@@ -4557,13 +4405,9 @@
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -4604,13 +4448,9 @@
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -4650,10 +4490,9 @@
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -4693,10 +4532,9 @@
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -4739,12 +4577,8 @@
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -4787,12 +4621,8 @@
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -4832,7 +4662,6 @@
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA"
@@ -4876,12 +4705,8 @@
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -4922,12 +4747,8 @@
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -4970,12 +4791,9 @@
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -5018,12 +4836,9 @@
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -5064,13 +4879,10 @@
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -5110,7 +4922,6 @@
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA"
@@ -5152,10 +4963,9 @@
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -5196,13 +5006,9 @@
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -5243,13 +5049,9 @@
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -5290,9 +5092,7 @@
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -5333,9 +5133,7 @@
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -5375,10 +5173,9 @@
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -5419,10 +5216,9 @@
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -5465,9 +5261,9 @@
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLA",
+      "PLZA-DLC"
     ]
   },
   {
@@ -5509,12 +5305,10 @@
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -5556,10 +5350,8 @@
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -5600,13 +5392,10 @@
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -5647,13 +5436,10 @@
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -5692,10 +5478,9 @@
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -5734,13 +5519,9 @@
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -5781,11 +5562,9 @@
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -5828,11 +5607,9 @@
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -5874,12 +5651,8 @@
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -5919,12 +5692,8 @@
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -5972,11 +5741,9 @@
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -6025,11 +5792,9 @@
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -6078,11 +5843,9 @@
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -6131,11 +5894,9 @@
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -6177,13 +5938,11 @@
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -6224,10 +5983,8 @@
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -6268,10 +6025,8 @@
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -6312,10 +6067,8 @@
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -6356,10 +6109,8 @@
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -6399,10 +6150,9 @@
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -6443,12 +6193,9 @@
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -6488,13 +6235,9 @@
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -6534,13 +6277,9 @@
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -6580,13 +6319,9 @@
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -6627,12 +6362,9 @@
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -6674,12 +6406,9 @@
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -6722,12 +6451,9 @@
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -6767,11 +6493,8 @@
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -6812,13 +6535,9 @@
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -6856,8 +6575,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
+      "BDSP",
       "SV-DLC",
       "PLZA"
     ]
@@ -6897,8 +6615,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
+      "BDSP",
       "SV-DLC",
       "PLZA"
     ]
@@ -6938,8 +6655,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
+      "BDSP",
       "SV-DLC",
       "PLZA"
     ]
@@ -6979,10 +6695,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -7020,10 +6735,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -7061,10 +6775,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -7102,8 +6815,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
+      "BDSP",
       "SV-DLC",
       "PLZA"
     ]
@@ -7143,8 +6855,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
+      "BDSP",
       "SV-DLC",
       "PLZA"
     ]
@@ -7184,8 +6895,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
+      "BDSP",
       "SV-DLC",
       "PLZA"
     ]
@@ -7224,10 +6934,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV-DLC"
     ]
   },
   {
@@ -7264,10 +6972,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV-DLC"
     ]
   },
   {
@@ -7305,14 +7011,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -7350,14 +7051,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -7395,7 +7091,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "BDSP"
     ]
   },
   {
@@ -7433,7 +7129,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "BDSP"
     ]
   },
   {
@@ -7471,8 +7167,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
+      "BDSP",
       "SV-DLC",
       "PLZA"
     ]
@@ -7512,8 +7207,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
+      "BDSP",
       "SV-DLC",
       "PLZA"
     ]
@@ -7554,11 +7248,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLA",
+      "PLZA-DLC"
     ]
   },
   {
@@ -7596,14 +7289,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -7641,14 +7329,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -7686,13 +7369,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -7731,12 +7411,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -7777,14 +7454,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -7822,9 +7495,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA"
     ]
@@ -7865,9 +7536,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA"
     ]
@@ -7907,11 +7576,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -7949,11 +7615,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -7991,9 +7654,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
+      "BDSP",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -8032,9 +7694,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
+      "BDSP",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -8073,9 +7734,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
+      "BDSP",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -8115,14 +7775,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -8161,14 +7816,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -8207,14 +7857,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -8251,14 +7896,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -8297,14 +7938,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -8343,10 +7979,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV"
     ]
   },
   {
@@ -8385,10 +8019,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV"
     ]
   },
   {
@@ -8427,10 +8059,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV"
     ]
   },
   {
@@ -8467,10 +8097,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -8507,10 +8136,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV"
     ]
   },
   {
@@ -8547,10 +8174,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV"
     ]
   },
   {
@@ -8588,10 +8213,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -8630,14 +8254,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -8676,14 +8295,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -8727,13 +8341,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -8778,13 +8389,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -8823,10 +8431,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV"
     ]
   },
   {
@@ -8865,13 +8472,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -8909,10 +8512,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV"
     ]
   },
   {
@@ -8948,7 +8550,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "BDSP",
+      "PLA"
     ]
   },
   {
@@ -8985,11 +8588,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -9027,10 +8627,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV"
     ]
   },
   {
@@ -9067,10 +8665,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV"
     ]
   },
   {
@@ -9108,10 +8704,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV"
     ]
   },
   {
@@ -9148,14 +8742,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -9193,10 +8782,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -9234,11 +8822,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLA",
+      "PLZA"
     ]
   },
   {
@@ -9275,10 +8862,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV-DLC"
     ]
   },
   {
@@ -9315,10 +8900,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV-DLC"
     ]
   },
   {
@@ -9356,14 +8939,11 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -9402,13 +8982,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -9446,11 +9023,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -9487,13 +9061,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -9533,14 +9104,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -9578,10 +9145,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV"
     ]
   },
   {
@@ -9619,10 +9185,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV"
     ]
   },
   {
@@ -9659,10 +9224,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV-DLC"
     ]
   },
   {
@@ -9700,10 +9263,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV-DLC"
     ]
   },
   {
@@ -9742,14 +9303,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -9788,14 +9345,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -9833,11 +9386,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -9874,9 +9424,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA"
     ]
@@ -9915,9 +9463,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA"
     ]
@@ -9956,13 +9502,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -10001,9 +9543,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA"
     ]
@@ -10042,12 +9582,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -10087,9 +9623,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
+      "BDSP",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -10128,9 +9663,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
+      "BDSP",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -10170,14 +9704,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -10214,10 +9743,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV"
     ]
   },
   {
@@ -10254,10 +9781,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV"
     ]
   },
   {
@@ -10295,14 +9820,11 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -10339,10 +9861,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV"
     ]
   },
   {
@@ -10378,10 +9899,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV-DLC"
     ]
   },
   {
@@ -10420,14 +9939,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -10466,14 +9980,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -10511,11 +10020,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -10553,14 +10059,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -10598,14 +10100,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -10641,11 +10139,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -10683,14 +10178,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -10726,14 +10217,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -10769,14 +10255,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -10812,14 +10293,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -10858,13 +10334,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -10904,13 +10376,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -10950,13 +10418,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -10994,14 +10458,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -11038,14 +10497,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -11082,11 +10536,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -11122,14 +10573,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -11165,14 +10612,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -11208,14 +10651,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -11251,14 +10690,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -11295,14 +10730,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -11339,14 +10770,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -11382,14 +10809,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -11426,14 +10849,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -11470,14 +10889,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -11512,10 +10927,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV-DLC"
     ]
   },
   {
@@ -11550,10 +10963,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV-DLC"
     ]
   },
   {
@@ -11589,11 +11000,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -11629,11 +11037,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -11671,7 +11076,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "BDSP",
+      "PLA"
     ]
   },
   {
@@ -11709,7 +11115,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "BDSP",
+      "PLA"
     ]
   },
   {
@@ -11748,7 +11155,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "BDSP",
+      "PLA"
     ]
   },
   {
@@ -11786,7 +11194,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "BDSP",
+      "PLA"
     ]
   },
   {
@@ -11825,7 +11234,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "BDSP",
+      "PLA"
     ]
   },
   {
@@ -11862,14 +11272,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -11906,14 +11311,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -11950,14 +11350,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -11993,14 +11388,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -12037,14 +11427,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -12081,14 +11466,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -12124,7 +11504,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "BDSP"
     ]
   },
   {
@@ -12160,7 +11540,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "BDSP"
     ]
   },
   {
@@ -12196,14 +11576,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -12239,14 +11614,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -12284,13 +11654,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -12329,13 +11696,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -12374,13 +11738,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -12417,10 +11778,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV"
     ]
   },
   {
@@ -12456,10 +11815,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV"
     ]
   },
   {
@@ -12494,10 +11851,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV"
     ]
   },
   {
@@ -12533,10 +11888,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV"
     ]
   },
   {
@@ -12572,10 +11925,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV"
     ]
   },
   {
@@ -12611,10 +11962,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV"
     ]
   },
   {
@@ -12650,10 +11999,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV"
     ]
   },
   {
@@ -12690,11 +12037,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -12731,11 +12075,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -12772,11 +12113,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -12812,11 +12150,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -12852,11 +12187,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -12892,11 +12224,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -12931,10 +12260,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV"
     ]
   },
   {
@@ -12969,10 +12296,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV"
     ]
   },
   {
@@ -13009,14 +12334,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -13051,10 +12371,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -13089,7 +12408,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "BDSP"
     ]
   },
   {
@@ -13124,7 +12443,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "BDSP"
     ]
   },
   {
@@ -13159,13 +12478,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -13201,11 +12516,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -13242,11 +12555,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -13283,11 +12594,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -13324,11 +12633,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -13364,9 +12671,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
+      "BDSP",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -13403,9 +12709,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
+      "BDSP",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -13441,11 +12746,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -13480,11 +12783,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -13518,10 +12819,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV-DLC"
     ]
   },
   {
@@ -13555,10 +12854,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV-DLC"
     ]
   },
   {
@@ -13592,10 +12889,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV-DLC"
     ]
   },
   {
@@ -13629,10 +12924,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV-DLC"
     ]
   },
   {
@@ -13669,11 +12962,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLA",
+      "PLZA"
     ]
   },
   {
@@ -13708,10 +13000,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
+      "BDSP",
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -13746,10 +13037,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
+      "BDSP",
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -13785,11 +13075,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -13825,11 +13113,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -13864,11 +13150,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -13903,11 +13186,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -13943,9 +13223,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
+      "BDSP",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -13982,9 +13261,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
+      "BDSP",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -14019,14 +13297,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -14061,10 +13334,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
+      "BDSP",
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -14099,10 +13371,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
+      "BDSP",
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -14136,7 +13407,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "BDSP"
     ]
   },
   {
@@ -14172,14 +13443,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -14216,14 +13482,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -14260,14 +13521,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -14302,10 +13558,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV"
     ]
   },
   {
@@ -14341,10 +13595,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV"
     ]
   },
   {
@@ -14380,13 +13632,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -14423,13 +13671,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -14464,10 +13708,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
+      "BDSP",
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -14501,10 +13744,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
+      "BDSP",
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -14539,11 +13781,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -14578,11 +13817,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -14618,14 +13854,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -14661,14 +13893,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -14703,14 +13931,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -14746,14 +13969,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -14789,11 +14007,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -14829,11 +14044,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -14869,11 +14081,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -14909,11 +14118,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -14949,11 +14155,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -14989,11 +14192,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -15028,14 +14228,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -15070,14 +14266,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -15111,7 +14303,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "BDSP"
     ]
   },
   {
@@ -15145,7 +14337,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "BDSP",
+      "PLZA-DLC"
     ]
   },
   {
@@ -15180,9 +14373,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
+      "BDSP",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -15218,9 +14410,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
+      "BDSP",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -15257,14 +14448,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -15300,14 +14487,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -15342,10 +14525,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV"
     ]
   },
   {
@@ -15380,10 +14561,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
+      "BDSP",
+      "PLA",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -15417,11 +14598,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -15456,11 +14635,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -15496,13 +14672,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -15539,13 +14712,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -15583,8 +14753,6 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA"
@@ -15624,8 +14792,6 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA"
@@ -15665,8 +14831,6 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA"
@@ -15705,7 +14869,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "BDSP"
     ]
   },
   {
@@ -15741,7 +14905,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "BDSP"
     ]
   },
   {
@@ -15777,7 +14941,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "BDSP"
     ]
   },
   {
@@ -15812,11 +14976,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -15850,10 +15011,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV"
     ]
   },
   {
@@ -15889,13 +15048,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -15932,13 +15087,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -15976,13 +15127,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -16020,12 +15167,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -16064,12 +15207,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -16108,12 +15247,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -16149,14 +15284,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -16190,14 +15320,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -16231,14 +15356,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -16273,14 +15393,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -16315,14 +15431,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -16356,14 +15468,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -16397,14 +15505,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -16439,14 +15543,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -16481,14 +15581,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -16522,10 +15617,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV-DLC"
     ]
   },
   {
@@ -16558,10 +15651,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -16594,10 +15686,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -16631,10 +15722,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -16667,10 +15757,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -16704,10 +15793,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -16741,10 +15829,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -16777,10 +15864,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -16813,10 +15899,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -16850,10 +15935,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -16887,10 +15971,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
+      "BDSP",
+      "PLA",
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -16924,10 +16008,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
+      "BDSP",
+      "PLA",
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -16961,10 +16045,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
+      "BDSP",
+      "PLA",
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -16996,7 +16080,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "BDSP",
+      "PLA"
     ]
   },
   {
@@ -17029,7 +16114,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "BDSP",
+      "PLA"
     ]
   },
   {
@@ -17061,10 +16147,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV"
     ]
   },
   {
@@ -17096,10 +16181,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV"
     ]
   },
   {
@@ -17132,14 +16216,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -17172,14 +16252,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -17212,14 +16288,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -17253,11 +16325,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLA",
+      "PLZA"
     ]
   },
   {
@@ -17291,11 +16362,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLA",
+      "PLZA"
     ]
   },
   {
@@ -17327,10 +16397,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -17362,10 +16431,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -17398,10 +16466,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -17434,10 +16501,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -17470,7 +16536,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "BDSP",
+      "PLA"
     ]
   },
   {
@@ -17504,7 +16571,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "BDSP",
+      "PLA"
     ]
   },
   {
@@ -17538,7 +16606,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "BDSP",
+      "PLA"
     ]
   },
   {
@@ -17571,14 +16640,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -17611,14 +16676,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -17649,10 +16710,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV"
     ]
   },
   {
@@ -17684,10 +16744,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV"
     ]
   },
   {
@@ -17719,10 +16778,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV"
     ]
   },
   {
@@ -17754,9 +16812,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA"
     ]
@@ -17790,9 +16846,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA"
     ]
@@ -17826,14 +16880,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -17866,14 +16916,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -17905,10 +16951,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -17941,14 +16986,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -17981,14 +17022,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -18020,11 +17057,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLA",
+      "PLZA"
     ]
   },
   {
@@ -18056,11 +17092,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLA",
+      "PLZA"
     ]
   },
   {
@@ -18092,10 +17127,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV"
     ]
   },
   {
@@ -18128,10 +17162,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV"
     ]
   },
   {
@@ -18163,7 +17196,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "BDSP",
+      "PLA"
     ]
   },
   {
@@ -18195,7 +17229,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "BDSP",
+      "PLA"
     ]
   },
   {
@@ -18227,10 +17262,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
+      "BDSP",
+      "PLA",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -18263,14 +17298,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -18303,14 +17334,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -18343,14 +17370,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -18383,14 +17406,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -18422,14 +17441,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -18463,11 +17478,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLA",
+      "PLZA-DLC"
     ]
   },
   {
@@ -18500,14 +17514,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -18539,7 +17549,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "BDSP",
+      "PLA"
     ]
   },
   {
@@ -18571,14 +17582,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -18612,13 +17619,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -18653,13 +17657,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -18694,13 +17695,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -18733,14 +17731,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -18772,13 +17766,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -18812,13 +17803,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -18851,13 +17839,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -18890,13 +17875,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -18930,9 +17912,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA"
     ]
@@ -18967,9 +17947,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA"
     ]
@@ -19004,14 +17982,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -19044,14 +18018,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -19082,7 +18052,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "BDSP",
+      "PLA"
     ]
   },
   {
@@ -19114,10 +18085,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV"
     ]
   },
   {
@@ -19149,10 +18119,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV"
     ]
   },
   {
@@ -19185,9 +18154,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA"
     ]
@@ -19222,13 +18189,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -19262,13 +18226,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -19303,14 +18264,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -19344,14 +18301,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -19383,8 +18336,6 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA"
@@ -19421,14 +18372,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -19460,8 +18407,6 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA"
@@ -19497,14 +18442,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -19537,14 +18478,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -19578,9 +18515,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA"
     ]
@@ -19615,10 +18550,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -19657,13 +18591,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -19703,13 +18634,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -19743,10 +18671,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -19780,14 +18707,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -19820,14 +18743,11 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -19862,13 +18782,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -19902,10 +18819,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -19938,14 +18854,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -19979,13 +18891,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -20018,14 +18927,11 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -20056,14 +18962,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -20094,14 +18996,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -20132,14 +19030,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -20171,14 +19065,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -20210,14 +19100,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -20249,14 +19135,11 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -20287,14 +19170,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -20326,14 +19205,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -20364,14 +19239,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -20403,10 +19274,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -20438,10 +19308,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -20472,10 +19341,10 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
+      "BDSP",
+      "PLA",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -20506,10 +19375,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -20540,10 +19408,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -20572,11 +19439,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh-DLC"
     ]
   },
   {
@@ -20606,10 +19469,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -20639,10 +19499,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -20672,10 +19529,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -20705,8 +19559,6 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -20739,8 +19591,6 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -20773,8 +19623,6 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -20806,10 +19654,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -20839,10 +19685,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -20872,10 +19716,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -20904,7 +19746,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "PLZA"
     ]
   },
   {
@@ -20933,7 +19775,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "PLZA"
     ]
   },
   {
@@ -20963,11 +19805,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh-DLC"
     ]
   },
   {
@@ -20997,11 +19835,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh-DLC"
     ]
   },
   {
@@ -21031,11 +19865,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh-DLC"
     ]
   },
   {
@@ -21064,11 +19894,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -21097,11 +19924,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -21130,7 +19954,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "PLZA"
     ]
   },
   {
@@ -21159,7 +19983,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "PLZA"
     ]
   },
   {
@@ -21188,7 +20012,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "PLZA"
     ]
   },
   {
@@ -21217,7 +20041,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "PLZA"
     ]
   },
   {
@@ -21246,7 +20070,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "PLZA"
     ]
   },
   {
@@ -21275,7 +20099,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "PLZA"
     ]
   },
   {
@@ -21304,11 +20128,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -21337,11 +20158,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -21372,11 +20190,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -21407,11 +20221,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -21442,11 +20252,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -21475,10 +20281,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -21507,10 +20310,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -21540,11 +20340,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -21574,11 +20370,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -21608,11 +20400,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -21642,11 +20430,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -21676,11 +20460,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -21709,12 +20489,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -21746,12 +20521,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -21781,11 +20551,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -21815,14 +20582,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -21852,14 +20613,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -21889,14 +20644,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -21926,11 +20675,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -21961,11 +20706,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -21996,11 +20737,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -22028,11 +20765,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -22060,11 +20794,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -22095,10 +20826,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -22129,10 +20857,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -22163,10 +20888,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -22197,11 +20919,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -22232,11 +20951,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -22267,11 +20983,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -22301,14 +21014,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -22338,14 +21045,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -22374,14 +21075,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -22410,14 +21106,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -22446,14 +21137,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -22484,13 +21170,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -22522,13 +21203,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -22560,13 +21236,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -22596,11 +21267,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -22629,11 +21296,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -22661,11 +21324,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -22695,11 +21354,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -22729,11 +21384,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -22763,12 +21414,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -22800,12 +21446,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -22836,11 +21477,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -22870,11 +21507,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -22904,11 +21538,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -22938,11 +21569,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh-DLC"
     ]
   },
   {
@@ -22972,11 +21599,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh-DLC"
     ]
   },
   {
@@ -23006,11 +21629,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh-DLC"
     ]
   },
   {
@@ -23040,11 +21659,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh-DLC"
     ]
   },
   {
@@ -23073,11 +21688,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -23106,11 +21718,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -23139,14 +21748,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -23175,14 +21779,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -23211,14 +21810,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -23247,14 +21840,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -23284,14 +21871,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -23321,14 +21902,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -23358,14 +21933,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -23395,14 +21964,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -23432,14 +21995,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -23469,14 +22026,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -23506,10 +22057,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -23539,10 +22087,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -23572,11 +22117,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -23606,11 +22148,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -23640,11 +22179,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -23674,10 +22210,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -23707,10 +22240,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -23739,11 +22269,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -23772,11 +22299,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -23806,11 +22329,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -23840,14 +22359,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -23877,14 +22391,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -23914,11 +22423,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -23948,11 +22453,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -23980,10 +22481,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -24013,14 +22511,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -24050,14 +22542,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -24087,11 +22573,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -24121,11 +22603,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -24155,11 +22633,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -24189,11 +22663,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -24223,11 +22693,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -24257,9 +22723,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -24290,9 +22754,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -24323,9 +22785,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -24355,11 +22815,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -24388,11 +22844,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -24423,12 +22875,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -24461,12 +22908,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -24499,12 +22941,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -24536,14 +22973,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -24573,14 +23004,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -24610,14 +23035,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -24646,14 +23065,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -24682,14 +23095,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -24717,14 +23124,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -24753,11 +23155,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -24786,11 +23184,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -24819,11 +23213,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -24852,14 +23243,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -24888,14 +23273,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -24923,11 +23302,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh-DLC"
     ]
   },
   {
@@ -24957,14 +23332,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -24994,14 +23364,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -25032,14 +23397,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -25070,14 +23429,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -25105,11 +23458,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh-DLC"
     ]
   },
   {
@@ -25139,14 +23488,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -25176,14 +23520,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -25213,14 +23552,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -25250,14 +23583,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -25285,11 +23612,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -25318,11 +23641,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -25353,14 +23672,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -25391,14 +23704,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -25429,14 +23736,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -25466,14 +23767,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -25503,14 +23798,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -25539,14 +23828,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -25575,14 +23859,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -25611,14 +23890,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -25646,14 +23920,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -25682,14 +23951,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -25718,14 +23982,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -25754,14 +24012,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -25790,14 +24042,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -25826,14 +24073,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -25862,14 +24103,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -25898,10 +24134,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -25930,11 +24164,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -25962,8 +24193,6 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -25993,8 +24222,6 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -26025,8 +24252,6 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -26056,8 +24281,6 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -26087,8 +24310,6 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -26119,8 +24340,6 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -26150,8 +24369,6 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -26181,8 +24398,6 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -26213,8 +24428,6 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -26243,11 +24456,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -26275,11 +24485,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -26308,13 +24515,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -26344,13 +24546,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -26380,13 +24577,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -26415,9 +24607,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -26446,9 +24636,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -26478,9 +24666,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -26509,9 +24695,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -26540,9 +24724,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -26571,9 +24753,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -26602,9 +24782,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -26633,9 +24811,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -26663,9 +24839,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -26693,9 +24867,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -26723,11 +24895,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -26755,11 +24924,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -26785,7 +24951,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "PLZA"
     ]
   },
   {
@@ -26812,12 +24978,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -26846,12 +25007,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -26882,11 +25038,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -26915,11 +25068,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -26948,11 +25098,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -26979,11 +25126,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -27010,11 +25154,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -27041,11 +25182,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -27072,11 +25210,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -27104,12 +25239,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -27139,12 +25269,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -27174,11 +25299,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -27206,11 +25328,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -27238,13 +25357,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -27273,13 +25387,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -27307,13 +25416,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -27341,13 +25445,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -27376,11 +25475,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -27408,11 +25504,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -27440,11 +25533,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -27472,11 +25562,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -27504,11 +25591,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -27536,11 +25620,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -27574,13 +25655,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -27608,13 +25685,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -27642,13 +25714,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -27676,12 +25743,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -27711,13 +25773,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -27746,13 +25804,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -27781,13 +25835,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -27815,13 +25865,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -27850,12 +25895,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -27885,12 +25925,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -27920,11 +25955,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -27952,11 +25984,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -27983,13 +26012,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -28017,13 +26042,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -28052,13 +26073,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -28087,13 +26103,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -28120,11 +26131,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -28151,11 +26159,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -28182,11 +26187,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -28213,12 +26215,7 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -28247,10 +26244,8 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -28277,14 +26272,9 @@
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -28311,14 +26301,9 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -28345,14 +26330,9 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -28379,14 +26359,9 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -28412,14 +26387,8 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -28445,14 +26414,8 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -28479,14 +26442,8 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -28512,14 +26469,8 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -28545,14 +26496,8 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -28579,14 +26524,8 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -28613,10 +26552,7 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -28643,10 +26579,7 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -28673,10 +26606,7 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -28701,10 +26631,7 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -28729,10 +26656,7 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -28758,14 +26682,8 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -28792,14 +26710,8 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -28826,14 +26738,8 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -28858,10 +26764,8 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -28887,10 +26791,8 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -28915,10 +26817,7 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -28944,14 +26843,8 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -28977,14 +26870,8 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -29009,14 +26896,8 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -29041,14 +26922,8 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -29072,11 +26947,7 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -29102,14 +26973,8 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -29135,14 +27000,8 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -29167,14 +27026,8 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -29199,14 +27052,8 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -29232,14 +27079,8 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -29265,14 +27106,8 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -29297,14 +27132,8 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -29329,14 +27158,8 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -29362,11 +27185,7 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -29392,11 +27211,7 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -29422,14 +27237,8 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -29455,14 +27264,8 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -29488,11 +27291,7 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -29518,11 +27317,7 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -29548,14 +27343,8 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -29581,14 +27370,8 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -29614,14 +27397,8 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -29645,14 +27422,8 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -29677,14 +27448,8 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -29708,14 +27473,8 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -29741,11 +27500,8 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -29771,11 +27527,8 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -29801,14 +27554,9 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -29834,14 +27582,9 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -29865,11 +27608,7 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -29894,11 +27633,7 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -29923,11 +27658,7 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -29952,10 +27683,7 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -29979,10 +27707,7 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -30007,11 +27732,7 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -30036,11 +27757,7 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -30065,14 +27782,9 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -30097,10 +27809,7 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -30125,11 +27834,8 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -30154,11 +27860,7 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -30184,14 +27886,8 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -30218,14 +27914,8 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -30252,14 +27942,8 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -30284,11 +27968,7 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh-DLC"
     ]
   },
   {
@@ -30313,11 +27993,7 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh-DLC"
     ]
   },
   {
@@ -30342,11 +28018,7 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh-DLC"
     ]
   },
   {
@@ -30371,11 +28043,7 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh-DLC"
     ]
   },
   {
@@ -30402,14 +28070,8 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -30436,14 +28098,8 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -30471,14 +28127,8 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -30506,14 +28156,8 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -30538,11 +28182,7 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh-DLC"
     ]
   },
   {
@@ -30567,11 +28207,7 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh-DLC"
     ]
   },
   {
@@ -30596,11 +28232,7 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh-DLC"
     ]
   },
   {
@@ -30624,11 +28256,7 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh-DLC"
     ]
   },
   {
@@ -30653,11 +28281,7 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh-DLC"
     ]
   },
   {
@@ -30682,11 +28306,7 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh-DLC"
     ]
   },
   {
@@ -30711,11 +28331,7 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh-DLC"
     ]
   },
   {
@@ -30739,14 +28355,8 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -30771,14 +28381,9 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -30803,11 +28408,8 @@
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -30830,10 +28432,8 @@
       "0804"
     ],
     "games": [
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "USUM",
+      "SwSh-DLC"
     ]
   },
   {
@@ -30857,10 +28457,8 @@
       "0804"
     ],
     "games": [
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "USUM",
+      "SwSh-DLC"
     ]
   },
   {
@@ -30883,10 +28481,8 @@
       "0805"
     ],
     "games": [
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "USUM",
+      "SwSh-DLC"
     ]
   },
   {
@@ -30909,10 +28505,8 @@
       "0806"
     ],
     "games": [
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "USUM",
+      "SwSh-DLC"
     ]
   },
   {
@@ -30934,10 +28528,9 @@
       "0807"
     ],
     "games": [
-      "SwSh",
+      "USUM",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -30960,10 +28553,9 @@
       "0809"
     ],
     "games": [
-      "SwSh",
+      "LGPE",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -30986,10 +28578,9 @@
       "0809"
     ],
     "games": [
-      "SwSh",
+      "LGPE",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -31014,12 +28605,7 @@
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -31044,12 +28630,7 @@
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -31074,12 +28655,7 @@
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -31104,12 +28680,7 @@
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -31134,12 +28705,7 @@
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -31164,12 +28730,7 @@
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -31194,12 +28755,7 @@
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -31224,12 +28780,7 @@
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -31254,12 +28805,7 @@
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -31283,12 +28829,7 @@
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -31312,12 +28853,7 @@
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -31342,12 +28878,8 @@
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -31372,12 +28904,8 @@
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -31403,12 +28931,8 @@
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -31432,10 +28956,7 @@
       "0826"
     ],
     "games": [
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -31460,10 +28981,7 @@
       "0826"
     ],
     "games": [
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -31488,10 +29006,7 @@
       "0826"
     ],
     "games": [
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -31515,9 +29030,7 @@
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -31541,9 +29054,7 @@
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -31566,10 +29077,7 @@
       "0830"
     ],
     "games": [
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -31592,10 +29100,7 @@
       "0830"
     ],
     "games": [
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -31618,10 +29123,7 @@
       "0832"
     ],
     "games": [
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -31644,10 +29146,7 @@
       "0832"
     ],
     "games": [
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -31671,12 +29170,7 @@
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -31701,12 +29195,7 @@
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -31729,10 +29218,7 @@
       "0836"
     ],
     "games": [
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -31755,10 +29241,7 @@
       "0836"
     ],
     "games": [
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -31783,12 +29266,7 @@
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -31814,12 +29292,7 @@
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -31845,12 +29318,7 @@
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -31878,12 +29346,7 @@
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -31911,12 +29374,7 @@
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -31944,12 +29402,7 @@
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -31973,12 +29426,7 @@
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -32002,12 +29450,7 @@
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -32031,12 +29474,7 @@
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -32060,12 +29498,7 @@
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -32089,12 +29522,7 @@
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -32119,12 +29547,8 @@
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -32149,12 +29573,8 @@
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -32178,10 +29598,7 @@
       "0851"
     ],
     "games": [
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -32205,10 +29622,7 @@
       "0851"
     ],
     "games": [
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -32232,9 +29646,7 @@
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -32258,9 +29670,7 @@
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -32284,12 +29694,7 @@
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -32313,12 +29718,7 @@
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -32343,12 +29743,7 @@
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -32373,12 +29768,7 @@
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -32404,12 +29794,7 @@
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -32435,12 +29820,7 @@
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -32466,12 +29846,7 @@
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -32497,12 +29872,7 @@
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -32527,10 +29897,7 @@
       "0862"
     ],
     "games": [
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -32555,12 +29922,8 @@
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -32583,10 +29946,7 @@
       "0864"
     ],
     "games": [
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -32610,9 +29970,7 @@
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -32638,9 +29996,7 @@
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -32666,9 +30022,7 @@
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -32692,12 +30046,7 @@
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -32721,12 +30070,7 @@
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -32749,11 +30093,7 @@
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -32777,12 +30117,7 @@
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -32807,12 +30142,7 @@
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -32837,12 +30167,7 @@
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -32865,12 +30190,7 @@
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -32893,12 +30213,7 @@
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -32922,12 +30237,8 @@
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -32951,12 +30262,8 @@
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -32980,12 +30287,7 @@
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -33009,12 +30311,7 @@
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -33037,10 +30334,7 @@
       "0880"
     ],
     "games": [
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -33063,10 +30357,7 @@
       "0881"
     ],
     "games": [
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -33089,10 +30380,7 @@
       "0882"
     ],
     "games": [
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -33115,10 +30403,7 @@
       "0883"
     ],
     "games": [
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -33143,12 +30428,7 @@
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -33174,12 +30454,7 @@
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -33205,12 +30480,7 @@
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -33236,12 +30506,7 @@
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -33264,12 +30529,7 @@
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -33292,12 +30552,7 @@
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -33321,12 +30576,7 @@
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -33349,13 +30599,8 @@
       "0892"
     ],
     "games": [
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -33379,13 +30624,8 @@
       "0892"
     ],
     "games": [
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -33408,13 +30648,8 @@
       "0893"
     ],
     "games": [
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -33436,13 +30671,8 @@
       "0894"
     ],
     "games": [
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -33464,13 +30694,8 @@
       "0895"
     ],
     "games": [
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -33492,13 +30717,8 @@
       "0896"
     ],
     "games": [
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -33520,13 +30740,8 @@
       "0897"
     ],
     "games": [
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -33549,13 +30764,8 @@
       "0898"
     ],
     "games": [
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -33579,9 +30789,8 @@
       "0899"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -33606,9 +30815,9 @@
       "0900"
     ],
     "games": [
-      "SV",
+      "PLA",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -33633,9 +30842,8 @@
       "0901"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -33659,9 +30867,8 @@
       "0902"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -33686,9 +30893,8 @@
       "0903"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -33712,9 +30918,9 @@
       "0904"
     ],
     "games": [
-      "SV",
+      "PLA",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -33737,9 +30943,8 @@
       "0905"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -33763,9 +30968,7 @@
       "0908"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -33789,9 +30992,7 @@
       "0908"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -33816,9 +31017,7 @@
       "0908"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -33842,9 +31041,7 @@
       "0911"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -33868,9 +31065,7 @@
       "0911"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -33895,9 +31090,7 @@
       "0911"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -33921,9 +31114,7 @@
       "0914"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -33947,9 +31138,7 @@
       "0914"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -33974,9 +31163,7 @@
       "0914"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -33999,9 +31186,7 @@
       "0916"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -34024,9 +31209,7 @@
       "0916"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -34049,9 +31232,7 @@
       "0918"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -34074,9 +31255,7 @@
       "0918"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -34099,9 +31278,7 @@
       "0920"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -34125,9 +31302,7 @@
       "0920"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -34151,9 +31326,7 @@
       "0923"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -34178,9 +31351,7 @@
       "0923"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -34205,9 +31376,7 @@
       "0923"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -34230,9 +31399,7 @@
       "0925"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -34255,9 +31422,7 @@
       "0925"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -34281,8 +31446,7 @@
     ],
     "games": [
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -34306,8 +31470,7 @@
     ],
     "games": [
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -34332,9 +31495,7 @@
       "0930"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -34359,9 +31520,7 @@
       "0930"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -34386,9 +31545,7 @@
       "0930"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -34412,8 +31569,7 @@
     ],
     "games": [
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -34438,8 +31594,7 @@
     ],
     "games": [
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -34464,8 +31619,7 @@
     ],
     "games": [
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -34490,8 +31644,7 @@
     ],
     "games": [
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -34516,8 +31669,7 @@
     ],
     "games": [
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -34543,8 +31695,7 @@
     ],
     "games": [
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -34570,8 +31721,7 @@
     ],
     "games": [
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -34594,9 +31744,7 @@
       "0939"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -34619,9 +31767,7 @@
       "0939"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -34645,9 +31791,7 @@
       "0941"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -34671,9 +31815,7 @@
       "0941"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -34697,8 +31839,7 @@
     ],
     "games": [
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -34722,8 +31863,7 @@
     ],
     "games": [
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -34748,8 +31888,7 @@
     ],
     "games": [
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -34774,8 +31913,7 @@
     ],
     "games": [
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -34799,9 +31937,7 @@
       "0947"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -34825,9 +31961,7 @@
       "0947"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -34851,9 +31985,7 @@
       "0949"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -34877,9 +32009,7 @@
       "0949"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -34901,9 +32031,7 @@
       "0950"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -34927,8 +32055,7 @@
     ],
     "games": [
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -34953,8 +32080,7 @@
     ],
     "games": [
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -34977,9 +32103,7 @@
       "0954"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -35003,9 +32127,7 @@
       "0954"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -35028,9 +32150,7 @@
       "0956"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -35053,9 +32173,7 @@
       "0956"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -35081,8 +32199,7 @@
     ],
     "games": [
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -35108,8 +32225,7 @@
     ],
     "games": [
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -35135,8 +32251,7 @@
     ],
     "games": [
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -35159,9 +32274,7 @@
       "0961"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -35184,9 +32297,7 @@
       "0961"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -35209,9 +32320,7 @@
       "0962"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -35234,9 +32343,7 @@
       "0964"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -35259,9 +32366,7 @@
       "0964"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -35285,9 +32390,7 @@
       "0966"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -35311,9 +32414,7 @@
       "0966"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -35337,8 +32438,7 @@
     ],
     "games": [
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -35360,9 +32460,7 @@
       "0968"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -35387,8 +32485,7 @@
     ],
     "games": [
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -35413,8 +32510,7 @@
     ],
     "games": [
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -35438,8 +32534,7 @@
     ],
     "games": [
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -35463,8 +32558,7 @@
     ],
     "games": [
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -35488,8 +32582,7 @@
     ],
     "games": [
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -35512,9 +32605,7 @@
       "0975"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -35537,9 +32628,7 @@
       "0975"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -35562,9 +32651,7 @@
       "0976"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -35587,8 +32674,7 @@
     ],
     "games": [
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -35612,8 +32698,7 @@
     ],
     "games": [
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -35639,8 +32724,7 @@
     ],
     "games": [
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -35665,9 +32749,7 @@
       "0980"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -35691,9 +32773,7 @@
       "0981"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -35716,9 +32796,7 @@
       "0982"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -35743,9 +32821,7 @@
       "0983"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -35768,9 +32844,7 @@
       "0984"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -35793,9 +32867,7 @@
       "0985"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -35818,9 +32890,7 @@
       "0986"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -35843,9 +32913,7 @@
       "0987"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -35868,9 +32936,7 @@
       "0988"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -35893,9 +32959,7 @@
       "0989"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -35918,9 +32982,7 @@
       "0990"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -35943,9 +33005,7 @@
       "0991"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -35968,9 +33028,7 @@
       "0992"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -35993,9 +33051,7 @@
       "0993"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -36018,9 +33074,7 @@
       "0994"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -36043,9 +33097,7 @@
       "0995"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -36071,8 +33123,7 @@
     ],
     "games": [
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -36098,8 +33149,7 @@
     ],
     "games": [
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -36125,8 +33175,7 @@
     ],
     "games": [
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -36150,8 +33199,7 @@
     ],
     "games": [
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -36176,8 +33224,7 @@
     ],
     "games": [
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -36200,9 +33247,7 @@
       "1001"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -36225,9 +33270,7 @@
       "1002"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -36250,9 +33293,7 @@
       "1003"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -36275,9 +33316,7 @@
       "1004"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -36300,9 +33339,7 @@
       "1005"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -36325,9 +33362,7 @@
       "1006"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -36350,9 +33385,7 @@
       "1007"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -36375,9 +33408,7 @@
       "1008"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -36400,9 +33431,7 @@
       "1009"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -36425,9 +33454,7 @@
       "1010"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -36454,9 +33481,7 @@
       "1019"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -36480,9 +33505,7 @@
       "1013"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -36506,9 +33529,7 @@
       "1013"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -36531,9 +33552,7 @@
       "1014"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -36556,9 +33575,7 @@
       "1015"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -36581,9 +33598,7 @@
       "1016"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -36605,9 +33620,7 @@
       "1017"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -36631,9 +33644,7 @@
       "1018"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -36660,9 +33671,7 @@
       "1019"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -36685,9 +33694,7 @@
       "1020"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -36710,9 +33717,7 @@
       "1021"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -36735,9 +33740,7 @@
       "1022"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -36760,9 +33763,7 @@
       "1023"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -36784,9 +33785,7 @@
       "1024"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -36809,9 +33808,7 @@
       "1025"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   }
 ]

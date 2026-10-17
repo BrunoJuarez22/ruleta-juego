@@ -310,6 +310,23 @@ ruleta-juego/
          - En el Modal Ganador: organiza las entregas de Nintendo Switch y las entregas clásicas con etiquetas descriptivas.
          - En los selectores de línea evolutiva, lista de pendientes, capturados e historial de giros: muestra las insignias de juegos disponibles de cada integrante.
       4. Se actualizó el parámetro anti-caché a `v=4.2` en `index.html`.
+30. **Auditoría y Reconstrucción Canónica de Disponibilidad por Juego para los 1,025 Pokémon (`v=4.3`):**
+    - **Causa Raíz Detectada:** El archivo `pokemon_game_indices.csv` de PokéAPI empleado originalmente para construir `all_pokemon.json` tenía un mapeo defectuoso por generación para las entregas de Gen 7 a Gen 9:
+      - Asignaba `LGPE` a 802 Pokémon (en vez de los 153 de Kanto + Meltan/Melmetal) y omitía a Meltan (#0808) y Melmetal (#0809).
+      - Asignaba exactamente los mismos 664 Pokémon de `SwSh` tanto a `BDSP` como a `PLA`, omitiendo en `PLA` a 80 Pokémon de Hisui (incluyendo a Cyndaquil, Turtwig, Chimchar, Piplup, Starly, Bidoof, Wyrdeer, Kleavor, Ursaluna, Basculegion, Sneasler, Overqwil y Enamorus) y omitiendo en `BDSP` a 171 Pokémon de las Generaciones 1 a 4 capturables en Sinnoh/Subsuelo.
+      - Asignaba los mismos 733 Pokémon de `SV` a `PLZA`, omitiendo en `PLZA` a 109 Pokémon de Ciudad Luminalia (como Weedle, Pidgey, Abra, Machop, Furfrou, Patrat, monos elementales, fósiles de Kalos, etc.).
+    - **Solución Canónica Implementada:**
+      1. Se cruzaron las Pokédexes oficiales de PokéAPI (`letsgo-kanto`, `galar`, `isle-of-armor`, `crown-tundra`, `hisui`, `paldea`, `kitakami`, `blueberry`, `lumiose-city` y `hyperspace`) junto con las listas exactas de Pokémon obtenibles en incursiones/aventuras Dinamax/Galletas de Galano (`Snacksworth`) para reconstruir el arreglo `games` de los 1,025 Pokémon:
+         - **`LGPE` (153):** #0001–#0151 + #0808 Meltan y #0809 Melmetal.
+         - **`SwSh` (400 base) + `SwSh-DLC` (264 expansión = 664 total):** Pokédex de Galar + Isla de la Armadura + Nieves de la Corona + Aventuras Dinamax e iniciales de Hoenn/Alola.
+         - **`BDSP` (493):** Los 493 Pokémon de las Generaciones 1 a 4 (#0001 Bulbasaur a #0493 Arceus) presentes en la Pokédex Nacional de Diamante Brillante y Perla Reluciente (Sinnoh + Grutas del Subsuelo + Parque Hansa).
+         - **`PLA` (242):** Los 242 Pokémon de la Pokédex oficial de Hisui (incluyendo las 7 evoluciones/especies de Hisui #0899–#0905).
+         - **`SV` (401 base) + `SV-DLC` (332 expansión = 733 total):** Pokédex de Paldea + Noroteo (`kitakami`) + Biodomo Arándano (`blueberry`) + Legendarios de Galano y transferibles.
+         - **`PLZA` (232 base) + `PLZA-DLC` (132 Luminalia Dimensional = 364 total):** Pokédex de Ciudad Luminalia (`lumiose-city`) + Pokédex Dimensional (`hyperspace`).
+         - **Entregas Clásicas (`RB` a `USUM`):** Asignación exacta por generación debutante, corrigiendo además a Poipole, Naganadel, Stakataka, Blacephalon y Zeraora (#0803–#0807) para incluir `USUM`.
+      2. Se regeneraron `all_pokemon.json`, `all_data.js`, `switch_pokemon.json` y `switch_data.js`.
+      3. Se implementó `resolvePokemonGames(pokemon)` en `script.js` para consultar siempre el registro canónico nacional (`NATIONAL_BY_ID`), garantizando que incluso los Pokémon guardados previamente en `localStorage` o en la base de datos en la nube muestren las insignias actualizadas.
+      4. Se añadieron Sawk/Throh a los exclusivos de `SwSh` y Mime Jr./Mr. Mime + Bonsly/Sudowoodo a los exclusivos de `BDSP`, y se actualizó el anti-caché a `v=4.3` en `index.html`.
 
 ---
 

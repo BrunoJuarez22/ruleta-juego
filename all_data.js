@@ -1,8 +1,4 @@
-/**
- * all_data.js — Catálogo Canónico Nacional Completo (1025 Pokémon)
- * Contiene los 1025 Pokémon de la Pokédex Nacional (Generaciones 1 a 9)
- * con nombres oficiales en español, tipos elementales, colores oficiales, líneas evolutivas y disponibilidad en juegos.
- */
+// Base de Datos Nacional Completa (Generaciones 1 a 9 - 1025 Pokémon)
 window.ALL_NATIONAL_POKEMON = [
   {
     "pokemonId": "0001",
@@ -43,11 +39,8 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -91,11 +84,8 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -139,11 +129,8 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -187,10 +174,7 @@ window.ALL_NATIONAL_POKEMON = [
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -234,10 +218,7 @@ window.ALL_NATIONAL_POKEMON = [
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -282,10 +263,7 @@ window.ALL_NATIONAL_POKEMON = [
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -328,11 +306,8 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -375,11 +350,8 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -422,11 +394,8 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -470,9 +439,7 @@ window.ALL_NATIONAL_POKEMON = [
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -514,9 +481,7 @@ window.ALL_NATIONAL_POKEMON = [
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -559,9 +524,7 @@ window.ALL_NATIONAL_POKEMON = [
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -602,7 +565,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "LGPE",
+      "BDSP",
+      "PLZA"
     ]
   },
   {
@@ -643,7 +608,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "LGPE",
+      "BDSP",
+      "PLZA"
     ]
   },
   {
@@ -684,7 +651,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "LGPE",
+      "BDSP",
+      "PLZA"
     ]
   },
   {
@@ -725,7 +694,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "LGPE",
+      "BDSP",
+      "PLZA"
     ]
   },
   {
@@ -766,7 +737,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "LGPE",
+      "BDSP",
+      "PLZA"
     ]
   },
   {
@@ -807,7 +780,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "LGPE",
+      "BDSP",
+      "PLZA"
     ]
   },
   {
@@ -846,7 +821,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "LGPE",
+      "BDSP"
     ]
   },
   {
@@ -885,7 +861,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "LGPE",
+      "BDSP"
     ]
   },
   {
@@ -925,7 +902,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "LGPE",
+      "BDSP"
     ]
   },
   {
@@ -965,7 +943,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "LGPE",
+      "BDSP"
     ]
   },
   {
@@ -1005,7 +984,7 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SV",
+      "BDSP",
       "SV-DLC",
       "PLZA"
     ]
@@ -1047,7 +1026,7 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SV",
+      "BDSP",
       "SV-DLC",
       "PLZA"
     ]
@@ -1091,11 +1070,9 @@ window.ALL_NATIONAL_POKEMON = [
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -1138,11 +1115,9 @@ window.ALL_NATIONAL_POKEMON = [
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -1183,13 +1158,9 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -1229,13 +1200,9 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -1276,10 +1243,8 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -1320,10 +1285,8 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -1365,10 +1328,8 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -1409,10 +1370,8 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -1453,10 +1412,8 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -1498,10 +1455,8 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -1543,10 +1498,8 @@ window.ALL_NATIONAL_POKEMON = [
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -1590,10 +1543,8 @@ window.ALL_NATIONAL_POKEMON = [
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -1636,12 +1587,9 @@ window.ALL_NATIONAL_POKEMON = [
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -1682,12 +1630,9 @@ window.ALL_NATIONAL_POKEMON = [
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -1729,13 +1674,10 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -1777,13 +1719,10 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -1825,10 +1764,10 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLA",
+      "PLZA-DLC"
     ]
   },
   {
@@ -1870,10 +1809,10 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLA",
+      "PLZA-DLC"
     ]
   },
   {
@@ -1917,12 +1856,8 @@ window.ALL_NATIONAL_POKEMON = [
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -1966,12 +1901,8 @@ window.ALL_NATIONAL_POKEMON = [
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -2015,12 +1946,8 @@ window.ALL_NATIONAL_POKEMON = [
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -2060,7 +1987,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "LGPE",
+      "BDSP",
+      "PLA"
     ]
   },
   {
@@ -2100,7 +2029,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "LGPE",
+      "BDSP",
+      "PLA"
     ]
   },
   {
@@ -2141,9 +2072,8 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV"
     ]
   },
   {
@@ -2184,9 +2114,8 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV"
     ]
   },
   {
@@ -2227,12 +2156,8 @@ window.ALL_NATIONAL_POKEMON = [
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -2273,12 +2198,8 @@ window.ALL_NATIONAL_POKEMON = [
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -2320,12 +2241,9 @@ window.ALL_NATIONAL_POKEMON = [
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -2367,12 +2285,9 @@ window.ALL_NATIONAL_POKEMON = [
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -2412,13 +2327,10 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -2458,13 +2370,10 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -2505,9 +2414,9 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
+      "BDSP",
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -2548,9 +2457,9 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
+      "BDSP",
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -2591,12 +2500,9 @@ window.ALL_NATIONAL_POKEMON = [
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -2637,12 +2543,9 @@ window.ALL_NATIONAL_POKEMON = [
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -2684,13 +2587,9 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -2732,13 +2631,9 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -2781,13 +2676,9 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -2828,10 +2719,10 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLA",
+      "PLZA"
     ]
   },
   {
@@ -2872,10 +2763,10 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLA",
+      "PLZA"
     ]
   },
   {
@@ -2916,10 +2807,10 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLA",
+      "PLZA"
     ]
   },
   {
@@ -2961,9 +2852,9 @@ window.ALL_NATIONAL_POKEMON = [
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLA",
+      "PLZA"
     ]
   },
   {
@@ -3005,9 +2896,9 @@ window.ALL_NATIONAL_POKEMON = [
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLA",
+      "PLZA"
     ]
   },
   {
@@ -3049,9 +2940,9 @@ window.ALL_NATIONAL_POKEMON = [
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLA",
+      "PLZA"
     ]
   },
   {
@@ -3093,7 +2984,7 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SV",
+      "BDSP",
       "SV-DLC",
       "PLZA"
     ]
@@ -3137,7 +3028,7 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SV",
+      "BDSP",
       "SV-DLC",
       "PLZA"
     ]
@@ -3181,7 +3072,7 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SV",
+      "BDSP",
       "SV-DLC",
       "PLZA"
     ]
@@ -3224,13 +3115,10 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -3271,13 +3159,10 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -3319,9 +3204,9 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -3363,9 +3248,9 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -3407,9 +3292,9 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -3450,7 +3335,6 @@ window.ALL_NATIONAL_POKEMON = [
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA"
     ]
@@ -3493,7 +3377,6 @@ window.ALL_NATIONAL_POKEMON = [
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA"
     ]
@@ -3537,12 +3420,9 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -3585,12 +3465,9 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -3633,13 +3510,10 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -3681,13 +3555,10 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -3729,9 +3600,8 @@ window.ALL_NATIONAL_POKEMON = [
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -3772,9 +3642,8 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV-DLC"
     ]
   },
   {
@@ -3815,9 +3684,8 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV-DLC"
     ]
   },
   {
@@ -3857,9 +3725,8 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV-DLC"
     ]
   },
   {
@@ -3900,9 +3767,8 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV-DLC"
     ]
   },
   {
@@ -3942,9 +3808,8 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV"
     ]
   },
   {
@@ -3984,9 +3849,8 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV"
     ]
   },
   {
@@ -4027,12 +3891,8 @@ window.ALL_NATIONAL_POKEMON = [
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -4074,12 +3934,8 @@ window.ALL_NATIONAL_POKEMON = [
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -4122,11 +3978,9 @@ window.ALL_NATIONAL_POKEMON = [
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -4170,11 +4024,9 @@ window.ALL_NATIONAL_POKEMON = [
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -4218,11 +4070,9 @@ window.ALL_NATIONAL_POKEMON = [
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -4265,9 +4115,9 @@ window.ALL_NATIONAL_POKEMON = [
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLA",
+      "PLZA"
     ]
   },
   {
@@ -4307,9 +4157,8 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV"
     ]
   },
   {
@@ -4349,9 +4198,8 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV"
     ]
   },
   {
@@ -4392,9 +4240,7 @@ window.ALL_NATIONAL_POKEMON = [
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -4435,9 +4281,7 @@ window.ALL_NATIONAL_POKEMON = [
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -4477,9 +4321,9 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV"
     ]
   },
   {
@@ -4519,9 +4363,9 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV"
     ]
   },
   {
@@ -4562,13 +4406,9 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -4609,13 +4449,9 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -4655,10 +4491,9 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -4698,10 +4533,9 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -4744,12 +4578,8 @@ window.ALL_NATIONAL_POKEMON = [
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -4792,12 +4622,8 @@ window.ALL_NATIONAL_POKEMON = [
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -4837,7 +4663,6 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA"
@@ -4881,12 +4706,8 @@ window.ALL_NATIONAL_POKEMON = [
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -4927,12 +4748,8 @@ window.ALL_NATIONAL_POKEMON = [
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -4975,12 +4792,9 @@ window.ALL_NATIONAL_POKEMON = [
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -5023,12 +4837,9 @@ window.ALL_NATIONAL_POKEMON = [
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -5069,13 +4880,10 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -5115,7 +4923,6 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA"
@@ -5157,10 +4964,9 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -5201,13 +5007,9 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -5248,13 +5050,9 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -5295,9 +5093,7 @@ window.ALL_NATIONAL_POKEMON = [
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -5338,9 +5134,7 @@ window.ALL_NATIONAL_POKEMON = [
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -5380,10 +5174,9 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -5424,10 +5217,9 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -5470,9 +5262,9 @@ window.ALL_NATIONAL_POKEMON = [
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLA",
+      "PLZA-DLC"
     ]
   },
   {
@@ -5514,12 +5306,10 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -5561,10 +5351,8 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -5605,13 +5393,10 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -5652,13 +5437,10 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -5697,10 +5479,9 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -5739,13 +5520,9 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -5786,11 +5563,9 @@ window.ALL_NATIONAL_POKEMON = [
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -5833,11 +5608,9 @@ window.ALL_NATIONAL_POKEMON = [
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -5879,12 +5652,8 @@ window.ALL_NATIONAL_POKEMON = [
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -5924,12 +5693,8 @@ window.ALL_NATIONAL_POKEMON = [
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -5977,11 +5742,9 @@ window.ALL_NATIONAL_POKEMON = [
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -6030,11 +5793,9 @@ window.ALL_NATIONAL_POKEMON = [
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -6083,11 +5844,9 @@ window.ALL_NATIONAL_POKEMON = [
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -6136,11 +5895,9 @@ window.ALL_NATIONAL_POKEMON = [
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -6182,13 +5939,11 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -6229,10 +5984,8 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -6273,10 +6026,8 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -6317,10 +6068,8 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -6361,10 +6110,8 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -6404,10 +6151,9 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -6448,12 +6194,9 @@ window.ALL_NATIONAL_POKEMON = [
       "USUM",
       "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -6493,13 +6236,9 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -6539,13 +6278,9 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -6585,13 +6320,9 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -6632,12 +6363,9 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -6679,12 +6407,9 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -6727,12 +6452,9 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -6772,11 +6494,8 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -6817,13 +6536,9 @@ window.ALL_NATIONAL_POKEMON = [
       "SM",
       "USUM",
       "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -6861,8 +6576,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
+      "BDSP",
       "SV-DLC",
       "PLZA"
     ]
@@ -6902,8 +6616,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
+      "BDSP",
       "SV-DLC",
       "PLZA"
     ]
@@ -6943,8 +6656,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
+      "BDSP",
       "SV-DLC",
       "PLZA"
     ]
@@ -6984,10 +6696,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -7025,10 +6736,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -7066,10 +6776,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -7107,8 +6816,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
+      "BDSP",
       "SV-DLC",
       "PLZA"
     ]
@@ -7148,8 +6856,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
+      "BDSP",
       "SV-DLC",
       "PLZA"
     ]
@@ -7189,8 +6896,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
+      "BDSP",
       "SV-DLC",
       "PLZA"
     ]
@@ -7229,10 +6935,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV-DLC"
     ]
   },
   {
@@ -7269,10 +6973,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV-DLC"
     ]
   },
   {
@@ -7310,14 +7012,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -7355,14 +7052,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -7400,7 +7092,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "BDSP"
     ]
   },
   {
@@ -7438,7 +7130,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "BDSP"
     ]
   },
   {
@@ -7476,8 +7168,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
+      "BDSP",
       "SV-DLC",
       "PLZA"
     ]
@@ -7517,8 +7208,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
+      "BDSP",
       "SV-DLC",
       "PLZA"
     ]
@@ -7559,11 +7249,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLA",
+      "PLZA-DLC"
     ]
   },
   {
@@ -7601,14 +7290,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -7646,14 +7330,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -7691,13 +7370,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -7736,12 +7412,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -7782,14 +7455,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -7827,9 +7496,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA"
     ]
@@ -7870,9 +7537,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA"
     ]
@@ -7912,11 +7577,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -7954,11 +7616,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -7996,9 +7655,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
+      "BDSP",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -8037,9 +7695,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
+      "BDSP",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -8078,9 +7735,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
+      "BDSP",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -8120,14 +7776,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -8166,14 +7817,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -8212,14 +7858,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -8256,14 +7897,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -8302,14 +7939,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -8348,10 +7980,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV"
     ]
   },
   {
@@ -8390,10 +8020,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV"
     ]
   },
   {
@@ -8432,10 +8060,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV"
     ]
   },
   {
@@ -8472,10 +8098,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -8512,10 +8137,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV"
     ]
   },
   {
@@ -8552,10 +8175,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV"
     ]
   },
   {
@@ -8593,10 +8214,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -8635,14 +8255,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -8681,14 +8296,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -8732,13 +8342,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -8783,13 +8390,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -8828,10 +8432,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV"
     ]
   },
   {
@@ -8870,13 +8473,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -8914,10 +8513,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV"
     ]
   },
   {
@@ -8953,7 +8551,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "BDSP",
+      "PLA"
     ]
   },
   {
@@ -8990,11 +8589,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -9032,10 +8628,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV"
     ]
   },
   {
@@ -9072,10 +8666,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV"
     ]
   },
   {
@@ -9113,10 +8705,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV"
     ]
   },
   {
@@ -9153,14 +8743,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -9198,10 +8783,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -9239,11 +8823,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLA",
+      "PLZA"
     ]
   },
   {
@@ -9280,10 +8863,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV-DLC"
     ]
   },
   {
@@ -9320,10 +8901,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV-DLC"
     ]
   },
   {
@@ -9361,14 +8940,11 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -9407,13 +8983,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -9451,11 +9024,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -9492,13 +9062,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -9538,14 +9105,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -9583,10 +9146,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV"
     ]
   },
   {
@@ -9624,10 +9186,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV"
     ]
   },
   {
@@ -9664,10 +9225,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV-DLC"
     ]
   },
   {
@@ -9705,10 +9264,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV-DLC"
     ]
   },
   {
@@ -9747,14 +9304,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -9793,14 +9346,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -9838,11 +9387,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -9879,9 +9425,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA"
     ]
@@ -9920,9 +9464,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA"
     ]
@@ -9961,13 +9503,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -10006,9 +9544,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA"
     ]
@@ -10047,12 +9583,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -10092,9 +9624,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
+      "BDSP",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -10133,9 +9664,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
+      "BDSP",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -10175,14 +9705,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -10219,10 +9744,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV"
     ]
   },
   {
@@ -10259,10 +9782,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV"
     ]
   },
   {
@@ -10300,14 +9821,11 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -10344,10 +9862,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV"
     ]
   },
   {
@@ -10383,10 +9900,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV-DLC"
     ]
   },
   {
@@ -10425,14 +9940,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -10471,14 +9981,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -10516,11 +10021,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -10558,14 +10060,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -10603,14 +10101,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -10646,11 +10140,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -10688,14 +10179,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -10731,14 +10218,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -10774,14 +10256,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -10817,14 +10294,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -10863,13 +10335,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -10909,13 +10377,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -10955,13 +10419,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -10999,14 +10459,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -11043,14 +10498,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -11087,11 +10537,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -11127,14 +10574,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -11170,14 +10613,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -11213,14 +10652,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -11256,14 +10691,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -11300,14 +10731,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -11344,14 +10771,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -11387,14 +10810,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -11431,14 +10850,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -11475,14 +10890,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -11517,10 +10928,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV-DLC"
     ]
   },
   {
@@ -11555,10 +10964,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV-DLC"
     ]
   },
   {
@@ -11594,11 +11001,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -11634,11 +11038,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -11676,7 +11077,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "BDSP",
+      "PLA"
     ]
   },
   {
@@ -11714,7 +11116,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "BDSP",
+      "PLA"
     ]
   },
   {
@@ -11753,7 +11156,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "BDSP",
+      "PLA"
     ]
   },
   {
@@ -11791,7 +11195,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "BDSP",
+      "PLA"
     ]
   },
   {
@@ -11830,7 +11235,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "BDSP",
+      "PLA"
     ]
   },
   {
@@ -11867,14 +11273,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -11911,14 +11312,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -11955,14 +11351,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -11998,14 +11389,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -12042,14 +11428,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -12086,14 +11467,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -12129,7 +11505,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "BDSP"
     ]
   },
   {
@@ -12165,7 +11541,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "BDSP"
     ]
   },
   {
@@ -12201,14 +11577,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -12244,14 +11615,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -12289,13 +11655,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -12334,13 +11697,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -12379,13 +11739,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -12422,10 +11779,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV"
     ]
   },
   {
@@ -12461,10 +11816,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV"
     ]
   },
   {
@@ -12499,10 +11852,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV"
     ]
   },
   {
@@ -12538,10 +11889,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV"
     ]
   },
   {
@@ -12577,10 +11926,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV"
     ]
   },
   {
@@ -12616,10 +11963,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV"
     ]
   },
   {
@@ -12655,10 +12000,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV"
     ]
   },
   {
@@ -12695,11 +12038,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -12736,11 +12076,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -12777,11 +12114,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -12817,11 +12151,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -12857,11 +12188,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -12897,11 +12225,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -12936,10 +12261,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV"
     ]
   },
   {
@@ -12974,10 +12297,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV"
     ]
   },
   {
@@ -13014,14 +12335,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -13056,10 +12372,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -13094,7 +12409,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "BDSP"
     ]
   },
   {
@@ -13129,7 +12444,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "BDSP"
     ]
   },
   {
@@ -13164,13 +12479,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -13206,11 +12517,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -13247,11 +12556,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -13288,11 +12595,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -13329,11 +12634,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -13369,9 +12672,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
+      "BDSP",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -13408,9 +12710,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
+      "BDSP",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -13446,11 +12747,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -13485,11 +12784,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -13523,10 +12820,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV-DLC"
     ]
   },
   {
@@ -13560,10 +12855,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV-DLC"
     ]
   },
   {
@@ -13597,10 +12890,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV-DLC"
     ]
   },
   {
@@ -13634,10 +12925,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV-DLC"
     ]
   },
   {
@@ -13674,11 +12963,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLA",
+      "PLZA"
     ]
   },
   {
@@ -13713,10 +13001,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
+      "BDSP",
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -13751,10 +13038,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
+      "BDSP",
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -13790,11 +13076,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -13830,11 +13114,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -13869,11 +13151,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -13908,11 +13187,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -13948,9 +13224,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
+      "BDSP",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -13987,9 +13262,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
+      "BDSP",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -14024,14 +13298,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -14066,10 +13335,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
+      "BDSP",
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -14104,10 +13372,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
+      "BDSP",
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -14141,7 +13408,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "BDSP"
     ]
   },
   {
@@ -14177,14 +13444,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -14221,14 +13483,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -14265,14 +13522,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -14307,10 +13559,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV"
     ]
   },
   {
@@ -14346,10 +13596,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV"
     ]
   },
   {
@@ -14385,13 +13633,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -14428,13 +13672,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -14469,10 +13709,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
+      "BDSP",
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -14506,10 +13745,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
+      "BDSP",
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -14544,11 +13782,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -14583,11 +13818,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -14623,14 +13855,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -14666,14 +13894,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -14708,14 +13932,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -14751,14 +13970,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -14794,11 +14008,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -14834,11 +14045,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -14874,11 +14082,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -14914,11 +14119,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -14954,11 +14156,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -14994,11 +14193,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -15033,14 +14229,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -15075,14 +14267,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -15116,7 +14304,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "BDSP"
     ]
   },
   {
@@ -15150,7 +14338,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "BDSP",
+      "PLZA-DLC"
     ]
   },
   {
@@ -15185,9 +14374,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
+      "BDSP",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -15223,9 +14411,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
+      "BDSP",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -15262,14 +14449,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -15305,14 +14488,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -15347,10 +14526,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV"
     ]
   },
   {
@@ -15385,10 +14562,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
+      "BDSP",
+      "PLA",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -15422,11 +14599,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -15461,11 +14636,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -15501,13 +14673,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -15544,13 +14713,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -15588,8 +14754,6 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA"
@@ -15629,8 +14793,6 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA"
@@ -15670,8 +14832,6 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA"
@@ -15710,7 +14870,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "BDSP"
     ]
   },
   {
@@ -15746,7 +14906,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "BDSP"
     ]
   },
   {
@@ -15782,7 +14942,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "BDSP"
     ]
   },
   {
@@ -15817,11 +14977,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "BDSP"
     ]
   },
   {
@@ -15855,10 +15012,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV"
     ]
   },
   {
@@ -15894,13 +15049,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -15937,13 +15088,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -15981,13 +15128,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -16025,12 +15168,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -16069,12 +15208,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -16113,12 +15248,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -16154,14 +15285,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -16195,14 +15321,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -16236,14 +15357,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -16278,14 +15394,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -16320,14 +15432,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -16361,14 +15469,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -16402,14 +15506,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -16444,14 +15544,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -16486,14 +15582,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -16527,10 +15618,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "SV-DLC"
     ]
   },
   {
@@ -16563,10 +15652,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -16599,10 +15687,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -16636,10 +15723,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -16672,10 +15758,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -16709,10 +15794,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -16746,10 +15830,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -16782,10 +15865,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -16818,10 +15900,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -16855,10 +15936,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -16892,10 +15972,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
+      "BDSP",
+      "PLA",
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -16929,10 +16009,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
+      "BDSP",
+      "PLA",
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -16966,10 +16046,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
+      "BDSP",
+      "PLA",
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -17001,7 +16081,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "BDSP",
+      "PLA"
     ]
   },
   {
@@ -17034,7 +16115,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "BDSP",
+      "PLA"
     ]
   },
   {
@@ -17066,10 +16148,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV"
     ]
   },
   {
@@ -17101,10 +16182,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV"
     ]
   },
   {
@@ -17137,14 +16217,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -17177,14 +16253,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -17217,14 +16289,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -17258,11 +16326,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLA",
+      "PLZA"
     ]
   },
   {
@@ -17296,11 +16363,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLA",
+      "PLZA"
     ]
   },
   {
@@ -17332,10 +16398,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -17367,10 +16432,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -17403,10 +16467,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -17439,10 +16502,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -17475,7 +16537,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "BDSP",
+      "PLA"
     ]
   },
   {
@@ -17509,7 +16572,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "BDSP",
+      "PLA"
     ]
   },
   {
@@ -17543,7 +16607,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "BDSP",
+      "PLA"
     ]
   },
   {
@@ -17576,14 +16641,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -17616,14 +16677,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -17654,10 +16711,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV"
     ]
   },
   {
@@ -17689,10 +16745,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV"
     ]
   },
   {
@@ -17724,10 +16779,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV"
     ]
   },
   {
@@ -17759,9 +16813,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA"
     ]
@@ -17795,9 +16847,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA"
     ]
@@ -17831,14 +16881,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -17871,14 +16917,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -17910,10 +16952,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -17946,14 +16987,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -17986,14 +17023,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -18025,11 +17058,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLA",
+      "PLZA"
     ]
   },
   {
@@ -18061,11 +17093,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLA",
+      "PLZA"
     ]
   },
   {
@@ -18097,10 +17128,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV"
     ]
   },
   {
@@ -18133,10 +17163,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV"
     ]
   },
   {
@@ -18168,7 +17197,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "BDSP",
+      "PLA"
     ]
   },
   {
@@ -18200,7 +17230,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "BDSP",
+      "PLA"
     ]
   },
   {
@@ -18232,10 +17263,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
+      "BDSP",
+      "PLA",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -18268,14 +17299,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -18308,14 +17335,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -18348,14 +17371,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -18388,14 +17407,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -18427,14 +17442,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -18468,11 +17479,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
-      "PLA"
+      "PLA",
+      "PLZA-DLC"
     ]
   },
   {
@@ -18505,14 +17515,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -18544,7 +17550,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "BDSP",
+      "PLA"
     ]
   },
   {
@@ -18576,14 +17583,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -18617,13 +17620,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -18658,13 +17658,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -18699,13 +17696,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -18738,14 +17732,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -18777,13 +17767,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -18817,13 +17804,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -18856,13 +17840,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -18895,13 +17876,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -18935,9 +17913,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA"
     ]
@@ -18972,9 +17948,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA"
     ]
@@ -19009,14 +17983,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -19049,14 +18019,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -19087,7 +18053,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "BDSP",
+      "PLA"
     ]
   },
   {
@@ -19119,10 +18086,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV"
     ]
   },
   {
@@ -19154,10 +18120,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV"
     ]
   },
   {
@@ -19190,9 +18155,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA"
     ]
@@ -19227,13 +18190,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -19267,13 +18227,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -19308,14 +18265,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -19349,14 +18302,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -19388,8 +18337,6 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA"
@@ -19426,14 +18373,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -19465,8 +18408,6 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA"
@@ -19502,14 +18443,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -19542,14 +18479,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -19583,9 +18516,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA"
     ]
@@ -19620,10 +18551,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -19662,13 +18592,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -19708,13 +18635,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -19748,10 +18672,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -19785,14 +18708,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -19825,14 +18744,11 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -19867,13 +18783,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -19907,10 +18820,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -19943,14 +18855,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -19984,13 +18892,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -20023,14 +18928,11 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
       "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -20061,14 +18963,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -20099,14 +18997,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -20137,14 +19031,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -20176,14 +19066,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -20215,14 +19101,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -20254,14 +19136,11 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -20292,14 +19171,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -20331,14 +19206,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -20369,14 +19240,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
       "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -20408,10 +19275,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -20443,10 +19309,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -20477,10 +19342,10 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
+      "BDSP",
+      "PLA",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -20511,10 +19376,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -20545,10 +19409,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "BDSP",
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -20577,11 +19440,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh-DLC"
     ]
   },
   {
@@ -20611,10 +19470,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -20644,10 +19500,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -20677,10 +19530,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -20710,8 +19560,6 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -20744,8 +19592,6 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -20778,8 +19624,6 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -20811,10 +19655,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -20844,10 +19686,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -20877,10 +19717,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -20909,7 +19747,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "PLZA"
     ]
   },
   {
@@ -20938,7 +19776,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "PLZA"
     ]
   },
   {
@@ -20968,11 +19806,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh-DLC"
     ]
   },
   {
@@ -21002,11 +19836,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh-DLC"
     ]
   },
   {
@@ -21036,11 +19866,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh-DLC"
     ]
   },
   {
@@ -21069,11 +19895,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -21102,11 +19925,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -21135,7 +19955,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "PLZA"
     ]
   },
   {
@@ -21164,7 +19984,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "PLZA"
     ]
   },
   {
@@ -21193,7 +20013,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "PLZA"
     ]
   },
   {
@@ -21222,7 +20042,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "PLZA"
     ]
   },
   {
@@ -21251,7 +20071,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "PLZA"
     ]
   },
   {
@@ -21280,7 +20100,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "PLZA"
     ]
   },
   {
@@ -21309,11 +20129,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -21342,11 +20159,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -21377,11 +20191,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -21412,11 +20222,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -21447,11 +20253,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -21480,10 +20282,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -21512,10 +20311,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -21545,11 +20341,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -21579,11 +20371,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -21613,11 +20401,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -21647,11 +20431,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -21681,11 +20461,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -21714,12 +20490,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -21751,12 +20522,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -21786,11 +20552,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -21820,14 +20583,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -21857,14 +20614,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -21894,14 +20645,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -21931,11 +20676,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -21966,11 +20707,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -22001,11 +20738,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -22033,11 +20766,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -22065,11 +20795,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -22100,10 +20827,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -22134,10 +20858,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -22168,10 +20889,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -22202,11 +20920,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -22237,11 +20952,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -22272,11 +20984,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -22306,14 +21015,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -22343,14 +21046,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -22379,14 +21076,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -22415,14 +21107,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -22451,14 +21138,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -22489,13 +21171,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -22527,13 +21204,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -22565,13 +21237,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -22601,11 +21268,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -22634,11 +21297,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -22666,11 +21325,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -22700,11 +21355,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -22734,11 +21385,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -22768,12 +21415,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -22805,12 +21447,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -22841,11 +21478,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -22875,11 +21508,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -22909,11 +21539,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -22943,11 +21570,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh-DLC"
     ]
   },
   {
@@ -22977,11 +21600,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh-DLC"
     ]
   },
   {
@@ -23011,11 +21630,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh-DLC"
     ]
   },
   {
@@ -23045,11 +21660,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh-DLC"
     ]
   },
   {
@@ -23078,11 +21689,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -23111,11 +21719,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -23144,14 +21749,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -23180,14 +21780,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -23216,14 +21811,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -23252,14 +21841,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -23289,14 +21872,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -23326,14 +21903,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -23363,14 +21934,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -23400,14 +21965,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -23437,14 +21996,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -23474,14 +22027,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -23511,10 +22058,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -23544,10 +22088,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -23577,11 +22118,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -23611,11 +22149,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -23645,11 +22180,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -23679,10 +22211,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -23712,10 +22241,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -23744,11 +22270,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -23777,11 +22300,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -23811,11 +22330,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -23845,14 +22360,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -23882,14 +22392,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -23919,11 +22424,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -23953,11 +22454,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -23985,10 +22482,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -24018,14 +22512,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -24055,14 +22543,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -24092,11 +22574,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -24126,11 +22604,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -24160,11 +22634,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -24194,11 +22664,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -24228,11 +22694,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -24262,9 +22724,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -24295,9 +22755,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -24328,9 +22786,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -24360,11 +22816,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -24393,11 +22845,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -24428,12 +22876,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -24466,12 +22909,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -24504,12 +22942,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -24541,14 +22974,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -24578,14 +23005,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -24615,14 +23036,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -24651,14 +23066,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -24687,14 +23096,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -24722,14 +23125,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -24758,11 +23156,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -24791,11 +23185,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -24824,11 +23214,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -24857,14 +23244,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -24893,14 +23274,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -24928,11 +23303,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh-DLC"
     ]
   },
   {
@@ -24962,14 +23333,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -24999,14 +23365,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -25037,14 +23398,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -25075,14 +23430,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -25110,11 +23459,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh-DLC"
     ]
   },
   {
@@ -25144,14 +23489,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -25181,14 +23521,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -25218,14 +23553,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -25255,14 +23584,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -25290,11 +23613,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -25323,11 +23642,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -25358,14 +23673,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -25396,14 +23705,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -25434,14 +23737,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -25471,14 +23768,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -25508,14 +23799,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -25544,14 +23829,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -25580,14 +23860,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -25616,14 +23891,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -25651,14 +23921,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -25687,14 +23952,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -25723,14 +23983,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -25759,14 +24013,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -25795,14 +24043,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -25831,14 +24074,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -25867,14 +24104,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -25903,10 +24135,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -25935,11 +24165,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -25967,8 +24194,6 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -25998,8 +24223,6 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -26030,8 +24253,6 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -26061,8 +24282,6 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -26092,8 +24311,6 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -26124,8 +24341,6 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -26155,8 +24370,6 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -26186,8 +24399,6 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -26218,8 +24429,6 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -26248,11 +24457,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -26280,11 +24486,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -26313,13 +24516,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -26349,13 +24547,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -26385,13 +24578,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -26420,9 +24608,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -26451,9 +24637,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -26483,9 +24667,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -26514,9 +24696,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -26545,9 +24725,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -26576,9 +24754,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -26607,9 +24783,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -26638,9 +24812,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -26668,9 +24840,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -26698,9 +24868,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -26728,11 +24896,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -26760,11 +24925,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -26790,7 +24952,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE"
+      "PLZA"
     ]
   },
   {
@@ -26817,12 +24979,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -26851,12 +25008,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -26887,11 +25039,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -26920,11 +25069,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -26953,11 +25099,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -26984,11 +25127,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -27015,11 +25155,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -27046,11 +25183,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -27077,11 +25211,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -27109,12 +25240,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -27144,12 +25270,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -27179,11 +25300,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -27211,11 +25329,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -27243,13 +25358,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -27278,13 +25388,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -27312,13 +25417,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -27346,13 +25446,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -27381,11 +25476,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -27413,11 +25505,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -27445,11 +25534,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -27477,11 +25563,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -27509,11 +25592,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -27541,11 +25621,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -27579,13 +25656,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -27613,13 +25686,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -27647,13 +25715,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -27681,12 +25744,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -27716,13 +25774,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -27751,13 +25805,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -27786,13 +25836,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -27820,13 +25866,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -27855,12 +25896,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -27890,12 +25926,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -27925,11 +25956,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -27957,11 +25985,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -27988,13 +26013,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -28022,13 +26043,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
       "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -28057,13 +26074,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -28092,13 +26104,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -28125,11 +26132,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -28156,11 +26160,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -28187,11 +26188,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -28218,12 +26216,7 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
       "PLZA"
     ]
@@ -28252,10 +26245,8 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -28282,14 +26273,9 @@ window.ALL_NATIONAL_POKEMON = [
       "ORAS",
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -28316,14 +26302,9 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -28350,14 +26331,9 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -28384,14 +26360,9 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
       "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -28417,14 +26388,8 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -28450,14 +26415,8 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -28484,14 +26443,8 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -28517,14 +26470,8 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -28550,14 +26497,8 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -28584,14 +26525,8 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -28618,10 +26553,7 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -28648,10 +26580,7 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -28678,10 +26607,7 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -28706,10 +26632,7 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -28734,10 +26657,7 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -28763,14 +26683,8 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -28797,14 +26711,8 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -28831,14 +26739,8 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -28863,10 +26765,8 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -28892,10 +26792,8 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -28920,10 +26818,7 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -28949,14 +26844,8 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -28982,14 +26871,8 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -29014,14 +26897,8 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -29046,14 +26923,8 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -29077,11 +26948,7 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -29107,14 +26974,8 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -29140,14 +27001,8 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -29172,14 +27027,8 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -29204,14 +27053,8 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -29237,14 +27080,8 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -29270,14 +27107,8 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -29302,14 +27133,8 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -29334,14 +27159,8 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -29367,11 +27186,7 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -29397,11 +27212,7 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -29427,14 +27238,8 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -29460,14 +27265,8 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -29493,11 +27292,7 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -29523,11 +27318,7 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -29553,14 +27344,8 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -29586,14 +27371,8 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -29619,14 +27398,8 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -29650,14 +27423,8 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -29682,14 +27449,8 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -29713,14 +27474,8 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -29746,11 +27501,8 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -29776,11 +27528,8 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -29806,14 +27555,9 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -29839,14 +27583,9 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -29870,11 +27609,7 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -29899,11 +27634,7 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -29928,11 +27659,7 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -29957,10 +27684,7 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -29984,10 +27708,7 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -30012,11 +27733,7 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -30041,11 +27758,7 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -30070,14 +27783,9 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -30102,10 +27810,7 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -30130,11 +27835,8 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA"
     ]
   },
   {
@@ -30159,11 +27861,7 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -30189,14 +27887,8 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -30223,14 +27915,8 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -30257,14 +27943,8 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -30289,11 +27969,7 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh-DLC"
     ]
   },
   {
@@ -30318,11 +27994,7 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh-DLC"
     ]
   },
   {
@@ -30347,11 +28019,7 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh-DLC"
     ]
   },
   {
@@ -30376,11 +28044,7 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh-DLC"
     ]
   },
   {
@@ -30407,14 +28071,8 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -30441,14 +28099,8 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -30476,14 +28128,8 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -30511,14 +28157,8 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -30543,11 +28183,7 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh-DLC"
     ]
   },
   {
@@ -30572,11 +28208,7 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh-DLC"
     ]
   },
   {
@@ -30601,11 +28233,7 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh-DLC"
     ]
   },
   {
@@ -30629,11 +28257,7 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh-DLC"
     ]
   },
   {
@@ -30658,11 +28282,7 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh-DLC"
     ]
   },
   {
@@ -30687,11 +28307,7 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh-DLC"
     ]
   },
   {
@@ -30716,11 +28332,7 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh-DLC"
     ]
   },
   {
@@ -30744,14 +28356,8 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -30776,14 +28382,9 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -30808,11 +28409,8 @@ window.ALL_NATIONAL_POKEMON = [
     "games": [
       "SM",
       "USUM",
-      "LGPE",
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -30835,10 +28433,8 @@ window.ALL_NATIONAL_POKEMON = [
       "0804"
     ],
     "games": [
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "USUM",
+      "SwSh-DLC"
     ]
   },
   {
@@ -30862,10 +28458,8 @@ window.ALL_NATIONAL_POKEMON = [
       "0804"
     ],
     "games": [
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "USUM",
+      "SwSh-DLC"
     ]
   },
   {
@@ -30888,10 +28482,8 @@ window.ALL_NATIONAL_POKEMON = [
       "0805"
     ],
     "games": [
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "USUM",
+      "SwSh-DLC"
     ]
   },
   {
@@ -30914,10 +28506,8 @@ window.ALL_NATIONAL_POKEMON = [
       "0806"
     ],
     "games": [
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "USUM",
+      "SwSh-DLC"
     ]
   },
   {
@@ -30939,10 +28529,9 @@ window.ALL_NATIONAL_POKEMON = [
       "0807"
     ],
     "games": [
-      "SwSh",
+      "USUM",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -30965,10 +28554,9 @@ window.ALL_NATIONAL_POKEMON = [
       "0809"
     ],
     "games": [
-      "SwSh",
+      "LGPE",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -30991,10 +28579,9 @@ window.ALL_NATIONAL_POKEMON = [
       "0809"
     ],
     "games": [
-      "SwSh",
+      "LGPE",
       "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -31019,12 +28606,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -31049,12 +28631,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -31079,12 +28656,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -31109,12 +28681,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -31139,12 +28706,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -31169,12 +28731,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -31199,12 +28756,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -31229,12 +28781,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -31259,12 +28806,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -31288,12 +28830,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -31317,12 +28854,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -31347,12 +28879,8 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -31377,12 +28905,8 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -31408,12 +28932,8 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -31437,10 +28957,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0826"
     ],
     "games": [
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -31465,10 +28982,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0826"
     ],
     "games": [
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -31493,10 +29007,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0826"
     ],
     "games": [
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -31520,9 +29031,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -31546,9 +29055,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -31571,10 +29078,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0830"
     ],
     "games": [
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -31597,10 +29101,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0830"
     ],
     "games": [
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -31623,10 +29124,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0832"
     ],
     "games": [
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -31649,10 +29147,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0832"
     ],
     "games": [
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -31676,12 +29171,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -31706,12 +29196,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -31734,10 +29219,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0836"
     ],
     "games": [
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -31760,10 +29242,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0836"
     ],
     "games": [
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -31788,12 +29267,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -31819,12 +29293,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -31850,12 +29319,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -31883,12 +29347,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -31916,12 +29375,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -31949,12 +29403,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -31978,12 +29427,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -32007,12 +29451,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -32036,12 +29475,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -32065,12 +29499,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -32094,12 +29523,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -32124,12 +29548,8 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -32154,12 +29574,8 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -32183,10 +29599,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0851"
     ],
     "games": [
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -32210,10 +29623,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0851"
     ],
     "games": [
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -32237,9 +29647,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -32263,9 +29671,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -32289,12 +29695,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -32318,12 +29719,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -32348,12 +29744,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -32378,12 +29769,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -32409,12 +29795,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -32440,12 +29821,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -32471,12 +29847,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -32502,12 +29873,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -32532,10 +29898,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0862"
     ],
     "games": [
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -32560,12 +29923,8 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -32588,10 +29947,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0864"
     ],
     "games": [
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -32615,9 +29971,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -32643,9 +29997,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -32671,9 +30023,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -32697,12 +30047,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -32726,12 +30071,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -32754,11 +30094,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
       "PLZA"
     ]
   },
@@ -32782,12 +30118,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -32812,12 +30143,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -32842,12 +30168,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -32870,12 +30191,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -32898,12 +30214,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -32927,12 +30238,8 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -32956,12 +30263,8 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -32985,12 +30288,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -33014,12 +30312,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -33042,10 +30335,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0880"
     ],
     "games": [
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -33068,10 +30358,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0881"
     ],
     "games": [
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -33094,10 +30381,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0882"
     ],
     "games": [
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -33120,10 +30404,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0883"
     ],
     "games": [
-      "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA"
+      "SwSh"
     ]
   },
   {
@@ -33148,12 +30429,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -33179,12 +30455,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -33210,12 +30481,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -33241,12 +30507,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -33269,12 +30530,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -33297,12 +30553,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -33326,12 +30577,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SwSh",
-      "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -33354,13 +30600,8 @@ window.ALL_NATIONAL_POKEMON = [
       "0892"
     ],
     "games": [
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -33384,13 +30625,8 @@ window.ALL_NATIONAL_POKEMON = [
       "0892"
     ],
     "games": [
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -33413,13 +30649,8 @@ window.ALL_NATIONAL_POKEMON = [
       "0893"
     ],
     "games": [
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -33441,13 +30672,8 @@ window.ALL_NATIONAL_POKEMON = [
       "0894"
     ],
     "games": [
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -33469,13 +30695,8 @@ window.ALL_NATIONAL_POKEMON = [
       "0895"
     ],
     "games": [
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -33497,13 +30718,8 @@ window.ALL_NATIONAL_POKEMON = [
       "0896"
     ],
     "games": [
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -33525,13 +30741,8 @@ window.ALL_NATIONAL_POKEMON = [
       "0897"
     ],
     "games": [
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -33554,13 +30765,8 @@ window.ALL_NATIONAL_POKEMON = [
       "0898"
     ],
     "games": [
-      "SwSh",
       "SwSh-DLC",
-      "BDSP",
-      "PLA",
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -33584,9 +30790,8 @@ window.ALL_NATIONAL_POKEMON = [
       "0899"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -33611,9 +30816,9 @@ window.ALL_NATIONAL_POKEMON = [
       "0900"
     ],
     "games": [
-      "SV",
+      "PLA",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -33638,9 +30843,8 @@ window.ALL_NATIONAL_POKEMON = [
       "0901"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -33664,9 +30868,8 @@ window.ALL_NATIONAL_POKEMON = [
       "0902"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -33691,9 +30894,8 @@ window.ALL_NATIONAL_POKEMON = [
       "0903"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -33717,9 +30919,9 @@ window.ALL_NATIONAL_POKEMON = [
       "0904"
     ],
     "games": [
-      "SV",
+      "PLA",
       "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -33742,9 +30944,8 @@ window.ALL_NATIONAL_POKEMON = [
       "0905"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLA",
+      "SV-DLC"
     ]
   },
   {
@@ -33768,9 +30969,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0908"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -33794,9 +30993,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0908"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -33821,9 +31018,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0908"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -33847,9 +31042,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0911"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -33873,9 +31066,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0911"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -33900,9 +31091,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0911"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -33926,9 +31115,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0914"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -33952,9 +31139,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0914"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -33979,9 +31164,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0914"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -34004,9 +31187,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0916"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -34029,9 +31210,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0916"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -34054,9 +31233,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0918"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -34079,9 +31256,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0918"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -34104,9 +31279,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0920"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -34130,9 +31303,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0920"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -34156,9 +31327,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0923"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -34183,9 +31352,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0923"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -34210,9 +31377,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0923"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -34235,9 +31400,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0925"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -34260,9 +31423,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0925"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -34286,8 +31447,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -34311,8 +31471,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -34337,9 +31496,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0930"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -34364,9 +31521,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0930"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -34391,9 +31546,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0930"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -34417,8 +31570,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -34443,8 +31595,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -34469,8 +31620,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -34495,8 +31645,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -34521,8 +31670,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -34548,8 +31696,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -34575,8 +31722,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -34599,9 +31745,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0939"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -34624,9 +31768,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0939"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -34650,9 +31792,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0941"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -34676,9 +31816,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0941"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -34702,8 +31840,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -34727,8 +31864,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -34753,8 +31889,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -34779,8 +31914,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -34804,9 +31938,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0947"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -34830,9 +31962,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0947"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -34856,9 +31986,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0949"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -34882,9 +32010,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0949"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -34906,9 +32032,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0950"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -34932,8 +32056,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -34958,8 +32081,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -34982,9 +32104,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0954"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -35008,9 +32128,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0954"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -35033,9 +32151,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0956"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -35058,9 +32174,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0956"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -35086,8 +32200,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -35113,8 +32226,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -35140,8 +32252,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -35164,9 +32275,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0961"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -35189,9 +32298,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0961"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -35214,9 +32321,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0962"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -35239,9 +32344,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0964"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -35264,9 +32367,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0964"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -35290,9 +32391,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0966"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -35316,9 +32415,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0966"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -35342,8 +32439,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -35365,9 +32461,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0968"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -35392,8 +32486,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -35418,8 +32511,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -35443,8 +32535,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -35468,8 +32559,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -35493,8 +32583,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -35517,9 +32606,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0975"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -35542,9 +32629,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0975"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -35567,9 +32652,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0976"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -35592,8 +32675,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -35617,8 +32699,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -35644,8 +32725,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -35670,9 +32750,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0980"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -35696,9 +32774,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0981"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -35721,9 +32797,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0982"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -35748,9 +32822,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0983"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -35773,9 +32845,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0984"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -35798,9 +32868,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0985"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -35823,9 +32891,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0986"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -35848,9 +32914,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0987"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -35873,9 +32937,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0988"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -35898,9 +32960,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0989"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -35923,9 +32983,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0990"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -35948,9 +33006,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0991"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -35973,9 +33029,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0992"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -35998,9 +33052,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0993"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -36023,9 +33075,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0994"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -36048,9 +33098,7 @@ window.ALL_NATIONAL_POKEMON = [
       "0995"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -36076,8 +33124,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -36103,8 +33150,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -36130,8 +33176,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -36155,8 +33200,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -36181,8 +33225,7 @@ window.ALL_NATIONAL_POKEMON = [
     ],
     "games": [
       "SV",
-      "SV-DLC",
-      "PLZA"
+      "PLZA-DLC"
     ]
   },
   {
@@ -36205,9 +33248,7 @@ window.ALL_NATIONAL_POKEMON = [
       "1001"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -36230,9 +33271,7 @@ window.ALL_NATIONAL_POKEMON = [
       "1002"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -36255,9 +33294,7 @@ window.ALL_NATIONAL_POKEMON = [
       "1003"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -36280,9 +33317,7 @@ window.ALL_NATIONAL_POKEMON = [
       "1004"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -36305,9 +33340,7 @@ window.ALL_NATIONAL_POKEMON = [
       "1005"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -36330,9 +33363,7 @@ window.ALL_NATIONAL_POKEMON = [
       "1006"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -36355,9 +33386,7 @@ window.ALL_NATIONAL_POKEMON = [
       "1007"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -36380,9 +33409,7 @@ window.ALL_NATIONAL_POKEMON = [
       "1008"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV"
     ]
   },
   {
@@ -36405,9 +33432,7 @@ window.ALL_NATIONAL_POKEMON = [
       "1009"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -36430,9 +33455,7 @@ window.ALL_NATIONAL_POKEMON = [
       "1010"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -36459,9 +33482,7 @@ window.ALL_NATIONAL_POKEMON = [
       "1019"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -36485,9 +33506,7 @@ window.ALL_NATIONAL_POKEMON = [
       "1013"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -36511,9 +33530,7 @@ window.ALL_NATIONAL_POKEMON = [
       "1013"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -36536,9 +33553,7 @@ window.ALL_NATIONAL_POKEMON = [
       "1014"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -36561,9 +33576,7 @@ window.ALL_NATIONAL_POKEMON = [
       "1015"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -36586,9 +33599,7 @@ window.ALL_NATIONAL_POKEMON = [
       "1016"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -36610,9 +33621,7 @@ window.ALL_NATIONAL_POKEMON = [
       "1017"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -36636,9 +33645,7 @@ window.ALL_NATIONAL_POKEMON = [
       "1018"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -36665,9 +33672,7 @@ window.ALL_NATIONAL_POKEMON = [
       "1019"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -36690,9 +33695,7 @@ window.ALL_NATIONAL_POKEMON = [
       "1020"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -36715,9 +33718,7 @@ window.ALL_NATIONAL_POKEMON = [
       "1021"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -36740,9 +33741,7 @@ window.ALL_NATIONAL_POKEMON = [
       "1022"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -36765,9 +33764,7 @@ window.ALL_NATIONAL_POKEMON = [
       "1023"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -36789,9 +33786,7 @@ window.ALL_NATIONAL_POKEMON = [
       "1024"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   },
   {
@@ -36814,9 +33809,7 @@ window.ALL_NATIONAL_POKEMON = [
       "1025"
     ],
     "games": [
-      "SV",
-      "SV-DLC",
-      "PLZA"
+      "SV-DLC"
     ]
   }
 ];
