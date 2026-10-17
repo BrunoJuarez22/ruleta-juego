@@ -327,8 +327,8 @@ ruleta-juego/
       2. Se regeneraron `all_pokemon.json`, `all_data.js`, `switch_pokemon.json` y `switch_data.js`.
       3. Se implementó `resolvePokemonGames(pokemon)` en `script.js` para consultar siempre el registro canónico nacional (`NATIONAL_BY_ID`), garantizando que incluso los Pokémon guardados previamente en `localStorage` o en la base de datos en la nube muestren las insignias actualizadas.
       4. Se añadieron Sawk/Throh a los exclusivos de `SwSh` y Mime Jr./Mr. Mime + Bonsly/Sudowoodo a los exclusivos de `BDSP`, y se actualizó el anti-caché a `v=4.3` en `index.html`.
-31. **Configuración de Máquina Continua en Fly.io para Indexación en Google Search Console:**
-    - Se ajustó `fly.toml` con `auto_stop_machines = 'off'` y `min_machines_running = 1` para prevenir el apagado automático por inactividad. Esto elimina los errores de arranque en frío (*cold start timeouts* y `502/503`) cuando el rastreador en segundo plano de Googlebot visita la aplicación para validaciones de indexación.
+31. **Reversión a Modo Reposo Automático (Coste $0.00 Garantizado):**
+    - Se restableció `fly.toml` con `auto_stop_machines = 'stop'` y `min_machines_running = 0`. Esto garantiza que la máquina se suspenda automáticamente tras inactividad para no generar ningún consumo ni cobro en Fly.io. La indexación en Google Search Console se gestiona directamente mediante la solicitud manual desde la Prueba en Vivo exitosa ("Lista para indexar").
 
 ---
 
