@@ -28,6 +28,7 @@ Herramienta web interactiva para cazadores de Pokémon Shiny. Incluye la **Rulet
   - Los Pokémon obtenidos en la ruleta que no se marquen como capturados pasan automáticamente a la lista de **Pendientes**.
   - Destacado visual prioritario del Pokémon pendiente obtenido en el giro anterior (`★ GIRO ANTERIOR`).
   - Matriz visual interactiva para consultar, filtrar y marcar capturas en cualquier momento.
+  - Filtro por tipo en cada Pokédex (ruleta y matriz) que indica cuántos Pokémon de cada tipo te quedan por capturar, ordenado del tipo con más restantes al que menos.
   - Almacenamiento aislado por cada Pokédex (`localStorage`).
 
 - **Sistema de Cuentas y Base de Datos (Modo Híbrido):**

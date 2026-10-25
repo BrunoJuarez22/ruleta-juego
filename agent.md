@@ -56,6 +56,7 @@ Cualquier cambio de interfaz o estilo debe cumplir estrictamente con los siguien
   - `.btn-matrix-evo` debe tener un ancho fijo compacto (`44px` o `42px`) y `flex-shrink: 0;`.
 - **Destacado del Giro Anterior:** El estado `.is-last-spin-pending` es prioritario. Si un Pokémon quedó pendiente en el último giro de la ruleta, debe mostrarse con el borde rojo de 2px, gradiente especial y la etiqueta `★ GIRO ANTERIOR`.
 - **Desmarcado de Pendientes:** Las tarjetas en estado `.is-pending` o `.is-last-spin-pending` deben permitir retirar el Pokémon de la lista de pendientes mediante el botón rápido `✕` en la cabecera, el botón `.btn-matrix-unpend` (`DESMARCAR`) en la botonera de la tarjeta y desde el modal de línea evolutiva (`#winnerUnpendModalBtn`).
+- **Filtros por Tipo Dinámicos (`#typeFilter` y `#matrixTypeFilter`):** Sus opciones se generan siempre desde `rebuildTypeFilterOptions()` (no codificar listas estáticas). Cada opción debe mostrar `Tipo (N por capturar)` calculado sobre la Pokédex activa, y el orden debe ser de mayor a menor número de Pokémon restantes por capturar. Cualquier nuevo punto de captura/descaptura debe terminar pasando por `updateDashboardViews()` para que los conteos se mantengan actualizados.
 
 ### C. Modales y Control de Parpadeo
 - Antes de abrir el modal del Pokémon ganador o de la línea evolutiva, asegurarse de que el contenido del modal anterior esté limpio (`clearModalContent()`).

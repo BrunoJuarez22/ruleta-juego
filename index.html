@@ -74,7 +74,7 @@
   }
   </script>
 
-  <link rel="stylesheet" href="style.css?v=4.3">
+  <link rel="stylesheet" href="style.css?v=4.4">
 </head>
 <body>
 
@@ -173,7 +173,7 @@
   <div class="filter-toolbar">
     <div class="filter-group">
       <label for="typeFilter" class="filter-label">TIPO:</label>
-      <select id="typeFilter" class="filter-select">
+      <select id="typeFilter" class="filter-select" title="Filtrar la ruleta por tipo (entre paréntesis: Pokémon de ese tipo que te quedan por capturar)">
         <option value="all">TODOS LOS TIPOS</option>
         <option value="Planta">Planta</option>
         <option value="Fuego">Fuego</option>
@@ -322,6 +322,14 @@
                   <line x1="6" y1="6" x2="18" y2="18"></line>
                 </svg>
               </button>
+            </div>
+
+            <!-- Filtro por Tipo con conteo de Pokémon restantes por capturar (ordenado de mayor a menor) -->
+            <div class="matrix-type-filter">
+              <label for="matrixTypeFilter" class="filter-label">TIPO:</label>
+              <select id="matrixTypeFilter" class="filter-select" title="Filtrar la matriz por tipo (entre paréntesis: Pokémon de ese tipo que te quedan por capturar)">
+                <option value="all">TODOS LOS TIPOS</option>
+              </select>
             </div>
 
             <div class="matrix-filter-chips" id="matrixFilterChips">
@@ -751,10 +759,10 @@
 
   <canvas id="confettiCanvas"></canvas>
 
-  <script src="paldea_data.js?v=4.3"></script>
-  <script src="all_data.js?v=4.3"></script>
-  <script src="switch_data.js?v=4.3"></script>
-  <script src="api.js?v=4.3"></script>
-  <script src="script.js?v=4.3"></script>
+  <script src="paldea_data.js?v=4.4"></script>
+  <script src="all_data.js?v=4.4"></script>
+  <script src="switch_data.js?v=4.4"></script>
+  <script src="api.js?v=4.4"></script>
+  <script src="script.js?v=4.4"></script>
 </body>
 </html>

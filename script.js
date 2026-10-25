@@ -760,6 +760,7 @@ let capturedShinyList = [];
 let spinHistory = [];
 let lastSpinPendingIds = new Set();
 let currentMatrixFilter = 'all';
+let currentMatrixTypeFilter = 'all';
 let matrixSearchQuery = '';
 
 const imageCache = new Map();
@@ -804,6 +805,7 @@ const capturedCountEl = document.getElementById('capturedCount');
 // Elementos de la Matriz Gigante Paldea 400
 const matrixGrid = document.getElementById('matrixGrid');
 const matrixSearchInput = document.getElementById('matrixSearchInput');
+const matrixTypeFilter = document.getElementById('matrixTypeFilter');
 const matrixClearSearchBtn = document.getElementById('matrixClearSearchBtn');
 const matrixCapturedCount = document.getElementById('matrixCapturedCount');
 const matrixCapturedPercent = document.getElementById('matrixCapturedPercent');
@@ -1580,8 +1582,62 @@ function saveShinyTracking(dexId = currentDexId) {
 }
 
 function updateDashboardViews() {
+  rebuildTypeFilterOptions();
   renderPaldeaMatrix();
   renderCapturedList();
+}
+
+// ==========================================
+// FILTRO POR TIPO CON CONTEO DE RESTANTES
+// ==========================================
+// Calcula, para la Pokédex activa, cuántos Pokémon de cada tipo existen y cuántos
+// quedan por capturar. Los Pokémon de doble tipo cuentan en ambos tipos.
+// Orden: más restantes por capturar primero; desempate por total y luego alfabético.
+function getTypeRemainingStats() {
+  const capturedSet = new Set(capturedShinyList.map(c => getPokemonId(c)));
+  const statsMap = new Map();
+  let totalRemaining = 0;
+
+  getActiveDexFullList().forEach(p => {
+    const captured = isPokemonCaptured(p, capturedSet);
+    if (!captured) totalRemaining++;
+    (p.types || []).forEach(t => {
+      if (!statsMap.has(t)) statsMap.set(t, { type: t, total: 0, remaining: 0 });
+      const s = statsMap.get(t);
+      s.total++;
+      if (!captured) s.remaining++;
+    });
+  });
+
+  const stats = [...statsMap.values()].sort((a, b) =>
+    (b.remaining - a.remaining) || (b.total - a.total) || a.type.localeCompare(b.type, 'es')
+  );
+  return { stats, totalRemaining };
+}
+
+function fillTypeSelect(selectEl, stats, totalRemaining) {
+  if (!selectEl) return 'all';
+  const previous = selectEl.value || 'all';
+  const options = [`<option value="all">TODOS LOS TIPOS (${totalRemaining} por capturar)</option>`];
+  stats.forEach(s => {
+    options.push(`<option value="${s.type}">${s.type} (${s.remaining} por capturar)</option>`);
+  });
+  selectEl.innerHTML = options.join('');
+  const stillExists = previous === 'all' || stats.some(s => s.type === previous);
+  selectEl.value = stillExists ? previous : 'all';
+  return selectEl.value;
+}
+
+// Reconstruye los selectores de tipo de la ruleta (#typeFilter) y de la matriz
+// (#matrixTypeFilter) conservando la selección actual cuando sigue siendo válida.
+function rebuildTypeFilterOptions() {
+  const { stats, totalRemaining } = getTypeRemainingStats();
+
+  const prevWheelType = typeFilter ? typeFilter.value : 'all';
+  const newWheelType = fillTypeSelect(typeFilter, stats, totalRemaining);
+  if (prevWheelType !== newWheelType && !isSpinning) applyFilters();
+
+  currentMatrixTypeFilter = fillTypeSelect(matrixTypeFilter, stats, totalRemaining);
 }
 
 function markMultipleAsShinyCaptured(pokemonList) {
@@ -1802,6 +1858,11 @@ function renderPaldeaMatrix() {
       }
 
       if (!matchName && !matchNum && !matchType && !matchGame) return false;
+    }
+
+    // Filtro por tipo elemental (selector de la matriz)
+    if (currentMatrixTypeFilter !== 'all' && !(p.types || []).includes(currentMatrixTypeFilter)) {
+      return false;
     }
 
     // Filtros por pestaña de estado o edición
@@ -2599,6 +2660,8 @@ function switchDexContext(newDexId) {
 
   // Resetear filtros
   if (typeFilter) typeFilter.value = 'all';
+  if (matrixTypeFilter) matrixTypeFilter.value = 'all';
+  currentMatrixTypeFilter = 'all';
   if (matrixSearchInput) {
     matrixSearchInput.value = '';
     matrixSearchQuery = '';
@@ -2791,6 +2854,13 @@ function initApp() {
   });
 
   // Eventos de la Matriz Gigante Paldea 400
+  if (matrixTypeFilter) {
+    matrixTypeFilter.addEventListener('change', (e) => {
+      currentMatrixTypeFilter = e.target.value || 'all';
+      renderPaldeaMatrix();
+    });
+  }
+
   if (matrixSearchInput) {
     matrixSearchInput.addEventListener('input', (e) => {
       matrixSearchQuery = e.target.value;

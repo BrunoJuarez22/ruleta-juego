@@ -329,6 +329,18 @@ ruleta-juego/
       4. Se añadieron Sawk/Throh a los exclusivos de `SwSh` y Mime Jr./Mr. Mime + Bonsly/Sudowoodo a los exclusivos de `BDSP`, y se actualizó el anti-caché a `v=4.3` en `index.html`.
 31. **Reversión a Modo Reposo Automático (Coste $0.00 Garantizado):**
     - Se restableció `fly.toml` con `auto_stop_machines = 'stop'` y `min_machines_running = 0`. Esto garantiza que la máquina se suspenda automáticamente tras inactividad para no generar ningún consumo ni cobro en Fly.io. La indexación en Google Search Console se gestiona directamente mediante la solicitud manual desde la Prueba en Vivo exitosa ("Lista para indexar").
+32. **Filtro por Tipo con Conteo de Restantes por Capturar en Cada Pokédex (`v=4.4`):**
+    - **Requerimiento del Usuario:** Filtrar por tipo en cada sección (cada Pokédex/juego), mostrando junto a cada tipo cuántos Pokémon de ese tipo quedan por capturar, y ordenando las opciones del tipo con más Pokémon al que menos.
+    - **Implementación (`script.js`):**
+      - `getTypeRemainingStats()`: recorre la lista completa del dex activo (`getActiveDexFullList()`) y calcula por tipo `total` y `remaining` (no capturados según `isPokemonCaptured`). Los Pokémon de doble tipo cuentan en ambos tipos. Solo aparecen los tipos presentes en ese dex.
+      - **Orden:** primero el tipo con más Pokémon restantes por capturar; desempate por total del tipo y después alfabético (`localeCompare('es')`).
+      - `fillTypeSelect()` / `rebuildTypeFilterOptions()`: regeneran dinámicamente las opciones con el formato `Tipo (N por capturar)` y `TODOS LOS TIPOS (N por capturar)`, conservando la selección actual si sigue siendo válida.
+      - Se invoca desde `updateDashboardViews()`, por lo que los conteos y el orden se actualizan al instante al capturar/desmarcar, al cambiar de Pokédex y tras la sincronización con la nube.
+    - **Puntos de filtrado:**
+      - **Ruleta (`#typeFilter`):** el selector de tipo existente ahora es dinámico (antes era estático y sin conteos).
+      - **Matriz (`#matrixTypeFilter`):** nuevo selector `.matrix-type-filter` junto al buscador de la matriz. Estado en `currentMatrixTypeFilter`; se combina con el buscador y con los chips (estado, edición o generación). Se reinicia a `'all'` en `switchDexContext()`.
+    - **Estilo:** coherente con las directrices (sin emojis, bordes de 3px, sin animaciones). Sin cambios en `localStorage` ni en la base de datos.
+    - Anti-caché actualizado a `v=4.4` en `index.html`.
 
 ---
 

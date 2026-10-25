@@ -1524,6 +1524,33 @@ main {
   color: var(--text-main);
 }
 
+/* Selector de tipo de la matriz (con conteo de Pokémon restantes por capturar) */
+.matrix-type-filter {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.matrix-type-filter .filter-select {
+  padding: 6px 10px;
+  font-size: 0.76rem;
+  border-radius: 3px;
+  background-color: var(--bg-surface);
+  min-width: 200px;
+  max-width: 100%;
+}
+
+@media (max-width: 680px) {
+  .matrix-type-filter {
+    width: 100%;
+  }
+  .matrix-type-filter .filter-select {
+    flex: 1;
+    min-width: 0;
+  }
+}
+
 .matrix-filter-chips {
   display: flex;
   flex-wrap: wrap;
