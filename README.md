@@ -1,12 +1,12 @@
 # Shiny Roulette - Ruleta y Rastreador de Pokémon Shiny
 
-Herramienta web interactiva para cazadores de Pokémon Shiny. Incluye la **Ruleta General con los 1,025 Pokémon existentes (Generaciones 1 a 9)** y **7 Pokédexes Oficiales independientes para todos los juegos de Nintendo Switch**.
+Herramienta web interactiva para cazadores de Pokémon Shiny. Incluye la **Ruleta General con los 1,025 Pokémon existentes (Generaciones 1 a 9)** y **10 Pokédexes Oficiales independientes para entregas de Nintendo Switch y Nintendo 3DS**.
 
 ---
 
 ## Características Principales
 
-- **Ruleta General y Multi-Pokédex (7 Catálogos Oficiales):**
+- **Ruleta General y Multi-Pokédex (10 Catálogos Oficiales):**
   - **Ruleta General (Gens 1-9):** 1,025 Pokémon con filtro por generación y disponibilidad multi-juego.
   - **Pokédex de Paldea (Escarlata y Púrpura):** 400 Pokémon con filtros de exclusivos de versión.
   - **Pokédex de Galar (Espada y Escudo):** 400 Pokémon con exclusivos de versión.
@@ -14,10 +14,22 @@ Herramienta web interactiva para cazadores de Pokémon Shiny. Incluye la **Rulet
   - **Pokédex de Sinnoh (Diamante Brillante y Perla Reluciente):** 151 Pokémon con exclusivos de versión.
   - **Pokédex de Kanto (Let's Go Pikachu / Eevee):** 153 Pokémon con exclusivos de versión.
   - **Pokédex de Luminalia (Leyendas Pokémon: Z-A):** 232 Pokémon confirmados de Ciudad Luminalia.
+  - **Pokédex de Kalos (Pokémon X y Pokémon Y):** 457 Pokémon divididos en Kalos Centro, Costa y Montaña con 32 exclusivos de versión.
+  - **Pokédex de Hoenn (Pokémon Rubí Omega y Zafiro Alfa):** 211 Pokémon con 16 exclusivos de versión.
+  - **Pokédex de Alola (Pokémon Ultrasol y Ultraluna):** 403 Pokémon distribuidos en sus 4 islas con 40 exclusivos de versión.
 
 - **Insignias Canónicas de Disponibilidad por Juego:**
   - En la Ruleta General, cada Pokémon muestra insignias nítidas indicando en qué entregas de Nintendo Switch está disponible (`SV`, `Z-A`, `SwSh`, `PLA`, `BDSP`, `LGPE`) y en cuántas entregas clásicas (`+CLÁS`).
   - Datos verificados y canónicos cruzados con Pokédexes oficiales, DLCs (*La Máscara Turquesa*, *El Disco Índigo*, *Isla de la Armadura*, *Nieves de la Corona* y *Luminalia Dimensional*) y transferencias oficiales.
+
+- **Guía de Ubicación y Obtención por Juego (Tarjeta Modal Expandible):**
+  - Al abrir la tarjeta expandible de cualquier Pokémon (desde la ruleta, la cuadrícula de la matriz, la lista de capturados shiny, el historial de giros, el catálogo modal o el visor del puntero), se muestra dónde y cómo obtener/capturar al Pokémon en cada juego donde está disponible.
+  - **Fase 1 (Pokédex de Paldea completa - 400 Pokémon):** Incluye todas las rutas, áreas de Paldea, Noroteo, Biodomo Arándano, niveles, métodos de captura (`SALVAJE`, `EVOLUCIÓN`, `TERAINCURSIONES`, `APARICIÓN MASIVA`, `CRIAR`, `ESPECIAL`, `INTERCAMBIO`) y ubicaciones históricas desde Generación 1 hasta Generación 9.
+  - **Fase 2 (Pokédex de Hisui / *Leyendas: Arceus* - 242 Pokémon y Ciudad Luminalia / *Leyendas: Z-A* - 232 Pokémon):** Incluye las regiones de Hisui (`Pradera Obsidiana`, `Pantanal Carmesí`, `Costa Cobalto`, `Ladera Corona`, `Tundra Alba`), distorsiones espaciotemporales, apariciones supermasivas, Pokémon Alfa, Zonas salvajes 1–20 y distritos de Ciudad Luminalia, Zonas salvajes dimensionales (*Luminalia Dimensional*) y todas las formas regionales de Hisui, Alola y Galar.
+  - **Fase 3 (Pokédex de Galar / *Espada y Escudo* - 400 Pokémon):** Incluye las rutas 1–10 de Galar, zonas y climas del Área Silvestre, nidos exactos de Incursiones Dinamax y Gigamax, Aventura Dinamax (*Las Nieves de la Corona*), *Isla de la Armadura*, encuentros por Curri y desglose completo de las 16 especies con forma regional de Galar (`[Forma de Galar]` + forma clásica).
+  - **Fase 4 (Pokédex de Sinnoh / *Diamante Brillante y Perla Reluciente* - 151 Pokémon, Pokédex de Kanto / *Let's Go Pikachu y Let's Go Eevee* - 153 Pokémon y Pokédex Nacional Completa - 1,025 Pokémon):** Incluye rutas 201–230 de Sinnoh, Grutas del Subsuelo, Árboles de Miel, Pokéradar, Jardín Trofeo, Gran Pantano, Parque Hansa, rutas 1–25 de Kanto, GO Park (`Meltan` y `Melmetal`), las 18 formas regionales de Alola (`[Forma de Alola]` + `[Forma de Kanto]`), Ultraentes y todas las especies de los DLCs de Gen 8 y Gen 9.
+  - **Fase 5 (Juegos de Nintendo 3DS: Kalos X/Y - 457 Pokémon, Hoenn RO/ZA - 211 Pokémon y Alola US/UL - 403 Pokémon):** Cobertura exhaustiva de las 3 áreas de Kalos (Centro, Costa, Montaña), rutas y mares de Hoenn, las 4 islas de Alola (Melemele, Akala, Ula-Ula, Poni), Safari Amistad, Ultravuelo, Ruinas del Espacio y Ultramétropolis, cubriendo el **100% de las 1,025 especies de la Pokédex Nacional y las 10 Pokédexes de la aplicación**.
+  - Avisos informativos junto a la cuadrícula en cada sección y pestañas rápidas para consultar las ubicaciones de cualquier fase de su línea evolutiva sin salir de la tarjeta.
 
 - **Líneas Evolutivas Interactivas:**
   - Al salir un Pokémon, el resultado muestra a los integrantes de su familia evolutiva en ese juego.

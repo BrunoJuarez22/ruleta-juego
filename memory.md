@@ -41,6 +41,10 @@ ruleta-juego/
 ├── script.js                     # Motor de ruleta (Canvas 2D), Web Audio API, matriz y lógica shiny
 ├── paldea_data.js                # Definición de window.PALDEA_POKEMON (400 registros completos)
 ├── paldea_pokemon.json           # Base de datos canónica de Paldea en formato JSON
+├── switch_data.js                # Definición de window.GALAR_POKEMON, HISUI, SINNOH, LETSGO, LUMIOSE
+├── switch_pokemon.json           # Base de datos canónica de juegos de Nintendo Switch en formato JSON
+├── 3ds_data.js                   # Definición de window.KALOS_POKEMON, HOENN_POKEMON, ALOLA_POKEMON
+├── 3ds_pokemon.json              # Base de datos canónica de juegos de Nintendo 3DS en formato JSON (XY, ORAS, USUM)
 ├── all_data.js                   # Definición de window.ALL_NATIONAL_POKEMON (1025 Pokémon de Gens 1 a 9)
 ├── all_pokemon.json              # Base de datos canónica Nacional de 1025 Pokémon con disponibilidad de juegos
 ├── package.json                  # Dependencias de backend (express, bcryptjs, jsonwebtoken, cors)
@@ -341,6 +345,107 @@ ruleta-juego/
       - **Matriz (`#matrixTypeFilter`):** nuevo selector `.matrix-type-filter` junto al buscador de la matriz. Estado en `currentMatrixTypeFilter`; se combina con el buscador y con los chips (estado, edición o generación). Se reinicia a `'all'` en `switchDexContext()`.
     - **Estilo:** coherente con las directrices (sin emojis, bordes de 3px, sin animaciones). Sin cambios en `localStorage` ni en la base de datos.
     - Anti-caché actualizado a `v=4.4` en `index.html`.
+33. **Guía de Ubicación y Obtención por Juego en Tarjeta Modal Expandible (Fase 1: 400 Pokémon de Paldea) y Avisos en Cuadrícula (`v=4.5`):**
+    - **Requerimiento del Usuario:**
+      1. Incluir en la tarjeta modal expandible (`#winnerModal`) de cada Pokémon —accesible desde cualquier lugar donde aparezca una tarjeta— la guía de **dónde es capturable/obtenible en cada juego**, comenzando en esta primera parte con los **400 Pokémon de Paldea**.
+      2. Añadir cerca de la cuadrícula en cada sección un aviso indicando que se puede consultar dónde obtener el Pokémon en cada juego donde está disponible.
+    - **Datos Canónicos Locales y Auditoría de Exactitud (`paldea_pokemon.json` y `paldea_data.js`):**
+      - Se extrajeron, limpiaron de marcado MediaWiki y estructuraron las plantillas oficiales `{{Localización}}` de WikiDex en español para los **400 Pokémon de la Pokédex de Paldea (#001 Sprigatito a #400 Miraidon)**, generando 3,675 tarjetas de juego verificadas desde Generación 1 hasta Generación 9.
+      - **Auditoría y Correcciones Canónicas:**
+        1. **Exclusivos de Versión en Paldea:** Se eliminaron las apariciones masivas y teraincursiones nativas erróneas que un bot de WikiDex había duplicado en la versión opuesta para 13 exclusivos (`Misdreavus`, `Gulpin`, `Swalot`, `Drifloon`, `Stunky`, `Bagon`, `Shelgon`, `Oranguru`, `Passimian`, `Skrelp`, `Dragalge`, `Clauncher`, `Clawitzer`), dejando claramente indicado el intercambio o captura cooperativa vía Círculo Unión / Teraincursiones en línea, así como el método exacto de obtención de `Armadura Auspiciosa` y `Armadura Maldita` en Pueblo Pirotín para `Armarouge` y `Ceruledge`.
+        2. **Reemplazo de Frases Genéricas por Áreas Exactas de Paldea:** En los 57 Pokémon donde WikiDex listaba frases genéricas de bot (`"En bosques/cuevas/minas de toda la región"`), se sustituyeron por sus áreas y provincias exactas de Paldea (`Área 1–6 del sur/este/oeste/norte`, `Sierra Napada`, `Gruta Vestura`, `Desierto Rostiz`, `Bosquejada`, `Lago Cazola`, `Área Cero`, etc.), además de añadir las ubicaciones de los iniciales en el Biodomo Arándano (*El Disco Índigo*) y los colores/ubicaciones de las 8 estacas de los cuatro Pokémon funestos (`Wo-Chien`, `Chien-Pao`, `Ting-Lu`, `Chi-Yu`).
+        3. **Formas de Hisui en Leyendas Pokémon: Arceus:** Se integraron las ubicaciones de captura en *Leyendas Pokémon: Arceus* para las 12 especies de Paldea que aparecen en Hisui bajo su forma regional (`Growlithe`, `Arcanine`, `Voltorb`, `Electrode`, `Qwilfish`, `Lilligant`, `Zorua`, `Zoroark`, `Sliggoo`, `Goodra`, `Avalugg`, `Braviary`), logrando 0 discrepancias frente a `all_pokemon.json`.
+        4. **Sub-viñetas de Formas y Filtrado de Juegos No Nativos:** Se combinaron jerárquicamente las sub-viñetas de formas/estilos (`Oricorio`, `Lycanroc`, `Deerling`, `Sawsbuck`, `Shellos`, `Gastrodon`, `Flabébé`, `Gimmighoul`), se normalizó `"Evolucionar: de [Pre-evolución]"` y se descartaron los pares de juegos clásicos donde el Pokémon no es obtenible nativamente (solo transferible vía *Pokétransfer* / *Parque Compi* / *Poké Trasladador*).
+      - En las 353 especies donde Escarlata y Púrpura comparten exactamente las mismas zonas/métodos se agrupan en una tarjeta combinada `POKÉMON ESCARLATA Y PÚRPURA`; en las 47 especies con diferencias o exclusividad de versión se muestran tarjetas separadas para `POKÉMON ESCARLATA` y `POKÉMON PÚRPURA`.
+    - **Resolución Multi-Pokédex (`script.js`):**
+      - `resolvePokemonLocations(pokemon)` busca primero `pokemon.locations`, y si el Pokémon proviene de otra Pokédex (`general`, `swsh`, `pla`, `bdsp`, `lgpe`, `plza`) o de listas guardadas (`capturedShinyList`, `pendingList`, `spinHistory`), cruza automáticamente su número regional o nacional contra `PALDEA_BY_NUM` y `PALDEA_BY_NAT`. Así, los 400 Pokémon de Paldea muestran su guía completa de ubicaciones sin importar en cuál de las 7 secciones se abra su tarjeta.
+      - `buildLocationCardsData(resolvedLocs)` y `formatLocationLineHtml(line)` organizan las ubicaciones en acordeones temáticos por entrega (`.loc-game-card`), priorizando y expandiendo por defecto el juego de la Pokédex activa y `Pokémon Escarlata y Púrpura`, con etiquetas estilizadas por método de obtención (`SALVAJE`, `EVOLUCIÓN`, `TERAINCURSIONES`, `APARICIÓN MASIVA`, `CRIAR`, `ESPECIAL`, `INTERCAMBIO`), botón `VER TODOS (N)` / `PLEGAR SECUNDARIOS` (`#toggleAllLocationsBtn`) y pestañas rápidas de fase evolutiva (`#winnerLocationsEvoTabs`).
+    - **Acceso Universal desde Todas las Tarjetas y Vistas:**
+      - **Matriz / Cuadrícula (`#matrixGrid`):** clic en cualquier `.matrix-card` o en su botón `.btn-matrix-evo` (ahora presente en el 100% de las tarjetas: `LÍNEA` si evoluciona, `FICHA` si es fase única) abre `#winnerModal`.
+      - **Capturados (`#capturedList`):** clic en cualquier `.shiny-card-item` o en su nuevo botón `.info-btn` (`FICHA`) abre `#winnerModal`.
+      - **Historial (`#historyList`), Catálogo Modal (`#itemsListContainer`) y Live Pointer Tracker (`.live-tracker-card`):** clic directo en la fila/tarjeta abre `#winnerModal` (con `z-index: 1100` para superponerse limpiamente sobre `#settingsModal`).
+      - Se añadió botón superior de cierre `#closeWinnerModalBtn` (`✕`) en `.winner-card-top-bar`.
+    - **Avisos junto a la Cuadrícula (`.grid-location-notice`):**
+      - Se incorporó un banner informativo `.grid-location-notice` encima de `#matrixGrid` en `#pendingView`, además de avisos compactos en `#capturedView`, `#historyView` y `.catalog-location-hint` en `#settingsModal`.
+    - Anti-caché actualizado a `v=4.5` en `index.html`.
+34. **Guía de Ubicación y Obtención Extendida a las Pokédex de los Dos Juegos de Leyendas: Hisui (242 Pokémon) y Ciudad Luminalia (232 Pokémon) (`v=4.6`):**
+    - **Requerimiento del Usuario:** Continuar el sistema de ubicaciones por juego incorporando las Pokédex completas de los dos juegos de Leyendas (*Leyendas Pokémon: Arceus* y *Leyendas Pokémon: Z-A*) con todas las mejoras y auditorías de exactitud.
+    - **Datos Canónicos y Auditoría de Exactitud (`switch_pokemon.json`, `switch_data.js`, `paldea_pokemon.json`, `paldea_data.js`):**
+      - **Pokédex de Hisui (`pla` — *Leyendas Pokémon: Arceus*, 242 Pokémon):**
+        - Los 242 Pokémon (#001 Rowlet a #242 Enamorus) cuentan ahora con su objeto `locations` completo (3,511 tarjetas de juego generadas), incluyendo regiones exactas de Hisui (`Pradera Obsidiana`, `Pantanal Carmesí`, `Costa Cobalto`, `Ladera Corona`, `Tundra Alba`), `Distorsiones espaciotemporales`, `Apariciones masivas`, `Apariciones supermasivas`, ubicaciones de `Pokémon alfa` y encomiendas/peticiones.
+        - **Formas Regionales de Hisui y Alola en PLA:** Se integraron las 16 formas de Hisui (`Decidueye`, `Typhlosion`, `Samurott`, `Growlithe`, `Arcanine`, `Voltorb`, `Electrode`, `Qwilfish`, `Sneasel` —incluyendo tanto la `[Forma de Johto]` en distorsiones de la Pradera Obsidiana como la `[Forma de Hisui]` en Ladera Corona y Tundra Alba—, `Lilligant`, `Zorua`, `Zoroark`, `Braviary`, `Sliggoo`, `Goodra` y `Avalugg`), así como `Vulpix de Alola` (Petición 83 «Los Vulpix de Alola perdidos» en la Tundra Alba) y `Ninetales de Alola` (piedra hielo).
+        - **Correcciones Específicas en Hisui:** Prefijo `Salvaje:` en `Kadabra` (`Pradera Obsidiana (Planicie Arena) y Tundra Alba (Lago Agudeza)`), guía detallada de las 28 formas de `Unown` y las `Ruinas Sosiego`, Encomienda 27 para `Arceus` en el Templo de Sinnoh, combinación jerárquica de roca hielo/piedra hielo en `Glaceon`, y normalización de evolución para `Overqwil` y `Goodra`.
+      - **Pokédex de Ciudad Luminalia (`plza` — *Leyendas Pokémon: Z-A*, 232 Pokémon):**
+        - Los 232 Pokémon (#001 Chikorita a #232 Volcanion) cuentan con su objeto `locations` completo (2,875 tarjetas de juego generadas), detallando las `Zonas salvajes 1 a 20`, distritos de Ciudad Luminalia (`Distrito Verde`, `Distrito Rojo`, `Distrito Azul`, `Distrito Amarillo`, `Distrito Rosa`), ubicaciones de `Pokémon Alfa`, `Zonas salvajes dimensionales (1 a 5 estrellas)` del DLC *Luminalia Dimensional*, y misiones principales/secundarias.
+        - **Formas Regionales y Especiales en PLZA:** Se integraron los métodos de obtención de `Raichu de Alola` (intercambio en Ciudad Luminalia), `Slowpoke de Galar` (Misión secundaria 39: «Slowpoke por Slowpoke»), `Slowbro de Galar` (brazal galanuez), `Slowking de Galar` (corona galanuez), `Stunfisk de Galar` (Zonas salvajes dimensionales de 4 y 5 estrellas) y `[Floette Flor Eterna]` (15 combates de cupón en los Juegos Z-A Infinitos), además de diferenciar `Alfa (Meowstic macho)` y `Alfa (Meowstic hembra)`.
+      - **Exclusivos de Versión del DLC de Escarlata/Púrpura, BDSP, LGPE y Filtrado de Transferencias:**
+        - Se aplicó limpieza de versión opuesta en `escarlata`/`púrpura` para los exclusivos del DLC presentes en Hisui/Luminalia (`Aipom`, `Ambipom`, `Gligar`, `Gliscor`, `Cranidos`, `Rampardos`, `Shieldon`, `Bastiodon`), se corrigieron los exclusivos de `BDSP` (`Bonsly`, `Sudowoodo`, `Mime Jr.`, `Mr. Mime`) y `LGPE` (`Arbok`), se añadieron los subencabezados `[Tronco Planta]`, `[Tronco Arena]`, `[Tronco Basura]` en `Burmy`/`Wormadam` y `[Forma raya blanca]` en `Basculin` para Hisui, y se filtraron todas las líneas no nativas de `Banco de Pokémon` y `Pokémon HOME` (eliminando tarjetas de transferencia pura en especies como `Wyrdeer`, `Sneasler`, `Enamorus` o `Diancie`).
+    - **Resolución Universal Multi-Pokédex (`script.js`):**
+      - `resolvePokemonLocations(pokemon)` consulta ahora `HISUI_BY_NUM`, `LUMIOSE_BY_NUM`, `PALDEA_BY_NUM` y los mapas nacionales `PALDEA_BY_NAT`, `HISUI_BY_NAT` y `LUMIOSE_BY_NAT`.
+      - Con esta segunda fase, **660 de las 1,025 especies de la Pokédex Nacional** muestran ya su guía completa de captura multi-juego desde cualquiera de las 7 secciones de la aplicación, priorizando y expandiendo automáticamente en primera posición la tarjeta del juego activo (`Leyendas Pokémon: Arceus` en Hisui y `Leyendas Pokémon: Z-A` en Luminalia) y actualizando dinámicamente la insignia `#gridLocationPhaseBadge` (`PALDEA 400/400 COMPLETO`, `HISUI 242/242 COMPLETO`, `LUMINALIA 232/232 COMPLETO`, `GUÍA MULTI-JUEGO ACTIVA (660/1025)`).
+    - Anti-caché actualizado a `v=4.6` en `index.html`.
+35. **Guía de Ubicación y Obtención Extendida a la Pokédex de Galar: Espada y Escudo (400 Pokémon) (`v=4.7`):**
+    - **Requerimiento del Usuario:** Añadir la guía completa de ubicaciones de captura por juego para los 400 Pokémon de la Pokédex de Galar (*Pokémon Espada y Pokémon Escudo*).
+    - **Datos Canónicos y Auditoría de Exactitud (`switch_pokemon.json`, `switch_data.js`, `paldea_pokemon.json`, `paldea_data.js`):**
+      - **Pokédex de Galar (`swsh` — *Pokémon Espada y Pokémon Escudo*, 400 Pokémon):**
+        - Los 400 Pokémon (#001 Grookey a #400 Eternatus) cuentan ahora con su objeto `locations` completo (3,769 tarjetas de juego generadas), incluyendo rutas de Galar (`Ruta 1 a 10`), zonas y condiciones climáticas del Área Silvestre (`Llanura Pétrea`, `Valle Entrepuentes`, `Lago Milotic`, `Cuenca Polvorienta`, `Gorro del Gigante`, `Espejo del Gigante`, `Lago del Enfado`, etc.), nidos exactos de `Incursiones Dinamax` e `Incursiones Gigamax`, `Aventura Dinamax` (*Las Nieves de la Corona*), zonas de la *Isla de la Armadura*, encuentros mediante `Curri` y regalos/intercambios internos.
+        - **Integración Completa de las Formas Regionales de Galar y Clásicas:** Se extrajeron y fusionaron las páginas dedicadas de WikiDex para las 16 especies con forma regional de Galar (`Meowth`, `Ponyta`, `Rapidash`, `Slowpoke`, `Slowbro`, `Slowking`, `Farfetch’d`, `Weezing`, `Mr. Mime`, `Corsola`, `Zigzagoon`, `Linoone`, `Darumaka`, `Darmanitan`, `Yamask` y `Stunfisk`), presentando bajo subencabezados diferenciados (`[Forma de Galar]` y `[Forma de Kanto/Johto/Hoenn/Teselia]`) tanto las rutas/nidos de la forma de Galar como los intercambios con NPCs/Tatiana o regalos del Maestro Diglett para obtener la forma clásica.
+        - **Correcciones Específicas y Exclusivos de Versión:**
+          - Corrección del extractor `extractLocalizacionTemplate` para soportar espacios tras las llaves de apertura (`{{ Localización`, necesario en `Nincada` #104) y lookahead negativo `(?!\s+en\s+otros)`.
+          - Adición de `Cramorant` (#0845, exclusivo del DLC de *Escarlata*) y `Morpeko` (#0877, exclusivo del DLC de *Púrpura*) al mapa de exclusivos de versión de SV-DLC.
+          - Normalización de líneas en `Bronzor` (`Salvaje: Silla del Gigante...`), `Flapple` (`Incursiones Gigamax: disponible en eventos de incursión Dinamax`), `Indeedee` (`[Ambos sexos]`), `Butterfree`, `Xatu`, `Krabby`, `Quagsire`, `Basculin` y métodos de inserción de cartucho GBA en 4.ª generación.
+    - **Resolución Universal Multi-Pokédex (`script.js`):**
+      - `resolvePokemonLocations(pokemon)` consulta ahora `GALAR_BY_NUM` y `GALAR_BY_NAT` junto a `PALDEA`, `HISUI` y `LUMIOSE`.
+      - Clasificación visual de etiquetas de método para `CURRI`, `GOLPE CABEZA`, `POKÉRADAR` y `SUBSUELO` en `formatLocationLineHtml(line)`.
+      - Con esta tercera fase, **835 de las 1,025 especies de la Pokédex Nacional** (1,274 entradas regionales verificadas con 0 errores entre Paldea 400, Galar 400, Hisui 242 y Luminalia 232) muestran su guía completa de captura multi-juego en toda la aplicación, con insignia `#gridLocationPhaseBadge` actualizada a `GALAR 400/400 COMPLETO` en `swsh` y `GUÍA MULTI-JUEGO ACTIVA (835/1025)` en general.
+    - Anti-caché actualizado a `v=4.7` en `index.html`.
+36. **Guía de Ubicación y Obtención Completada en el 100% de las Pokédex: Sinnoh BDSP (151), Kanto LGPE (153) y Pokédex Nacional Completa (1,025 Pokémon) (`v=4.8`):**
+    - **Requerimiento del Usuario:** Añadir las demás Pokédex restantes (`Sinnoh: Diamante Brillante y Perla Reluciente`, `Kanto: Let's Go Pikachu y Let's Go Eevee` y la `Ruleta General / Pokédex Nacional Completa`).
+    - **Datos Canónicos y Auditoría de Exactitud (`all_pokemon.json`, `all_data.js`, `switch_pokemon.json`, `switch_data.js`, `paldea_pokemon.json`, `paldea_data.js`):**
+      - **Pokédex de Sinnoh (`bdsp` — *Pokémon Diamante Brillante y Pokémon Perla Reluciente*, 151 Pokémon):**
+        - Los 151 Pokémon (#001 Turtwig a #151 Manaphy) cuentan con su objeto `locations` completo (2,155 tarjetas de juego generadas), incluyendo rutas de Sinnoh (`Ruta 201 a 230`), cuevas de las **Grutas del Subsuelo** (`Cueva Espaciosa`, `Caverna Solana`, `Caverna Claroestela`, `Caverna Reflelago`, `Cueva Carámbano`, etc.), **Árboles de Miel**, **Pokéradar**, **Jardín Trofeo**, **Gran Pantano**, **Parque Hansa**, revivir fósiles en el Museo Minero de Ciudad Pirita y diferenciación exacta de los 18 exclusivos de versión (`Cranidos`/`Rampardos`, `Stunky`/`Skuntank`, `Murkrow`/`Honchkrow`, `Mime Jr.`/`Mr. Mime`, `Dialga` en *Diamante Brillante* vs `Shieldon`/`Bastiodon`, `Glameow`/`Purugly`, `Misdreavus`/`Mismagius`, `Bonsly`/`Sudowoodo`, `Palkia` en *Perla Reluciente*).
+      - **Pokédex de Kanto (`lgpe` — *Pokémon: Let's Go, Pikachu! y Pokémon: Let's Go, Eevee!*, 153 Pokémon):**
+        - Los 153 Pokémon (#001 Bulbasaur a #153 Melmetal) cuentan con su objeto `locations` completo (2,922 tarjetas de juego generadas), incluyendo rutas de Kanto (`Ruta 1 a 25`), `Bosque Verde`, `Monte Moon`, `Túnel Roca`, `Central de Energía`, `Mansión Pokémon`, `Islas Espuma`, `Cueva Celeste`, regalos de NPCs en Ciudad Carmín/Celeste/Azulona/Azafrán, `Poké Ball Plus` (`Mew`), `GO Park` (`Meltan` y `Melmetal`) y diferenciación de los 24 exclusivos de versión (`Sandshrew`/`Sandslash`, `Oddish`/`Gloom`/`Vileplume`, `Mankey`/`Primeape`, `Growlithe`/`Arcanine`, `Grimer`/`Muk`, `Scyther` en *Pikachu* vs `Ekans`/`Arbok`, `Vulpix`/`Ninetales`, `Meowth`/`Persian`, `Bellsprout`/`Weepinbell`/`Victreebel`, `Koffing`/`Weezing`, `Pinsir` en *Eevee*).
+      - **Integración Completa de las 18 Formas Regionales de Alola:**
+        - Se extrajeron y fusionaron las páginas dedicadas de WikiDex para las 18 especies con forma regional de Alola (`Rattata`, `Raticate`, `Raichu`, `Sandshrew`, `Sandslash`, `Vulpix`, `Ninetales`, `Diglett`, `Dugtrio`, `Meowth`, `Persian`, `Geodude`, `Graveler`, `Golem`, `Grimer`, `Muk`, `Exeggutor` y `Marowak`), mostrando bajo `[Forma de Alola]` y `[Forma de Kanto]` sus rutas salvajes en *Sol/Luna/Ultrasol/Ultraluna*, sus intercambios ilimitados en los Centros Pokémon de Kanto en *Let's Go Pikachu/Eevee*, las recompensas del entrenador de Diglett en *Espada/Escudo* y su aparición en el Biodomo Arándano (*El Disco Índigo*, respetando la exclusividad de `Vulpix/Ninetales de Alola` en *Escarlata* y `Sandshrew/Sandslash de Alola` en *Púrpura*).
+      - **Pokédex Nacional Completa (`general` — 1,025/1,025 Pokémon):**
+        - Se extrajeron y procesaron las 191 especies restantes de las Generaciones 1 a 9 (incluyendo iniciales, legendarios, singulares, Ultraentes y Pokémon del DLC *La Máscara Turquesa* / *El Disco Índigo* como `Ondulagua`, `Ferroverdor`, `Dipplin`, `Poltchageist`, `Sinistcha`, `Okidogi`, `Munkidori`, `Fezandipiti`, `Ogerpon`, `Archaludon`, `Hydrapple`, `Flamariete`, `Electrofuria`, `Ferromole`, `Ferrotesta`, `Terapagos` y `Pecharunt`), alcanzando **9,685 tarjetas de juego verificadas con 0 errores sobre las 2,603 entradas totales de los 7 catálogos**.
+    - **Resolución e Interfaz 100% Completas (`script.js` e `index.html`):**
+      - `resolvePokemonLocations(pokemon)` consulta ahora `NATIONAL_BY_ID`, `PALDEA_BY_NUM`, `GALAR_BY_NUM`, `HISUI_BY_NUM`, `SINNOH_BY_NUM`, `LETSGO_BY_NUM` y `LUMIOSE_BY_NUM`.
+      - `switchDexContext(dexId)` muestra la insignia de completitud al 100% en las 7 secciones: `NACIONAL 1025/1025 COMPLETO`, `PALDEA 400/400 COMPLETO`, `GALAR 400/400 COMPLETO`, `HISUI 242/242 COMPLETO`, `SINNOH 151/151 COMPLETO`, `KANTO 153/153 COMPLETO` y `LUMINALIA 232/232 COMPLETO`.
+    - **Auditoría Exhaustiva y Correcciones Globales de Calidad:**
+      - **Aislamiento de Exclusivos de Versión en Pokédex Nacional:** Se corrigió la resolución de `palEntry` para consultar `paldeaByNac` al procesar `all_pokemon.json`, garantizando que los 46 exclusivos de Paldea (`Drifloon`, `Stunky`, `Oranguru`, `Skrelp`, `Misdreavus`, `Gulpin`, `Passimian`, `Bagon`, etc.) apliquen con total fidelidad `cleanOppositePaldeaVersion` tanto en el catálogo de Paldea como en la Ruleta General.
+      - **Depuración de Frases Genéricas:** Se eliminó la coletilla `"de toda la región"` en las 59 descripciones de apariciones masivas de Paldea, reemplazándola por biomas concisos y limpios (`"Aparición masiva de Pokémon: zonas de bosque."`, `"zonas de montaña."`, `"zonas de campo."`, etc.).
+      - **Normalización de Raids de Evento:** Se clasificaron las incursiones especiales de preorden de `Jangmo-o` y `Larvitar` bajo la etiqueta `Especial (Cristal Dinamax): Usar el Cristal Dinamax`.
+      - **Verificación 100% Limpia:** Suite de auditoría ejecutada con 0 advertencias, 0 errores sintácticos, 0 caracteres emoji y 0 inconsistencias sobre las 2,603 entradas totales.
+    - Anti-caché actualizado a `v=4.8` en `index.html`.
+37. **Incorporación Completa de los Juegos de Nintendo 3DS: Kalos (X / Y, 457 Pokémon), Hoenn (Rubí Omega / Zafiro Alfa, 211 Pokémon) y Alola (Ultrasol / Ultraluna, 403 Pokémon) (`v=4.9`):**
+    - **Requerimiento del Usuario:** Añadir las Pokédex y guías completas de los juegos canónicos de Nintendo 3DS.
+    - **Nuevas Pokédex Oficiales Integradas (1,071 entradas regionales adicionales):**
+      - **Pokédex de Kalos (`xy` — *Pokémon X y Pokémon Y*, 457 Pokémon):**
+        - Cobertura canónica integral de las 3 áreas regionales de Kalos sin duplicados: Kalos Centro (153), Kalos Costa (153) y Kalos Montaña (151), desde #001 Chespin hasta #457 Zygarde.
+        - Identificación de los 32 exclusivos regionales: 16 de *Pokémon X* (`Staryu`, `Starmie`, `Pinsir`, `Houndour`, `Houndoom`, `Lileep`, `Cradily`, `Anorith`, `Armaldo`, `Sawk`, `Swirlix`, `Slurpuff`, `Clauncher`, `Clawitzer`, `Xerneas`, etc.) y 16 de *Pokémon Y* (`Shellder`, `Cloyster`, `Heracross`, `Electrike`, `Manectric`, `Omanyte`, `Omastar`, `Kabuto`, `Kabutops`, `Throh`, `Spritzee`, `Aromatisse`, `Skrelp`, `Dragalge`, `Yveltal`, etc.).
+      - **Pokédex de Hoenn (`oras` — *Pokémon Rubí Omega y Pokémon Zafiro Alfa*, 211 Pokémon):**
+        - Cobertura de los 211 Pokémon oficiales de Hoenn (#001 Treecko a #211 Deoxys).
+        - Identificación exacta de los 16 exclusivos regionales: 8 de *Rubí Omega* (`Seedot`, `Nuzleaf`, `Shiftry`, `Mawile`, `Zangoose`, `Solrock`, `Latios`, `Groudon`) y 8 de *Zafiro Alfa* (`Lotad`, `Lombre`, `Ludicolo`, `Sableye`, `Seviper`, `Lunatone`, `Latias`, `Kyogre`).
+      - **Pokédex de Alola (`usum` — *Pokémon Ultrasol y Pokémon Ultraluna*, 403 Pokémon):**
+        - Cobertura de los 403 Pokémon de Alola organizados canónicamente por sus 4 islas: Melemele (120), Akala (130), Ula-Ula (90) y Poni (63), desde #001 Rowlet hasta #403 Zeraora.
+        - Identificación exacta de los 40 exclusivos regionales: 20 de *Ultrasol* (`Vulpix de Alola`, `Ninetales de Alola`, `Houndour`, `Houndoom`, `Cranidos`, `Rampardos`, `Cottonee`, `Whimsicott`, `Tirtouga`, `Carracosta`, `Rufflet`, `Braviary`, `Clauncher`, `Clawitzer`, `Passimian`, `Turtonator`, `Solgaleo`, `Buzzwole`, `Kartana`, `Blacephalon`) y 20 de *Ultraluna* (`Sandshrew de Alola`, `Sandslash de Alola`, `Electrike`, `Manectric`, `Shieldon`, `Bastiodon`, `Petilil`, `Lilligant`, `Archen`, `Archeops`, `Vullaby`, `Mandibuzz`, `Skrelp`, `Dragalge`, `Oranguru`, `Drampa`, `Lunala`, `Pheromosa`, `Celesteela`, `Stakataka`).
+    - **Datasets y Lógica de Aplicación (`3ds_pokemon.json`, `3ds_data.js`, `script.js`, `style.css`, `index.html`):**
+      - Generación offline de `3ds_pokemon.json` y `3ds_data.js` con mapeo de números regionales (`numKal`, `numHoe`, `numAlo`), números nacionales, sprites estándar y shiny locales, artwork oficial, chain IDs, líneas evolutivas regionales y objetos `locations` multi-juego completos.
+      - Registro en `DEX_CONFIGS` con nombres, contadores y títulos dinámicos para `xy` (457), `oras` (211) y `usum` (403), totalizando **10 Pokédexes independientes y 3,674 entradas verificadas**.
+      - Inclusión de 3 nuevos botones en el selector superior `.dex-selector-pills` con distintivos visuales en gradiente: Kalos (`dot-xy`: azul/rojo), Hoenn (`dot-oras`: naranja/azul) y Alola (`dot-usum`: ámbar/violeta).
+      - Actualización de `getPokemonId`, `getPokemonDisplayNum`, `getPokemonByAnyId`, `getPokemonGame`, `getGameBadgeHtml`, `getWinnerGameBannerHtml`, `openEvolutionLineModal`, `resolvePokemonLocations` y `removePending`.
+      - Reconstrucción dinámica de filtros por rango:
+        - `xy`: Iniciales (#001-#009), Kalos Centro (#001-#153), Kalos Costa (#154-#306), Kalos Montaña (#307-#457), rangos numéricos, exclusivos de X (16), exclusivos de Y (16), disponibles en ambos (425) y legendarios (#454-#457).
+        - `oras`: Iniciales (#001-#009), bloques de 50, exclusivos de Rubí Omega (8), exclusivos de Zafiro Alfa (8), disponibles en ambos (195), fósiles (#134-#137) y legendarios (#198-#211).
+        - `usum`: Iniciales (#001-#009), Isla Melemele (#001-#120), Isla Akala (#121-#250), Isla Ula-Ula (#251-#340), Isla Poni (#341-#403), rangos por centena, exclusivos de Ultrasol (20), exclusivos de Ultraluna (20), disponibles en ambos (363) y Ultraentes/Legendarios (#377-#403).
+      - Reconstrucción dinámica de chips en la matriz con botones dedicados para filtrar por exclusivos de cada versión.
+      - Priorización y expansión automática en primera posición de la tarjeta de captura del juego activo (`POKÉMON X Y POKÉMON Y` en `xy`, `POKÉMON RUBÍ OMEGA Y ZAFIRO ALFA` en `oras` y `POKÉMON ULTRASOL Y ULTRALUNA` en `usum`).
+      - Actualización de insignia `#gridLocationPhaseBadge`: `KALOS 457/457 COMPLETO`, `HOENN 211/211 COMPLETO` y `ALOLA 403/403 COMPLETO`.
+      - Compatibilidad total con persistencia local y sincronización en la nube (SQLite backend `user_captured`, `user_pending`, `user_dex_state`).
+      - Cumplimiento de regla de cero emojis (solo SVG y caracteres estándar `★`, `♀`, `♂`).
+      - Anti-caché actualizado a `v=4.9` en `index.html`.
 
 ---
 
@@ -381,7 +486,14 @@ ruleta-juego/
   "shinySprite": "assets/sprites/shiny/906.png",
   "chainId": 478,
   "evolutionLine": ["001", "002", "003"],
-  "game": "both"
+  "game": "both",
+  "locations": {
+    "escarlata": [
+      "Especial: Pokémon inicial entregado por el director Clavel en Pueblo Cahíz (nivel 5)",
+      "Criar: de Sprigatito, Floragato o Meowscarada"
+    ],
+    "púrpura": "=escarlata"
+  }
 }
 ```
 

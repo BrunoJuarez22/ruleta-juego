@@ -74,7 +74,7 @@
   }
   </script>
 
-  <link rel="stylesheet" href="style.css?v=4.4">
+  <link rel="stylesheet" href="style.css?v=4.9">
 </head>
 <body>
 
@@ -164,6 +164,21 @@
           <span class="dex-pill-dot dot-plza"></span>
           <span class="dex-pill-name">LUMINALIA (Z-A)</span>
           <span class="dex-pill-count">232</span>
+        </button>
+        <button id="dexBtnXy" class="dex-pill" data-dex="xy" role="tab" aria-selected="false" title="Pokédex de Kalos (Pokémon X y Pokémon Y)">
+          <span class="dex-pill-dot dot-xy"></span>
+          <span class="dex-pill-name">KALOS (X / Y)</span>
+          <span class="dex-pill-count">457</span>
+        </button>
+        <button id="dexBtnOras" class="dex-pill" data-dex="oras" role="tab" aria-selected="false" title="Pokédex de Hoenn (Pokémon Rubí Omega y Zafiro Alfa)">
+          <span class="dex-pill-dot dot-oras"></span>
+          <span class="dex-pill-name">HOENN (RO / ZA)</span>
+          <span class="dex-pill-count">211</span>
+        </button>
+        <button id="dexBtnUsum" class="dex-pill" data-dex="usum" role="tab" aria-selected="false" title="Pokédex de Alola (Pokémon Ultrasol y Ultraluna)">
+          <span class="dex-pill-dot dot-usum"></span>
+          <span class="dex-pill-name">ALOLA (US / UL)</span>
+          <span class="dex-pill-count">403</span>
         </button>
       </div>
     </div>
@@ -354,6 +369,19 @@
           </div>
         </div>
 
+        <!-- Aviso informativo de Guía de Ubicación y Captura por Juego -->
+        <div class="grid-location-notice" role="note">
+          <svg class="icon-svg-sm notice-pin-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          <div class="notice-text-content">
+            <strong>GUÍA DE CAPTURA POR JUEGO:</strong>
+            <span id="gridLocationNoticeText">Haz clic en cualquier tarjeta de Pokémon (o en su botón FICHA / LÍNEA) para abrir su tarjeta expandible y consultar dónde se puede obtener y capturar en cada juego donde está disponible.</span>
+          </div>
+          <span class="notice-phase-badge" id="gridLocationPhaseBadge">NACIONAL 1025/1025 COMPLETO</span>
+        </div>
+
         <div id="matrixGrid" class="matrix-grid">
           <!-- Rellenado dinámicamente con JS (400 Pokémon) -->
         </div>
@@ -361,6 +389,16 @@
 
       <!-- Vista 2: Capturados Shiny -->
       <div id="capturedView" class="dashboard-view">
+        <div class="grid-location-notice grid-location-notice-compact" role="note">
+          <svg class="icon-svg-sm notice-pin-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          <div class="notice-text-content">
+            <strong>CONSULTA DE UBICACIÓN:</strong>
+            <span>Haz clic en cualquier Pokémon capturado o en el botón FICHA para ver dónde se obtiene en cada juego disponible.</span>
+          </div>
+        </div>
         <div id="capturedList" class="items-grid-list">
           <!-- Rellenado dinámicamente con JS -->
         </div>
@@ -368,6 +406,16 @@
 
       <!-- Vista 3: Historial -->
       <div id="historyView" class="dashboard-view">
+        <div class="grid-location-notice grid-location-notice-compact" role="note">
+          <svg class="icon-svg-sm notice-pin-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          <div class="notice-text-content">
+            <strong>CONSULTA DE UBICACIÓN:</strong>
+            <span>Haz clic en cualquier Pokémon del historial reciente para abrir su tarjeta y consultar dónde se captura en cada juego.</span>
+          </div>
+        </div>
         <div id="historyList" class="history-chips">
           <!-- Rellenado dinámicamente con JS -->
         </div>
@@ -424,10 +472,18 @@
     </div>
   </footer>
 
-  <!-- Modal de Selección de Línea Evolutiva y Resultado -->
+  <!-- Modal de Selección de Línea Evolutiva, Ubicación por Juego y Resultado -->
   <div id="winnerModal" class="modal-overlay">
     <div class="modal-box winner-card">
-      <div id="modalCardTag" class="modal-card-tag">OBJETIVO SHINY RULETA</div>
+      <div class="winner-card-top-bar">
+        <div id="modalCardTag" class="modal-card-tag">OBJETIVO SHINY RULETA</div>
+        <button id="closeWinnerModalBtn" class="modal-close winner-modal-close" type="button" title="Cerrar tarjeta" aria-label="Cerrar tarjeta">
+          <svg class="icon-svg-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
       <div class="winner-image-container">
         <img id="winnerImg" src="assets/pokeball.svg" alt="Pokémon" onerror="this.src='assets/pokeball.svg'">
       </div>
@@ -435,6 +491,26 @@
       <h2 id="winnerTitle" class="winner-title">Sprigatito</h2>
       <div id="winnerGameBanner" class="winner-game-banner"></div>
       <div id="winnerTypes" class="winner-types-container"></div>
+
+      <!-- Sección Expandible: Dónde Capturar / Obtener por Juego -->
+      <div id="winnerLocationsSection" class="winner-locations-section">
+        <div class="loc-section-header">
+          <div class="loc-header-title-group">
+            <svg class="icon-svg-xs loc-pin-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <span class="loc-section-title">DÓNDE CAPTURAR / OBTENER POR JUEGO</span>
+          </div>
+          <button type="button" id="toggleAllLocationsBtn" class="btn-loc-expand-all" title="Expandir o plegar todos los juegos">
+            EXPANDIR TODO
+          </button>
+        </div>
+        <div id="winnerLocationsEvoTabs" class="loc-evo-tabs" style="display: none;"></div>
+        <div id="winnerLocationsContainer" class="locations-accordion-list">
+          <!-- Rellenado dinámicamente con JS -->
+        </div>
+      </div>
       
       <!-- Sección de Línea Evolutiva Dinámica -->
       <div id="evolutionLineSection" class="evolution-line-section">
@@ -493,6 +569,13 @@
       </div>
       <div class="modal-search-wrapper">
         <input type="text" id="pokedexSearch" class="search-input" placeholder="BUSCAR POR NOMBRE, NÚMERO O TIPO...">
+        <div class="catalog-location-hint">
+          <svg class="icon-svg-xs" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          <span>Haz clic en cualquier fila del catálogo para abrir su tarjeta y consultar dónde se captura en cada juego.</span>
+        </div>
       </div>
       <div class="modal-body">
         <div id="itemsListContainer" class="items-list-container">
@@ -759,10 +842,11 @@
 
   <canvas id="confettiCanvas"></canvas>
 
-  <script src="paldea_data.js?v=4.4"></script>
-  <script src="all_data.js?v=4.4"></script>
-  <script src="switch_data.js?v=4.4"></script>
-  <script src="api.js?v=4.4"></script>
-  <script src="script.js?v=4.4"></script>
+  <script src="paldea_data.js?v=4.9"></script>
+  <script src="all_data.js?v=4.9"></script>
+  <script src="switch_data.js?v=4.9"></script>
+  <script src="3ds_data.js?v=4.9"></script>
+  <script src="api.js?v=4.9"></script>
+  <script src="script.js?v=4.9"></script>
 </body>
 </html>

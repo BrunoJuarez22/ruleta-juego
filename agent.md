@@ -58,9 +58,14 @@ Cualquier cambio de interfaz o estilo debe cumplir estrictamente con los siguien
 - **Desmarcado de Pendientes:** Las tarjetas en estado `.is-pending` o `.is-last-spin-pending` deben permitir retirar el Pokémon de la lista de pendientes mediante el botón rápido `✕` en la cabecera, el botón `.btn-matrix-unpend` (`DESMARCAR`) en la botonera de la tarjeta y desde el modal de línea evolutiva (`#winnerUnpendModalBtn`).
 - **Filtros por Tipo Dinámicos (`#typeFilter` y `#matrixTypeFilter`):** Sus opciones se generan siempre desde `rebuildTypeFilterOptions()` (no codificar listas estáticas). Cada opción debe mostrar `Tipo (N por capturar)` calculado sobre la Pokédex activa, y el orden debe ser de mayor a menor número de Pokémon restantes por capturar. Cualquier nuevo punto de captura/descaptura debe terminar pasando por `updateDashboardViews()` para que los conteos se mantengan actualizados.
 
-### C. Modales y Control de Parpadeo
+### C. Modales, Guía de Ubicaciones por Juego y Control de Parpadeo
 - Antes de abrir el modal del Pokémon ganador o de la línea evolutiva, asegurarse de que el contenido del modal anterior esté limpio (`clearModalContent()`).
 - Utilizar precarga con `Image.decode()` sobre la imagen nueva antes de añadir la clase `.active`, impidiendo que el navegador pinte el fotograma del Pokémon previo.
+- **Acceso Universal al Modal (`#winnerModal`):** Cualquier tarjeta o fila de Pokémon en la aplicación (cuadrícula `.matrix-card`, lista de capturados `.shiny-card-item`, historial `.history-item`, catálogo `.item-row` y `.live-tracker-card`) debe permitir abrir `openEvolutionLineModal(pokemon, 'matrix')` al hacer clic fuera de los botones de acción rápida. `#winnerModal` debe mantener `z-index: 1100` para poder abrirse encima de `#settingsModal`.
+- **Guía de Ubicaciones por Juego (`#winnerLocationsSection`):**
+  - Los datos de ubicación se almacenan de forma 100% local (`locations` en `paldea_pokemon.json` y `paldea_data.js` en Fase 1, y progresivamente en el resto de Pokédexes).
+  - `resolvePokemonLocations(pokemon)` debe cruzar siempre `PALDEA_BY_NUM` y `PALDEA_BY_NAT` para que los Pokémon con ubicaciones registradas las muestren sin importar qué Pokédex (`general`, `paldea`, `swsh`, `pla`, `bdsp`, `lgpe`, `plza`) esté activa.
+  - Conservar visible el aviso informativo `.grid-location-notice` junto a la cuadrícula en cada sección para recordar al usuario que puede consultar dónde obtener cada Pokémon haciendo clic en su tarjeta.
 
 ### D. Arquitectura de Backend, Cuentas y Modo Híbrido
 - **Tolerancia a Fallos y Modo Invitado:** La aplicación nunca debe romperse si el servidor backend no está corriendo o no hay internet. Siempre debe conservar su capacidad 100% offline-first operando sobre `localStorage`.

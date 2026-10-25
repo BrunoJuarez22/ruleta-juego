@@ -134,7 +134,53 @@ ALL_LUMIOSE_POKEMON.forEach(p => {
   }
 });
 
-// Catálogos Oficiales de Pokédex disponibles (7 Pokédexes independientes)
+// Datasets canónicos para los juegos de Nintendo 3DS
+const ALL_KALOS_POKEMON = (window.KALOS_POKEMON || []).map((p, index) => {
+  p.color = p.color || getPokemonColor(p, index);
+  return p;
+});
+const KALOS_BY_NUM = new Map();
+const KALOS_BY_NAT = new Map();
+ALL_KALOS_POKEMON.forEach(p => {
+  KALOS_BY_NUM.set(p.numKal, p);
+  KALOS_BY_NUM.set(String(parseInt(p.numKal, 10)), p);
+  if (p.numNac) {
+    KALOS_BY_NAT.set(p.numNac, p);
+    KALOS_BY_NAT.set(String(parseInt(p.numNac, 10)), p);
+  }
+});
+
+const ALL_HOENN_POKEMON = (window.HOENN_POKEMON || []).map((p, index) => {
+  p.color = p.color || getPokemonColor(p, index);
+  return p;
+});
+const HOENN_BY_NUM = new Map();
+const HOENN_BY_NAT = new Map();
+ALL_HOENN_POKEMON.forEach(p => {
+  HOENN_BY_NUM.set(p.numHoe, p);
+  HOENN_BY_NUM.set(String(parseInt(p.numHoe, 10)), p);
+  if (p.numNac) {
+    HOENN_BY_NAT.set(p.numNac, p);
+    HOENN_BY_NAT.set(String(parseInt(p.numNac, 10)), p);
+  }
+});
+
+const ALL_ALOLA_POKEMON = (window.ALOLA_POKEMON || []).map((p, index) => {
+  p.color = p.color || getPokemonColor(p, index);
+  return p;
+});
+const ALOLA_BY_NUM = new Map();
+const ALOLA_BY_NAT = new Map();
+ALL_ALOLA_POKEMON.forEach(p => {
+  ALOLA_BY_NUM.set(p.numAlo, p);
+  ALOLA_BY_NUM.set(String(parseInt(p.numAlo, 10)), p);
+  if (p.numNac) {
+    ALOLA_BY_NAT.set(p.numNac, p);
+    ALOLA_BY_NAT.set(String(parseInt(p.numNac, 10)), p);
+  }
+});
+
+// Catálogos Oficiales de Pokédex disponibles (10 Pokédexes independientes)
 const DEX_CONFIGS = {
   general: {
     id: 'general',
@@ -198,6 +244,33 @@ const DEX_CONFIGS = {
     matrixTitle: 'MATRIZ LUMINALIA (232)',
     catalogTitle: 'CATÁLOGO POKÉDEX DE LUMINALIA (232)',
     getItems: () => ALL_LUMIOSE_POKEMON
+  },
+  xy: {
+    id: 'xy',
+    name: 'Pokédex de Kalos (Pokémon X / Y)',
+    shortName: 'KALOS (X / Y)',
+    totalCount: 457,
+    matrixTitle: 'MATRIZ KALOS (457)',
+    catalogTitle: 'CATÁLOGO POKÉDEX DE KALOS (457)',
+    getItems: () => ALL_KALOS_POKEMON
+  },
+  oras: {
+    id: 'oras',
+    name: 'Pokédex de Hoenn (Rubí Omega / Zafiro Alfa)',
+    shortName: 'HOENN (RO / ZA)',
+    totalCount: 211,
+    matrixTitle: 'MATRIZ HOENN (211)',
+    catalogTitle: 'CATÁLOGO POKÉDEX DE HOENN (211)',
+    getItems: () => ALL_HOENN_POKEMON
+  },
+  usum: {
+    id: 'usum',
+    name: 'Pokédex de Alola (Ultrasol / Ultraluna)',
+    shortName: 'ALOLA (US / UL)',
+    totalCount: 403,
+    matrixTitle: 'MATRIZ ALOLA (403)',
+    catalogTitle: 'CATÁLOGO POKÉDEX DE ALOLA (403)',
+    getItems: () => ALL_ALOLA_POKEMON
   }
 };
 
@@ -227,6 +300,12 @@ function getPokemonId(pokemon) {
       return String(pokemon.numKan || pokemon.pokemonId || pokemon.numNac || pokemon.id || '');
     case 'plza':
       return String(pokemon.numLum || pokemon.pokemonId || pokemon.numNac || pokemon.id || '');
+    case 'xy':
+      return String(pokemon.numKal || pokemon.pokemonId || pokemon.numNac || pokemon.id || '');
+    case 'oras':
+      return String(pokemon.numHoe || pokemon.pokemonId || pokemon.numNac || pokemon.id || '');
+    case 'usum':
+      return String(pokemon.numAlo || pokemon.pokemonId || pokemon.numNac || pokemon.id || '');
     default:
       return String(pokemon.pokemonId || pokemon.numNac || pokemon.numPal || pokemon.id || '');
   }
@@ -247,6 +326,12 @@ function getPokemonDisplayNum(pokemon) {
       return pokemon.numKan || pokemon.numNac || pokemon.pokemonId || '';
     case 'plza':
       return pokemon.numLum || pokemon.numNac || pokemon.pokemonId || '';
+    case 'xy':
+      return pokemon.numKal || pokemon.numNac || pokemon.pokemonId || '';
+    case 'oras':
+      return pokemon.numHoe || pokemon.numNac || pokemon.pokemonId || '';
+    case 'usum':
+      return pokemon.numAlo || pokemon.numNac || pokemon.pokemonId || '';
     default:
       return pokemon.numNac || pokemon.pokemonId || '';
   }
@@ -278,6 +363,9 @@ function getPokemonByAnyId(id) {
     else if (currentDexId === 'bdsp') natInDex = SINNOH_BY_NAT.get(pad4) || SINNOH_BY_NAT.get(numIntStr);
     else if (currentDexId === 'lgpe') natInDex = LETSGO_BY_NAT.get(pad4) || LETSGO_BY_NAT.get(numIntStr);
     else if (currentDexId === 'plza') natInDex = LUMIOSE_BY_NAT.get(pad4) || LUMIOSE_BY_NAT.get(numIntStr);
+    else if (currentDexId === 'xy') natInDex = KALOS_BY_NAT.get(pad4) || KALOS_BY_NAT.get(numIntStr);
+    else if (currentDexId === 'oras') natInDex = HOENN_BY_NAT.get(pad4) || HOENN_BY_NAT.get(numIntStr);
+    else if (currentDexId === 'usum') natInDex = ALOLA_BY_NAT.get(pad4) || ALOLA_BY_NAT.get(numIntStr);
 
     if (natInDex) return natInDex;
 
@@ -304,6 +392,15 @@ function getPokemonByAnyId(id) {
   } else if (currentDexId === 'plza') {
     const found = LUMIOSE_BY_NUM.get(pad3) || LUMIOSE_BY_NUM.get(numIntStr);
     if (found) return found;
+  } else if (currentDexId === 'xy') {
+    const found = KALOS_BY_NUM.get(pad3) || KALOS_BY_NUM.get(numIntStr);
+    if (found) return found;
+  } else if (currentDexId === 'oras') {
+    const found = HOENN_BY_NUM.get(pad3) || HOENN_BY_NUM.get(numIntStr);
+    if (found) return found;
+  } else if (currentDexId === 'usum') {
+    const found = ALOLA_BY_NUM.get(pad3) || ALOLA_BY_NUM.get(numIntStr);
+    if (found) return found;
   }
 
   // 4. Respaldo general: catálogo Nacional
@@ -312,7 +409,8 @@ function getPokemonByAnyId(id) {
 
   // 5. Último recurso: otros catálogos regionales
   return PALDEA_BY_NUM.get(pad3) || GALAR_BY_NUM.get(pad3) || HISUI_BY_NUM.get(pad3) ||
-         SINNOH_BY_NUM.get(pad3) || LETSGO_BY_NUM.get(pad3) || LUMIOSE_BY_NUM.get(pad3) || null;
+         SINNOH_BY_NUM.get(pad3) || LETSGO_BY_NUM.get(pad3) || LUMIOSE_BY_NUM.get(pad3) ||
+         KALOS_BY_NUM.get(pad3) || HOENN_BY_NUM.get(pad3) || ALOLA_BY_NUM.get(pad3) || null;
 }
 
 // Conjuntos oficiales de exclusivos de Paldea
@@ -348,6 +446,28 @@ const PEARL_EXCLUSIVE_SET = new Set(['185', '200', '410', '411', '429', '431', '
 // Conjuntos oficiales de exclusivos de Let's Go Pikachu y Eevee (Nº Nacional)
 const PIKACHU_EXCLUSIVE_SET = new Set(['27', '28', '43', '44', '45', '56', '57', '58', '59', '88', '89', '123']);
 const EEVEE_EXCLUSIVE_SET = new Set(['23', '24', '37', '38', '52', '53', '69', '70', '71', '109', '110', '127']);
+
+// Conjuntos oficiales de exclusivos de Nintendo 3DS (Nº Regional de 3 dígitos)
+const X_EXCLUSIVE_SET = new Set([
+  '131', '132', '185', '186', '187', '188', '228', '229', '251', '283', '350', '351', '405', '406', '407', '454'
+]);
+const Y_EXCLUSIVE_SET = new Set([
+  '129', '130', '183', '184', '189', '190', '226', '227', '250', '284', '348', '349', '408', '409', '410', '455'
+]);
+
+const RO_EXCLUSIVE_SET = new Set([
+  '022', '023', '024', '071', '128', '131', '206', '208'
+]);
+const ZA_EXCLUSIVE_SET = new Set([
+  '019', '020', '021', '070', '129', '130', '205', '207'
+]);
+
+const US_EXCLUSIVE_SET = new Set([
+  '089', '090', '105', '106', '216', '235', '236', '241', '242', '288', '289', '290', '330', '331', '349', '350', '389', '393', '394', '398'
+]);
+const UL_EXCLUSIVE_SET = new Set([
+  '091', '092', '103', '104', '215', '237', '238', '239', '240', '293', '294', '321', '328', '329', '347', '348', '390', '392', '395', '397'
+]);
 
 function getPokemonGame(pokemon) {
   if (!pokemon) return 'both';
@@ -386,6 +506,27 @@ function getPokemonGame(pokemon) {
 
   if (currentDexId === 'plza') {
     return 'lumina';
+  }
+
+  if (currentDexId === 'xy') {
+    const num = String(parseInt(pokemon.numKal || '0', 10)).padStart(3, '0');
+    if (X_EXCLUSIVE_SET.has(num)) return 'x';
+    if (Y_EXCLUSIVE_SET.has(num)) return 'y';
+    return 'both';
+  }
+
+  if (currentDexId === 'oras') {
+    const num = String(parseInt(pokemon.numHoe || '0', 10)).padStart(3, '0');
+    if (RO_EXCLUSIVE_SET.has(num)) return 'ro';
+    if (ZA_EXCLUSIVE_SET.has(num)) return 'za';
+    return 'both';
+  }
+
+  if (currentDexId === 'usum') {
+    const num = String(parseInt(pokemon.numAlo || '0', 10)).padStart(3, '0');
+    if (US_EXCLUSIVE_SET.has(num)) return 'us';
+    if (UL_EXCLUSIVE_SET.has(num)) return 'ul';
+    return 'both';
   }
 
   return 'both';
@@ -510,6 +651,78 @@ function getGameBadgeHtml(pokemon, variant = 'normal') {
 
     return `<span class="game-badge game-badge-lumina ${variant === 'mini' ? 'game-badge-mini' : ''}" title="${title}">
       <span class="game-dot game-dot-lumina"></span>
+      <span class="game-text">${label}</span>
+    </span>`;
+  }
+
+  if (currentDexId === 'xy') {
+    const game = getPokemonGame(pokemon);
+    let shortLabel = 'AMBOS';
+    let fullLabel = 'AMBOS';
+    let title = 'Disponible en Pokémon X y Pokémon Y';
+
+    if (game === 'x') {
+      shortLabel = 'X';
+      fullLabel = 'POKÉMON X';
+      title = 'Exclusivo de Pokémon X';
+    } else if (game === 'y') {
+      shortLabel = 'Y';
+      fullLabel = 'POKÉMON Y';
+      title = 'Exclusivo de Pokémon Y';
+    }
+
+    const label = (variant === 'mini') ? shortLabel : fullLabel;
+
+    return `<span class="game-badge game-badge-${game} ${variant === 'mini' ? 'game-badge-mini' : ''}" title="${title}">
+      <span class="game-dot game-dot-${game}"></span>
+      <span class="game-text">${label}</span>
+    </span>`;
+  }
+
+  if (currentDexId === 'oras') {
+    const game = getPokemonGame(pokemon);
+    let shortLabel = 'AMBOS';
+    let fullLabel = 'AMBOS';
+    let title = 'Disponible en Pokémon Rubí Omega y Zafiro Alfa';
+
+    if (game === 'ro') {
+      shortLabel = 'RO';
+      fullLabel = 'RUBÍ OMEGA';
+      title = 'Exclusivo de Pokémon Rubí Omega';
+    } else if (game === 'za') {
+      shortLabel = 'ZA';
+      fullLabel = 'ZAFIRO ALFA';
+      title = 'Exclusivo de Pokémon Zafiro Alfa';
+    }
+
+    const label = (variant === 'mini') ? shortLabel : fullLabel;
+
+    return `<span class="game-badge game-badge-${game} ${variant === 'mini' ? 'game-badge-mini' : ''}" title="${title}">
+      <span class="game-dot game-dot-${game}"></span>
+      <span class="game-text">${label}</span>
+    </span>`;
+  }
+
+  if (currentDexId === 'usum') {
+    const game = getPokemonGame(pokemon);
+    let shortLabel = 'AMBOS';
+    let fullLabel = 'AMBOS';
+    let title = 'Disponible en Pokémon Ultrasol y Ultraluna';
+
+    if (game === 'us') {
+      shortLabel = 'US';
+      fullLabel = 'ULTRASOL';
+      title = 'Exclusivo de Pokémon Ultrasol';
+    } else if (game === 'ul') {
+      shortLabel = 'UL';
+      fullLabel = 'ULTRALUNA';
+      title = 'Exclusivo de Pokémon Ultraluna';
+    }
+
+    const label = (variant === 'mini') ? shortLabel : fullLabel;
+
+    return `<span class="game-badge game-badge-${game} ${variant === 'mini' ? 'game-badge-mini' : ''}" title="${title}">
+      <span class="game-dot game-dot-${game}"></span>
       <span class="game-text">${label}</span>
     </span>`;
   }
@@ -682,6 +895,48 @@ function getWinnerGameBannerHtml(pokemon) {
     </div>`;
   }
 
+  if (currentDexId === 'xy') {
+    const game = getPokemonGame(pokemon);
+    let text = 'DISPONIBLE EN AMBOS JUEGOS (POKÉMON X & Y)';
+    if (game === 'x') {
+      text = '★ EXCLUSIVO DE POKÉMON X';
+    } else if (game === 'y') {
+      text = '★ EXCLUSIVO DE POKÉMON Y';
+    }
+    return `<div id="winnerGameBanner" class="winner-game-banner winner-game-${game}">
+      <span class="game-dot game-dot-${game}"></span>
+      <span>${text}</span>
+    </div>`;
+  }
+
+  if (currentDexId === 'oras') {
+    const game = getPokemonGame(pokemon);
+    let text = 'DISPONIBLE EN AMBOS JUEGOS (RUBÍ OMEGA & ZAFIRO ALFA)';
+    if (game === 'ro') {
+      text = '★ EXCLUSIVO DE POKÉMON RUBÍ OMEGA';
+    } else if (game === 'za') {
+      text = '★ EXCLUSIVO DE POKÉMON ZAFIRO ALFA';
+    }
+    return `<div id="winnerGameBanner" class="winner-game-banner winner-game-${game}">
+      <span class="game-dot game-dot-${game}"></span>
+      <span>${text}</span>
+    </div>`;
+  }
+
+  if (currentDexId === 'usum') {
+    const game = getPokemonGame(pokemon);
+    let text = 'DISPONIBLE EN AMBOS JUEGOS (ULTRASOL & ULTRALUNA)';
+    if (game === 'us') {
+      text = '★ EXCLUSIVO DE POKÉMON ULTRASOL';
+    } else if (game === 'ul') {
+      text = '★ EXCLUSIVO DE POKÉMON ULTRALUNA';
+    }
+    return `<div id="winnerGameBanner" class="winner-game-banner winner-game-${game}">
+      <span class="game-dot game-dot-${game}"></span>
+      <span>${text}</span>
+    </div>`;
+  }
+
   // Ruleta General: Mostrar listado completo de juegos agrupados por consola / generación
   const games = resolvePokemonGames(pokemon);
   if (games.length === 0) {
@@ -831,6 +1086,11 @@ const winnerSpinAgainBtn = document.getElementById('winnerSpinAgainBtn');
 const winnerAcceptBtn = document.getElementById('winnerAcceptBtn');
 const winnerCancelPendingBtn = document.getElementById('winnerCancelPendingBtn');
 const winnerUnpendModalBtn = document.getElementById('winnerUnpendModalBtn');
+const closeWinnerModalBtn = document.getElementById('closeWinnerModalBtn');
+const winnerLocationsSection = document.getElementById('winnerLocationsSection');
+const winnerLocationsContainer = document.getElementById('winnerLocationsContainer');
+const winnerLocationsEvoTabs = document.getElementById('winnerLocationsEvoTabs');
+const toggleAllLocationsBtn = document.getElementById('toggleAllLocationsBtn');
 const evolutionLineSection = document.getElementById('evolutionLineSection');
 const evolutionLineContainer = document.getElementById('evolutionLineContainer');
 
@@ -1300,6 +1560,11 @@ function clearModalContent() {
   const winnerGameBanner = document.getElementById('winnerGameBanner');
   if (winnerGameBanner) winnerGameBanner.innerHTML = '';
   winnerTypes.innerHTML = '';
+  if (winnerLocationsContainer) winnerLocationsContainer.innerHTML = '';
+  if (winnerLocationsEvoTabs) {
+    winnerLocationsEvoTabs.innerHTML = '';
+    winnerLocationsEvoTabs.style.display = 'none';
+  }
   evolutionLineContainer.innerHTML = '';
   selectedEvoIds.clear();
 }
@@ -1364,6 +1629,12 @@ function openEvolutionLineModal(pokemon, source = 'wheel') {
     winnerDexNum.textContent = `Nº KANTO: #${fullPokemon.numKan || fullPokemon.numNac} · NAC: #${fullPokemon.numNac || fullPokemon.numKan}`;
   } else if (currentDexId === 'plza') {
     winnerDexNum.textContent = `Nº LUMINALIA: #${fullPokemon.numLum || fullPokemon.numNac} · NAC: #${fullPokemon.numNac || fullPokemon.numLum}`;
+  } else if (currentDexId === 'xy') {
+    winnerDexNum.textContent = `Nº KALOS: #${fullPokemon.numKal || fullPokemon.numNac} · NAC: #${fullPokemon.numNac || fullPokemon.numKal}`;
+  } else if (currentDexId === 'oras') {
+    winnerDexNum.textContent = `Nº HOENN: #${fullPokemon.numHoe || fullPokemon.numNac} · NAC: #${fullPokemon.numNac || fullPokemon.numHoe}`;
+  } else if (currentDexId === 'usum') {
+    winnerDexNum.textContent = `Nº ALOLA: #${fullPokemon.numAlo || fullPokemon.numNac} · NAC: #${fullPokemon.numNac || fullPokemon.numAlo}`;
   } else {
     const genText = fullPokemon.generation ? ` · GENERACIÓN ${fullPokemon.generation}` : '';
     winnerDexNum.textContent = `Nº NACIONAL: #${fullPokemon.numNac || fullPokemon.numPal || getPokemonId(fullPokemon)}${genText}`;
@@ -1377,22 +1648,31 @@ function openEvolutionLineModal(pokemon, source = 'wheel') {
     `<span class="type-badge type-${t}">${t}</span>`
   ).join('');
 
-  // 3. Configurar interfaz según el origen (Ruleta vs Matriz / Pendientes)
+  // 3. Configurar interfaz según el origen (Ruleta vs Matriz / Pendientes / Capturados / Catálogo)
   const pokeId = getPokemonId(fullPokemon);
   if (source === 'wheel') {
     if (modalCardTag) modalCardTag.textContent = 'OBJETIVO SHINY RULETA';
     if (winnerWheelActions) winnerWheelActions.style.display = 'flex';
+    if (winnerPendingActions) winnerPendingActions.style.display = 'none';
   } else {
     const isPend = isPokemonPending(fullPokemon) || isPokemonLastSpin(fullPokemon);
-    if (modalCardTag) modalCardTag.textContent = isPend ? 'CAPTURAR O DESMARCAR PENDIENTE' : 'CAPTURAR LÍNEA EVOLUTIVA';
+    if (modalCardTag) {
+      modalCardTag.textContent = isPend
+        ? 'FICHA DE CAPTURA · POKÉMON PENDIENTE'
+        : 'FICHA DE CAPTURA Y LÍNEA EVOLUTIVA';
+    }
     if (winnerWheelActions) winnerWheelActions.style.display = 'none';
     if (winnerPendingActions) winnerPendingActions.style.display = 'flex';
     if (winnerUnpendModalBtn) {
       winnerUnpendModalBtn.style.display = isPend ? 'inline-flex' : 'none';
     }
+    if (winnerCancelPendingBtn) {
+      winnerCancelPendingBtn.textContent = 'CERRAR TARJETA';
+    }
   }
 
-  // 4. Renderizar selector de línea evolutiva
+  // 4. Renderizar guía de ubicaciones por juego y selector de línea evolutiva
+  renderPokemonLocations(fullPokemon);
   renderEvolutionLineSelector(fullPokemon, source);
 
   // 5. Cargar y decodificar la nueva imagen antes de mostrar el modal
@@ -1506,6 +1786,539 @@ function updateCaptureButtonText() {
   } else {
     winnerCaptureShinyText.textContent = `MARCAR ${count} SHINYS CAPTURADOS`;
   }
+}
+
+// ==========================================
+// 6B. GUÍA DE UBICACIÓN Y CAPTURA POR JUEGO (MODAL EXPANDIBLE)
+// ==========================================
+const LOCATION_GAME_GROUPS = [
+  {
+    id: 'sv',
+    dexId: 'paldea',
+    pair: ['escarlata', 'púrpura'],
+    combinedTitle: 'POKÉMON ESCARLATA Y PÚRPURA',
+    singleTitles: { 'escarlata': 'POKÉMON ESCARLATA', 'púrpura': 'POKÉMON PÚRPURA' },
+    badges: {
+      combined: '<span class="loc-ver-pill pill-esc">ESCARLATA</span><span class="loc-ver-pill pill-pur">PÚRPURA</span>',
+      'escarlata': '<span class="loc-ver-pill pill-esc">ESCARLATA</span>',
+      'púrpura': '<span class="loc-ver-pill pill-pur">PÚRPURA</span>'
+    },
+    regionTag: 'PALDEA · SWITCH',
+    themeClass: 'loc-theme-sv'
+  },
+  {
+    id: 'plza',
+    dexId: 'plza',
+    single: 'leyendas za',
+    title: 'LEYENDAS POKÉMON: Z-A',
+    badge: '<span class="loc-ver-pill pill-plza">LEYENDAS Z-A</span>',
+    regionTag: 'LUMINALIA · SWITCH',
+    themeClass: 'loc-theme-plza'
+  },
+  {
+    id: 'pla',
+    dexId: 'pla',
+    single: 'leyendas arceus',
+    title: 'LEYENDAS POKÉMON: ARCEUS',
+    badge: '<span class="loc-ver-pill pill-pla">LEYENDAS ARCEUS</span>',
+    regionTag: 'HISUI · SWITCH',
+    themeClass: 'loc-theme-pla'
+  },
+  {
+    id: 'swsh',
+    dexId: 'swsh',
+    pair: ['espada', 'escudo'],
+    combinedTitle: 'POKÉMON ESPADA Y ESCUDO',
+    singleTitles: { 'espada': 'POKÉMON ESPADA', 'escudo': 'POKÉMON ESCUDO' },
+    badges: {
+      combined: '<span class="loc-ver-pill pill-sw">ESPADA</span><span class="loc-ver-pill pill-sh">ESCUDO</span>',
+      'espada': '<span class="loc-ver-pill pill-sw">ESPADA</span>',
+      'escudo': '<span class="loc-ver-pill pill-sh">ESCUDO</span>'
+    },
+    regionTag: 'GALAR · SWITCH',
+    themeClass: 'loc-theme-swsh'
+  },
+  {
+    id: 'bdsp',
+    dexId: 'bdsp',
+    pair: ['diamante brillante', 'perla reluciente'],
+    combinedTitle: 'DIAMANTE BRILLANTE Y PERLA RELUCIENTE',
+    singleTitles: { 'diamante brillante': 'DIAMANTE BRILLANTE', 'perla reluciente': 'PERLA RELUCIENTE' },
+    badges: {
+      combined: '<span class="loc-ver-pill pill-bd">DIAMANTE B.</span><span class="loc-ver-pill pill-sp">PERLA R.</span>',
+      'diamante brillante': '<span class="loc-ver-pill pill-bd">DIAMANTE B.</span>',
+      'perla reluciente': '<span class="loc-ver-pill pill-sp">PERLA R.</span>'
+    },
+    regionTag: 'SINNOH · SWITCH',
+    themeClass: 'loc-theme-bdsp'
+  },
+  {
+    id: 'lgpe',
+    dexId: 'lgpe',
+    pair: ['lgp', 'lge'],
+    combinedTitle: "LET'S GO, PIKACHU! Y LET'S GO, EEVEE!",
+    singleTitles: { 'lgp': "LET'S GO, PIKACHU!", 'lge': "LET'S GO, EEVEE!" },
+    badges: {
+      combined: '<span class="loc-ver-pill pill-lgp">PIKACHU</span><span class="loc-ver-pill pill-lge">EEVEE</span>',
+      'lgp': '<span class="loc-ver-pill pill-lgp">PIKACHU</span>',
+      'lge': '<span class="loc-ver-pill pill-lge">EEVEE</span>'
+    },
+    regionTag: 'KANTO · SWITCH',
+    themeClass: 'loc-theme-lgpe'
+  },
+  {
+    id: 'usum',
+    dexId: 'usum',
+    pair: ['ultrasol', 'ultraluna'],
+    combinedTitle: 'POKÉMON ULTRASOL Y ULTRALUNA',
+    singleTitles: { 'ultrasol': 'POKÉMON ULTRASOL', 'ultraluna': 'POKÉMON ULTRALUNA' },
+    badges: {
+      combined: '<span class="loc-ver-pill pill-us">ULTRASOL</span><span class="loc-ver-pill pill-ul">ULTRALUNA</span>',
+      'ultrasol': '<span class="loc-ver-pill pill-us">ULTRASOL</span>',
+      'ultraluna': '<span class="loc-ver-pill pill-ul">ULTRALUNA</span>'
+    },
+    regionTag: 'ALOLA · 3DS',
+    themeClass: 'loc-theme-usum'
+  },
+  {
+    id: 'sm',
+    pair: ['sol', 'luna'],
+    combinedTitle: 'POKÉMON SOL Y LUNA',
+    singleTitles: { 'sol': 'POKÉMON SOL', 'luna': 'POKÉMON LUNA' },
+    regionTag: 'ALOLA · 3DS',
+    themeClass: 'loc-theme-classic'
+  },
+  {
+    id: 'oras',
+    dexId: 'oras',
+    pair: ['rubí omega', 'zafiro alfa'],
+    combinedTitle: 'POKÉMON RUBÍ OMEGA Y ZAFIRO ALFA',
+    singleTitles: { 'rubí omega': 'POKÉMON RUBÍ OMEGA', 'zafiro alfa': 'POKÉMON ZAFIRO ALFA' },
+    badges: {
+      combined: '<span class="loc-ver-pill pill-ro">RUBÍ OMEGA</span><span class="loc-ver-pill pill-za">ZAFIRO ALFA</span>',
+      'rubí omega': '<span class="loc-ver-pill pill-ro">RUBÍ OMEGA</span>',
+      'zafiro alfa': '<span class="loc-ver-pill pill-za">ZAFIRO ALFA</span>'
+    },
+    regionTag: 'HOENN · 3DS',
+    themeClass: 'loc-theme-oras'
+  },
+  {
+    id: 'xy',
+    dexId: 'xy',
+    pair: ['x', 'y'],
+    combinedTitle: 'POKÉMON X Y POKÉMON Y',
+    singleTitles: { 'x': 'POKÉMON X', 'y': 'POKÉMON Y' },
+    badges: {
+      combined: '<span class="loc-ver-pill pill-x">POKÉMON X</span><span class="loc-ver-pill pill-y">POKÉMON Y</span>',
+      'x': '<span class="loc-ver-pill pill-x">POKÉMON X</span>',
+      'y': '<span class="loc-ver-pill pill-y">POKÉMON Y</span>'
+    },
+    regionTag: 'KALOS · 3DS',
+    themeClass: 'loc-theme-xy'
+  },
+  {
+    id: 'b2w2',
+    pair: ['negro 2', 'blanco 2'],
+    combinedTitle: 'POKÉMON NEGRO 2 Y BLANCO 2',
+    singleTitles: { 'negro 2': 'POKÉMON NEGRO 2', 'blanco 2': 'POKÉMON BLANCO 2' },
+    regionTag: 'TESELIA · NDS',
+    themeClass: 'loc-theme-classic'
+  },
+  {
+    id: 'bw',
+    pair: ['negro', 'blanco'],
+    combinedTitle: 'POKÉMON NEGRO Y BLANCO',
+    singleTitles: { 'negro': 'POKÉMON NEGRO', 'blanco': 'POKÉMON BLANCO' },
+    regionTag: 'TESELIA · NDS',
+    themeClass: 'loc-theme-classic'
+  },
+  {
+    id: 'hgss',
+    pair: ['oro heartgold', 'plata soulsilver'],
+    combinedTitle: 'ORO HEARTGOLD Y PLATA SOULSILVER',
+    singleTitles: { 'oro heartgold': 'ORO HEARTGOLD', 'plata soulsilver': 'PLATA SOULSILVER' },
+    regionTag: 'JOHTO · NDS',
+    themeClass: 'loc-theme-classic'
+  },
+  {
+    id: 'pt',
+    single: 'platino',
+    title: 'POKÉMON PLATINO',
+    regionTag: 'SINNOH · NDS',
+    themeClass: 'loc-theme-classic'
+  },
+  {
+    id: 'dp',
+    pair: ['diamante', 'perla'],
+    combinedTitle: 'POKÉMON DIAMANTE Y PERLA',
+    singleTitles: { 'diamante': 'POKÉMON DIAMANTE', 'perla': 'POKÉMON PERLA' },
+    regionTag: 'SINNOH · NDS',
+    themeClass: 'loc-theme-classic'
+  },
+  {
+    id: 'e',
+    single: 'esmeralda',
+    title: 'POKÉMON ESMERALDA',
+    regionTag: 'HOENN · GBA',
+    themeClass: 'loc-theme-classic'
+  },
+  {
+    id: 'frlg',
+    pair: ['rojofuego', 'verdehoja'],
+    combinedTitle: 'ROJO FUEGO Y VERDE HOJA',
+    singleTitles: { 'rojofuego': 'POKÉMON ROJO FUEGO', 'verdehoja': 'POKÉMON VERDE HOJA' },
+    regionTag: 'KANTO · GBA',
+    themeClass: 'loc-theme-classic'
+  },
+  {
+    id: 'rs',
+    pair: ['rubí', 'zafiro'],
+    combinedTitle: 'POKÉMON RUBÍ Y ZAFIRO',
+    singleTitles: { 'rubí': 'POKÉMON RUBÍ', 'zafiro': 'POKÉMON ZAFIRO' },
+    regionTag: 'HOENN · GBA',
+    themeClass: 'loc-theme-classic'
+  },
+  {
+    id: 'c',
+    single: 'cristal',
+    title: 'POKÉMON CRISTAL',
+    regionTag: 'JOHTO · GBC',
+    themeClass: 'loc-theme-classic'
+  },
+  {
+    id: 'gs',
+    pair: ['oro', 'plata'],
+    combinedTitle: 'POKÉMON ORO Y PLATA',
+    singleTitles: { 'oro': 'POKÉMON ORO', 'plata': 'POKÉMON PLATA' },
+    regionTag: 'JOHTO · GBC',
+    themeClass: 'loc-theme-classic'
+  },
+  {
+    id: 'y_classic',
+    single: 'amarillo',
+    title: 'POKÉMON AMARILLO',
+    regionTag: 'KANTO · GB',
+    themeClass: 'loc-theme-classic'
+  },
+  {
+    id: 'rb',
+    pair: ['rojo', 'azul'],
+    combinedTitle: 'POKÉMON ROJO Y AZUL',
+    singleTitles: { 'rojo': 'POKÉMON ROJO', 'azul': 'POKÉMON AZUL' },
+    regionTag: 'KANTO · GB',
+    themeClass: 'loc-theme-classic'
+  }
+];
+
+function escapeHtmlText(str) {
+  return String(str || '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+function resolvePokemonLocations(pokemon) {
+  if (!pokemon) return null;
+
+  let rawLocs = pokemon.locations || null;
+
+  if (!rawLocs && pokemon.numPal) {
+    const palEntry = PALDEA_BY_NUM.get(String(pokemon.numPal).padStart(3, '0')) || PALDEA_BY_NUM.get(String(parseInt(pokemon.numPal, 10)));
+    if (palEntry && palEntry.locations) rawLocs = palEntry.locations;
+  }
+  if (!rawLocs && pokemon.numGal) {
+    const galEntry = GALAR_BY_NUM.get(String(pokemon.numGal).padStart(3, '0')) || GALAR_BY_NUM.get(String(parseInt(pokemon.numGal, 10)));
+    if (galEntry && galEntry.locations) rawLocs = galEntry.locations;
+  }
+  if (!rawLocs && pokemon.numHis) {
+    const hisEntry = HISUI_BY_NUM.get(String(pokemon.numHis).padStart(3, '0')) || HISUI_BY_NUM.get(String(parseInt(pokemon.numHis, 10)));
+    if (hisEntry && hisEntry.locations) rawLocs = hisEntry.locations;
+  }
+  if (!rawLocs && pokemon.numSin) {
+    const sinEntry = SINNOH_BY_NUM.get(String(pokemon.numSin).padStart(3, '0')) || SINNOH_BY_NUM.get(String(parseInt(pokemon.numSin, 10)));
+    if (sinEntry && sinEntry.locations) rawLocs = sinEntry.locations;
+  }
+  if (!rawLocs && pokemon.numKan) {
+    const kanEntry = LETSGO_BY_NUM.get(String(pokemon.numKan).padStart(3, '0')) || LETSGO_BY_NUM.get(String(parseInt(pokemon.numKan, 10)));
+    if (kanEntry && kanEntry.locations) rawLocs = kanEntry.locations;
+  }
+  if (!rawLocs && pokemon.numLum) {
+    const lumEntry = LUMIOSE_BY_NUM.get(String(pokemon.numLum).padStart(3, '0')) || LUMIOSE_BY_NUM.get(String(parseInt(pokemon.numLum, 10)));
+    if (lumEntry && lumEntry.locations) rawLocs = lumEntry.locations;
+  }
+  if (!rawLocs && pokemon.numKal) {
+    const kalEntry = KALOS_BY_NUM.get(String(pokemon.numKal).padStart(3, '0')) || KALOS_BY_NUM.get(String(parseInt(pokemon.numKal, 10)));
+    if (kalEntry && kalEntry.locations) rawLocs = kalEntry.locations;
+  }
+  if (!rawLocs && pokemon.numHoe) {
+    const hoeEntry = HOENN_BY_NUM.get(String(pokemon.numHoe).padStart(3, '0')) || HOENN_BY_NUM.get(String(parseInt(pokemon.numHoe, 10)));
+    if (hoeEntry && hoeEntry.locations) rawLocs = hoeEntry.locations;
+  }
+  if (!rawLocs && pokemon.numAlo) {
+    const aloEntry = ALOLA_BY_NUM.get(String(pokemon.numAlo).padStart(3, '0')) || ALOLA_BY_NUM.get(String(parseInt(pokemon.numAlo, 10)));
+    if (aloEntry && aloEntry.locations) rawLocs = aloEntry.locations;
+  }
+
+  if (!rawLocs) {
+    const natKey = pokemon.numNac || (currentDexId === 'general' ? pokemon.pokemonId : '');
+    if (natKey) {
+      const natInt = parseInt(natKey, 10);
+      if (!isNaN(natInt)) {
+        const pad4 = String(natInt).padStart(4, '0');
+        const strInt = String(natInt);
+        const matchedEntry =
+          NATIONAL_BY_ID.get(pad4) || NATIONAL_BY_ID.get(strInt) ||
+          PALDEA_BY_NAT.get(pad4) || PALDEA_BY_NAT.get(strInt) ||
+          GALAR_BY_NAT.get(pad4) || GALAR_BY_NAT.get(strInt) ||
+          HISUI_BY_NAT.get(pad4) || HISUI_BY_NAT.get(strInt) ||
+          LUMIOSE_BY_NAT.get(pad4) || LUMIOSE_BY_NAT.get(strInt) ||
+          SINNOH_BY_NAT.get(pad4) || SINNOH_BY_NAT.get(strInt) ||
+          LETSGO_BY_NAT.get(pad4) || LETSGO_BY_NAT.get(strInt) ||
+          KALOS_BY_NAT.get(pad4) || KALOS_BY_NAT.get(strInt) ||
+          HOENN_BY_NAT.get(pad4) || HOENN_BY_NAT.get(strInt) ||
+          ALOLA_BY_NAT.get(pad4) || ALOLA_BY_NAT.get(strInt);
+        if (matchedEntry && matchedEntry.locations) {
+          rawLocs = matchedEntry.locations;
+        }
+      }
+    }
+  }
+
+  if (!rawLocs) return null;
+
+  const resolved = {};
+  for (const [k, val] of Object.entries(rawLocs)) {
+    let lines = val;
+    if (typeof val === 'string' && val.startsWith('=')) {
+      const refKey = val.slice(1);
+      lines = rawLocs[refKey];
+    }
+    if (Array.isArray(lines)) {
+      const filtered = lines.filter(line => !/no aparece en/i.test(line));
+      if (filtered.length > 0) {
+        resolved[k] = filtered;
+      }
+    }
+  }
+  return Object.keys(resolved).length > 0 ? resolved : null;
+}
+
+function formatLocationLineHtml(line) {
+  const trimmed = String(line || '').trim();
+  if (!trimmed) return '';
+
+  if (trimmed.startsWith('[') && trimmed.endsWith(']')) {
+    const subTitle = trimmed.slice(1, -1).trim();
+    return `<div class="loc-form-subheading">${escapeHtmlText(subTitle)}</div>`;
+  }
+
+  const colonIdx = trimmed.indexOf(':');
+  if (colonIdx > 0 && colonIdx < 52) {
+    const method = trimmed.slice(0, colonIdx).trim();
+    const detail = trimmed.slice(colonIdx + 1).trim();
+    const mLow = method.toLowerCase();
+
+    let methodClass = 'method-default';
+    if (mLow.includes('salvaje') || mLow.includes('alfa') || mLow.includes('árbol') || mLow.includes('roca') || mLow.includes('pesca') || mLow.includes('surf') || mLow.includes('curri') || mLow.includes('cabeza') || mLow.includes('radar') || mLow.includes('subsuelo')) {
+      methodClass = 'method-wild';
+    } else if (mLow.includes('evolucion') || mLow.includes('criar') || mLow.includes('cría')) {
+      methodClass = 'method-evo';
+    } else if (mLow.includes('incursi') || mLow.includes('dinamax')) {
+      methodClass = 'method-raid';
+    } else if (mLow.includes('aparici') || mLow.includes('manada') || mLow.includes('distorsi')) {
+      methodClass = 'method-outbreak';
+    } else if (mLow.includes('regalo') || mLow.includes('especial') || mLow.includes('evento') || mLow.includes('fósil') || mLow.includes('revivir')) {
+      methodClass = 'method-special';
+    } else if (mLow.includes('intercambi') || mLow.includes('transfer') || mLow.includes('parque') || mLow.includes('pokéwalker') || mLow.includes('go park')) {
+      methodClass = 'method-trade';
+    }
+
+    return `
+      <div class="loc-method-row">
+        <span class="loc-method-badge ${methodClass}">${escapeHtmlText(method.toUpperCase())}</span>
+        <span class="loc-method-detail">${escapeHtmlText(detail)}</span>
+      </div>
+    `;
+  }
+
+  return `
+    <div class="loc-method-row">
+      <span class="loc-method-detail">${escapeHtmlText(trimmed)}</span>
+    </div>
+  `;
+}
+
+function buildLocationCardsData(resolvedLocs) {
+  if (!resolvedLocs) return [];
+  const cards = [];
+
+  // Ordenar grupos priorizando el juego del Pokédex activo y después Escarlata/Púrpura (Paldea)
+  const orderedGroups = [...LOCATION_GAME_GROUPS].sort((a, b) => {
+    const aIsActive = a.dexId && a.dexId === currentDexId ? 1 : 0;
+    const bIsActive = b.dexId && b.dexId === currentDexId ? 1 : 0;
+    if (aIsActive !== bIsActive) return bIsActive - aIsActive;
+    const aIsSv = a.id === 'sv' ? 1 : 0;
+    const bIsSv = b.id === 'sv' ? 1 : 0;
+    if (aIsSv !== bIsSv) return bIsSv - aIsSv;
+    return 0;
+  });
+
+  for (const grp of orderedGroups) {
+    if (grp.single) {
+      const lines = resolvedLocs[grp.single];
+      if (lines && lines.length > 0) {
+        cards.push({
+          groupId: grp.id,
+          dexId: grp.dexId || null,
+          title: grp.title,
+          badgeHtml: grp.badge || `<span class="loc-ver-pill pill-classic">${escapeHtmlText(grp.regionTag)}</span>`,
+          regionTag: grp.regionTag,
+          themeClass: grp.themeClass,
+          lines
+        });
+      }
+    } else if (grp.pair) {
+      const [k1, k2] = grp.pair;
+      const lines1 = resolvedLocs[k1];
+      const lines2 = resolvedLocs[k2];
+
+      if (lines1 && lines2 && JSON.stringify(lines1) === JSON.stringify(lines2)) {
+        cards.push({
+          groupId: grp.id,
+          dexId: grp.dexId || null,
+          title: grp.combinedTitle,
+          badgeHtml: (grp.badges && grp.badges.combined) || `<span class="loc-ver-pill pill-classic">${escapeHtmlText(grp.regionTag)}</span>`,
+          regionTag: grp.regionTag,
+          themeClass: grp.themeClass,
+          lines: lines1
+        });
+      } else {
+        if (lines1 && lines1.length > 0) {
+          cards.push({
+            groupId: `${grp.id}_${k1}`,
+            dexId: grp.dexId || null,
+            title: (grp.singleTitles && grp.singleTitles[k1]) || k1.toUpperCase(),
+            badgeHtml: (grp.badges && grp.badges[k1]) || `<span class="loc-ver-pill pill-classic">${escapeHtmlText(grp.regionTag)}</span>`,
+            regionTag: grp.regionTag,
+            themeClass: k1 === 'escarlata' ? 'loc-theme-scarlet' : grp.themeClass,
+            lines: lines1
+          });
+        }
+        if (lines2 && lines2.length > 0) {
+          cards.push({
+            groupId: `${grp.id}_${k2}`,
+            dexId: grp.dexId || null,
+            title: (grp.singleTitles && grp.singleTitles[k2]) || k2.toUpperCase(),
+            badgeHtml: (grp.badges && grp.badges[k2]) || `<span class="loc-ver-pill pill-classic">${escapeHtmlText(grp.regionTag)}</span>`,
+            regionTag: grp.regionTag,
+            themeClass: k2 === 'púrpura' ? 'loc-theme-violet' : grp.themeClass,
+            lines: lines2
+          });
+        }
+      }
+    }
+  }
+
+  return cards;
+}
+
+function renderPokemonLocations(pokemon, stageOverride = null) {
+  if (!winnerLocationsContainer || !winnerLocationsSection) return;
+
+  const basePokemon = getPokemonByAnyId(getPokemonId(pokemon)) || pokemon;
+  const targetPokemon = stageOverride || basePokemon;
+
+  // Renderizar pestañas rápidas de la familia evolutiva si tiene más de 1 miembro
+  const lineIds = (basePokemon.evolutionLine && basePokemon.evolutionLine.length > 1)
+    ? basePokemon.evolutionLine
+    : [];
+  const members = lineIds.map(id => getPokemonByAnyId(id)).filter(Boolean);
+
+  if (winnerLocationsEvoTabs) {
+    if (members.length > 1) {
+      winnerLocationsEvoTabs.style.display = 'flex';
+      const targetId = getPokemonId(targetPokemon);
+      winnerLocationsEvoTabs.innerHTML = `
+        <span class="loc-evo-tabs-label">FASE:</span>
+        ${members.map(m => {
+          const mId = getPokemonId(m);
+          const isAct = mId === targetId || (m.numNac && m.numNac === targetPokemon.numNac);
+          return `<button type="button" class="loc-evo-tab-btn ${isAct ? 'active' : ''}" data-evo-loc-id="${mId}">
+            #${getPokemonDisplayNum(m)} ${escapeHtmlText(m.name)}
+          </button>`;
+        }).join('')}
+      `;
+      winnerLocationsEvoTabs.querySelectorAll('[data-evo-loc-id]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const mPoke = getPokemonByAnyId(btn.dataset.evoLocId);
+          if (mPoke) renderPokemonLocations(basePokemon, mPoke);
+        });
+      });
+    } else {
+      winnerLocationsEvoTabs.style.display = 'none';
+      winnerLocationsEvoTabs.innerHTML = '';
+    }
+  }
+
+  const resolvedLocs = resolvePokemonLocations(targetPokemon);
+  const cardsData = buildLocationCardsData(resolvedLocs);
+
+  if (cardsData.length === 0) {
+    const availGames = resolvePokemonGames(targetPokemon).map(g => GAME_NAMES_MAP[g] || g);
+    if (toggleAllLocationsBtn) toggleAllLocationsBtn.style.display = 'none';
+    winnerLocationsContainer.innerHTML = `
+      <div class="loc-empty-fallback">
+        <div class="loc-fallback-title">DISPONIBLE EN: ${escapeHtmlText(availGames.join(' · ') || 'Entregas principales')}</div>
+        <div class="loc-fallback-desc">La guía detallada por rutas para este Pokémon fuera de las Pokédex de Paldea, Galar, Hisui y Ciudad Luminalia se incorporará en los siguientes bloques de actualización.</div>
+      </div>
+    `;
+    return;
+  }
+
+  if (toggleAllLocationsBtn) {
+    toggleAllLocationsBtn.style.display = cardsData.length > 1 ? 'inline-flex' : 'none';
+    toggleAllLocationsBtn.textContent = `VER TODOS (${cardsData.length})`;
+    toggleAllLocationsBtn.dataset.allExpanded = 'false';
+  }
+
+  winnerLocationsContainer.innerHTML = '';
+  const fragment = document.createDocumentFragment();
+
+  cardsData.forEach((c, idx) => {
+    // Expandir por defecto la tarjeta del juego activo (o Paldea/primera tarjeta en Ruleta General)
+    const isPrimary = idx === 0 || (c.dexId && c.dexId === currentDexId) || (currentDexId === 'general' && c.groupId.startsWith('sv'));
+    const cardEl = document.createElement('div');
+    cardEl.className = `loc-game-card ${c.themeClass} ${isPrimary ? 'is-expanded' : ''}`;
+
+    cardEl.innerHTML = `
+      <button type="button" class="loc-game-header" aria-expanded="${isPrimary ? 'true' : 'false'}">
+        <div class="loc-game-header-left">
+          ${c.badgeHtml}
+          <span class="loc-game-title">${escapeHtmlText(c.title)}</span>
+        </div>
+        <div class="loc-game-header-right">
+          <span class="loc-region-tag">${escapeHtmlText(c.regionTag)}</span>
+          <svg class="icon-svg-xs loc-chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </div>
+      </button>
+      <div class="loc-game-body">
+        ${c.lines.map(formatLocationLineHtml).join('')}
+      </div>
+    `;
+
+    const headerBtn = cardEl.querySelector('.loc-game-header');
+    headerBtn.addEventListener('click', () => {
+      const expanded = cardEl.classList.toggle('is-expanded');
+      headerBtn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+    });
+
+    fragment.appendChild(cardEl);
+  });
+
+  winnerLocationsContainer.appendChild(fragment);
 }
 
 // ==========================================
@@ -1762,6 +2575,9 @@ function removePending(pokemon) {
   if (pokemon.numSin) lastSpinPendingIds.delete(pokemon.numSin);
   if (pokemon.numKan) lastSpinPendingIds.delete(pokemon.numKan);
   if (pokemon.numLum) lastSpinPendingIds.delete(pokemon.numLum);
+  if (pokemon.numKal) lastSpinPendingIds.delete(pokemon.numKal);
+  if (pokemon.numHoe) lastSpinPendingIds.delete(pokemon.numHoe);
+  if (pokemon.numAlo) lastSpinPendingIds.delete(pokemon.numAlo);
   if (pokemon.numNac) lastSpinPendingIds.delete(pokemon.numNac);
   saveShinyTracking();
 
@@ -1849,6 +2665,21 @@ function renderPaldeaMatrix() {
         matchGame = q === 'hisui' || q === 'arceus' || q === 'leyendas';
       } else if (currentDexId === 'plza') {
         matchGame = q === 'luminalia' || q === 'za' || q === 'z-a';
+      } else if (currentDexId === 'xy') {
+        const g = getPokemonGame(p);
+        matchGame = (q === 'x' && g === 'x') ||
+                    (q === 'y' && g === 'y') ||
+                    (q === 'ambos' && g === 'both');
+      } else if (currentDexId === 'oras') {
+        const g = getPokemonGame(p);
+        matchGame = ((q === 'ro' || q === 'rubi' || q === 'rubí' || q === 'omega') && g === 'ro') ||
+                    ((q === 'za' || q === 'zafiro' || q === 'alfa') && g === 'za') ||
+                    (q === 'ambos' && g === 'both');
+      } else if (currentDexId === 'usum') {
+        const g = getPokemonGame(p);
+        matchGame = ((q === 'us' || q === 'ultrasol' || q === 'sol') && g === 'us') ||
+                    ((q === 'ul' || q === 'ultraluna' || q === 'luna') && g === 'ul') ||
+                    (q === 'ambos' && g === 'both');
       } else {
         const gamesList = resolvePokemonGames(p);
         matchGame = gamesList.some(g => g.toLowerCase().includes(q) || (GAME_NAMES_MAP[g] || '').toLowerCase().includes(q));
@@ -1896,6 +2727,18 @@ function renderPaldeaMatrix() {
       if (currentMatrixFilter === 'hisui') return true;
     } else if (currentDexId === 'plza') {
       if (currentMatrixFilter === 'lumina') return true;
+    } else if (currentDexId === 'xy') {
+      if (currentMatrixFilter === 'x') return getPokemonGame(p) === 'x';
+      if (currentMatrixFilter === 'y') return getPokemonGame(p) === 'y';
+      if (currentMatrixFilter === 'both') return getPokemonGame(p) === 'both';
+    } else if (currentDexId === 'oras') {
+      if (currentMatrixFilter === 'ro') return getPokemonGame(p) === 'ro';
+      if (currentMatrixFilter === 'za') return getPokemonGame(p) === 'za';
+      if (currentMatrixFilter === 'both') return getPokemonGame(p) === 'both';
+    } else if (currentDexId === 'usum') {
+      if (currentMatrixFilter === 'us') return getPokemonGame(p) === 'us';
+      if (currentMatrixFilter === 'ul') return getPokemonGame(p) === 'ul';
+      if (currentMatrixFilter === 'both') return getPokemonGame(p) === 'both';
     } else {
       // General
       if (currentMatrixFilter === 'gen1') return p.generation === 1;
@@ -2000,11 +2843,16 @@ function renderPaldeaMatrix() {
           <button class="btn-matrix-toggle ${isCaptured ? 'is-desmarcar' : 'is-capturar'}" title="${isCaptured ? 'Desmarcar de Shiny' : 'Marcar como Shiny capturado'}">
             ${isCaptured ? 'DESMARCAR' : 'CAPTURAR'}
           </button>
-          ${hasEvo ? `<button class="btn-matrix-evo" title="Seleccionar miembros de la línea evolutiva">LÍNEA</button>` : ''}
+          <button class="btn-matrix-evo" title="${hasEvo ? 'Ver ubicación de captura y línea evolutiva' : 'Ver ubicación de captura por juego'}">${hasEvo ? 'LÍNEA' : 'FICHA'}</button>
         </div>
         ${isPendingOrLastSpin ? `<button class="btn-matrix-unpend" title="Desmarcar y quitar de pendientes">DESMARCAR</button>` : ''}
       </div>
     `;
+
+    card.title = `Haz clic para ver dónde capturar a ${p.name} en cada juego`;
+    card.addEventListener('click', () => {
+      openEvolutionLineModal(p, 'matrix');
+    });
 
     const toggleBtn = card.querySelector('.btn-matrix-toggle');
     toggleBtn.addEventListener('click', (e) => {
@@ -2017,8 +2865,8 @@ function renderPaldeaMatrix() {
       }
     });
 
-    if (hasEvo) {
-      const evoBtn = card.querySelector('.btn-matrix-evo');
+    const evoBtn = card.querySelector('.btn-matrix-evo');
+    if (evoBtn) {
       evoBtn.addEventListener('click', (e) => {
         e.stopPropagation();
         openEvolutionLineModal(p, 'matrix');
@@ -2073,11 +2921,23 @@ function renderCapturedList() {
         <span class="shiny-item-date">${item.time || ''}</span>
       </div>
       <div class="shiny-item-actions">
+        <button class="btn-mini-action info-btn" title="Ver ubicación de captura por juego">FICHA</button>
         <button class="btn-mini-action remove-btn" title="Quitar de capturados">DESMARCAR</button>
       </div>
     `;
 
-    card.querySelector('.remove-btn').addEventListener('click', () => {
+    card.title = `Haz clic para ver dónde capturar a ${item.name} en cada juego`;
+    card.addEventListener('click', () => {
+      openEvolutionLineModal(item, 'captured');
+    });
+
+    card.querySelector('.info-btn').addEventListener('click', (e) => {
+      e.stopPropagation();
+      openEvolutionLineModal(item, 'captured');
+    });
+
+    card.querySelector('.remove-btn').addEventListener('click', (e) => {
+      e.stopPropagation();
       removeShinyCaptured(item);
     });
 
@@ -2191,6 +3051,10 @@ function renderHistory() {
       <span class="type-badge type-${mainType}">${mainType}</span>
       ${getGameBadgeHtml(hist, 'mini')}
     `;
+    chip.title = `Haz clic para ver dónde capturar a ${hist.name} en cada juego`;
+    chip.addEventListener('click', () => {
+      openEvolutionLineModal(hist, 'history');
+    });
     historyListEl.appendChild(chip);
   });
 }
@@ -2267,6 +3131,54 @@ function rebuildRangeFilterOptions(dexId = currentDexId) {
       <option value="161-232">#161 - #232</option>
       <option value="kalos_natives">NATIVOS DE KALOS (GEN 6)</option>
     `;
+  } else if (dexId === 'xy') {
+    rangeFilter.innerHTML = `
+      <option value="all">TODOS (#001 - #457)</option>
+      <option value="starters">INICIALES (#001 - #009)</option>
+      <option value="kalos_centro">KALOS CENTRO (#001 - #153)</option>
+      <option value="kalos_costa">KALOS COSTA (#154 - #306)</option>
+      <option value="kalos_montana">KALOS MONTAÑA (#307 - #457)</option>
+      <option value="1-100">#001 - #100</option>
+      <option value="101-200">#101 - #200</option>
+      <option value="201-300">#201 - #300</option>
+      <option value="301-400">#301 - #400</option>
+      <option value="401-457">#401 - #457</option>
+      <option value="x">EXCLUSIVOS POKÉMON X (16)</option>
+      <option value="y">EXCLUSIVOS POKÉMON Y (16)</option>
+      <option value="both">DISPONIBLE EN AMBOS (425)</option>
+      <option value="legendaries">LEGENDARIOS (#454 - #457)</option>
+    `;
+  } else if (dexId === 'oras') {
+    rangeFilter.innerHTML = `
+      <option value="all">TODOS (#001 - #211)</option>
+      <option value="starters">INICIALES (#001 - #009)</option>
+      <option value="1-50">#001 - #050</option>
+      <option value="51-100">#051 - #100</option>
+      <option value="101-150">#101 - #150</option>
+      <option value="151-211">#151 - #211</option>
+      <option value="ro">EXCLUSIVOS RUBÍ OMEGA (8)</option>
+      <option value="za">EXCLUSIVOS ZAFIRO ALFA (8)</option>
+      <option value="both">DISPONIBLE EN AMBOS (195)</option>
+      <option value="fossils">FÓSILES (#134 - #137)</option>
+      <option value="legendaries">LEGENDARIOS (#198 - #211)</option>
+    `;
+  } else if (dexId === 'usum') {
+    rangeFilter.innerHTML = `
+      <option value="all">TODOS (#001 - #403)</option>
+      <option value="starters">INICIALES (#001 - #009)</option>
+      <option value="melemele">ISLA MELEMELE (#001 - #120)</option>
+      <option value="akala">ISLA AKALA (#121 - #250)</option>
+      <option value="ulaula">ISLA ULA-ULA (#251 - #340)</option>
+      <option value="poni">ISLA PONI (#341 - #403)</option>
+      <option value="1-100">#001 - #100</option>
+      <option value="101-200">#101 - #200</option>
+      <option value="201-300">#201 - #300</option>
+      <option value="301-403">#301 - #403</option>
+      <option value="us">EXCLUSIVOS ULTRASOL (20)</option>
+      <option value="ul">EXCLUSIVOS ULTRALUNA (20)</option>
+      <option value="both">DISPONIBLE EN AMBOS (363)</option>
+      <option value="ultrabeasts">ULTRAENTES Y LEGENDARIOS (#377 - #403)</option>
+    `;
   } else {
     rangeFilter.innerHTML = `
       <option value="all">TODOS (#0001 - #1025)</option>
@@ -2325,6 +3237,24 @@ function rebuildMatrixFilterChips(dexId = currentDexId) {
   } else if (dexId === 'plza') {
     specificChipsHtml = `
       <button class="matrix-chip chip-game-lumina" data-matrix-filter="lumina">LUMINALIA (232)</button>
+    `;
+  } else if (dexId === 'xy') {
+    specificChipsHtml = `
+      <button class="matrix-chip chip-game-x" data-matrix-filter="x">POKÉMON X (16)</button>
+      <button class="matrix-chip chip-game-y" data-matrix-filter="y">POKÉMON Y (16)</button>
+      <button class="matrix-chip chip-game-both" data-matrix-filter="both">AMBOS (425)</button>
+    `;
+  } else if (dexId === 'oras') {
+    specificChipsHtml = `
+      <button class="matrix-chip chip-game-ro" data-matrix-filter="ro">RUBÍ OMEGA (8)</button>
+      <button class="matrix-chip chip-game-za" data-matrix-filter="za">ZAFIRO ALFA (8)</button>
+      <button class="matrix-chip chip-game-both" data-matrix-filter="both">AMBOS (195)</button>
+    `;
+  } else if (dexId === 'usum') {
+    specificChipsHtml = `
+      <button class="matrix-chip chip-game-us" data-matrix-filter="us">ULTRASOL (20)</button>
+      <button class="matrix-chip chip-game-ul" data-matrix-filter="ul">ULTRALUNA (20)</button>
+      <button class="matrix-chip chip-game-both" data-matrix-filter="both">AMBOS (363)</button>
     `;
   } else {
     // Ruleta General (Gens 1 a 9)
@@ -2480,6 +3410,84 @@ function applyFilters() {
       } else if (selectedRange === 'kalos_natives') {
         filtered = filtered.filter(p => p.generation === 6);
       }
+    } else if (currentDexId === 'xy') {
+      if (selectedRange === 'starters') {
+        filtered = filtered.filter(p => parseInt(p.numKal || '999', 10) <= 9);
+      } else if (selectedRange === 'kalos_centro') {
+        filtered = filtered.filter(p => { const n = parseInt(p.numKal || '0', 10); return n >= 1 && n <= 153; });
+      } else if (selectedRange === 'kalos_costa') {
+        filtered = filtered.filter(p => { const n = parseInt(p.numKal || '0', 10); return n >= 154 && n <= 306; });
+      } else if (selectedRange === 'kalos_montana') {
+        filtered = filtered.filter(p => { const n = parseInt(p.numKal || '0', 10); return n >= 307 && n <= 457; });
+      } else if (selectedRange === '1-100') {
+        filtered = filtered.filter(p => { const n = parseInt(p.numKal || '0', 10); return n >= 1 && n <= 100; });
+      } else if (selectedRange === '101-200') {
+        filtered = filtered.filter(p => { const n = parseInt(p.numKal || '0', 10); return n >= 101 && n <= 200; });
+      } else if (selectedRange === '201-300') {
+        filtered = filtered.filter(p => { const n = parseInt(p.numKal || '0', 10); return n >= 201 && n <= 300; });
+      } else if (selectedRange === '301-400') {
+        filtered = filtered.filter(p => { const n = parseInt(p.numKal || '0', 10); return n >= 301 && n <= 400; });
+      } else if (selectedRange === '401-457') {
+        filtered = filtered.filter(p => { const n = parseInt(p.numKal || '0', 10); return n >= 401 && n <= 457; });
+      } else if (selectedRange === 'x') {
+        filtered = filtered.filter(p => getPokemonGame(p) === 'x');
+      } else if (selectedRange === 'y') {
+        filtered = filtered.filter(p => getPokemonGame(p) === 'y');
+      } else if (selectedRange === 'both') {
+        filtered = filtered.filter(p => getPokemonGame(p) === 'both');
+      } else if (selectedRange === 'legendaries') {
+        filtered = filtered.filter(p => parseInt(p.numKal || '0', 10) >= 454);
+      }
+    } else if (currentDexId === 'oras') {
+      if (selectedRange === 'starters') {
+        filtered = filtered.filter(p => parseInt(p.numHoe || '999', 10) <= 9);
+      } else if (selectedRange === '1-50') {
+        filtered = filtered.filter(p => { const n = parseInt(p.numHoe || '0', 10); return n >= 1 && n <= 50; });
+      } else if (selectedRange === '51-100') {
+        filtered = filtered.filter(p => { const n = parseInt(p.numHoe || '0', 10); return n >= 51 && n <= 100; });
+      } else if (selectedRange === '101-150') {
+        filtered = filtered.filter(p => { const n = parseInt(p.numHoe || '0', 10); return n >= 101 && n <= 150; });
+      } else if (selectedRange === '151-211') {
+        filtered = filtered.filter(p => { const n = parseInt(p.numHoe || '0', 10); return n >= 151 && n <= 211; });
+      } else if (selectedRange === 'ro') {
+        filtered = filtered.filter(p => getPokemonGame(p) === 'ro');
+      } else if (selectedRange === 'za') {
+        filtered = filtered.filter(p => getPokemonGame(p) === 'za');
+      } else if (selectedRange === 'both') {
+        filtered = filtered.filter(p => getPokemonGame(p) === 'both');
+      } else if (selectedRange === 'fossils') {
+        filtered = filtered.filter(p => { const n = parseInt(p.numHoe || '0', 10); return n >= 134 && n <= 137; });
+      } else if (selectedRange === 'legendaries') {
+        filtered = filtered.filter(p => parseInt(p.numHoe || '0', 10) >= 198);
+      }
+    } else if (currentDexId === 'usum') {
+      if (selectedRange === 'starters') {
+        filtered = filtered.filter(p => parseInt(p.numAlo || '999', 10) <= 9);
+      } else if (selectedRange === 'melemele') {
+        filtered = filtered.filter(p => { const n = parseInt(p.numAlo || '0', 10); return n >= 1 && n <= 120; });
+      } else if (selectedRange === 'akala') {
+        filtered = filtered.filter(p => { const n = parseInt(p.numAlo || '0', 10); return n >= 121 && n <= 250; });
+      } else if (selectedRange === 'ulaula') {
+        filtered = filtered.filter(p => { const n = parseInt(p.numAlo || '0', 10); return n >= 251 && n <= 340; });
+      } else if (selectedRange === 'poni') {
+        filtered = filtered.filter(p => { const n = parseInt(p.numAlo || '0', 10); return n >= 341 && n <= 403; });
+      } else if (selectedRange === '1-100') {
+        filtered = filtered.filter(p => { const n = parseInt(p.numAlo || '0', 10); return n >= 1 && n <= 100; });
+      } else if (selectedRange === '101-200') {
+        filtered = filtered.filter(p => { const n = parseInt(p.numAlo || '0', 10); return n >= 101 && n <= 200; });
+      } else if (selectedRange === '201-300') {
+        filtered = filtered.filter(p => { const n = parseInt(p.numAlo || '0', 10); return n >= 201 && n <= 300; });
+      } else if (selectedRange === '301-403') {
+        filtered = filtered.filter(p => { const n = parseInt(p.numAlo || '0', 10); return n >= 301 && n <= 403; });
+      } else if (selectedRange === 'us') {
+        filtered = filtered.filter(p => getPokemonGame(p) === 'us');
+      } else if (selectedRange === 'ul') {
+        filtered = filtered.filter(p => getPokemonGame(p) === 'ul');
+      } else if (selectedRange === 'both') {
+        filtered = filtered.filter(p => getPokemonGame(p) === 'both');
+      } else if (selectedRange === 'ultrabeasts') {
+        filtered = filtered.filter(p => parseInt(p.numAlo || '0', 10) >= 377);
+      }
     } else {
       // Ruleta General
       if (selectedRange === 'gen1') filtered = filtered.filter(p => p.generation === 1);
@@ -2574,6 +3582,21 @@ function renderPokedexModalList(filterQuery = '') {
       matchGame = q === 'hisui' || q === 'arceus' || q === 'leyendas';
     } else if (currentDexId === 'plza') {
       matchGame = q === 'luminalia' || q === 'za' || q === 'z-a';
+    } else if (currentDexId === 'xy') {
+      const g = getPokemonGame(p);
+      matchGame = (q === 'x' && g === 'x') ||
+                  (q === 'y' && g === 'y') ||
+                  (q === 'ambos' && g === 'both');
+    } else if (currentDexId === 'oras') {
+      const g = getPokemonGame(p);
+      matchGame = ((q === 'ro' || q === 'rubi' || q === 'rubí' || q === 'omega') && g === 'ro') ||
+                  ((q === 'za' || q === 'zafiro' || q === 'alfa') && g === 'za') ||
+                  (q === 'ambos' && g === 'both');
+    } else if (currentDexId === 'usum') {
+      const g = getPokemonGame(p);
+      matchGame = ((q === 'us' || q === 'ultrasol' || q === 'sol') && g === 'us') ||
+                  ((q === 'ul' || q === 'ultraluna' || q === 'luna') && g === 'ul') ||
+                  (q === 'ambos' && g === 'both');
     } else {
       const gamesList = resolvePokemonGames(p);
       matchGame = gamesList.some(g => g.toLowerCase().includes(q) || (GAME_NAMES_MAP[g] || '').toLowerCase().includes(q));
@@ -2607,6 +3630,10 @@ function renderPokedexModalList(filterQuery = '') {
         ${getGameBadgeHtml(p, 'mini')}
       </div>
     `;
+    row.title = `Haz clic para abrir la tarjeta de ${p.name} y consultar dónde se captura en cada juego`;
+    row.addEventListener('click', () => {
+      openEvolutionLineModal(p, 'catalog');
+    });
     itemsListContainer.appendChild(row);
   }
 
@@ -2653,6 +3680,31 @@ function switchDexContext(newDexId) {
 
   const resetAllBtnText = document.getElementById('resetAllBtnText');
   if (resetAllBtnText) resetAllBtnText.textContent = `VER LOS ${config.totalCount}`;
+
+  const gridLocationPhaseBadge = document.getElementById('gridLocationPhaseBadge');
+  if (gridLocationPhaseBadge) {
+    if (currentDexId === 'paldea') {
+      gridLocationPhaseBadge.textContent = 'PALDEA 400/400 COMPLETO';
+    } else if (currentDexId === 'swsh') {
+      gridLocationPhaseBadge.textContent = 'GALAR 400/400 COMPLETO';
+    } else if (currentDexId === 'pla') {
+      gridLocationPhaseBadge.textContent = 'HISUI 242/242 COMPLETO';
+    } else if (currentDexId === 'bdsp') {
+      gridLocationPhaseBadge.textContent = 'SINNOH 151/151 COMPLETO';
+    } else if (currentDexId === 'lgpe') {
+      gridLocationPhaseBadge.textContent = 'KANTO 153/153 COMPLETO';
+    } else if (currentDexId === 'plza') {
+      gridLocationPhaseBadge.textContent = 'LUMINALIA 232/232 COMPLETO';
+    } else if (currentDexId === 'xy') {
+      gridLocationPhaseBadge.textContent = 'KALOS 457/457 COMPLETO';
+    } else if (currentDexId === 'oras') {
+      gridLocationPhaseBadge.textContent = 'HOENN 211/211 COMPLETO';
+    } else if (currentDexId === 'usum') {
+      gridLocationPhaseBadge.textContent = 'ALOLA 403/403 COMPLETO';
+    } else {
+      gridLocationPhaseBadge.textContent = 'NACIONAL 1025/1025 COMPLETO';
+    }
+  }
 
   // Reconstruir opciones de filtros
   rebuildRangeFilterOptions(currentDexId);
@@ -2837,6 +3889,47 @@ function initApp() {
   if (winnerCancelPendingBtn) {
     winnerCancelPendingBtn.addEventListener('click', () => {
       closeWinnerModal();
+    });
+  }
+
+  if (closeWinnerModalBtn) {
+    closeWinnerModalBtn.addEventListener('click', () => {
+      if (modalSource === 'wheel' && currentWonPokemon) {
+        const wonId = getPokemonId(currentWonPokemon);
+        markAsPending(currentWonPokemon);
+        lastSpinPendingIds = new Set([wonId]);
+        saveShinyTracking();
+      }
+      closeWinnerModal();
+    });
+  }
+
+  if (toggleAllLocationsBtn) {
+    toggleAllLocationsBtn.addEventListener('click', () => {
+      if (!winnerLocationsContainer) return;
+      const cards = winnerLocationsContainer.querySelectorAll('.loc-game-card');
+      const allOpen = toggleAllLocationsBtn.dataset.allExpanded === 'true';
+      cards.forEach((c, idx) => {
+        const shouldOpen = !allOpen ? true : idx === 0;
+        c.classList.toggle('is-expanded', shouldOpen);
+        const hBtn = c.querySelector('.loc-game-header');
+        if (hBtn) hBtn.setAttribute('aria-expanded', shouldOpen ? 'true' : 'false');
+      });
+      toggleAllLocationsBtn.dataset.allExpanded = (!allOpen).toString();
+      toggleAllLocationsBtn.textContent = !allOpen
+        ? 'PLEGAR SECUNDARIOS'
+        : `VER TODOS (${cards.length})`;
+    });
+  }
+
+  const liveTrackerCardEl = document.querySelector('.live-tracker-card');
+  if (liveTrackerCardEl) {
+    liveTrackerCardEl.style.cursor = 'pointer';
+    liveTrackerCardEl.title = 'Haz clic para abrir la tarjeta del Pokémon apuntado y ver dónde se captura en cada juego';
+    liveTrackerCardEl.addEventListener('click', () => {
+      if (isSpinning) return;
+      const activePoke = getActivePokemonAtRotation(currentRotation);
+      if (activePoke) openEvolutionLineModal(activePoke, 'tracker');
     });
   }
 
