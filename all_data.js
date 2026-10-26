@@ -73295,7 +73295,6 @@ window.ALL_NATIONAL_POKEMON = [
     "locations": {
       "escarlata": [
         "Especial: Pokémon inicial entregado por el director Clavel en Pueblo Cahíz (nivel 5)",
-        "Salvaje: Área Costera del Biodomo Arándano tras ampliar la biodiversidad en la Sala del Club de la Liga (DLC El Disco Índigo)",
         "Criar: de Sprigatito, Floragato o Meowscarada"
       ],
       "púrpura": "=escarlata"
@@ -73388,7 +73387,6 @@ window.ALL_NATIONAL_POKEMON = [
     "locations": {
       "escarlata": [
         "Especial: Pokémon inicial entregado por el director Clavel en Pueblo Cahíz (nivel 5)",
-        "Salvaje: Área Árida del Biodomo Arándano tras ampliar la biodiversidad en la Sala del Club de la Liga (DLC El Disco Índigo)",
         "Criar: de Fuecoco, Crocalor o Skeledirge"
       ],
       "púrpura": "=escarlata"
@@ -73481,7 +73479,6 @@ window.ALL_NATIONAL_POKEMON = [
     "locations": {
       "escarlata": [
         "Especial: Pokémon inicial entregado por el director Clavel en Pueblo Cahíz (nivel 5)",
-        "Salvaje: Área Polar del Biodomo Arándano tras ampliar la biodiversidad en la Sala del Club de la Liga (DLC El Disco Índigo)",
         "Criar: de Quaxly, Quaxwell o Quaquaval"
       ],
       "púrpura": "=escarlata"

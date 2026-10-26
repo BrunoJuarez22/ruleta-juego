@@ -452,6 +452,36 @@ ruleta-juego/
     - **Corrección (`style.css`):** `.loc-game-card { flex: 0 0 auto; min-width: 0 }`, títulos y detalles con `overflow-wrap: anywhere` y `min-width: 0`, etiquetas de método con `max-width: 42%` y salto de línea, cabecera con `white-space: normal`, y altura de lista ampliada a `min(58vh, 460px)` con `overscroll-behavior: contain`.
     - **Mejora de UX (`script.js`):** Nueva función `setFocusedLocationCard(cardEl)`. El juego pulsado se expande y agranda (`.is-focused`: cabecera, título, píldoras y texto más grandes con sombra), mientras los demás se pliegan y compactan (`.has-focus` en la lista: cabeceras reducidas y opacidad 0.82). Pulsar de nuevo el juego enfocado lo pliega y restaura todos a tamaño normal. La lista se desplaza suavemente para mostrar la tarjeta pulsada al inicio. Por defecto se enfoca la primera tarjeta (juego de la Pokédex activa). "VER TODOS" expande todas con tamaño uniforme; "PLEGAR SECUNDARIOS" vuelve a enfocar solo la primera.
     - Anti-caché actualizado a `v=5.0` en `index.html`.
+39. **Auditoría Exhaustiva de Ubicaciones y Corrección Canónica de Iniciales de Paldea (`v=5.1`):**
+    - **Reporte del Usuario:** Información de capturas errónea detectada en los iniciales de Paldea (Sprigatito, Fuecoco y Quaxly), donde aparecía erróneamente que se podían capturar en estado salvaje en el Biodomo Arándano.
+    - **Causa Raíz:** Se detectó una línea espuria `"Salvaje: Área Costera/Árida/Polar del Biodomo Arándano tras ampliar la biodiversidad en la Sala del Club de la Liga (DLC El Disco Índigo)"` en Sprigatito, Fuecoco y Quaxly en `paldea_pokemon.json`, `paldea_data.js`, `all_pokemon.json` y `all_data.js`. Los iniciales de Paldea (Gen 9) nunca aparecen salvajes en Paldea ni en el Biodomo Arándano (el Biodomo del DLC 2 solo incluye iniciales de las Generaciones 1 a 8). En *Pokémon Escarlata y Púrpura*, solo se obtienen como regalo inicial del director Clavel en Pueblo Cahíz (nivel 5) o mediante crianza.
+    - **Auditoría Exhaustiva Multi-Dex:**
+      - Se realizó un barrido completo mediante scripts automatizados sobre los 400 Pokémon de Paldea, los 1,025 Pokémon de la Pokédex Nacional, las 5 Pokédexes de Switch y las 3 Pokédexes de 3DS.
+      - Se verificó que ningún otro Pokémon contenía menciones falsas de Biodomo o hábitats inexistentes.
+      - Se comprobó que los 24 iniciales de Gen 1–8 sí aparecen legítimamente en el Biodomo tras las mejoras de biodiversidad donando PA en la Sala del Club de la Liga.
+      - Se verificaron todas las formas paradoja, cuarteto de las ruinas, Pokémon dominantes, evoluciones por intercambio e ítems especiales.
+    - **Corrección Aplicada:**
+      - Se eliminaron las líneas salvajes erróneas de Sprigatito (#001 / #0906), Fuecoco (#004 / #0909) y Quaxly (#007 / #0912), dejando únicamente el regalo oficial de Clavel y la crianza.
+      - Sincronización exacta y consistente entre `paldea_pokemon.json`, `paldea_data.js`, `all_pokemon.json` y `all_data.js`.
+      - Verificación de 0 emojis en todo el código fuente y validación de sintaxis de JavaScript sin errores.
+      - Actualización de versión anti-caché a `v=5.1` en `index.html`.
+40. **Optimización SEO Integral para Solucionar «Rastreada: actualmente sin indexar» en Google Search Console (`v=5.2`):**
+    - **Diagnóstico del Problema:** Google Search Console marcaba el estado "Rastreada: actualmente sin indexar". Googlebot ya había visitado y leído la página, pero la descartaba por ser percibida como contenido de bajo valor ("Thin Content"), al ser una herramienta basada en `<canvas>` interactivo y scripts de renderizado del lado del cliente (SPA) sin suficiente texto estático semántico ni encabezados en el HTML inicial.
+    - **Medidas Técnicas y de Contenido Aplicadas:**
+      1. **Sección Semántica Completa en HTML (`.seo-guide-section`):** Se introdujo una sección estática con más de 1,200 palabras legibles directamente por crawlers sin requerir ejecución de JavaScript:
+         - Encabezados jerárquicos semánticos (`<h2>`, `<h3>`).
+         - Detalle canónico de las 10 Pokédexes soportadas (Paldea, Galar, Hisui, Sinnoh, Kanto, Luminalia, Kalos, Hoenn, Alola y Nacional).
+         - Explicación de la base de datos de capturas ("Dónde capturar en cada juego").
+         - Guía técnica de mecánicas de Shiny Hunting (probabilidades 1/4096 y 1/8192, Amuleto Iris, Masuda, Poder Variocolor, Ultraumbrales, etc.).
+         - Preguntas frecuentes (`FAQ`) reales y estructuradas con elementos `<details>` / `<summary>`.
+      2. **Datos Estructurados Schema.org JSON-LD:**
+         - Implementación en `<head>` de `@graph` con `WebSite`, `WebApplication` (con características y requisitos de sistema) y `FAQPage` con 5 entidades completas de preguntas/respuestas para habilitar fragmentos enriquecidos (Rich Snippets) en Google.
+      3. **Optimización de Títulos y Metadatos:**
+         - `<title>` ampliado: `Shiny Roulette — Ruleta Pokédex, Shiny Hunting y Guía de Capturas (1,025 Pokémon)`.
+         - `<meta name="description">`, Open Graph y Twitter Cards actualizados para reflejar el soporte integral de 10 Pokédexes y 1,025 Pokémon.
+      4. **Diseño y Estilo Coherente (`style.css`):**
+         - Diseñado con variables de tema (claro/oscuro), bordes limpios (4px/3px), responsive y cumplimiento estricto de cero emojis.
+      5. **Actualización de versión anti-caché a `v=5.2`** en `index.html`.
 
 ---
 

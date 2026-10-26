@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shiny Roulette</title>
+  <title>Shiny Roulette — Ruleta Pokédex, Shiny Hunting y Guía de Capturas (1,025 Pokémon)</title>
 
   <!-- Metadatos Primarios de SEO y Posicionamiento -->
-  <meta name="description" content="Shiny Roulette es la ruleta interactiva de la Pokédex de Paldea para cazadores de Pokémon Shiny. Gira la ruleta, filtra por exclusivos de Escarlata y Púrpura, y gestiona tus capturas.">
-  <meta name="keywords" content="Shiny Roulette, ruleta pokemon, ruleta shiny, pokemon escarlata purpura, pokedex paldea, shiny hunting, pokemon shiny, ruleta paldea, exclusivos escarlata, exclusivos purpura">
+  <meta name="description" content="Shiny Roulette es la herramienta interactiva definitiva para cazadores de Pokémon Shiny. Incluye 10 Pokédexes oficiales (Paldea, Galar, Hisui, Sinnoh, Kanto, Luminalia, Kalos, Hoenn, Alola y Nacional de 1,025 Pokémon), ruleta aleatoria con física continua, guía canónica de dónde capturar en cada juego, filtros avanzados por tipo y rastreador de capturas.">
+  <meta name="keywords" content="Shiny Roulette, ruleta pokemon, ruleta shiny, pokemon escarlata purpura, pokedex paldea, shiny hunting, pokemon shiny, ruleta paldea, exclusivos escarlata, exclusivos purpura, pokedex galar, pokedex hisui, pokedex sinnoh, pokedex kalos, pokedex alola, pokedex hoenn, 1025 pokemon, donde capturar pokemon, shiny living dex">
   <meta name="author" content="Shiny Roulette">
   <meta name="application-name" content="Shiny Roulette">
   <meta name="apple-mobile-web-app-title" content="Shiny Roulette">
@@ -28,19 +28,19 @@
   <!-- Open Graph / Facebook / WhatsApp -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Shiny Roulette">
-  <meta property="og:title" content="Shiny Roulette">
-  <meta property="og:description" content="Ruleta interactiva de la Pokédex de Paldea para cazadores de Pokémon Shiny. Gira, filtra exclusivos de Escarlata y Púrpura, y registra tus capturas.">
+  <meta property="og:title" content="Shiny Roulette — Ruleta Pokédex, Shiny Hunting y Guía de Capturas (1,025 Pokémon)">
+  <meta property="og:description" content="Ruleta interactiva y guía de capturas para cazar Pokémon Shiny en 10 Pokédexes oficiales (Paldea, Galar, Hisui, Sinnoh, Kanto, Luminalia, Kalos, Hoenn, Alola y Nacional de 1,025 Pokémon).">
   <meta property="og:url" content="https://shiny-roulette.fly.dev/">
   <meta property="og:image" content="https://shiny-roulette.fly.dev/assets/pokeball.svg">
   <meta property="og:locale" content="es_ES">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Shiny Roulette">
-  <meta name="twitter:description" content="Ruleta interactiva de los 400 Pokémon de Paldea para cazadores de Pokémon Shiny.">
+  <meta name="twitter:title" content="Shiny Roulette — Ruleta Pokédex, Shiny Hunting y Guía de Capturas">
+  <meta name="twitter:description" content="Ruleta interactiva y catálogo para cazadores de Pokémon Shiny en 10 Pokédexes y 1,025 Pokémon oficiales.">
   <meta name="twitter:image" content="https://shiny-roulette.fly.dev/assets/pokeball.svg">
 
-  <!-- Datos Estructurados JSON-LD (Schema.org) para Nombre de Sitio en Google -->
+  <!-- Datos Estructurados JSON-LD (Schema.org: WebSite, WebApplication, FAQPage) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -50,8 +50,8 @@
         "@id": "https://shiny-roulette.fly.dev/#website",
         "url": "https://shiny-roulette.fly.dev/",
         "name": "Shiny Roulette",
-        "alternateName": ["ShinyRoulette", "Shiny Roulette Paldea"],
-        "description": "Ruleta interactiva de la Pokédex de Paldea para cazadores de Pokémon Shiny con los 400 Pokémon de Escarlata y Púrpura.",
+        "alternateName": ["ShinyRoulette", "Ruleta Shiny", "Ruleta Pokémon", "Shiny Living Dex Tracker"],
+        "description": "Ruleta interactiva y rastreador de Pokédex para cazadores de Pokémon Shiny en 10 juegos oficiales (1,025 Pokémon de Gens 1 a 9).",
         "inLanguage": "es"
       },
       {
@@ -62,19 +62,74 @@
         "applicationCategory": "GameApplication",
         "operatingSystem": "All",
         "browserRequirements": "Requires JavaScript. Requires HTML5.",
-        "description": "Herramienta interactiva de ruleta y catálogo para capturar Pokémon Shiny de la Pokédex de Paldea (Pokémon Escarlata y Pokémon Púrpura).",
+        "description": "Herramienta interactiva de ruleta, catálogo y guía de capturas para cacerías de Pokémon Shiny en 10 Pokédexes oficiales (Paldea, Galar, Hisui, Sinnoh, Kanto, Luminalia, Kalos, Hoenn, Alola y Nacional de 1,025 Pokémon).",
         "inLanguage": "es",
+        "featureList": [
+          "10 Pokédexes canónicas completas con 1,025 Pokémon",
+          "Guía detallada de ubicaciones y métodos de captura por juego oficial",
+          "Ruleta interactiva con física realista y Live Tracker a 60 FPS",
+          "Matriz de seguimiento de capturados vs pendientes",
+          "Filtro dinámico por tipo con conteo de Pokémon restantes",
+          "Soporte 100% Offline-First sin latencia de red",
+          "Sincronización en la nube con cuentas protegidas por JWT"
+        ],
         "offers": {
           "@type": "Offer",
           "price": "0",
           "priceCurrency": "USD"
         }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://shiny-roulette.fly.dev/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Qué es un Pokémon Shiny o variocolor y cuál es su probabilidad de aparición?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Un Pokémon Shiny (o variocolor) es una variante extraordinariamente rara que presenta un esquema de color alternativo al habitual y destella estrellas al entrar en combate. Desde la sexta generación (Pokémon X e Y), la probabilidad base estándar es de 1 entre 4096 encuentros (0.024%). Esta tasa puede mejorarse significativamente mediante el Amuleto Iris (Shiny Charm), el Método Masuda en crianza, apariciones masivas, o poderes de bocadillo en Pokémon Escarlata y Púrpura, alcanzando tasas de hasta 1 entre 512."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cómo ayuda Shiny Roulette a completar un Shiny Living Dex?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Shiny Roulette permite organizar y amenizar la cacería seleccionando objetivos al azar o aplicando filtros estrictos por región, generación, tipo elemental o exclusivos de edición. Al obtener un shiny, puedes marcar al Pokémon y a sus fases evolutivas completas directamente en la ruleta o en la matriz de 1025 registros, manteniendo un inventario visual exacto de capturados y pendientes."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Shiny Roulette funciona sin conexión a internet?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sí. Shiny Roulette está diseñada bajo una arquitectura 100% Offline-First. Todos los datos de las 10 Pokédexes, las guías de ubicación, los sprites oficiales estándar y shiny, y los efectos sonoros sintetizados por Web Audio API están integrados localmente, garantizando funcionamiento instantáneo sin requerir conexión a internet."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Dónde puedo consultar cómo capturar a cada Pokémon en cada juego?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Al hacer clic en cualquier Pokémon en la matriz o al ganar en la ruleta, se despliega la tarjeta modal con la sección Dónde capturar. Esta guía incluye rutas salvajes, nidos Dinamax, teraincursiones, regalos, Grutas del Subsuelo, distorsiones espaciotemporales, fósiles y métodos evolutivos específicos para cada juego oficial donde el Pokémon está presente."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cómo se sincroniza el progreso entre el móvil y el ordenador?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "El progreso se almacena automáticamente en el navegador mediante localStorage. Adicionalmente, puedes crear una cuenta gratuita desde el botón Mi Cuenta para sincronizar en tiempo real tus capturas y pendientes en la base de datos en la nube protegida con cifrado bcrypt y tokens JWT."
+            }
+          }
+        ]
       }
     ]
   }
   </script>
 
-  <link rel="stylesheet" href="style.css?v=5.0">
+  <link rel="stylesheet" href="style.css?v=5.2">
 </head>
 <body>
 
@@ -444,6 +499,142 @@
            data-full-width-responsive="true"></ins>
       <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
       -->
+    </div>
+  </section>
+
+  <!-- Sección Semántica de Información, Guía de Uso y Preguntas Frecuentes (SEO & Experiencia de Usuario) -->
+  <section class="seo-guide-section" id="guiaInformacion" aria-labelledby="seoMainHeading">
+    <div class="seo-section-header">
+      <span class="seo-badge-tag">GUÍA OFICIAL & DOCUMENTACIÓN</span>
+      <h2 id="seoMainHeading">Shiny Roulette: Tu Herramienta Definitiva para Shiny Hunting y Pokédex Multi-Juego</h2>
+      <p class="seo-lead-text">
+        <strong>Shiny Roulette</strong> es una plataforma web interactiva y gratuita concebida para cazadores de Pokémon Shiny (variocolor), coleccionistas de Shiny Living Dex y entusiastas de la franquicia. Integra <strong>10 Pokédexes canónicas completas</strong> (Nintendo Switch y Nintendo 3DS), un catálogo general de <strong>1,025 Pokémon de las Generaciones 1 a 9</strong>, un motor de ruleta con física continua a 60 FPS, una matriz de seguimiento interactiva y una <strong>guía canónica detallada de ubicación y obtención</strong> en cada juego oficial donde el Pokémon está disponible.
+      </p>
+    </div>
+
+    <div class="seo-features-grid">
+      <article class="seo-feature-card">
+        <div class="seo-card-header">
+          <span class="seo-card-icon-pill">POKÉDEXES</span>
+          <h3>10 Pokédexes Canónicas Verificadas</h3>
+        </div>
+        <p>Accede de forma instantánea a las Pokédexes oficiales con numeración regional, tipos elementales, sprites locales estándar y variocolor:</p>
+        <ul class="seo-feature-list">
+          <li><strong>Paldea (400 Pokémon):</strong> Pokémon Escarlata y Púrpura (Nintendo Switch). Filtro por exclusivos de versión, teraincursiones y paradojas.</li>
+          <li><strong>Galar (400 Pokémon):</strong> Pokémon Espada y Escudo (Nintendo Switch). Exclusivos, nidos Dinamax y curri.</li>
+          <li><strong>Hisui (242 Pokémon):</strong> Leyendas Pokémon: Arceus (Nintendo Switch). Apariciones masivas y distorsiones espaciotemporales.</li>
+          <li><strong>Sinnoh (151 Pokémon):</strong> Diamante Brillante y Perla Reluciente (Nintendo Switch). Grutas del Subsuelo y Pokéradar.</li>
+          <li><strong>Kanto (153 Pokémon):</strong> Let's Go, Pikachu! y Let's Go, Eevee! (Nintendo Switch). Rachas de captura y GO Park.</li>
+          <li><strong>Luminalia (232 Pokémon):</strong> Leyendas Pokémon: Z-A (Nintendo Switch). Megaevolución y zonas salvajes urbanas.</li>
+          <li><strong>Kalos (457 Pokémon):</strong> Pokémon X y Pokémon Y (Nintendo 3DS). Kalos Centro, Costa y Montaña, y Safari Amistad.</li>
+          <li><strong>Hoenn (211 Pokémon):</strong> Pokémon Rubí Omega y Zafiro Alfa (Nintendo 3DS). Ultravuelo y parajes espejismo.</li>
+          <li><strong>Alola (403 Pokémon):</strong> Pokémon Ultrasol y Ultraluna (Nintendo 3DS). Islas Melemele, Akala, Ula-Ula y Poni, y ultraumbrales.</li>
+          <li><strong>Pokédex Nacional (1,025 Pokémon):</strong> Todas las criaturas desde Kanto (#0001 Bulbasaur) hasta Paldea y Pecharunt (#1025).</li>
+        </ul>
+      </article>
+
+      <article class="seo-feature-card">
+        <div class="seo-card-header">
+          <span class="seo-card-icon-pill">UBICACIONES</span>
+          <h3>Guía Oficial: ¿Dónde Capturar a Cada Pokémon?</h3>
+        </div>
+        <p>Cada tarjeta cuenta con una guía de ubicación exhaustiva con tarjetas desplegables por juego, priorizando automáticamente el título activo:</p>
+        <ul class="seo-feature-list">
+          <li><strong>Encuentros Salvajes:</strong> Rutas exactas, cuevas, lagos, mares, zonas desérticas y horarios diurnos/nocturnos.</li>
+          <li><strong>Métodos Especiales:</strong> Entregas iniciales por profesores o directores, fósiles revividos, Pokémon dominantes y legendarios con santuarios o estacas.</li>
+          <li><strong>Crianza e Intercambios:</strong> Requisitos de huevos, intercambios con personajes no jugables (NPCs) en ciudades y academias.</li>
+          <li><strong>Líneas Evolutivas:</strong> Niveles exactos, piedras evolutivas, ítems equipados por intercambio, felicidad y métodos de interacción (como caminar pasos o derrotar líderes).</li>
+        </ul>
+      </article>
+
+      <article class="seo-feature-card">
+        <div class="seo-card-header">
+          <span class="seo-card-icon-pill">SHINY HUNTING</span>
+          <h3>Herramientas Especializadas para Cacerías</h3>
+        </div>
+        <p>Diseñada específicamente para facilitar y registrar el progreso del coleccionismo Shiny con fluidez total:</p>
+        <ul class="seo-feature-list">
+          <li><strong>Ruleta con Física Continua:</strong> Algoritmo de desaceleración armónica a 60 FPS con Live Tracker en tiempo real.</li>
+          <li><strong>Filtro de Tipo con Conteo Dinámico:</strong> Identifica en cada Pokédex cuántos Pokémon de cada tipo elemental te faltan por capturar, ordenados de mayor a menor prioridad.</li>
+          <li><strong>Matriz de Seguimiento Dual:</strong> Registra Pokémon en dos categorías visuales: <em>Capturados Shiny</em> (con distintivo dorado y número nacional) y <em>Pendientes</em>.</li>
+          <li><strong>Gestión de Familias Evolutivas:</strong> Selecciona uno, varios o todos los miembros de una misma línea evolutiva con un único clic.</li>
+        </ul>
+      </article>
+
+      <article class="seo-feature-card">
+        <div class="seo-card-header">
+          <span class="seo-card-icon-pill">TECNOLOGÍA</span>
+          <h3>100% Offline-First y Sincronización en la Nube</h3>
+        </div>
+        <p>Máxima velocidad, privacidad y disponibilidad sin interrupciones ni tiempos de carga externos:</p>
+        <ul class="seo-feature-list">
+          <li><strong>Latencia Cero:</strong> Todos los sprites estándar y shiny (incluidos #10250 y #10253) están integrados localmente en caché.</li>
+          <li><strong>Audio Sintetizado:</strong> Efectos sonoros generados nativamente mediante Web Audio API sin descargar archivos pesados.</li>
+          <li><strong>Persistencia Local Automática:</strong> Tus progresos se guardan al instante en <code>localStorage</code> sin requerir conexión.</li>
+          <li><strong>Cuentas y Sincronización Cloud:</strong> Opcionalmente, inicia sesión para sincronizar tus avances entre múltiples ordenadores y dispositivos móviles mediante base de datos SQLite segura.</li>
+        </ul>
+      </article>
+    </div>
+
+    <!-- Preguntas Frecuentes (FAQ) -->
+    <div class="seo-faq-block">
+      <div class="seo-faq-header">
+        <span class="seo-badge-tag">PREGUNTAS FRECUENTES</span>
+        <h3>Preguntas Frecuentes sobre Shiny Hunting y la Ruleta</h3>
+      </div>
+
+      <div class="seo-faq-list">
+        <details class="seo-faq-item" open>
+          <summary class="seo-faq-question">
+            <span>¿Qué es un Pokémon Shiny o variocolor y cuál es su probabilidad de aparición?</span>
+            <span class="seo-faq-toggle-icon" aria-hidden="true">+</span>
+          </summary>
+          <div class="seo-faq-answer">
+            <p>Un <strong>Pokémon Shiny</strong> (también conocido en español como <em>variocolor</em>) es una criatura con una paleta de colores inusual y exclusiva, acompañada por una animación especial de estrellas o destellos al entrar en combate. En los juegos de primera a quinta generación la probabilidad base era de <strong>1 entre 8,192</strong>. A partir de la sexta generación (Pokémon X e Y hasta Escarlata y Púrpura), la probabilidad base es de <strong>1 entre 4,096</strong> (0.024%).</p>
+            <p>Esta probabilidad puede optimizarse mediante diversas mecánicas oficiales: el <strong>Amuleto Iris</strong> (<em>Shiny Charm</em>), el <strong>Método Masuda</strong> en crianza (1/512), las <strong>Apariciones Masivas</strong> y los <strong>Poderes de Bocadillo</strong> en Paldea (Poder Variocolor nivel 3), las <strong>Rachas de Captura</strong> en Kanto (Let's Go), o los <strong>Ultraumbrales</strong> en Alola (Ultrasol y Ultraluna).</p>
+          </div>
+        </details>
+
+        <details class="seo-faq-item">
+          <summary class="seo-faq-question">
+            <span>¿Cómo me ayuda Shiny Roulette a completar mi Shiny Living Dex?</span>
+            <span class="seo-faq-toggle-icon" aria-hidden="true">+</span>
+          </summary>
+          <div class="seo-faq-answer">
+            <p>Un <em>Shiny Living Dex</em> consiste en poseer a cada especie y a cada una de sus fases evolutivas en su versión variocolor de forma simultánea. Shiny Roulette te permite evitar el bloqueo de decisión girando la ruleta para elegir tu próximo objetivo aleatorio, o bien filtrar por región, generación, exclusivos de tu versión o tipos elementales prioritarios. Además, al capturar a una criatura, el selector evolutivo te permite marcar fácilmente si conseguiste solo la cría o la línea completa.</p>
+          </div>
+        </details>
+
+        <details class="seo-faq-item">
+          <summary class="seo-faq-question">
+            <span>¿Dónde puedo consultar la información de capturas de cada Pokémon?</span>
+            <span class="seo-faq-toggle-icon" aria-hidden="true">+</span>
+          </summary>
+          <div class="seo-faq-answer">
+            <p>Tanto al ganar en la ruleta como al hacer clic en cualquier tarjeta de la matriz de seguimiento o del catálogo, se abrirá el modal de detalle. En la sección <strong>«Dónde capturar»</strong> encontrarás tarjetas dedicadas para cada juego oficial donde el Pokémon está disponible, con indicaciones exactas de rutas, apariciones, nidos, regalos o métodos evolutivos.</p>
+          </div>
+        </details>
+
+        <details class="seo-faq-item">
+          <summary class="seo-faq-question">
+            <span>¿Shiny Roulette funciona sin conexión a internet?</span>
+            <span class="seo-faq-toggle-icon" aria-hidden="true">+</span>
+          </summary>
+          <div class="seo-faq-answer">
+            <p>Sí, al 100%. Shiny Roulette está construida como una aplicación de latencia cero: los 1,025 sprites estándar, los 1,025 sprites shiny, los datos de las 10 Pokédexes, las guías de ubicación y los efectos de audio residen localmente en los archivos de la aplicación. Puedes utilizar la ruleta y registrar tus capturas incluso sin acceso a internet.</p>
+          </div>
+        </details>
+
+        <details class="seo-faq-item">
+          <summary class="seo-faq-question">
+            <span>¿Se guardan mis capturas si cierro la pestaña o cambio de dispositivo?</span>
+            <span class="seo-faq-toggle-icon" aria-hidden="true">+</span>
+          </summary>
+          <div class="seo-faq-answer">
+            <p>En el mismo navegador y dispositivo, tus capturas y pendientes se conservan de forma permanente e indefinida a través de <code>localStorage</code>. Si deseas sincronizar tu progreso entre diferentes dispositivos (por ejemplo, registrar capturas en tu móvil mientras juegas en la consola y revisarlas en tu ordenador), puedes crear una cuenta gratuita en segundos desde el botón «Mi Cuenta».</p>
+          </div>
+        </details>
+      </div>
     </div>
   </section>
 
@@ -842,11 +1033,11 @@
 
   <canvas id="confettiCanvas"></canvas>
 
-  <script src="paldea_data.js?v=5.0"></script>
-  <script src="all_data.js?v=5.0"></script>
-  <script src="switch_data.js?v=5.0"></script>
-  <script src="3ds_data.js?v=5.0"></script>
-  <script src="api.js?v=5.0"></script>
-  <script src="script.js?v=5.0"></script>
+  <script src="paldea_data.js?v=5.2"></script>
+  <script src="all_data.js?v=5.2"></script>
+  <script src="switch_data.js?v=5.2"></script>
+  <script src="3ds_data.js?v=5.2"></script>
+  <script src="api.js?v=5.2"></script>
+  <script src="script.js?v=5.2"></script>
 </body>
 </html>
