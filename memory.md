@@ -446,6 +446,12 @@ ruleta-juego/
       - Compatibilidad total con persistencia local y sincronización en la nube (SQLite backend `user_captured`, `user_pending`, `user_dex_state`).
       - Cumplimiento de regla de cero emojis (solo SVG y caracteres estándar `★`, `♀`, `♂`).
       - Anti-caché actualizado a `v=4.9` en `index.html`.
+38. **Corrección de Tarjetas de Ubicación Cortadas/Encimadas y Acordeón con Enfoque (`v=5.0`):**
+    - **Problema reportado:** Al desplegar un juego en la guía "Dónde capturar", el contenido aparecía cortado o chocaba con otras tarjetas.
+    - **Causa raíz:** `.locations-accordion-list` es un contenedor flex en columna con altura máxima; las tarjetas (`flex-shrink: 1` por defecto + `overflow: hidden`) se comprimían por debajo de su contenido, recortando y encimando texto. Además, las etiquetas de método largas (`flex-shrink: 0`) desbordaban horizontalmente el detalle.
+    - **Corrección (`style.css`):** `.loc-game-card { flex: 0 0 auto; min-width: 0 }`, títulos y detalles con `overflow-wrap: anywhere` y `min-width: 0`, etiquetas de método con `max-width: 42%` y salto de línea, cabecera con `white-space: normal`, y altura de lista ampliada a `min(58vh, 460px)` con `overscroll-behavior: contain`.
+    - **Mejora de UX (`script.js`):** Nueva función `setFocusedLocationCard(cardEl)`. El juego pulsado se expande y agranda (`.is-focused`: cabecera, título, píldoras y texto más grandes con sombra), mientras los demás se pliegan y compactan (`.has-focus` en la lista: cabeceras reducidas y opacidad 0.82). Pulsar de nuevo el juego enfocado lo pliega y restaura todos a tamaño normal. La lista se desplaza suavemente para mostrar la tarjeta pulsada al inicio. Por defecto se enfoca la primera tarjeta (juego de la Pokédex activa). "VER TODOS" expande todas con tamaño uniforme; "PLEGAR SECUNDARIOS" vuelve a enfocar solo la primera.
+    - Anti-caché actualizado a `v=5.0` en `index.html`.
 
 ---
 

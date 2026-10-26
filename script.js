@@ -2283,16 +2283,16 @@ function renderPokemonLocations(pokemon, stageOverride = null) {
   }
 
   winnerLocationsContainer.innerHTML = '';
+  winnerLocationsContainer.classList.remove('has-focus');
+  winnerLocationsContainer.scrollTop = 0;
   const fragment = document.createDocumentFragment();
 
-  cardsData.forEach((c, idx) => {
-    // Expandir por defecto la tarjeta del juego activo (o Paldea/primera tarjeta en Ruleta General)
-    const isPrimary = idx === 0 || (c.dexId && c.dexId === currentDexId) || (currentDexId === 'general' && c.groupId.startsWith('sv'));
+  cardsData.forEach((c) => {
     const cardEl = document.createElement('div');
-    cardEl.className = `loc-game-card ${c.themeClass} ${isPrimary ? 'is-expanded' : ''}`;
+    cardEl.className = `loc-game-card ${c.themeClass}`;
 
     cardEl.innerHTML = `
-      <button type="button" class="loc-game-header" aria-expanded="${isPrimary ? 'true' : 'false'}">
+      <button type="button" class="loc-game-header" aria-expanded="false">
         <div class="loc-game-header-left">
           ${c.badgeHtml}
           <span class="loc-game-title">${escapeHtmlText(c.title)}</span>
@@ -2311,14 +2311,51 @@ function renderPokemonLocations(pokemon, stageOverride = null) {
 
     const headerBtn = cardEl.querySelector('.loc-game-header');
     headerBtn.addEventListener('click', () => {
-      const expanded = cardEl.classList.toggle('is-expanded');
-      headerBtn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+      // Acordeón: el juego pulsado se agranda y el resto se compacta.
+      // Si se pulsa de nuevo el juego ya enfocado, se pliega y todos vuelven a su tamaño normal.
+      const isAlreadyFocused = cardEl.classList.contains('is-focused');
+      setFocusedLocationCard(isAlreadyFocused ? null : cardEl);
     });
 
     fragment.appendChild(cardEl);
   });
 
   winnerLocationsContainer.appendChild(fragment);
+
+  // Por defecto se enfoca y expande la primera tarjeta (juego de la Pokédex activa, ya ordenado primero)
+  const firstCard = winnerLocationsContainer.querySelector('.loc-game-card');
+  if (firstCard) setFocusedLocationCard(firstCard, false);
+}
+
+/**
+ * Enfoca una tarjeta de juego en la guía de ubicaciones: la expande y agranda,
+ * plega y compacta las demás. Con `cardEl = null` se pliegan todas.
+ */
+function setFocusedLocationCard(cardEl, scroll = true) {
+  if (!winnerLocationsContainer) return;
+  const cards = winnerLocationsContainer.querySelectorAll('.loc-game-card');
+
+  cards.forEach(c => {
+    const isTarget = c === cardEl;
+    c.classList.toggle('is-focused', isTarget);
+    c.classList.toggle('is-expanded', isTarget);
+    const hBtn = c.querySelector('.loc-game-header');
+    if (hBtn) hBtn.setAttribute('aria-expanded', isTarget ? 'true' : 'false');
+  });
+
+  winnerLocationsContainer.classList.toggle('has-focus', !!cardEl);
+
+  if (toggleAllLocationsBtn) {
+    toggleAllLocationsBtn.dataset.allExpanded = 'false';
+    toggleAllLocationsBtn.textContent = `VER TODOS (${cards.length})`;
+  }
+
+  if (cardEl && scroll) {
+    // Llevar la tarjeta pulsada al inicio de la lista para leerla completa sin choques
+    requestAnimationFrame(() => {
+      winnerLocationsContainer.scrollTo({ top: Math.max(0, cardEl.offsetTop - 2), behavior: 'smooth' });
+    });
+  }
 }
 
 // ==========================================
@@ -3909,16 +3946,21 @@ function initApp() {
       if (!winnerLocationsContainer) return;
       const cards = winnerLocationsContainer.querySelectorAll('.loc-game-card');
       const allOpen = toggleAllLocationsBtn.dataset.allExpanded === 'true';
-      cards.forEach((c, idx) => {
-        const shouldOpen = !allOpen ? true : idx === 0;
-        c.classList.toggle('is-expanded', shouldOpen);
+      if (allOpen) {
+        // Plegar secundarios: volver a enfocar solo el primer juego
+        setFocusedLocationCard(cards[0] || null);
+        return;
+      }
+      // Ver todos: expandir todas las tarjetas con tamaño uniforme (sin enfoque)
+      winnerLocationsContainer.classList.remove('has-focus');
+      cards.forEach(c => {
+        c.classList.remove('is-focused');
+        c.classList.add('is-expanded');
         const hBtn = c.querySelector('.loc-game-header');
-        if (hBtn) hBtn.setAttribute('aria-expanded', shouldOpen ? 'true' : 'false');
+        if (hBtn) hBtn.setAttribute('aria-expanded', 'true');
       });
-      toggleAllLocationsBtn.dataset.allExpanded = (!allOpen).toString();
-      toggleAllLocationsBtn.textContent = !allOpen
-        ? 'PLEGAR SECUNDARIOS'
-        : `VER TODOS (${cards.length})`;
+      toggleAllLocationsBtn.dataset.allExpanded = 'true';
+      toggleAllLocationsBtn.textContent = 'PLEGAR SECUNDARIOS';
     });
   }
 
